@@ -1,0 +1,100 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*******************/
+/*  GENERAL CSS */
+/*******************/
+@import url('https://fonts.googleapis.com/css?family=Shadows Into Light');
+@import url('https://fonts.googleapis.com/css?family=Annie Use Your Telescope');
+
+body {
+  font-family: 'Annie Use Your Telescope';
+}
+
+.wrapper {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/*******************/
+/*  Article with list of tasks */
+/*******************/
+
+.task-nav {
+  float: left;
+}
+
+.list-of-tasks {
+  float: right;
+  border: solid;
+  border-radius: 2rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.list-of-tasks h3 {
+  font-size: 300%;
+}
+
+.list-of-tasks ol {
+  width: 80%;
+  font-size: 150%;
+  font-weight: bold;
+  align-items: center;
+}
+
+.list-of-tasks ul {
+  width: 100%;
+  list-style: none;
+  display: inline-flex;
+  padding: 0 1%;
+  font-weight: normal;
+
+}
+
+.list-of-tasks li {
+  padding: 0 1%;
+}
+
+.list-of-tasks ul li:first-of-type {
+  border-right: solid;
+}
+
+.list-of-tasks ul li:nth-of-type(2) {
+  border-right: solid;
+}
+
+/*******************/
+/*  Nav for task list */
+/*******************/
+
+.task-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+}
+
+.task-nav h2 {
+  font-size: 500%;
+}
+
+.task-nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 200%;
+  border: solid black;
+  border-radius: 2rem;
+  margin-top: 10%;
+  padding: 10%;
+  width: 100%;
+  color: black;
+}
+
+.task-nav a:hover {
+  color: purple;
+  border-color: purple;
+}

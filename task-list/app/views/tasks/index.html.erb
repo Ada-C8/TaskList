@@ -1,0 +1,34 @@
+
+<nav class="task-nav wrapper">
+<h2> Task List </h2>
+<section class="add-or-show-tasks">
+  <!-- <button type="botton" name="Add task">Add task</button>
+  <button type="botton" name="Add task">All tasks</button> -->
+  <a href="google.com">Add task</a>
+  <a href="google.com">All tasks</a>
+</section>
+</nav>
+
+<article class="list-of-tasks wrapper">
+  <h3>YOUR TASKS</h3>
+
+  <ol>
+    <% @tasks.each do |task| %>
+    <li>
+      <%= task[:title] %>
+    </li>
+    <ul>
+      <li>
+        <%= task[:discription] %>
+      </li>
+      <li>
+        <%= task[:competion_status] %>
+      </li>
+      <li>
+        <%= task[:due_date] %>
+      </li>
+    </ul>
+      <% end %>
+  </ol>
+
+</article>
