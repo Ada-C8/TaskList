@@ -1,1 +1,7 @@
-<h2>Index for tasks</h2>
+<ol>
+  <% @tasks.each_with_index do |task, i| %>
+    <li>
+      <strong><%=task[:title]%></strong>  <strong>Due Date: </strong><%=task[:due_date]%>   <strong>Status: </strong><%=task[:completion_status]%> <br/> Mark Complete | Edit | Delete
+    </li>
+  <% end%>
+</ol>
