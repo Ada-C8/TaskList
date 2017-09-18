@@ -1,2 +1,7 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<% if @task %>
+<% else %>
+<h1>404: Not Found</h1>
+<% end %>
+
+<h1><%=@task[:id] %> <%=@task[:task_name] %>
+</h1>
