@@ -1,2 +1,30 @@
 <h1>Tasks#show</h1>
 <p>Find me in app/views/tasks/show.html.erb</p>
+<p>
+params are : <%= params %>
+</p>
+
+<%if @task %>
+<h2>
+  <%= @task[:title] %>
+  <%=link_to "Edit", edit_task_path(@task[:title]) %>
+  <%=link_to "Delete", delete_task_path(@task[:title]), method: :delete %>
+  </h2>
+  <h3>
+    <%= @task[:description] %>
+  </h3>
+  <h3>
+    <%= @task[:due] %>
+  </h3>
+  <h3>
+    <%= @task[:priority] %>
+  </h3>
+  <h3>
+    <%= @task[:compeleted] %>
+  </h3>
+  <%else%>
+  <h1> 404 : Not Found !</h1>
+  <%end%>
+</p>
+
+ <%=link_to "Home", tasks_path %>
