@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   get '/tasks', to: 'tasks#index', as: 'tasks' # tasks_path
 
   get 'tasks/:id/edit', to: 'tasks#edit', as: 'edit_task' #edit_task_path
@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   post '/tasks', to: 'taks#create', as: 'create_task' # create_task_path
 
   delete '/tasks', to: 'tasks#destory', as: 'delete-task' #delete_task_path
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,5 +1,13 @@
 class TasksController < ApplicationController
+
+  TASKS = [
+    {id: 1, task: "Dishes", status: :incomplete},
+    {id: 2, task: "Vacuum", status: :incomplete},
+    {id: 3, task: "Homework", status: :incomplete}
+  ]
+
   def index
+    @tasks = TASKS
   end
 
   def create
