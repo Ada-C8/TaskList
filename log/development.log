@@ -1,0 +1,103 @@
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:30:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 527ms (Views: 305.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:39:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (189.5ms)
+Completed 500 Internal Server Error in 196ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x007faf53a28140>:0x007faf599c3c08>):
+    3: <% @tasks.each do |task| %>
+    4:   <li>Task number:
+    5:     <strong>
+    6:       <%= link_to(book[:id], book_path(book[:id]), alt: 'link to', class:"number" ) %>
+    7:     </strong>
+    8:   </li>
+    9:   <li>Task:
+  
+app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb___3562734925910300851_70195499584200'
+app/views/tasks/index.html.erb:3:in `each'
+app/views/tasks/index.html.erb:3:in `_app_views_tasks_index_html_erb___3562734925910300851_70195499584200'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:40:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (163.5ms)
+Completed 500 Internal Server Error in 169ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x007faf53a28140>:0x007faf55a676e0>):
+     7:     </strong>
+     8:   </li>
+     9:   <li>Task:
+    10:     <strong> <%= book[:task_name] %> </strong>
+    11:   </li>
+    12: <% end %>
+    13: </ul>
+  
+app/views/tasks/index.html.erb:10:in `block in _app_views_tasks_index_html_erb___3562734925910300851_70195516500140'
+app/views/tasks/index.html.erb:3:in `each'
+app/views/tasks/index.html.erb:3:in `_app_views_tasks_index_html_erb___3562734925910300851_70195516500140'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:40:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 23.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:40:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 19.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:41:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-18 15:43:24 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 26.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:44:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 20.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:45:07 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms
+
+
+  
+SyntaxError (/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+ink to', class:"number" ) task[:task_name] );@output_buffer.
+                              ^):
+  
+app/views/tasks/index.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:45:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 23.4ms)
+
+

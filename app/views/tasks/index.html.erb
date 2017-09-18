@@ -1,0 +1,14 @@
+<h1>Tasklist</h1>
+
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <strong>
+      <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"number" ) %>
+    </strong>
+  </li>
+  <li>Task:
+    <strong> <%= task[:task_name] %> </strong>
+  </li>
+<% end %>
+</ul>
