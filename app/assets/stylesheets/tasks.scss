@@ -5,7 +5,7 @@ html {
   background-color: lightyellow
 }
 
-H1 {
+H1 , H2, ol li {
   color: green
 }
 
@@ -13,9 +13,6 @@ H1 {
   color:pink;
 }
 
-ol li {
-  color:green;
-}
 
 footer {
   background:RGBA(205, 208, 215,.3);
@@ -26,3 +23,19 @@ footer {
   margin-top: -20px;
   height: 20px;
 }
+
+
+// .task_list {
+//   display: inline-block;
+//   width: 20%;
+//   vertical-align: top;
+//   border-style: solid;
+//   border-color: beige;
+//   border-radius: 9%;
+//   margin: 4%;
+//   text-align: center;
+//   color: pink;
+//   text-shadow: black;
+//   background-color: rgba(250,235,215,.2);
+//
+// }
