@@ -1,0 +1,14 @@
+<h2>TASKLIST</h2>
+<ul>
+  <% @tasks.each do |task|%>
+    <li>
+      <strong><%= task[:title] %></strong>
+      <p>
+        <em><%= task[:description]%></em>
+      </p>
+      <p>
+        <%= task[:complete] %> | <%= task[:due_date] %>
+      </p>
+    </li>
+  <% end %>
+</ul>
