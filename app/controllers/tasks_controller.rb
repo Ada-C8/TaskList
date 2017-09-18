@@ -1,5 +1,8 @@
+TASKS = ["teach Lupin to hunt for truffles", "buy a farm", "go to space", "work for NASA", "up my style game"]
+
 class TasksController < ApplicationController
   def index
+    @tasks = TASKS
   end
 
   def create
