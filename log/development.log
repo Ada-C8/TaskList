@@ -469,3 +469,92 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 36ms (Views: 34.3ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:13:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 405ms (Views: 190.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:13:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 18.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:13:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 11.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:14:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 62ms (Views: 60.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:15:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 23ms
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...sition:  bottom": expected ";", was ": 0;"):
+    4:     <title>TaskList Home</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/tasks.scss:25
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1489916792822462520_70312886134500'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:15:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 32.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:16:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 16.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:16:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:17:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 41.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:17:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 15.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:17:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.6ms)
+
+
