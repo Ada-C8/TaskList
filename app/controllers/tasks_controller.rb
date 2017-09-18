@@ -1,5 +1,11 @@
 class TasksController < ApplicationController
+  TASKS = [
+    {id: 1, description: "Do laundry", done: false},
+    {id: 2, description: "Take out the trash", done: false},
+    {id: 3, description: "Do Task List Homework", done: false},
+  ]
   def index
+    @tasks = TASKS
   end
 
   def show
