@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    id = params[:id]
+    id = params[:id].to_i
     @task = nil
     TASKS.each do |task|
       if task[:id] == id
