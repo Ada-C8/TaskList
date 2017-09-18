@@ -13,6 +13,111 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-body { font-family: helvetica, sans-serif; }
-ul, ol { list-style: none; }
+/* universal */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+html, body { height: 100%; }
+body {
+  width: 100%;
+  background: #f0f0f0;
+  color: #333;
+  font-family: helvetica, sans-serif;
+  font-size: 14px;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover { cursor: pointer; }
+header, main.index-main, footer {
+  padding: 2% 10% 6%;
+}
+
+/* header */
+header { text-align: center; padding-bottom: 2%; }
+header h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/* main */
+main.index-main {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+}
+/* main - task-options*/
+main.index-main section.task-options { width: 40%; }
+.task-options a.button {
+  display: inline-block;
+  padding: 5%;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+}
+.fa-circle { color: #4EC4E8; }
+
+/* main - your-tasks */
+section.your-tasks {
+  width: 60%;
+  border-top: 5px solid #4EC4E8;
+  background: #fefefe;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 3% 6% 8%;
+}
+section.your-tasks h2 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5%;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #f0f0f0;
+}
+section.your-tasks ol li {
+  margin-bottom: 5%;
+  padding: 2%;
+  border-radius: 4px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  line-height: 1.4;
+}
+section.your-tasks ol li:hover {
+  background: #f0f0f0;
+}
+section.your-tasks ol li.complete span {
+  text-decoration: line-through;
+}
+section.your-tasks a.edit-status {
+  margin-top: 0.5%;
+}
+section.your-tasks ol li p.task {
+  margin-left: 2%;
+}
+span.task-name {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+span.task-status {
+  font-style: italic;
+  margin-left: 1%;
+}
+a.task-action { color: #4EC4E8; }
+a.delete-task { margin-left: 4%; color: #DD4647; }
+
+/* footer */
+footer {
+  border-top: 3px solid #666;
+  background: #777;
+  color: #fefefe;
+  text-align: center;
+}
+
+/** { border: 1px solid red !important;}*/

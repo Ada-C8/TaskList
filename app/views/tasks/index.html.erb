@@ -1,8 +1,44 @@
-<h1>Task List</h1>
-<ul>
-  <% @tasks.each do |task|  %>
-    <li>
-      <%= task[:name] %> (<%= task[:status]%>), started on <%= task[:created]%> and due by <%= task[:due] %>
-    </li>
-  <% end %>
-</ul>
+<header>
+  <h1>Task List</h1>
+</header>
+
+<main class="index-main">
+  <section class="task-options">
+    <a class="button" href="#">
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+    <a class="button" href="#">
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-list fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </section>
+  <section class="your-tasks">
+    <h2>Your Tasks</h2>
+    <ol>
+      <% @tasks.each do |task|  %>
+        <% if task[:status] == "Complete" %>
+        <li class="complete">
+          <a class="task-action edit-status" href="#"><i class="fa fa-check-square-o fa-lg"></i></a>
+        <% else %>
+        <li>
+          <a class="task-action edit-status" href="#"><i class="fa fa-square-o fa-lg"></i></a>
+        <% end %>
+          <p class="task">
+            <span class="task-name"><%= task[:name] %></span> <span class="task-status">(<%= task[:status]%>)</span>
+            <br />Date: <%= task[:created]%> ~ <%= task[:due] %>
+            <br /> <a href="#" class="task-action edit-task"><i class="fa fa-pencil-square-o"></i></a> <a href="#" class="task-action delete-task"><i class="fa fa-trash-o"></i></a>
+          </p>
+        </li>
+      <% end %>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <p>Copyright &copy; 2017</p>
+</footer>
