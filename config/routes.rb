@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   # get 'tasks/destroy'
   delete '/tasks', to: 'tasks#destroy', as: 'delete_task' #delete_book_path
 
+  # may need to move this up so that it is correctly placed.
+  # patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'task_complete'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
