@@ -9,6 +9,29 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>TASKLIST</h1>
+    </header>
+
+    <main>
+      <section id = 'sidebar'>
+        <ul>
+          <li>
+            <a href='#new'><strong>Add Task</strong></a>
+          </li>
+          <li>
+            <strong><%= link_to "All Tasks", tasks_path %></strong>
+          </li>
+        </ul>
+      </section>
+
+      <section id = 'content'>
+        <%= yield %>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2017
+    </footer>
   </body>
 </html>

@@ -12,4 +12,34 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar li, #content {
+  border: 1px solid black;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
+}
+
+
+
+
+footer {
+  border-top: 2px solid black;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+
+}
