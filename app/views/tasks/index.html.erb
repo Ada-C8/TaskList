@@ -5,13 +5,18 @@
 <body>
   <header>
     <ul class="navigation">
-      <li>Tasklist</li>
-      <li><%= link_to "Add Task", new_task_path %></li>
-      <li><%= link_to "All Tasks", tasks_path %></li>
+      <li>Donut Forget!</li>
     </ul>
   </header>
 
-  <section>
+  <section class="task-body">
+    <div class="all-task-actions">
+      <ul>
+        <li><%= link_to "Add Task", new_task_path %></li>
+        <li><%= link_to "All Tasks", tasks_path %></li>
+      </ul>
+    </div>
+
     <div class="task-list">
       <h2>You Need To...</h2>
       <ol>
@@ -19,6 +24,11 @@
           <li>
             <%= task[:description] %>
           </li>
+        <ul class="task-actions">
+          <li class="action">Mark Complete</li>
+          <li class="action">Edit</li>
+          <li class="action">Delete</li>
+        </ul>
         <% end %>
       </ol>
     </div>

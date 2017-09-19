@@ -10,10 +10,12 @@ body {
   list-style: none;
   margin: 0;
   font-family: 'Baloo Tammudu', cursive;
-  background-color: teal;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  background-color: #27cdb2;
+  border-radius: 15px 50px;
+
+  // display: flex;
+  // flex-flow: row wrap;
+  // justify-content: flex-end;
 }
 
 .navigation:first-of-type li {
@@ -23,26 +25,63 @@ body {
   text-shadow: 1;
 }
 
-.navigation a {
-  color: lightblue;
-  text-decoration: none;
-  font-size: 1em;
+
+.task-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+  width: 100%;
+  // align-items: stretch;
+  align-content: center;
+  align-items: center;
+  margin: 2em;
 }
 
-section {
-  display: flex;
-  width: 60%;
-  margin: 5em;
+ul {
+  list-style: none;
+}
+
+.all-task-actions li a{
+  background-color: transparent;
+  color: #27cdb2;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: none;
+  font-size: 3em;
+  font-family: 'Baloo Tammudu', cursive;
+  text-decoration: none;
+  order: 1;
+  text-align: center;
+  flex-grow: .5;
+  vertical-align: middle;
+  margin: .5em;
+}
+
+.all-task-actions li a:hover {
+  color: magenta;
 }
 
 .task-list {
-  background-color: pink;
-  flex-shrink: 1;
+  background-color: #e57ac0;
+  width: 50%;
+  // flex-shrink: 1;
   border-radius: 15px 50px;
-  height: 15em;
+  // height: 15em;
   font-family: 'Vibur';
-  padding: 2em;
+  padding: 1em;
   font-size: 2em;
+}
+
+.task-actions {
+  list-style: none;
+  font-size: .5em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
+}
+
+.actions {
+  // display: inline-block;
 }
 
 footer {
@@ -55,5 +94,6 @@ footer {
   bottom:0;
   left:0;
   font-family: 'Vibur';
+  text-align: center;
 
 }

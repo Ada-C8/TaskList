@@ -18,9 +18,13 @@ class TasksController < ApplicationController
   def update
   end
 
+  def mark_complete
+  end
+
   def edit
   end
 
   def destory
   end
+
 end
