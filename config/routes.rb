@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   post '/tasks', to:'tasks#create', as: 'create_task' #create_task_path
 
-  patch '/tasks/:id/:completed', to: 'tasks#complete', as: 'complete_task' #complete_task_path
+  patch '/task/:id/complete', to: 'task#complete', as: 'complete_task' #complete_task_path
 
   delete '/tasks', to: 'tasks#destroy', as: 'delete_task' #delete_task_path
 
