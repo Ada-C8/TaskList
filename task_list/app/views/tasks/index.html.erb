@@ -1,2 +1,43 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<div class='index-container'>
+  <h1>Task List</h1>
+  <ul>
+    <li>
+      <%= button_to('Add Task', create_task_path, class: 'button') %>
+    </li>
+    <li>
+      <%= button_to('All Tasks', tasks_path, method: :get, class: 'button') %>
+    </li>
+  </ul>
+
+  <div class='list'>
+
+    <h2>The Clock is Ticking...</h2>
+    <ol>
+      <% @tasks.each do |task| %>
+      <li>
+        <% if task[:complete] %>
+        <strong class='complete'><%= task[:task_name].capitalize %></strong>
+        <% else %>
+        <%= task[:task_name].capitalize %>
+        <% end %>
+        <ul>
+          <li>
+            <% if task[:complete] %>
+            <%= 'Unmark Complete' %>
+            <% else %>
+            <%= 'Mark Complete' %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to 'Edit', edit_task_path(task[:id]) %>
+          </li>
+          <li>
+            <%= link_to 'Delete', delete_task_path(task[:id]) %>
+          </li>
+        </ul>
+      </li>
+
+      <% end %>
+    </ol>
+  </div>
+</div>

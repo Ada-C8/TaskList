@@ -1,3 +1,87 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+h1 {
+  // background-image: image-url('this_is_fine_dog.png');
+  // background-size: cover;
+  // background-position: center;
+  // height: 15rem;
+}
+
+/* FONTS */
+h1, ul, li {
+  font-family: 'Arial', helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: monospace;
+  font-size: 2rem;
+}
+
+ol > li {
+  font-size: 1.5rem;
+}
+
+ul > li {
+  font-size: 1rem;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+/* DISPLAY */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.index-container {
+  flex: 1;
+  margin: 3% 8%;
+}
+
+h1, h2 {
+  display: flex;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  float: right;
+  padding: 2rem 2rem 2rem 4rem;
+  border: 2px black solid;
+  border-radius: 2rem;
+}
+
+footer {
+  text-align: center;
+}
+
+/* STYLE LINKS */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// .button {
+//   margin: 2rem;
+//   font-size: 2rem;
+// }
