@@ -8,24 +8,38 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
-  <header>
+<body id="grad1">
+  <header id ="body-header">
     <h1>Track Your Tasks!</h1>
   </header>
 
   <main>
 
-    <nav>
-      <ul class="clearfix">
-        <li><a href="#">ADD</a></li>
-        <li><a href="#">ALL</a></li>
-      </ul>
-    </nav>
+    <div id="nav-article-wrapper" class="clearfix">
+      <nav id="shift">
+        <header>
+          <h2>OPTIONS</h2>
+        </header>
+        <ul id="links-no-bullets">
+          <li><a href="#">Add a task</a></li>
+          <li><a href="#">All tasks</a></li>
+        </ul>
+      </nav>
 
-    <article>
-      <%= yield %>
-    </article>
+      <div id="article-wrapper">
+        <article>
+          <%= yield %>
+        </article>
+      </div>
 
-  </main>
+    </main>
+  </div>
+
+  <footer>
+    <p>
+      &copy; COPYRIGHT 2017
+    </p>
+  </footer>
+
 </body>
 </html>
