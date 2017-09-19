@@ -4,9 +4,12 @@ Rails.application.routes.draw do
 
   get 'tasks/:id/edit', to: 'tasks#edit', as: 'edit_tasks' # edit_tasks_path
 
+
   get 'tasks/new', to: 'tasks#new', as: 'new_task' # new_task_path
 
   get 'tasks/:id', to: 'tasks#show', as: 'task' # task_path
+
+  patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'mark_complete_task' # mark_complete_task_path
 
   patch 'tasks/:id', to: 'tasks#update', as: 'update_task' # update_task_path
 

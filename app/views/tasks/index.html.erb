@@ -6,15 +6,15 @@
 <% @tasks.each do |task| %>
 
 
-  <% if !(task[:completed]) %>
-  <li><strong><%= link_to(task[:title], task_path(task[:id])) %></strong> </li>
+  <% if !(task.completed) %>
+  <li><strong><%= link_to(task.title, task_path(task.id)) %></strong> </li>
   <%else%>
-  <li><strong class="completed"><%= link_to(task[:title], task_path(task[:id])) %></strong></li>
+  <li><strong class="completed"><%= link_to(task.title, task_path(task.id)) %></strong></li>
   <% end %>
   <article class="task_edits">
-    <%= link_to "mark complete", update_task_path(task[:id]), method: :patch %>
-    <%= link_to "edit", edit_tasks_path(task[:id]) %>
-    <%= link_to "delete", delete_task_path(task[:id]), method: :delete %></article>
+    <%= link_to "mark complete", mark_complete_task_path(task.id), method: :patch %>
+    <%= link_to "edit", edit_tasks_path(task.id) %>
+    <%= link_to "delete", delete_task_path(task.id), method: :delete %></article>
 <% end %>
 </ol>
 </section>
