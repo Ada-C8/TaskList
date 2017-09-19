@@ -9,16 +9,16 @@ Rails.application.routes.draw do
   get 'tasks/new', to: 'tasks#new', as: 'new_task' #=> new_task_path
 
   #get 'tasks/show'
-  get 'tasks/:id', to: 'tasks#show', as: 'book' #=> book_path
+  get 'tasks/:id', to: 'tasks#show', as: 'task' #=> task_path
 
   #get 'tasks/update'
-  patch 'tasks/:id', to: 'tasks#update', as: 'update_book' #=> update_book_path
+  patch 'tasks/:id', to: 'tasks#update', as: 'update_task' #=> update_task_path
 
   #get 'tasks/create'
-  post 'tasks', to: 'tasks#create', as: 'create_book' #=> create_book_path
+  post 'tasks', to: 'tasks#create', as: 'create_task' #=> create_task_path
 
   #get 'tasks/destroy'
-  delete 'tasks', to: 'tasks#destroy', as: 'delete_book' #=> delete_book_path
+  delete 'tasks', to: 'tasks#destroy', as: 'delete_task' #=> delete_task_path
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

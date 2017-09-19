@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaskList</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
+<body>
+  <header>
+    <h1> TASKLIST </h1>
+  </header>
+
+  <main class="group">
+    <div class="left">
+      <section class="button">
+        <h4><a href=''>Add Task</a></h4>
+      </section>
+      <section class="button">
+        <h4><a href=''>All Tasks</a></h4>
+      </section>
+    </div>
+
+    <div class="right">
+      <%= yield %>
+    </div>
+
+  </main>
+
+  <footer>
+    <h6> Copyright © 2017</h6>
   </body>
-</html>
+  </html>
