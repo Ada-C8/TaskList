@@ -1,0 +1,443 @@
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:14:30 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 449ms (Views: 271.7ms)
+
+
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:14:37 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (110.4ms)
+Completed 500 Internal Server Error in 115ms
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007ff654dfd368>:0x007ff65a849420>
+Did you mean?  edit_task_path):
+    3: <% if @task %>
+    4: <%= link_to "Full Task List", task_list_path(@task) %>
+    5: <%= link_to "Edit", edit_task_path(@task[:id]) %>
+    6: <%= link_to "Delete", delete_task_path(@task[:id]), method: :delete %>
+    7: 
+    8:   <h2>
+    9:     <%= @task[:id]%>
+  
+app/views/task_list/show.html.erb:6:in `_app_views_task_list_show_html_erb__1996608392203067417_70348028661500'
+Started GET "/task_list/edit" for 127.0.0.1 at 2017-09-18 16:14:42 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (145.7ms)
+Completed 500 Internal Server Error in 150ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books_path' for #<#<Class:0x007ff654dfd368>:0x007ff65900a580>):
+    20: 
+    21: <% end %>
+    22: 
+    23: <%=link_to "Home", books_path %>
+    24: 
+    25: <!-- <p>Find me in app/views/task_list/show.html.erb</p> -->
+  
+app/views/task_list/show.html.erb:23:in `_app_views_task_list_show_html_erb__1996608392203067417_70348015949740'
+Started GET "/task_list/show" for 127.0.0.1 at 2017-09-18 16:14:48 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (156.9ms)
+Completed 500 Internal Server Error in 161ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books_path' for #<#<Class:0x007ff654dfd368>:0x007ff65bacd6c8>):
+    20: 
+    21: <% end %>
+    22: 
+    23: <%=link_to "Home", books_path %>
+    24: 
+    25: <!-- <p>Find me in app/views/task_list/show.html.erb</p> -->
+  
+app/views/task_list/show.html.erb:23:in `_app_views_task_list_show_html_erb__1996608392203067417_70348038369380'
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:17:37 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 18.5ms)
+
+
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:22:39 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 12.9ms)
+
+
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:23:00 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 11.0ms)
+
+
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:23:27 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 13.1ms)
+
+
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:24:13 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (83.4ms)
+Completed 500 Internal Server Error in 87ms
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007ff65c9cf1a8>:0x007ff658e3b880>
+Did you mean?  edit_task_path):
+     7: <% if @task %>
+     8: <%= link_to "Full Task List", task_list_path(@task) %>
+     9: <%= link_to "Edit", edit_task_path(@task[:id]) %>
+    10: <%= link_to "Delete", delete_task_path(@task[:id]), method: :delete %>
+    11: 
+    12:   <h2>
+    13:     <%= @task[:id]%>
+  
+app/views/task_list/show.html.erb:10:in `_app_views_task_list_show_html_erb__1996608392203067417_70348015011800'
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:24:43 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    13:     <%= @task[:id]%>
+    14:   </h2>
+    15:   <h3>
+    16:     <%= @book[:status]%>
+    17:   </h3>
+    18:   <h4>
+    19:     <%= @book[:action]%>
+  
+app/views/task_list/show.html.erb:16:in `_app_views_task_list_show_html_erb__1996608392203067417_70347977746320'
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:24:57 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 8ms
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    16:     <%= @task[:status]%>
+    17:   </h3>
+    18:   <h4>
+    19:     <%= @book[:action]%>
+    20:   </h4>
+    21: 
+    22:   <%else%>
+  
+app/views/task_list/show.html.erb:19:in `_app_views_task_list_show_html_erb__1996608392203067417_70348011831660'
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:25:08 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (149.3ms)
+Completed 500 Internal Server Error in 154ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books_path' for #<#<Class:0x007ff65c9cf1a8>:0x007ff6547d7a38>):
+    24: 
+    25: <% end %>
+    26: 
+    27: <%=link_to "Home", books_path %>
+    28: 
+    29: <!-- <p>Find me in app/views/task_list/show.html.erb</p> -->
+  
+app/views/task_list/show.html.erb:27:in `_app_views_task_list_show_html_erb__1996608392203067417_70348011750380'
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:25:18 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 12.1ms)
+
+
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:27:13 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.3ms)
+
+
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:28:08 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 13.2ms)
+
+
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:28:19 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.0ms)
+
+
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:28:28 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.5ms)
+
+
+Started GET "/task_list?id=1&status=incomplete" for 127.0.0.1 at 2017-09-18 16:28:32 -0700
+Processing by TaskListController#index as HTML
+  Parameters: {"id"=>"1", "status"=>"incomplete"}
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.6ms)
+
+
+Started GET "/task_list/1/edit" for 127.0.0.1 at 2017-09-18 16:28:35 -0700
+Processing by TaskListController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/edit.html.erb within layouts/application
+  Rendered task_list/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 18.8ms)
+
+
+Started GET "/task_list/1" for 127.0.0.1 at 2017-09-18 16:33:05 -0700
+Processing by TaskListController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering task_list/show.html.erb within layouts/application
+  Rendered task_list/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.7ms)
+
+
+Started GET "/task_list?id=1&status=incomplete" for 127.0.0.1 at 2017-09-18 16:33:06 -0700
+Processing by TaskListController#index as HTML
+  Parameters: {"id"=>"1", "status"=>"incomplete"}
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.1ms)
+
+
+Started GET "/task_list?id=1&status=incomplete" for 127.0.0.1 at 2017-09-18 16:36:19 -0700
+Processing by TaskListController#index as HTML
+  Parameters: {"id"=>"1", "status"=>"incomplete"}
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 13.0ms)
+
+
+Started GET "/task_list?id=1&status=incomplete" for 127.0.0.1 at 2017-09-18 16:42:38 -0700
+Processing by TaskListController#index as HTML
+  Parameters: {"id"=>"1", "status"=>"incomplete"}
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 12.0ms)
+
+
+Started GET "/task_list?id=1&status=incomplete" for 127.0.0.1 at 2017-09-18 16:43:49 -0700
+Processing by TaskListController#index as HTML
+  Parameters: {"id"=>"1", "status"=>"incomplete"}
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 12.0ms)
+
+
+Started GET "/task_list?id=1&status=incomplete" for 127.0.0.1 at 2017-09-18 16:45:26 -0700
+Processing by TaskListController#index as HTML
+  Parameters: {"id"=>"1", "status"=>"incomplete"}
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+SyntaxError (/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+pend=( link_to(new_task_path), alt: 'link to', class:"id"));
+                              ^
+/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+ew_task_path), alt: 'link to', class:"id"));@output_buffer.s
+                              ^
+/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+, alt: 'link to', class:"id"));@output_buffer.safe_append='
+                              ^):
+  
+app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/task_list/index.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:45:46 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+SyntaxError (/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+pend=( link_to(new_task_path), alt: 'link to'));@output_buff
+                              ^
+/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+w_task_path), alt: 'link to'));@output_buffer.safe_append='
+                              ^):
+  
+app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/task_list/index.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:46:42 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms
+
+
+  
+SyntaxError (/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+_to(task[:id], new_task_path), alt: 'link to'));@output_buff
+                              ^
+/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+w_task_path), alt: 'link to'));@output_buffer.safe_append='
+                              ^):
+  
+app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/task_list/index.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+Started GET "/task_list/new" for 127.0.0.1 at 2017-09-18 16:47:45 -0700
+Processing by TaskListController#new as HTML
+  Rendering task_list/new.html.erb within layouts/application
+  Rendered task_list/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.0ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2017-09-18 16:48:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/books/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/books?author=Sandy+Metz&description=Learn+to+code+in+Ruby+with+this+handy+dandy+manual.&id=1&price=34.99&title=Object+Oriented+Design+in+Ruby" for 127.0.0.1 at 2017-09-18 16:48:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/task_list/new" for 127.0.0.1 at 2017-09-18 16:51:06 -0700
+Processing by TaskListController#new as HTML
+  Rendering task_list/new.html.erb within layouts/application
+  Rendered task_list/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.9ms)
+
+
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:51:14 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+SyntaxError (/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+to(new_task_path(@task_list)), alt: 'link to'));@output_buff
+                              ^
+/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+@task_list)), alt: 'link to'));@output_buffer.safe_append='
+                              ^):
+  
+app/views/task_list/index.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/task_list/index.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:53:49 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+SyntaxError (/Users/Julia/ada/Rails/TaskList/app/views/task_list/index.html.erb:15: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG):
+  
+app/views/task_list/index.html.erb:15: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:54:08 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 12.7ms)
+
+
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 16:54:13 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms)
+
+
+Started GET "/task_list" for 127.0.0.1 at 2017-09-18 17:05:12 -0700
+Processing by TaskListController#index as HTML
+  Rendering task_list/index.html.erb within layouts/application
+  Rendered task_list/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 12.2ms)
+
+

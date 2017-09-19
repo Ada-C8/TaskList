@@ -1,0 +1,31 @@
+<!-- TaskList#index -->
+
+<h1>Task List</h1>
+<h3>Add Task
+  <%=link_to "new task", new_task_path%>
+</h3>
+
+<h2 class="your-tasks">Your Tasks:</h2>
+<ul class="list-container">
+  <% @task_list.each do |task| %>
+    <li class="each-task">
+        <strong>#
+          <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"id")%>-
+        </strong>
+          <%= task[:action] %>
+      , Status:
+        <strong>
+          <%= task[:status] %>
+        </strong>
+    </li>
+    <li>
+      <% if task[:status] == "incomplete" %>
+        <p>Mark Complete</p>
+      <% else %>
+        <p>Unmark Complete</p>
+      <% end %>
+    </li>
+  <%end%>
+</ul>
+
+<!-- <p>Find me in app/views/task_list/index.html.erb</p> -->
