@@ -1,0 +1,46 @@
+<header>
+  <h1>Taskmaster 4000</h1>
+</header>
+
+<main>
+  <div class="menu">
+    <nav>
+      <ul>
+        <li>
+          <h3><a href="">Add Task</a></h3>
+        </li>
+        <li>
+          <h3><a href="">All Tasks</a></h3>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="tasks">
+    <h2>Your Tasks</h2>
+    <ul>
+      <% @tasks.each_with_index do |task, i| %>
+      <li class="task">
+        <p>
+          <strong><%= i + 1 %>. <%= task[:task] %></strong><br />
+          <nav class="task-options">
+            <ul>
+              <li>
+                <a href="">Mark Complete |</a>
+              </li>
+              <li>
+                <a href="">Edit |</a>
+              </li>
+              <li>
+                <a href="">Delete</a>
+              </li>
+            </ul>
+          </nav>
+        </p>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</main>
+<footer>
+  &copy; 2017
+</footer>

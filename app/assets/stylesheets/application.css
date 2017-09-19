@@ -1,0 +1,165 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+/*//
+// colors:
+// charcoal: #2A2B2A
+// red: #D7263D
+// orange: #F46036
+// gold: #FFB238
+// jade: #1B998B*/
+
+
+body {
+  background-color: #2A2B2A;
+  background-size: 100%;
+}
+
+p {
+  color: #D7263D;
+}
+
+h1 {
+  color: #1B998B;
+  font-family: 'Monoton', sans-serif;
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 0.5;
+}
+
+h2 {
+  color: #1B998B;
+  font-family: 'Monoton', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 0.5;
+}
+
+h3 {
+  color: #FFB238;
+  font-family: 'Monoton';
+  font-size: 1.5rem;
+  font-weight: normal;
+  /*line-height: 0.5;*/
+}
+
+header {
+  background-color: #FFB238;
+  border: 15px solid #D7263D;
+  border-radius: 5rem;
+  margin: 1rem auto;
+  min-width: 45rem;
+  text-align: center;
+  width: 80%;
+}
+
+main {
+  background-color: #F46036;
+  border: 15px solid #D7263D;
+  border-radius: 5rem;
+  margin: 1rem auto;
+  min-width: 45rem;
+  text-align: center;
+  width: 80%;
+}
+
+main div {
+  background-color: #FFB238;
+  /*border: 4px solid #F46036;*/
+  border-radius: 3rem;
+  /*height: 20rem;*/
+  margin: 1rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu {
+  /*border-radius: 3rem;*/
+  min-width: 12.5rem;
+  width: 30%;
+}
+
+.menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu li {
+  background-color: #D7263D;
+  border-radius: 1rem;
+  margin: 1rem auto;
+  width: 75%;
+}
+
+.tasks {
+  padding: 0 0 5rem 0;
+  min-width: 25rem;
+  width: 60%;
+}
+
+.tasks ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.task {
+  background-color: #FFB238;
+  border: 5px solid #D7263D;
+  border-radius: 1rem;
+  margin: 1rem auto;
+  min-width: 18rem;
+  padding: 1rem;
+  text-align: center;
+  width: 75%;
+}
+
+.task p {
+  display: inline-block;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 1.75rem;
+  margin: auto;
+  text-align: justify;
+  width: 80%;
+}
+
+.task-options ul {
+  display: inline-block;
+  padding: 0;
+  text-align: justify;
+  width: 80%;
+}
+
+.task-options li {
+  display: inline;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.task-options a {
+  color: #D7263D;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+footer {
+  background-color: #1B998B;
+  display: block;
+  bottom: 0;
+  height: 5rem;
+  left: 0;
+  margin: 2rem 0 0 0;
+  position: relative;
+  width: 100%;
+}
