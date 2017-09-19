@@ -2,12 +2,12 @@
 <ol>
   <% Task.all.each do |task|%>
     <li>
-      <strong><%= task.title %></strong>
+      <strong><%= link_to "#{task.title}", task_path(task.id) %></strong>
       <p>
         <em><%= task.description%></em>
       </p>
       <p>
-        <%= link_to "#{task.complete}", tasks_path %> | <%= link_to "Edit", edit_task_path(task.id) %> | <%= task.due_date %>
+        <%= task.complete %> | <%= link_to "Edit", edit_task_path(task.id) %> | <%= task.due_date %>
       </p>
     </li>
   <% end %>
