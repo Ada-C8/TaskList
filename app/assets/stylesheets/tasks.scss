@@ -38,6 +38,11 @@ body {
   margin: 2em;
 }
 
+.task-heading {
+  margin: 0;
+  text-align: center;
+}
+
 ul {
   list-style: none;
 }
@@ -64,6 +69,8 @@ ul {
 .task-list {
   background-color: #e57ac0;
   width: 50%;
+  display: flex;
+  flex-direction: column;
   // flex-shrink: 1;
   border-radius: 15px 50px;
   // height: 15em;
@@ -72,12 +79,33 @@ ul {
   font-size: 2em;
 }
 
+.tasks {
+  display: flex;
+  align-items: center;
+}
+
+.tasks .donut-image {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform:rotate(360deg); }
+}
+
+
 .task-actions {
   list-style: none;
   font-size: .5em;
   display: flex;
   flex-flow: row wrap;
-  justify-content:space-between;
+  justify-content: space-around;
+  // justify-content:space-between;
+}
+
+#task-box {
+  padding-left: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
 .actions {
@@ -90,7 +118,7 @@ footer {
   height:44px;
   padding-top:20px;
   background:transparent;
-  position:fixed;
+  position:relative;
   bottom:0;
   left:0;
   font-family: 'Vibur';

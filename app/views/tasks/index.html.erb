@@ -18,19 +18,19 @@
     </div>
 
     <div class="task-list">
-      <h2>You Need To...</h2>
-      <ol>
+      <h2 class="task-heading">You Need To...</h2>
+      <ul id="task-box">
         <% @tasks.each do |task| %>
-          <li>
-            <%= task[:description] %>
+          <li class="tasks">
+            <img class="donut-image" src="http://www198.lunapic.com/editor/working/150584966072159?3882819102" /><%= task[:name] %>
           </li>
-        <ul class="task-actions">
-          <li class="action">Mark Complete</li>
-          <li class="action">Edit</li>
-          <li class="action">Delete</li>
-        </ul>
+        <div class="task-actions">
+          <li class="action"><%= link_to "Mark Complete", mark_complete_path(@task.name) %></li>
+          <li class="action"><%= link_to "Edit Task", edit_task_path %></li>
+          <li class="action"><%= link_to "Delete Task", delete_task_path %></li>
+        </div>
         <% end %>
-      </ol>
+      </ul>
     </div>
   </section>
 
