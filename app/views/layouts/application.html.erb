@@ -9,17 +9,23 @@
   </head>
 
   <body>
-    <header>
+    <header class="flex-container">
       <h1>TASKLIST</h1>
     </header>
     <main>
-      <p>
-        Add Task
-      </p>
-      <p>
-        All Task
-      </p>
-      <%= yield %>
+      <div class="button">
+        <p>
+          <a href="#">Add Task</a>
+        </p>
+        <p>
+          <a href="#">All Task</a>
+        </p>
+      </div>
+      <div class="your-tasks">
+        <h3>YOUR TASKS</h3>
+        <%= yield %>
+      </div>
+
     </main>
     <footer>
       <p>
