@@ -12,9 +12,9 @@
       <%= task[:status] %>
     </li>
     <p></p>
-    <%= link_to("Mark Complete", update_task_path(task[:id]), method: :patch, alt: "link to mark complete") %>
-    <%= link_to("Edit", edit_task_path(task[:id]), alt: "link to edit") %>
-    <%= link_to("Delete", delete_task_path, method: :delete, alt: "link to delete") %>
+    <%= link_to("Mark Complete", update_task_path(task[:id]), {method: :patch, alt: "link to mark complete", class: "task_link" }) %>
+    <%= link_to("Edit", edit_task_path(task[:id]), {alt: "link to edit", class: "task_link"}) %>
+    <%= link_to("Delete", delete_task_path, {method: :delete, alt: "link to delete", class: "task_link" }) %>
     <% end %>
 </ul>
 </section>

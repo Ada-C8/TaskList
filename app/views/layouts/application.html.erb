@@ -27,9 +27,9 @@
 
   <body class="grad">
     <nav>
-      <%= button_to("Add Task", new_task_path, method: :get, alt: "button to add task") %>
+      <%= button_to("Add Task", new_task_path, {class: 'button', method: :get, alt: "button to add task"} ) %>
 
-      <%= button_to("All Tasks", tasks_path, method: :get, alt: "button to all tasks") %>
+      <%= button_to("All Tasks", tasks_path, {class: 'button', method: :get, alt: "button to all tasks"} ) %>
     </nav>
 
     <%= yield %>

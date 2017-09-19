@@ -30,6 +30,26 @@ h1 {
   font-size: 50px;
 }
 
+.button {
+  padding: 10px;
+  background-color: #ef1a56;
+  border-radius: 27%;
+  color: #000080;
+
+}
+
+.task_link {
+  color: #000080;
+}
+
+.task_link:visted {
+  color: #000080;
+}
+
+.task_link:hover {
+  color: #ef1a56;
+}
+
 #header_text {
   display: flex;
   flex-direction: column;

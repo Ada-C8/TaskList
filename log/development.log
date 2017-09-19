@@ -1176,3 +1176,322 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 24ms (Views: 21.6ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:03:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 10ms
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/layouts/application.html.erb:30: syntax error, unexpected ')', expecting =>
+ add task", {class: 'button'}) );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/layouts/application.html.erb:32: syntax error, unexpected ')', expecting =>
+all tasks", {class: 'button'}) );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/layouts/application.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/layouts/application.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/layouts/application.html.erb:30: syntax error, unexpected ')', expecting =>
+app/views/layouts/application.html.erb:32: syntax error, unexpected ')', expecting =>
+app/views/layouts/application.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:04:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/layouts/application.html.erb:32: syntax error, unexpected ')', expecting =>
+all tasks", {class: 'button'}) );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/layouts/application.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/layouts/application.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/layouts/application.html.erb:32: syntax error, unexpected ')', expecting =>
+app/views/layouts/application.html.erb:44: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:04:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 21ms
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 0..3)):
+    27: 
+    28:   <body class="grad">
+    29:     <nav>
+    30:       <%= button_to("Add Task", new_task_path, {class: 'button'}, method: :get, alt: "button to add task", ) %>
+    31: 
+    32:       <%= button_to("All Tasks", tasks_path, {class: 'button'}, method: :get, alt: "button to all tasks", ) %>
+    33:     </nav>
+  
+app/views/layouts/application.html.erb:30:in `_app_views_layouts_application_html_erb__3245686162665512679_70294416985360'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:04:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 23ms
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 0..3)):
+    29:     <nav>
+    30:       <%= button_to("Add Task", new_task_path, {class: 'button', method: :get, alt: "button to add task"} ) %>
+    31: 
+    32:       <%= button_to("All Tasks", tasks_path, {class: 'button'}, method: :get, alt: "button to all tasks", ) %>
+    33:     </nav>
+    34: 
+    35:     <%= yield %>
+  
+app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__3245686162665512679_70294397341140'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:05:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 15.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:05:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 26.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:05:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 29ms (Views: 27.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:05:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 25.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:09:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 28.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:09:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 25.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:09:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 15.8ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-18 22:11:02 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:11:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:12:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 22.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:12:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 17.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:12:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected ')', expecting '}'
+k[:id]), {alt: "link to edit"), class: "task_link" } );@outp
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '}', expecting ')'
+o edit"), class: "task_link" } );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected ')', expecting '}'
+delete, alt: "link to delete"), class: "task_link" } );@outp
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '}', expecting ')'
+delete"), class: "task_link" } );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:16: syntax error, unexpected ')', expecting '}'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '}', expecting ')'
+app/views/tasks/index.html.erb:17: syntax error, unexpected ')', expecting '}'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '}', expecting ')'
+app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:13:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 12ms
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected ',', expecting ')'
+k[:id]), alt: "link to edit"), {class: "task_link"} );@outpu
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected ')', expecting '}'
+delete, alt: "link to delete"), class: "task_link" } );@outp
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '}', expecting ')'
+delete"), class: "task_link" } );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:16: syntax error, unexpected ',', expecting ')'
+app/views/tasks/index.html.erb:17: syntax error, unexpected ')', expecting '}'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '}', expecting ')'
+app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:13:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 9ms
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected ')', expecting =>
+o edit", {class: "task_link"}) );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected ')', expecting '}'
+delete, alt: "link to delete"), class: "task_link" } );@outp
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '}', expecting ')'
+delete"), class: "task_link" } );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:16: syntax error, unexpected ')', expecting =>
+app/views/tasks/index.html.erb:17: syntax error, unexpected ')', expecting '}'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '}', expecting ')'
+app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:13:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 12ms
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected ')', expecting '}'
+delete, alt: "link to delete"), class: "task_link" } );@outp
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '}', expecting ')'
+delete"), class: "task_link" } );@output_buffer.safe_append=
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:17: syntax error, unexpected ')', expecting '}'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '}', expecting ')'
+app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:13:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:14:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 32.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:15:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 22:15:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 33.5ms)
+
+
