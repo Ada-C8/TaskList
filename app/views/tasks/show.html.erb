@@ -8,8 +8,12 @@
 
 
 <h3>
-  Task: <%= @task[:task] %>
+  Task: <%= @task[:name] %>
 </h3>
+
+<h4>
+  Description: <%= @task[:description] %>
+</h4>
 
 <% else %>
 < h1>404: Not Found</h1>
