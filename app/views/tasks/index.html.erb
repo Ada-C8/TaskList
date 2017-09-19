@@ -1,8 +1,9 @@
 <!-- <h1>Tasks#index</h1>
 <p>Find me in app/views/tasks/index.html.erb</p> -->
+
 <h1>TASK LIST</h1>
 <ul>
   <% @tasks.each do |task| %>
-    <li>Task: <strong><%=task[:id] %></strong></li>
+    <li> <%=link_to(task.name, task_show_path(task.id), alt: 'link to task#show')%> </li>
   <% end %>
 </ul>
