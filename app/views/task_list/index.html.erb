@@ -1,31 +1,26 @@
 <!-- TaskList#index -->
 
-<h1>Task List</h1>
-<h3>Add Task
-  <%=link_to "new task", new_task_path%>
-</h3>
+<!-- <h1 class="index-heading">Task List</h1> -->
 
-<h2 class="your-tasks">Your Tasks:</h2>
-<ul class="list-container">
-  <% @task_list.each do |task| %>
-    <li class="each-task">
-        <strong>#
-          <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"id")%>-
-        </strong>
-          <%= task[:action] %>
-      , Status:
-        <strong>
-          <%= task[:status] %>
-        </strong>
-    </li>
-    <li>
-      <% if task[:status] == "incomplete" %>
-        <p>Mark Complete</p>
-      <% else %>
-        <p>Unmark Complete</p>
-      <% end %>
-    </li>
-  <%end%>
-</ul>
+<div class="tasks-container">
 
+  <h2 class="your-tasks">Your Tasks:</h2>
+  <ul class="list-container">
+    <% @task_list.each do |task| %>
+      <li class="each-task">
+          <strong>
+            <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"id")%>.
+            <%= task[:action] %>
+          </strong>
+          <!-- <strong>
+            <%=task[:status] ? "complete" : "incomplete"%>
+          </strong> -->
+      </li>
+      <li class="task-actions">
+        <%= task[:status] ? "Unmark Complete" : "Mark Complete" %> | <%=link_to "Edit", edit_task_path(:id)%> |  <%=link_to "Delete", destroy_task_path(:id)%>
+      </li>
+    <%end%>
+  </ul>
+
+</div>
 <!-- <p>Find me in app/views/task_list/index.html.erb</p> -->

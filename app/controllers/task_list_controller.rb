@@ -1,9 +1,9 @@
 class TaskListController < ApplicationController
   TASK_LIST = [
-    {id: 1, status: false, action: "master Ruby"},
-    {id: 2, status: false, action: "learn how to cook palak paneer"},
-    {id: 3, status: false, action: "do laundry"},
-    {id: 4, status: false, action: "go for a walk"}
+    {id: 1, status: false, action: "Master Rails"},
+    {id: 2, status: false, action: "Learn how to cook palak paneer"},
+    {id: 3, status: false, action: "Laundry"},
+    {id: 4, status: false, action: "Go for a walk"}
   ]
 
   def index

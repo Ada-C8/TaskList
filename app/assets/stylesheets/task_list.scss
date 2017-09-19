@@ -1,3 +1,62 @@
 // Place all the styles related to the TaskList controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// font-family: 'Indie Flower', cursive;
+// font-family: 'Permanent Marker', cursive;
+// font-family: 'Sedgwick Ave', cursive;
+// font-family: 'Walter Turncoat', cursive;
+// font-family: 'Homemade Apple', cursive;
+// font-family: 'Waiting for the Sunrise', cursive;
+
+html {
+  background-image: url(banana-slices.jpg);
+  background-repeat: repeat;
+  font-family: 'Homemade Apple', cursive;
+  // padding-left: 15px;
+  // padding-right: 15px;
+}
+
+
+li {
+  list-style: none;
+  line-height: 2;
+}
+
+.tasks-container {
+  display: block;
+  // border: 5px dotted purple;
+  background-color: rgba(255,255,255,0.7);
+  width: 400px;
+  margin: auto;
+  border: 10px solid rgba(255,255,255,0.7);
+
+}
+
+.task-actions {
+
+}
+
+.your-tasks {
+
+}
+
+.list-container {
+
+}
+
+.each-task {
+
+}
+
+.task-actions {
+  padding-bottom: 10px;
+}
+
+// APPLICATION.HTML
+
+.menu-container {
+  display: block;
+  background-color: rgba(255,255,255,0.7);
+  margin: auto;
+}

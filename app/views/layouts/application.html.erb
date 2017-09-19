@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
+  <!-- <a href='http://www.freepik.com/free-vector/banana-pattern-vector_733641.htm'>Designed by Freepik</a>
+  <img class='bananas' src="ada/Rails/TaskList/imgs/banana-slices.jpg" />
+  <img src= "http://fillmurray.com/200/300" /> -->
   <head>
     <title>TaskList</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Indie+Flower|Permanent+Marker|Sedgwick+Ave|Waiting+for+the+Sunrise|Walter+Turncoat" rel="stylesheet">
   </head>
-
+  <header>
+    <h1>Task List</h1>
+  </header>
   <body>
-    <%= yield %>
+    <nav class="menu-container">
+      <ul>
+        <li>
+          <%=link_to "view full list", task_list_path%>
+        </li>
+        <li>
+          <%=link_to "add an item", new_task_path%>
+        </li>
+      </ul>
+    </nav>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
