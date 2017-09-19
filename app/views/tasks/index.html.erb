@@ -1,6 +1,8 @@
 <h1>Tasklist</h1>
-<h3>  <%= button_to "Add Task", new_task_path(@task) %>    </h3>
-
+<h3>  <%= button_to "Add Task", new_task_path(@task) %>
+<%= button_to "All Tasks", tasks_path(@task) %>
+</h3>
+<div class=task_block>
 <h2>
   Your Tasks:
 </h2>
@@ -13,3 +15,4 @@
   </li>
 <% end %>
 </ol>
+</div>

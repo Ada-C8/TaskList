@@ -839,3 +839,284 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 27ms (Views: 25.2ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:36:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 405ms (Views: 214.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:38:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 61.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:43:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 55ms (Views: 53.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:45:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 22.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:45:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 19.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:46:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:46:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 12.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:46:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 21.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:46:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 14.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:46:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 13.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:47:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 47.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:48:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+SyntaxError (/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected '='
+[:id]), alt: 'link to', class=list) );@output_buffer.safe_ap
+                              ^
+/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/tasks/index.html.erb:13: syntax error, unexpected '='
+app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:48:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms
+
+
+  
+SyntaxError (/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_class, expecting ')'
+sk[:id]), alt: 'link to' class=list) );@output_buffer.safe_a
+                              ^
+/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_class, expecting ')'
+app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:49:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+SyntaxError (/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_class, expecting ')'
+sk[:id]), alt: 'link to' class="list") );@output_buffer.safe
+                              ^
+/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected ')', expecting keyword_end
+alt: 'link to' class="list") );@output_buffer.safe_append='
+                              ^
+/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_class, expecting ')'
+app/views/tasks/index.html.erb:13: syntax error, unexpected ')', expecting keyword_end
+app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:49:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+SyntaxError (/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected '='
+[:id]), alt: 'link to', class="list") );@output_buffer.safe_
+                              ^
+/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected ')', expecting keyword_end
+lt: 'link to', class="list") );@output_buffer.safe_append='
+                              ^
+/Users/kaylaecker/ada/rails/wk_7/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/tasks/index.html.erb:13: syntax error, unexpected '='
+app/views/tasks/index.html.erb:13: syntax error, unexpected ')', expecting keyword_end
+app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:50:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 52ms (Views: 50.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:50:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 21.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:50:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 32.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:51:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 36.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-18 16:51:10 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 26.1ms)
+
+
+Started GET "/tasks/7" for 127.0.0.1 at 2017-09-18 16:51:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 23.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:51:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 34.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:52:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 15.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:52:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 16.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:53:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 44ms (Views: 42.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:54:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 37.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:54:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 29.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:54:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 37.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:54:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 18.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:54:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 31.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:55:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 15.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:57:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 49ms (Views: 47.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 16:57:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 21.3ms)
+
+

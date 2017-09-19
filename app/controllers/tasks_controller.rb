@@ -2,7 +2,13 @@ class TasksController < ApplicationController
 
   TASKS = [{id: 1, task_name: "Complete Weekend Warrior"},
     {id: 2, task_name: "Complete Koans"},
-    {id: 3, task_name: "Continue Reaadings"}]
+    {id: 3, task_name: "Continue Readings"},
+    {id: 4, task_name: "Take the dogs out"},
+    {id: 5, task_name: "Do the dishes"},
+    {id: 6, task_name: "Do the laundry"},
+    {id: 7, task_name: "Cook before everything goes bad"},
+
+  ]
 
 
   def index
