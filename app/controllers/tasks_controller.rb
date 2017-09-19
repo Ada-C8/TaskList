@@ -5,6 +5,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    @task = Task.find(params[:id].to_i)
   end
 
   def edit
@@ -14,6 +15,7 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def create

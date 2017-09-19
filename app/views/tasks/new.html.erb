@@ -1,2 +1,26 @@
 <h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<main>
+    <header>
+      <nav>
+        <h2>Task List</h2>
+        <ul>
+          <li>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <%= link_to "Add Task", new_task_path, class: "button"%>
+          </li>
+          <li>
+            <i class="fa fa-list-alt" aria-hidden="true"></i>
+            <%= link_to "All Tasks", tasks_path, class: "button" %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="new-task-form">
+      <!-- <%= form_for @task, url: {action: "create"} do |f| %>
+        <%= f.text_field :name %>
+        <%= f.text_field :description %>
+        <%= f.submit "Create Task" %>
+      <% end %> -->
+    </section>
+</main>
