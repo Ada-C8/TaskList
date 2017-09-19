@@ -7,8 +7,8 @@ params are : <%= params %>
 <%if @task %>
 <h2>
   <%= @task[:title] %>
-  <%=link_to "Edit", edit_task_path(@task[:title]) %>
-  <%=link_to "Delete", delete_task_path(@task[:title]), method: :delete %>
+  <%=link_to "Edit", edit_task_path(@task[:id]) %>
+  <%=link_to "Delete", delete_task_path(@task[:id]), method: :delete %>
   </h2>
   <h3>
     <%= @task[:description] %>

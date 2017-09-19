@@ -1,3 +1,38 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body, html, ul, ol, li, div, input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 { font-family: "Nothing You Could Do", Helvetica, Arial, Verdana, sans-serif; }
+
+.list { margin: 0 auto; width: 400px; }
+
+.todos { list-style: none; }
+.todos li {
+  padding: 10px 20px 10px 20px;
+  font-size: 18px;
+  font-family: "Happy Monkey", Helvetica, Arial, Verdana, sans-serif;
+  width: 100%;
+  background: #ddd;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+.todos li.done {
+  text-decoration: line-through;
+  color: #aaa;
+}
+.todos li:hover { cursor: pointer; }
+
+input[type="text"] {
+  box-sizing: border-box;
+  font-size: 18px;
+  border: 1px #ddd solid;
+  padding: 9px 19px 9px 19px;
+  width: 100%;
+  font-family: "Happy Monkey", Helvetica, Arial, Verdana, sans-serif;
+  outline: 0;
+}

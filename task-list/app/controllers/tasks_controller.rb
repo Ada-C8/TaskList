@@ -14,7 +14,7 @@ class TasksController < ApplicationController
     title = @task = params[:id].to_i
     @task = nil
     TASKS.each do |task|
-      if task[:id] = title
+      if task[:id] = id
         @task = task
       end
     end

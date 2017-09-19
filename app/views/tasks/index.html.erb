@@ -1,10 +1,13 @@
-<h1>Tanja's Tasks</h1>
+<h1>Tasks</h1>
 params are: <%= params %>
 </p>
 <% @tasks.each do |task| %>
 <ul>
   <li>
-    Title: <strong><%= task[:title])) %></strong>
+    ID: <strong><%= task[:id] %></strong>
+  </li>
+  <li>
+    Title: <strong><%= task[:title] %></strong>
   </li>
   <li>
     Description: <%=task[:description]%>
