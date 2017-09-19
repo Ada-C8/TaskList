@@ -1,0 +1,16 @@
+
+<div class="tasklist">
+
+
+<h2>Your Tasks</h2>
+
+<ol>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task[:title] %>
+      <!-- due: <%= task[:due_date] %> -->
+    </li>
+    <% end %>
+</ol>
+
+</div>

@@ -1,0 +1,75 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat');
+
+body {
+  font-family: 'Lobster';
+  background-color: ivory;
+}
+
+header {
+  float:left;
+  width: 45%;
+}
+
+header h1 {
+  background: skyblue;
+  border-radius: 2em;
+  width: 100%;
+  text-align: center;
+  color: navy;
+  font-size: 3em;
+  box-shadow: 6px 10px 9px #888899;
+
+}
+
+header p {
+  text-align: center;
+  font-family: cursive;
+  font-size: 1.5em;
+}
+
+header ul {
+  padding-left: 20%;
+  margin: auto 0;
+  text-align: center;
+}
+
+header li {
+  display: inline-block;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-right: 6em;
+  min-width: 150px;
+  background-color: rgb(66, 17, 120);
+  color: skyblue;
+  box-shadow: 6px 10px 9px #888899;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 1em;
+
+}
+
+main {
+  float: right;
+}
+
+footer{
+  clear: both;
+  text-align: center;
+  padding-top: 10%;
+}

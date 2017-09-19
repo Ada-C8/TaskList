@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+  <body>
+    <header>
+      <h1>Your Fabulous Task List </h1>
+      <p>
+        Let's get Productive!
+      </p>
+
+      <nav>
+        <ul>
+          <li>
+            Add Task
+          </li>
+          <li>
+            All Tasks
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      &copy; 2017 bb inc.
+    </footer>
+  </body>
+</html>
