@@ -1,0 +1,25 @@
+<h1 class="index">TASKLIST</h1>
+<aside class = "nav_buttons">
+  <article>
+    Add Task
+  </article>
+  <article>
+    All Tasks
+  </article>
+</aside>
+<section class="task_list">
+  <h2>YOUR TASKS</h2>
+  <ol>
+    <% @tasks.each do |task| %>
+    <li>
+      <%= task %>
+      <p>
+      Mark Complete | Edit | Delete
+      </p>
+    </li>
+    <% end %>
+  </ol>
+</section>
+<footer>
+  <h4>copywrite 2017</h4>
+</footer>
