@@ -1,6 +1,45 @@
-<h1>Task List</h1>
-<ul>
-  <% @tasks.each do |task| %>
-    <li><%= task[:description] %></li>
-  <% end %>
-</ul>
+<main>
+  <header>
+    <nav>
+      <h2>Task List</h2>
+      <ul>
+        <li>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+          <%= link_to "Add Task", new_task_path, class: "button"%>
+        </li>
+        <li>
+          <i class="fa fa-list-alt" aria-hidden="true"></i>
+          <%= link_to "All Tasks", tasks_path, class: "button" %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="task-list">
+    <h1>Your Tasks</h1>
+    <ul>
+      <% @tasks.each do |task| %>
+        <% if task[:done] %>
+          <li>
+            <p class="done">
+              <i class="fa fa-check-square-o" aria-hidden="true"></i>
+              <%= task[:description] %>
+            </p>
+        <% else %>
+          <li>
+            <!--  Would be nice to figure out how to update the status of a task :/ -->
+            <p>
+              <a href="#" title="mark as done"><i class="fa fa-square-o" aria-hidden="true"></i></a>
+              <%= task[:description] %>
+            </p>
+        <% end %>
+        <section class="task-action-buttons">
+          <%= link_to "Edit", edit_task_path(task[:id]), class: "button" %>
+          <%= link_to "Delete", delete_task_path(task[:id]), method: :delete, class: "button" %>
+        </section>
+        </li>
+
+      <% end %>
+    </ul>
+  </section>
+</main>
