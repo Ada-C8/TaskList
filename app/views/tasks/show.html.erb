@@ -1,5 +1,21 @@
 <main>
   <div class="task-container">
-    <h2>View Task</h2>
+    <h2 class="task-name"><%= @task.task %></h2>
+  </div>
+  <div class="task-container">
+    <ul>
+      <li>
+        <h4 class="inline">Due Date:
+        <p class="inline">
+          <%= @task.due_date %>
+        </p>
+      </li>
+      <li>
+        <h4>Task Description: </h4>
+        <p>
+          <%= @task.description %>
+        </p>
+      </li>
+    </ul>
   </div>
 </main>
