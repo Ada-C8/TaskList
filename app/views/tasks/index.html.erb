@@ -3,7 +3,7 @@
   <ol>
     <% @tasks.each do |task| %>
       <li>
-        <strong><%= link_to(task[:task_name], task_path(task[:id]), alt: 'link to task[:task_name] task') %></strong>
+        <strong><%= link_to(task.name, task_path(task.id), alt: 'link to task.name task') %></strong>
         <nav>
           <a href= >Mark Complete</a> |
           <a href= >Edit</a> |
