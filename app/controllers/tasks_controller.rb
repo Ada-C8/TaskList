@@ -2,7 +2,7 @@ TASKS = ["teach Lupin to hunt for truffles", "buy a farm", "go to space", "work 
 
 class TasksController < ApplicationController
   def index
-    @tasks = TASKS
+    @tasks = Task.all
   end
 
   def create

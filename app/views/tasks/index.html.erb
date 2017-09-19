@@ -1,11 +1,13 @@
 <h1 id="app_name">Gitturdun</h1>
 <ul id="index_list">
   <% @tasks.each do |task| %>
-    <p class="done button"><%= button_to "All Dun", update_task_path(@tasks.index(task)) %></p>
-    <li class="task"><%= task %></li>
-    <p class="edit button"><%= button_to "Edit", edit_task_path(@tasks.index(task)) %></p>
-    <p class="delete button"><%= button_to "Delete", delete_task_path(@tasks.index(task)) %></p>
+    <p class="done"><%= button_to "All Dun", update_task_path(@tasks.id) %></p>
+    <li class="task"><%= task.name %></li>
+    <section class="task_buttons">
+      <p class="edit"><%= button_to "Edit", edit_task_path(@tasks.id) %></p>
+      <p class="delete"><%= button_to "Delete", delete_task_path(@tasks.id) %></p>
+    </section<
   <% end %>
 <ul>
-<p class="add button"><%= button_to "+", new_task_path %></p>
-<p class="all button"><%= button_to "All", tasks_path %></p>
+<p class="add"><%= button_to "+", new_task_path %></p>
+<p class="all"><%= button_to "All", tasks_path %></p>
