@@ -1,7 +1,7 @@
 
 
 <section id="index_container">
-  <h2> Your To-Dos:</h2>
+  <h2 id="to_do"> # TODO</h2>
 <ul class="to_do_list">
   <% @tasks.each do |task| %>
     <li>
@@ -13,7 +13,7 @@
     </li>
     <p></p>
     <%= link_to("Mark Complete", update_task_path(task[:id]), {method: :patch, alt: "link to mark complete", class: "task_link" }) %>
-    <%= link_to("Edit", edit_task_path(task[:id]), {alt: "link to edit", class: "task_link"}) %>
+    <%= link_to("Edit", edit_task_path(task[:id]), {alt: "link to edit", class: "task_link", id: "edit_link"}) %>
     <%= link_to("Delete", delete_task_path, {method: :delete, alt: "link to delete", class: "task_link" }) %>
     <% end %>
 </ul>

@@ -32,7 +32,11 @@
       <%= button_to("All Tasks", tasks_path, {class: 'button', method: :get, alt: "button to all tasks"} ) %>
     </nav>
 
+    <article>
+
     <%= yield %>
+  </article>
+
   </body>
 
   <footer>
