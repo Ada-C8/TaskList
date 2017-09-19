@@ -1,12 +1,12 @@
 
 <nav class="task-nav wrapper">
-<h2> Task List </h2>
-<section class="add-or-show-tasks">
-  <!-- <button type="botton" name="Add task">Add task</button>
-  <button type="botton" name="Add task">All tasks</button> -->
-  <a href="google.com">Add task</a>
-  <a href="google.com">All tasks</a>
-</section>
+  <h2> Task List </h2>
+  <section class="add-or-show-tasks">
+    <!-- <button type="botton" name="Add task">Add task</button>
+    <button type="botton" name="Add task">All tasks</button> -->
+    <a href="google.com">Add task</a>
+    <a href="google.com">All tasks</a>
+  </section>
 </nav>
 
 <article class="list-of-tasks wrapper">
@@ -15,13 +15,35 @@
   <ol>
     <% @tasks.each do |task| %>
     <li>
+      <%= task.title %>
+    </li>
+    <ul>
+      <li class="right-border">
+        <%= task.description %>
+      </li>
+      <li class="right-border">
+        <%= task.completion_status %>
+      </li>
+      <li>
+        <%= task.due_date %>
+      </li>
+    </ul>
+      <% end %>
+  </ol>
+
+
+
+
+  <!-- <ol>
+    <% @tasks.each do |task| %>
+    <li>
       <%= task[:title] %>
     </li>
     <ul>
-      <li>
+      <li class="right-border">
         <%= task[:discription] %>
       </li>
-      <li>
+      <li class="right-border">
         <%= task[:competion_status] %>
       </li>
       <li>
@@ -29,6 +51,6 @@
       </li>
     </ul>
       <% end %>
-  </ol>
+  </ol> -->
 
 </article>

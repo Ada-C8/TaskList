@@ -10,12 +10,56 @@
 
 body {
   font-family: 'Annie Use Your Telescope';
+  min-height: 100%;
 }
 
 .wrapper {
   margin-left: 5%;
   margin-right: 5%;
 }
+
+.right-border {
+  border-right: solid;
+  border-width: thin;
+}
+
+/*******************/
+/*  Footer to bottom of page */
+/*******************/
+
+footer {
+  clear: both;
+}
+
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+  //  background:#ff0;
+   padding:10px;
+}
+#main {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+  //  background:#6cf;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
 /*******************/
 /*  Article with list of tasks */
 /*******************/
@@ -59,13 +103,6 @@ body {
   padding: 0 1%;
 }
 
-.list-of-tasks ul li:first-of-type {
-  border-right: solid;
-}
-
-.list-of-tasks ul li:nth-of-type(2) {
-  border-right: solid;
-}
 
 /*******************/
 /*  Nav for task list */
