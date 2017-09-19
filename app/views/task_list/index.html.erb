@@ -6,18 +6,27 @@
 
   <h2 class="your-tasks">Your Tasks:</h2>
   <ul class="list-container">
-    <% @task_list.each do |task| %>
+    <%count = 0 %>
+    <% @tasks.each do |task| %>
       <li class="each-task">
-          <strong>
-            <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"id")%>.
-            <%= task[:action] %>
-          </strong>
-          <!-- <strong>
-            <%=task[:status] ? "complete" : "incomplete"%>
-          </strong> -->
+          <!-- <strong><%= count + 1 %></strong>. -->
+            <%if task.status%>
+              <div class="strike-through">
+                <%= count + 1 %>.<%= task.action %>
+                <!-- <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"id")%>. -->
+              </div>
+
+            <%else%>
+              <div class="no-strike-through">
+                <%= count + 1 %>. <%= task.action %>
+              </div>
+          <div class="counter"
+            <%=count += 1%>
+          </div>
+            <%end%>
       </li>
       <li class="task-actions">
-        <%= task[:status] ? "Unmark Complete" : "Mark Complete" %> | <%=link_to "Edit", edit_task_path(:id)%> |  <%=link_to "Delete", destroy_task_path(:id)%>
+        <%= task.status ? "Unmark Complete" : "Mark Complete" %> | <%=link_to "Edit", edit_task_path(:id)%> |  <%=link_to "Delete", destroy_task_path(:id), method: :delete%>
       </li>
     <%end%>
   </ul>
