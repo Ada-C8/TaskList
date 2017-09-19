@@ -482,3 +482,10 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-18 16:24:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
