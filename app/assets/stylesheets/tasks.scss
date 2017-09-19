@@ -1,38 +1,64 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body, html, ul, ol, li, div, input {
-  border: 0;
-  margin: 0;
-  padding: 0;
+* {
+  font-family: monospace;
 }
 
-h1 { font-family: "Nothing You Could Do", Helvetica, Arial, Verdana, sans-serif; }
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
 
-.list { margin: 0 auto; width: 400px; }
+h1, h3, footer p {
+  text-align: center;
+}
 
-.todos { list-style: none; }
-.todos li {
-  padding: 10px 20px 10px 20px;
-  font-size: 18px;
-  font-family: "Happy Monkey", Helvetica, Arial, Verdana, sans-serif;
+header {
+  padding-top: 17px;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+  display: inline-block;
+}
+
+ul {
+  border:solid;
+  columns:3;
+  display: block;
+  margin: 0 auto;
+  padding: 2px 0;
+  margin-left: 30%;
+}
+
+
+
+body {
+  background-image: url("https://static.pexels.com/photos/479453/pexels-photo-479453.jpeg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  min-height: 100%;
+  position: absolute;
+  height: 100%;
+  margin: 5% ;
+}
+
+footer {
+  height: 75px;
   width: 100%;
-  background: #ddd;
-  margin-top: 4px;
-  box-sizing: border-box;
-}
-.todos li.done {
-  text-decoration: line-through;
-  color: #aaa;
-}
-.todos li:hover { cursor: pointer; }
-
-input[type="text"] {
-  box-sizing: border-box;
-  font-size: 18px;
-  border: 1px #ddd solid;
-  padding: 9px 19px 9px 19px;
-  width: 100%;
-  font-family: "Happy Monkey", Helvetica, Arial, Verdana, sans-serif;
-  outline: 0;
+  bottom: 0;
+  font-size: .8em;
+  position: absolute;
 }

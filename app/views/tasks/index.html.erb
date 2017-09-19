@@ -4,13 +4,10 @@ params are: <%= params %>
 <% @tasks.each do |task| %>
 <ul>
   <li>
-    ID: <strong><%= task[:id] %></strong>
+    <strong><%= task[:id] %></strong>
   </li>
   <li>
-    Title: <strong><%= task[:title] %></strong>
-  </li>
-  <li>
-    Description: <%=task[:description]%>
+    <strong><%= task[:title] %></strong>
   </li>
   <li>
     Due: <%=task[:due]%>
