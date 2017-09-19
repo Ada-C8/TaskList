@@ -1,0 +1,18 @@
+
+<h1>Index Tasks</h1>
+<% if @tasks %>
+
+<%@tasks.each do |task| %>
+
+<h1>
+<%= task.name %>
+<%= link_to "Edit", edit_task_path(task) %>
+<%= link_to "Delete", delete_task_path(task), method: :delete %>
+</h1>
+<% end %>
+
+<% else %>
+  <h1>404: Not Found</h1>
+<% end %>
+
+<%= link_to "Home", tasks_path%>
