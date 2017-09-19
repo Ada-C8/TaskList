@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
 
   TASKS = [
-    {id: 1, task: "Dishes", status: :incomplete},
-    {id: 2, task: "Vacuum", status: :incomplete},
-    {id: 3, task: "Homework", status: :incomplete}
+    {id: 1, task: "Hotel", status: :incomplete},
+    {id: 2, task: "Meowspace", status: :incomplete},
+    {id: 3, task: "CS Fun", status: :incomplete}
   ]
 
   def index
@@ -23,6 +23,13 @@ class TasksController < ApplicationController
   end
 
   def show
+    id = params[:id].to_i
+    @tasks = nil
+    TASKS.each do |task|
+      if task[:id] == id
+        @tasks = task
+      end
+    end
   end
 
   def update

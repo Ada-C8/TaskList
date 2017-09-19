@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaskList</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<header>
+  <section id="robot_container">
+  <h1 id="robot_name">*Tasky*</h1>
+  <span id="robot_pic">
+    <%=  image_tag(src="https://image.freepik.com/free-vector/coloured-robot-design_1148-9.jpg", alt: "helpful robot", size: "125x125") %></span>
+  </section>
+
+      <div id="header_text">
+
+    <h2>Your helpful coding task tracker</h2>
+    <h4>ProTip: Remember to commit regularly!!</h4>
+    </div>
+
+  </header>
+
+
+
+  <body class="grad">
+    <nav>
+      <%= button_to("Add Task", new_task_path, method: :get, alt: "button to add task") %>
+
+      <%= button_to("All Tasks", tasks_path, method: :get, alt: "button to all tasks") %>
+    </nav>
+
     <%= yield %>
   </body>
-</html>
+
+  <footer>
+    <span> &copy; 2017 </span>
+  </footer>
+  </html>

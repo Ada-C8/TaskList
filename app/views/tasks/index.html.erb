@@ -1,2 +1,20 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+
+
+<section id="index_container">
+  <h2> Your To-Dos:</h2>
+<ul class="to_do_list">
+  <% @tasks.each do |task| %>
+    <li>
+        #<%= task[:id] %>)
+      <%= task[:task] %>
+    </li>
+    <li> Status:
+      <%= task[:status] %>
+    </li>
+    <p></p>
+    <%= link_to("Mark Complete", update_task_path(task[:id]), method: :patch, alt: "link to mark complete") %>
+    <%= link_to("Edit", edit_task_path(task[:id]), alt: "link to edit") %>
+    <%= link_to("Delete", delete_task_path, method: :delete, alt: "link to delete") %>
+    <% end %>
+</ul>
+</section>
