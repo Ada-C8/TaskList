@@ -1,9 +1,16 @@
 <main>
 <h1>TaskList</h1>
+
 <ul>
   <h2>My Tasks</h2>
   <% @tasks.each do |task| %>
     <li><%= task %></li>
+    <section class = "buttons">
+    <%= button_to "Mark as Complete" + "  | " %>
+    <%= button_to "Edit" + "  | " %>
+    <%= button_to "Delete" %>
+    <div class="clearfix"></div>
+    </section>
   <% end %>
 </ul>
 </main>

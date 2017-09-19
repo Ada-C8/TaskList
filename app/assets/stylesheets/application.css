@@ -27,21 +27,39 @@ main {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  border: 1px solid red;
 }
 h1 {
   float: left;
   width: 35%;
   height: 80vh;
   font-family: 'Pacifico', cursive;
+  font-size: 3em;
   text-align: center;
+  border: 1px solid black;
 }
-
 ul {
   font-family: 'Shadows Into Light', cursive;
   font-size: 1.5em;
+  background: #D5CDCB;
   border-radius: 5%;
   width: 50%;
-  height: 60vh;
-  margin: auto;
-  padding-left: 12%;
+  height: auto;
+  padding-left: 10%;
+  padding-bottom: 2%;
+  border: 5px solid #028090;
+  box-shadow: -2px 2px 2px #114B5F;
+}
+input {
+  display: inline-block;
+  float: left;
+  font-size: .6em;
+  width: auto;
+  background: none;
+  border: 0;
+  outline:none;
+  color: #F45B69;
+}
+.clearfix {
+  clear: both;
 }
