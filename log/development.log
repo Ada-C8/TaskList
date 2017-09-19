@@ -1856,3 +1856,11 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 53ms (Views: 45.3ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 15:40:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 84ms (Views: 81.5ms | ActiveRecord: 0.3ms)
+
+
