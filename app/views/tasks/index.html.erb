@@ -1,37 +1,29 @@
-<main class="index-main">
-  <section class="task-options">
-    <a class="button" href="#">
-      <span class="fa-stack fa-3x">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+<article class="your-tasks">
+  <h2>Your Tasks</h2>
+  <ol>
+    <% by_date = @tasks.sort_by { |task| task[:due] } %>
+    <% by_date.each do |task|  %>
+    <% if task[:status] == "Complete" %>
+    <li class="complete">
+      <a class="task-action edit-status" href="#"><i class="fa fa-check-square-o fa-lg"></i></a>
+    <% elsif task[:status] == "Incomplete" && Date.today >= task[:due] %>
+    <li class="overdue">
+      <a class="task-action edit-status" href="#"><i class="fa fa-square-o fa-lg"></i></a>
+    <% else %>
+    <li>
+      <a class="task-action edit-status" href="#"><i class="fa fa-square-o fa-lg"></i></a>
+    <% end %>
+        <p class="task">
+        <span class="task-name"><%= task[:name] %></span> <span class="task-status">(<%= task[:status]%>)</span>
+        <br />Date: <%= task[:created].strftime("%m/%d/%Y")%> ~ <%= task[:due].strftime("%m/%d/%Y") %>
+        <br /><%= task[:description]%>
+        <br />
+        <span class="action-icons">
+          <a href="#" class="task-action edit-task"><i class="fa fa-pencil-square-o"></i></a>
+          <a href="#" class="task-action delete-task"><i class="fa fa-trash-o"></i></a>
+        </span>
       </span>
-    </a>
-    <a class="button" href="#">
-      <span class="fa-stack fa-3x">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-list fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </section>
-  <section class="your-tasks">
-    <h2>Your Tasks</h2>
-    <ol>
-      <% by_date = @tasks.sort_by { |task| task[:due] } %>
-      <% by_date.each do |task|  %>
-        <% if task[:status] == "Complete" %>
-        <li class="complete">
-          <a class="task-action edit-status" href="#"><i class="fa fa-check-square-o fa-lg"></i></a>
-        <% else %>
-        <li>
-          <a class="task-action edit-status" href="#"><i class="fa fa-square-o fa-lg"></i></a>
-        <% end %>
-          <p class="task">
-            <span class="task-name"><%= task[:name] %></span> <span class="task-status">(<%= task[:status]%>)</span>
-            <br />Date: <%= task[:created]%> ~ <%= task[:due] %>
-            <br /> <a href="#" class="task-action edit-task"><i class="fa fa-pencil-square-o"></i></a> <a href="#" class="task-action delete-task"><i class="fa fa-trash-o"></i></a>
-          </p>
-        </li>
-      <% end %>
-    </ol>
-  </section>
-</main>
+    </li>
+    <% end %>
+  </ol>
+</article>

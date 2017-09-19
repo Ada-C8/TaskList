@@ -12,7 +12,27 @@
     <header>
       <h1>Task List</h1>
     </header>
-    <%= yield %>
+    <main class="index-main">
+      <section class="task-options">
+        <a class="button" href="/tasks/new">
+          <span class="fa-stack fa-3x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a class="button" href="/tasks">
+          <span class="fa-stack fa-3x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-list fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </section>
+
+      <section class="main-list">
+        <%= yield %>
+      </section>
+
+    </main>
     <footer>
       <p>Copyright &copy; 2017</p>
     </footer>

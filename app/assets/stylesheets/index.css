@@ -1,0 +1,45 @@
+article.your-tasks ol li {
+  margin-bottom: 5%;
+  padding: 3% 4%;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  line-height: 1.4;
+}
+article.your-tasks ol li:hover {
+  background: #fafafa;
+}
+article.your-tasks ol li.complete span.task-name,
+article.your-tasks ol li.complete span.task-status {
+  text-decoration: line-through;
+}
+article.your-tasks ol li.overdue span.task-name,
+article.your-tasks ol li.overdue span.task-status {
+  color: #DD4647;
+}
+article.your-tasks a.edit-status {
+  margin-top: 0.5%;
+}
+article.your-tasks ol li p.task {
+  width: 80%;
+  margin-left: 8%;
+}
+span.task-name {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+span.task-status {
+  font-style: italic;
+  margin-left: 1%;
+}
+span.action-icons {
+  position: relative;
+  top: 5%;
+}
+a.task-action { color: #4EC4E8; }
+a.delete-task { margin-left: 4%; color: #DD4647;
+}
