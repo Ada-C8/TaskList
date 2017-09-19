@@ -35,18 +35,25 @@
   padding-left: 0;
 }
 
-.task {
+.task button {
+  color: #D7263D;
   background-color: #FFB238;
   border: 5px solid #D7263D;
   border-radius: 1rem;
+  height: 8rem;
   margin: 1rem auto;
   min-width: 18rem;
-  padding: 1rem;
   text-align: center;
   width: 75%;
 }
 
+.task button:hover {
+  background-color: #D7263D;
+  color: #FFB238;
+}
+
 .task p {
+  color: inherit;
   display: inline-block;
   font-family: 'Fredoka One', sans-serif;
   font-size: 1.75rem;
@@ -58,13 +65,11 @@
 .task-options ul {
   display: inline-block;
   padding: 0;
-  // min-width: 381px;
   text-align: left;
   width: 80%;
 }
 
 .task-options li {
-  color: #D7263D;
   display: inline;
   font-family: 'Comfortaa', sans-serif;
   font-size: 1.25rem;

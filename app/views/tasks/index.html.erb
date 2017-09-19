@@ -1,6 +1,3 @@
-<header>
-  <h1>Taskmaster 4000</h1>
-</header>
 
 <main>
   <div class="menu">
@@ -21,22 +18,24 @@
     <ul>
       <% @tasks.each_with_index do |task, i| %>
       <li class="task">
-        <p>
-          <strong><%= i + 1 %>. <%= task[:task] %></strong><br />
+        <button>
+          <p>
+            <strong><%= link_to "#{i + 1}. #{task[:task]}", task %></strong>
+          </p><br />
           <nav class="task-options">
             <ul>
               <li>
-                <a href="">Mark Complete</a> |
+                <%= link_to "Mark Complete", task %> |
               </li>
               <li>
-                <a href="">Edit</a> |
+                <%= link_to "Edit", task %> |
               </li>
               <li>
-                <a href="">Delete</a>
+                <%= link_to "Delete", task %>
               </li>
             </ul>
           </nav>
-        </p>
+        </button>
       </li>
       <% end %>
     </ul>
