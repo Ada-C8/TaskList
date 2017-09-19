@@ -10,8 +10,8 @@ class TasksController < ApplicationController
   end
 
   def show
-    name = params[:name]
-    @task = Task.find_by(name)
+    id = params[:id].to_i
+    @task = Task.find(id)
   end
 
   def create
@@ -21,8 +21,8 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-    name = params[:name]
-    @task = Task.find_by(name)
+    id = params[:id].to_i
+    @task = Task.find(id)
   end
 
   def edit
