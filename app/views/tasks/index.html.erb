@@ -1,0 +1,41 @@
+<%# In this space, I am going to write code that will generate HTML. The point of this is to write ruby code that will show up on the web page%>
+
+<h1 class="header">Tasks</h1>
+
+<section class="list">
+  <h2> Your Tasks </h2>
+  <ol>
+    <% @tasks.each do |task| %>
+      <li>
+        <%= link_to(task[:thing], task_path(task[:id]), alt: 'link to') %>
+
+        <%=link_to "Delete", delete_task_path(task[:id]), method: :delete, class:"link" %>
+
+        <%=link_to "Edit", edit_task_path(task[:id]), method: :patch, class:"link" %>
+      </li>
+    <%end %>
+  </ol>
+</section>
+
+<section class="nonspecific_links">
+  <ul>
+    <li>
+      <%=link_to "New Task", new_book_path %>
+    </li>
+    <li>
+      <%=link_to "Show All", tasks_path %>
+    </li>
+
+  </ul>
+</section>
+
+
+
+
+
+
+
+
+<!-- <% %>
+<% %>
+<% %> -->
