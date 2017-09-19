@@ -1167,3 +1167,76 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 155ms (Views: 151.9ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20170919211944)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20170919211944)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created" varchar, "status" varchar, "due" varchar)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170919211944"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDescriptionToTasks (20170919212221)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "tasks" ADD "description" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170919212221"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to EditColumnTypes (20170919214748)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "created" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "due" varchar DEFAULT NULL, "description" varchar DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","created","status","due","description")
+                     SELECT "id","name","created","status","due","description" FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "created" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "due" varchar DEFAULT NULL, "description" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","created","status","due","description")
+                     SELECT "id","name","created","status","due","description" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "created" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "due" varchar DEFAULT NULL, "description" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","created","status","due","description")
+                     SELECT "id","name","created","status","due","description" FROM "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "created" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "due" datetime DEFAULT NULL, "description" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","created","status","due","description")
+                     SELECT "id","name","created","status","due","description" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170919214748"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created", "status", "due", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Buy milk"], ["created", "2017-09-28 00:00:00"], ["status", "Incomplete"], ["due", "2017-10-02 00:00:00"], ["description", "Either purchase 2% milk from AmazonFresh online or in-person at QFC"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."name" = ? LIMIT ?[0m  [["name", "milk"], ["LIMIT", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created", "status", "due", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Do homework"], ["created", "2017-09-19 00:00:00"], ["status", "Complete"], ["due", "2017-09-19 00:00:00"], ["description", "Complete homework tasks for Ada for the due date using Google Calendar"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created", "status", "due", "description") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Do laundry"], ["created", "2017-09-18 00:00:00"], ["status", "Incomplete"], ["due", "2017-09-21 00:00:00"], ["description", "Wash and dry clothes in the hamper (or face a very unfashionable day of existence)"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
