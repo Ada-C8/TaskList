@@ -15,7 +15,7 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Faster+One');
 html{
-  background-color: orange;
+  background-color: yellow;
 }
 h1{
   font-family: 'Faster One', cursive;
@@ -25,6 +25,17 @@ h1{
   border-bottom: solid 5px black;
 }
 
-body section{
+body{
+  display: flex;
+  flex-direction: column;
+}
 
+footer{
+  display:flex;
+  justify-content: center;
+  align-items: flex-start | flex-end;
+}
+
+footer p{
+  order: 1;
 }
