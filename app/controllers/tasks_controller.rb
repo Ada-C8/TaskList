@@ -1,30 +1,31 @@
+require 'date'
 class TasksController < ApplicationController
   def index
     @tasks = [
       { name: "Do laundry",
-        created: "2017/09/19",
+        created: Date.strptime('2017/09/19', '%Y/%m/%d'),
         status: "Incomplete",
-        due: "2017/09/21"
+        due: Date.strptime('2017/09/21', '%Y/%m/%d')
       },
       { name: "Cook dinner",
-        created: "2017/09/18",
+        created: Date.strptime('2017/09/18', '%Y/%m/%d'),
         status: "Incomplete",
-        due: "2017/09/18"
+        due: Date.strptime('2017/09/18', '%Y/%m/%d')
       },
       { name: "Do homework",
-        created: "2017/09/19",
-        status: "Incomplete",
-        due: "2017/09/19"
+        created: Date.strptime('2017/09/19', '%Y/%m/%d'),
+        status: "Complete",
+        due: Date.strptime('2017/09/19', '%Y/%m/%d')
       },
       { name: "Mail forms",
-        created: "2017/09/19",
+        created: Date.strptime('2017/09/19', '%Y/%m/%d'),
         status: "Complete",
-        due: "2017/10/13"
+        due: Date.strptime('2017/10/13', '%Y/%m/%d')
       },
-      { name: "Text Kimmy", 
-        created: "2017/09/19",
+      { name: "Text Kimmy",
+        created: Date.strptime('2017/09/19', '%Y/%m/%d'),
         status: "Incomplete",
-        due: "2017/09/19"
+        due: Date.strptime('2017/09/19', '%Y/%m/%d')
       }
     ]
   end

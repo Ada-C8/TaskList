@@ -79,8 +79,8 @@ section.your-tasks h2 {
 }
 section.your-tasks ol li {
   margin-bottom: 5%;
-  padding: 2%;
-  border-radius: 4px; 
+  padding: 3% 4%;
+  border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -88,18 +88,12 @@ section.your-tasks ol li {
   width: 100%;
   line-height: 1.4;
 }
-section.your-tasks ol li:hover {
-  background: #f0f0f0;
-}
+section.your-tasks ol li:hover { background: #fafafa; }
 section.your-tasks ol li.complete span {
   text-decoration: line-through;
 }
-section.your-tasks a.edit-status {
-  margin-top: 0.5%;
-}
-section.your-tasks ol li p.task {
-  margin-left: 2%;
-}
+section.your-tasks a.edit-status { margin-top: 0.5%; }
+section.your-tasks ol li p.task { margin-left: 5%; }
 span.task-name {
   margin-top: 0;
   font-weight: bold;
