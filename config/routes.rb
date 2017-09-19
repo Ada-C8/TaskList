@@ -11,7 +11,7 @@ get "tasks/:id", to: "tasks#show"
 
 patch "/tasks/:id", to: "tasks#update"
 
-get "/tasks", to: "taks#index"
+get "/tasks", to: "tasks#index"
 
 delete "/tasks/:id", to: "tasks#destroy"
 
