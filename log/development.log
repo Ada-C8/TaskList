@@ -1,0 +1,70 @@
+Started GET "/" for 127.0.0.1 at 2017-09-18 15:35:46 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tanishahampden/.rvm/gems/ruby-2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tanishahampden/.rvm/gems/ruby-2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 216ms (Views: 10.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:35:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 624ms (Views: 621.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:39:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 77ms (Views: 69.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:39:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 76ms (Views: 73.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:43:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 32.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:44:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 55.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:45:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 42.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-18 15:47:42 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 15:19:03 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tanishahampden/.rvm/gems/ruby-2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tanishahampden/.rvm/gems/ruby-2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (15.7ms)
+Completed 200 OK in 37ms (Views: 24.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 15:19:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 56ms (Views: 53.8ms)
+
+
