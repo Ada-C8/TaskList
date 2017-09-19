@@ -1,2 +1,11 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<% if !(@task) %>
+<h1 class="fourohfour">Task does not exist</h1>
+<% else %>
+<h1 class= "task_title"><%= @task[:title] %></h1>
+<section class ="description">
+  <h4>description:</h4>
+  <p>
+    <%= @task[:description] %>
+  </p>
+</section>
+<% end %>

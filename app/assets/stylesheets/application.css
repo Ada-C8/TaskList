@@ -13,3 +13,78 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  margin-left: 5px;
+  color: red;
+  font-style: oblique;
+  display: block;
+  padding: 0;
+  margin: 0;
+  text-shadow: #AAA 0px 10px 40px;
+  font-size: 1.3em;
+}
+
+.nav_box {
+  background-color: #EEE;
+  height: 100%;
+  width: 150px;
+  position: absolute;
+  top: 0px;
+  display: float;
+  z-index: -100;
+}
+nav {
+display: inline-block;
+}
+
+.button {
+  margin-top: 100px;
+  margin-left: 20px;
+  z-index: 100;
+}
+
+.button a:hover {
+  text-shadow: yellow 0px 5px 20px;
+}
+
+a {
+  color: blue;
+  font-weight: bolder;
+}
+
+.content {
+  display: inline-block;
+  margin-left: 120px;
+  padding-left: 10px;
+  padding-right: 200px;
+  max-width: 300px;
+  min-height: 500px;
+  line-height: 2em;
+  background-color: yellow;
+  border-bottom-right-radius: 10%;
+  box-shadow: #AAA 0px 15px 20px;
+}
+
+.content li {
+  font-size: 2em;
+  line-height: 1.25em;
+}
+
+.completed {
+  text-decoration: line-through;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.task_edits a {
+  text-decoration: none;
+  font-weight: lighter;
+  margin-right: 5px;
+  color: black;
+}
+
+.task_edits a:hover {
+  text-shadow: blue 5px 5px 30px;
+
+}

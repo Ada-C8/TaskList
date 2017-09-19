@@ -2,34 +2,43 @@ class TasksController < ApplicationController
 TASKS = [
   {id: 1,
   title:"pay car insurance",
-  status:"incomplete"
+  completed: false,
 },
 {id: 2,
 title:"laundry",
-status:"incomplete"},
+completed: false},
 {id: 3,
 title:"buy groceries",
-status:"incomplete",
+completed: true,
 description:"spinach, maybe new bread"}
 ]
 
   def index
+    @tasks = TASKS
+  end
+
+  def show
     id = params[:id].to_i
     @task = nil
     TASKS.each do |task|
       if task[:id] == id
         @task = task
       end
-    end  
-  end
-
-  def show
+    end
   end
 
   def edit
   end
 
   def update
+    id = params[:id].to_i
+    @task = nil
+    TASKS.each do |task|
+      if task[:id] == id
+        @task = task
+        @task[:completed]= true
+      end
+    end
   end
 
   def new
