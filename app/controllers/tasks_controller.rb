@@ -1,4 +1,16 @@
 class TasksController < ApplicationController
+
+  # create a controller action for the task index page which contains an array of hard-coded tasks
+  TASKS = [
+    {id: "clean up room"},
+    {id: "wash dishes"},
+    {id: "clean bathroom"}
+  ]
+
+  def index
+    @tasks = TASKS
+  end
+
   def create
   end
 
@@ -6,9 +18,6 @@ class TasksController < ApplicationController
   end
 
   def edit
-  end
-
-  def index
   end
 
   def new
