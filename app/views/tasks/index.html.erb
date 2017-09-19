@@ -5,7 +5,7 @@
 
 <h2>Your Tasks</h2>
 
-<ol>
+<!-- <ol>
   <li>Task One</li>
     <ul>
       <li>Mark Complete</li>
@@ -30,7 +30,18 @@
     <li>Edit</li>
     <li>Delete</li>
   </ul>
-</ol>
+</ol> -->
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <strong><%= task[:name] %></strong>
+      description: <em><%= task[:description] %></em>
+      completion_date: <em><%= task[:completion_date] %></em>
+      <%# This is a comment %>
+    </li>
+  <% end %>
+</ul>
 
 <footer>
   &copy; 2017
