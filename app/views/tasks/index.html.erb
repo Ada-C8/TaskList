@@ -8,9 +8,8 @@
 </h2>
 <ol>
 <% @tasks.each do |task| %>
-  <li>
-    <strong>
-      <%= link_to(task[:task_name], task_path(task[:id]), alt: 'link to', class:"task_list" ) %>
+  <li>  <strong>
+      <%= link_to(task.name[task.name], task_path(task.id), alt: 'link to', class:"task_list" ) %>
     </strong>
   </li>
 <% end %>

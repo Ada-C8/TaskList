@@ -1,16 +1,53 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// html {
+//   background-color: lightyellow
+//
+// }
+
 html {
-  background-color: lightyellow
+  background: url("http://s.hswstatic.com/gif/double-rainbows-1200x800.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 H1 , H2, ol li {
   color: green
 }
 
+// flashing text/header
+
+H1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  font-size: 5em;
+  animation-name: flash;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes flash {
+  from {color: pink;}
+  to {color: black;}
+  // to {color:green;}
+}
+
+// end flashing text
+
 .task_list {
   color:pink;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px #000000;
+  text-decoration:none;
 }
 
 
@@ -19,23 +56,24 @@ footer {
   width:80px;
   margin:2px auto;
   text-align: center;
-  position:  bottom;
+  position:  fixed;
+  bottom:0;
   margin-top: -20px;
   height: 20px;
 }
 
 
 .task_block {
+  position:absolute;
+  left:500px;
+  top:150px;
   display: inline-block;
-  width: 25%;
-  vertical-align: top;
+  vertical-align: center;
   border-style: solid;
   border-color: beige;
   border-radius: 15%;
   margin: 4%;
   text-align: center;
-  color: pink;
-  text-shadow: black;
-  background-color: rgba(250,235,215,.2);
+  background-color: rgba(250,235,215,.4);
 
 }
