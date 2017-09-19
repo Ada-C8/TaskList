@@ -13,9 +13,13 @@
   padding-left: 0;
 }
 
-.menu li {
+.menu h2 {
+  margin-bottom: 0;
+}
+
+.menu button {
   background-color: #D7263D;
-  border-radius: 1rem;
+  border-radius: 5rem;
   margin: 1rem auto;
   width: 75%;
 }
@@ -47,24 +51,21 @@
   font-family: 'Fredoka One', sans-serif;
   font-size: 1.75rem;
   margin: auto;
-  text-align: justify;
+  text-align: left;
   width: 80%;
 }
 
 .task-options ul {
   display: inline-block;
   padding: 0;
-  text-align: justify;
+  // min-width: 381px;
+  text-align: left;
   width: 80%;
 }
 
 .task-options li {
+  color: #D7263D;
   display: inline;
   font-family: 'Comfortaa', sans-serif;
-}
-
-.task-options a {
-  color: #D7263D;
-  text-decoration: none;
   font-size: 1.25rem;
 }
