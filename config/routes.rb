@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: 'tasks#index' #root_path takes to index/home page. Also, localhost3000 automatically goes here.
+
   get '/tasks', to: 'tasks#index', as: 'tasks' #tasks_path
 
   get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_tasks' #edit_book_path

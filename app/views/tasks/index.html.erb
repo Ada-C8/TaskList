@@ -12,7 +12,7 @@
   <ol>
     <% @tasks.each do |task| %>
     <li>
-      <%= task %>
+      <%= link_to(task.name, task_path(task.id)) %>
       <p>
       Mark Complete | Edit | Delete
       </p>
