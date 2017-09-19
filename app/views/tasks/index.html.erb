@@ -1,0 +1,10 @@
+<body class="to_do_list">
+  <h2>To Do:</h2>
+  <ul>
+    <% @tasks.each do |task| %>
+    <li>
+      Task: <%=task[:task]%>
+    </li>
+    <%end%>
+  </ul>
+</body>
