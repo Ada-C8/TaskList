@@ -35,7 +35,7 @@ header {
   z-index: -100;
 }
 nav {
-display: inline-block;
+float: left;
 }
 
 .button {
@@ -87,4 +87,10 @@ a {
 .task_edits a:hover {
   text-shadow: blue 5px 5px 30px;
 
+}
+
+@media (max-width: 800px) {
+  .content {
+    max-width: 200px
+  }
 }
