@@ -1,20 +1,20 @@
 class TasksController < ApplicationController
 
   TASKS = [
-    {title: "Finish homework", description:"finish all homework assigned", due:"every day", priority: 1, completed: "no"},
-    {title: "Prepare lunch", description:"prepare food", due:"every day", priority: 3, completed: "no"},
-    {title: "Sleep", description:"defrag brain",due:"every day", priority: 2, completed: "no"},
-    {title: "Sweat", description:"work out", due:"every day",priority: 4, completed: "no"}
+    {id:1,title: "Finish homework", description:"finish all homework assigned", due:"every day", priority: 1, completed: "no"},
+    {id:2,title: "Prepare lunch", description:"prepare food", due:"every day", priority: 3, completed: "no"},
+    {id:3,title: "Sleep", description:"defrag brain",due:"every day", priority: 2, completed: "no"},
+    {id:4,title: "Sweat", description:"work out", due:"every day",priority: 4, completed: "no"}
   ]
   def index
     @tasks = TASKS
   end
 
   def show
-    title = @task = params[:title].to_i
+    title = @task = params[:id].to_i
     @task = nil
     TASKS.each do |task|
-      if task[:title] = title
+      if task[:id] = title
         @task = task
       end
     end

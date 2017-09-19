@@ -2,17 +2,17 @@ Rails.application.routes.draw do
 
   get '/tasks', to: 'tasks_index', as: 'tasks' #tasks_path
 
-  get '/tasks/:title/edit', to: 'tasks#edit', as: 'edit_task' #edit_task_path
+  get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_task' #edit_task_path
 
   get 'tasks/new', to: 'tasks#new', as: 'new_task' #new_task_path
 
-  get 'tasks/:title', to: 'tasks#show', as: 'task' #task_path
+  get 'tasks/:id', to: 'tasks#show', as: 'task' #task_path
 
-  patch '/tasks:title', to:'tasks#update', as: 'update_task' #update_task_path
+  patch '/tasks/:id', to:'tasks#update', as: 'update_task' #update_task_path
 
   post '/tasks', to:'tasks#create', as: 'create_task' #create_task_path
 
-  patch '/tasks:completed', to: 'tasks#complete', as: 'complete_task' #complete_task_path
+  patch '/tasks/:id/:completed', to: 'tasks#complete', as: 'complete_task' #complete_task_path
 
   delete '/tasks', to: 'tasks#destroy', as: 'delete_task' #delete_task_path
 
