@@ -1,22 +1,18 @@
 class TasksController < ApplicationController
 
-  TASKS = [{id:1, chore: "Empty dishwasher", deadline: "Tuesday"},
-           {id: 2, chore: "Clean car", deadline: "Friday"},
-           {id: 3, chore: "Walk dog", deadline: "Wednesday"},
-           {id: 4, chore: "Homework", deadline: "Everyday"},]
-
   def index
-    @tasks = TASKS
+    @tasks = Task.all
   end
 
   def show
-    id = params[:id].to_i
-    @task = nil
-    TASKS.each do |task|
-      if task[:id] == id
-        @task = task
-      end
-    end
+    @task = Task.find ( params[:id].to_i )
+    # id = params[:id].to_i
+    # @task = nil
+    # TASKS.each do |task|
+    #   if task[:id] == id
+    #     @task = task
+    #   end
+    # end
   end
 
   def edit
