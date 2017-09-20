@@ -8,13 +8,18 @@
 
   <% if !(task.completed) %>
   <li><strong><%= link_to(task.title, task_path(task.id)) %></strong> </li>
+  <article class="task_edits">
+  <%= link_to "mark complete", mark_complete_task_path(task.id), method: :patch %>
+  <%= link_to "edit", edit_tasks_path(task.id) %>
+  <%= link_to "delete", delete_task_path(task.id), method: :delete %></article>
   <%else%>
   <li><strong class="completed"><%= link_to(task.title, task_path(task.id)) %></strong></li>
-  <% end %>
   <article class="task_edits">
-    <%= link_to "mark complete", mark_complete_task_path(task.id), method: :patch %>
+    <%= link_to "mark incomplete", mark_complete_task_path(task.id), method: :patch %>
     <%= link_to "edit", edit_tasks_path(task.id) %>
     <%= link_to "delete", delete_task_path(task.id), method: :delete %></article>
+  <% end %>
+
 <% end %>
 </ol>
 </section>

@@ -12,17 +12,20 @@
     <header>
       <h1>Much Tasks, Many Lists</h1>
     </header>
-    <nav><article class="nav_box"></article>
-    </article>
+
+    <section class="fixed"><nav>
       <article class="button">
       <%= link_to "new task", new_task_path %>
       </article>
       <article class="button">
         <%= link_to "all tasks", tasks_path %>
       </article>
+    </section>
     </nav>
+    <section class="fluid">
     <article class="content">
     <%= yield %>
   </article>
+</section>
   </body>
 </html>

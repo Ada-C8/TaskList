@@ -15,12 +15,12 @@ class TasksController < ApplicationController
 
   def index
     # @tasks = TASKS
-    @tasks = Task.all
+    @tasks = Task.order(:completed)
   end
 
   def show
     @task = Task.find(params[:id].to_i)
-    # id = params[:id].to_i
+    # id  params[:id].to_i
     # @task = nil
     # TASKS.each do |task|
     #   if task[:id] == id
@@ -44,6 +44,14 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
+    @task = Task.find(params[:id].to_i)
+    if @task.completed == true
+      @task.completed = false
+    else
+      @task.completed = true
+    end
+    @task.save
+    redirect_to '/tasks'
   end
 
   def new
