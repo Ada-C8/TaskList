@@ -1,41 +1,41 @@
-<h2>&#10004; TO DO:</h2>
-<ul>
-  <li>
-    <header>
-      <h3><%= @tasks[0].key %></h3>
-      <h4>Due: Today</h4>
-      <h4>STATUS: NOT COMPLETE</h4>
-    </header>
-    <section>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-      </p>
-    </section>
-  </li>
 
-  <li>
-    <header>
-      <h3><%= @tasks[1].key %></h3>
-      <h4>Due: Today</h4>
-      <h4>STATUS: NOT COMPLETE</h4>
-    </header>
-    <section>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-      </p>
-    </section>
-  </li>
+<article>
 
-  <li>
-    <header>
-      <h3><%= @tasks[2].key %></h3>
-      <h4>Due: Today</h4>
-      <h4>STATUS: NOT COMPLETE</h4>
-    </header>
-    <section>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-      </p>
-    </section>
-  </li>
-</ul>
+<h1 class="increase-font">&#10004; TO DO:</h1>
+<ul class="no-bullet">
+<% @tasks.each do |task| %>
+<li>
+
+<article id="task-wrapper">
+  <header>
+    <h2><%= task.title %></h2>
+    <h3>DATE DUE: <%= task.due_date %></h3>
+    <h3>COMPLETE?
+      <% if task.status == false %>
+          NO!
+      <% else %>
+          HOORAY FOR BEING ONE STEP CLOSER TO YOUR GOALS!
+      <% end %>
+      </h3>
+  </header>
+
+  <section>
+    <p>
+      <%= task.description %>
+    </p>
+  </section>
+
+  <nav id="task-links">
+    <ul class="no-bullet">
+      <li><a href="#">MARK COMPLETE</a></li>
+      <li><a href="#">EDIT</a></li>
+      <li><a href="#">DELETE</a></li>
+    </ul>
+  </nav>
+
+</article>
+</li>
+
+<% end %>
+
+</article>
