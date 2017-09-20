@@ -1,5 +1,10 @@
 class TasksController < ApplicationController
 
+  # name : string
+  # description : string
+  # completion_date : string?
+  # done : boolean
+
   def index
     @tasks = Task.order(:id)
   end
@@ -19,7 +24,16 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_parameters)
+    complete_date = ""
+    done_boolean = false
+    if params[:task][:done]
+      done_boolean = true
+      complete_date = Date.today
+    end
+    @task = Task.new(name: params[:task][:name],
+                     description: params[:task][:description],
+                     completion_date: complete_date,
+                     done: done_boolean)
     if @task.save
       redirect_to @task
     else
@@ -32,12 +46,6 @@ class TasksController < ApplicationController
   def delete
   end
 
-  # Without this, you get ForbiddenAttributeError
-  # Allows user to pass in these attributes that they put into the form
-  private
-  def task_parameters
-    params.require(:task).permit(:name, :description)
-  end
 end
 
 #

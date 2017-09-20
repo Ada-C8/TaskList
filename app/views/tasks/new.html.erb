@@ -1,27 +1,19 @@
 <main>
-    <header>
-      <nav>
-        <h2>Task List</h2>
-        <ul>
-          <li>
-            <i class="fa fa-plus" aria-hidden="true"></i>
-            <%= link_to "Add Task", new_task_path, class: "button"%>
-          </li>
-          <li>
-            <i class="fa fa-list-alt" aria-hidden="true"></i>
-            <%= link_to "All Tasks", tasks_path, class: "button" %>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
     <section class="new-task-form">
       <%= form_for @task, url: {action: "create"} do |f| %>
-        <p> Name: </p>
+        <%= f.label :name %>
         <%= f.text_field :name %>
-        <p> Description: </p>
+        <%= f.label :description %>
         <%= f.text_field :description %>
-        <%= f.submit "Create Task" %>
+
+        <label for="task_done" class="control control-checkbox">
+            Done?
+            <input type="checkbox" id="task_done" name="task[done]" checked="checked" />
+            <div class="control_indicator"></div>
+        </label>
+        <!-- <%= f.label :done %>
+        <%= f.check_box :done %> -->
+        <%= f.submit "Create Task", class: "button" %>
       <% end %>
     </section>
 </main>
