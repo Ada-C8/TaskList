@@ -1,46 +1,27 @@
-
-<main id="index">
-  <div class="menu container">
-    <nav>
-      <h2>Menu</h2>
-      <ul>
-        <li>
-          <a href=""><button><h3><%= link_to 'Add Task', new_task_path %></h3></button></a>
-        </li>
-        <li>
-          <a href=""><button><h3>All Tasks</h3></button></a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="tasks container">
-    <h2>Your Tasks</h2>
-    <ul>
-      <% @tasks.each_with_index do |task, i| %>
-      <li class="task">
-        <button>
-          <p>
-            <strong><%= link_to "#{i + 1}. #{task[:task]}", task %></strong>
-          </p><br />
-          <nav class="task-options">
-            <ul>
-              <li>
-                <%= link_to "Mark Complete", task %> |
-              </li>
-              <li>
-                <%= link_to "Edit", task %> |
-              </li>
-              <li>
-                <%= link_to "Delete", task %>
-              </li>
-            </ul>
-          </nav>
-        </button>
-      </li>
-      <% end %>
-    </ul>
-  </div>
-</main>
-<footer>
-  &copy; 2017
-</footer>
+<div class="tasks container" id="index">
+  <h2>Your Tasks</h2>
+  <ul>
+    <% @tasks.each_with_index do |task, i| %>
+    <li class="task">
+      <button>
+        <p>
+          <strong><%= link_to "#{i + 1}. #{task[:task]}", task %></strong>
+        </p><br />
+        <nav class="task-options">
+          <ul>
+            <li>
+              <%= link_to "Mark Complete", task %> |
+            </li>
+            <li>
+              <%= link_to "Edit", task %> |
+            </li>
+            <li>
+              <%= link_to "Delete", task %>
+            </li>
+          </ul>
+        </nav>
+      </button>
+    </li>
+    <% end %>
+  </ul>
+</div>

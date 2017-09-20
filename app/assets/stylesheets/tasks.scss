@@ -60,7 +60,9 @@
   color: #FFB238;
 }
 
-#index .task p {color: inherit;}
+.task button p {
+  color: inherit;
+}
 
 .task p {
   display: inline-block;

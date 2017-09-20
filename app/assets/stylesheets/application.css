@@ -99,6 +99,10 @@ main {
   vertical-align: top;
 }
 
+.container.page {
+  width: 60%;
+}
+
 footer {
   background-color: #1B998B;
   display: block;

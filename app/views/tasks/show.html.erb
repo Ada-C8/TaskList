@@ -1,21 +1,16 @@
-<main id="show">
-  <div class="task container">
-    <h2 class="task-name"><%= @task.task %></h2>
-  </div>
-  <div class="task container">
-    <ul>
-      <li>
-        <h4 class="inline">Due Date:</h4>
-        <p class="inline">
-          <%= @task.due_date %>
-        </p>
-      </li>
-      <li>
-        <h4>Task Description: </h4>
-        <p>
-          <%= @task.description %>
-        </p>
-      </li>
-    </ul>
-  </div>
-</main>
+<div class="task container page" id="show">
+  <h2 class="task-name"><%= @task.task %></h2>
+  <ul>
+    <li>
+      <h4 class="inline">Due: </h4>
+      <p class="inline">
+        <%= @task.due_date %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <%= @task.description %>
+      </p>
+    </li>
+  </ul>
+</div>
