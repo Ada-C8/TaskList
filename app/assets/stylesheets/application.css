@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+header a {
+  text-decoration: none;
+}
+
+.tasklist-options li {
+  list-style: none;
+  width: 85px;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+.tasklist-options, .your-tasks-container {
+  display: inline-block;
+}
+
+.tasklist-options {
+  float: left;
+}
+
+.your-tasks-container {
+  float: left;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+footer {
+  background: gray;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  vertical-align: middle;
+  clear: both;
+}

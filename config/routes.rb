@@ -1,19 +1,22 @@
 Rails.application.routes.draw do
+
+  root to: 'tasks#index' #explicit for saying this is the homepage
+
   get '/tasks', to: 'tasks#index', as: 'tasks' #tasks_path
 
-  get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_task'
+  get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_task' #edit_task_path
 
-  get '/tasks/new', to: 'tasks#new', as: 'new_task'
+  get '/tasks/new', to: 'tasks#new', as: 'new_task' #new_task_path
 
-  get '/tasks/:id', to: 'tasks#show', as: 'task_show'
+  get '/tasks/:id', to: 'tasks#show', as: 'task_show' #task_show_path
 
-  patch '/tasks/:id', to: 'tasks#update', as: 'update_task'
+  patch '/tasks/:id', to: 'tasks#update', as: 'update_task' #update_task_path
 
-  post '/tasks', to: 'tasks#create', as: 'create_task'
+  post '/tasks', to: 'tasks#create', as: 'create_task' #create_task_path
 
-  patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete'
+  patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'task_complete' #task_complete_path
 
-  delete '/tasks', to: 'tasks#destroy', as: 'delete_task'
+  delete '/tasks/:id', to: 'tasks#destroy', as: 'delete_task' #delete_task_path
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

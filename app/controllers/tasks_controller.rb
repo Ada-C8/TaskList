@@ -16,15 +16,26 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.new(name: params[:task][:name], description:params[:task][:description])
+    if @task.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy
+    @task = Task.find(params[:id].to_i).destroy
+    if @task.save
+      redirect_to root_path
+    end
   end
 
   def edit
   end
 
   def new
+    @task = Task.new
   end
 
   def show

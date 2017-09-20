@@ -9,6 +9,20 @@
   </head>
 
   <body>
+    <header>
+      <h1><%= link_to("TASKLIST", root_path, alt: 'homepage')%></h1>
+    </header>
+
+    <nav class="tasklist-options">
+      <ul>
+        <li><%= link_to("Add Task", new_task_path, alt: 'new_task form') %></li>
+        <li><%= link_to("All Tasks", root_path, alt: 'homepage')%></li>
+      </ul>
+    </nav>
+
     <%= yield %>
+    <footer>
+      <h3>&copy; 2017</h3>
+    </footer>
   </body>
 </html>
