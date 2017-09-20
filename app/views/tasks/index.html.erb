@@ -1,0 +1,49 @@
+<body>
+<div>
+<section >
+  <h1>
+    TASK LIST
+  </h1>
+  <ul>
+    <il>
+      Add Task
+    </il>
+    <il>
+      All Task
+    </il>
+  </ul>
+</section>
+
+<section id="list">
+<h2>YOUR TASKS</h2>
+<ol>
+  <% @tasks.each do |task|  %>
+    <li>
+      <h3>
+        <%= task[:title] %>
+      </h3>
+      <P>
+       <%= task[:description] %>
+      </P>
+
+      <P>
+      Due:  <%= task[:duedate] %>.
+      </P>
+
+      <p>
+        Status: <%= task[:complete]%>
+      </p>
+    </li>
+  <% end %>
+</ol>
+</section>
+</div>
+
+
+<footer>
+  <p>
+  &copy 2017
+</p>
+</footer>
+
+</body>
