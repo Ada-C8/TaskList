@@ -1,13 +1,13 @@
 class TasksController < ApplicationController
 
-  @tasks = ["complete the death star", "clean the bathroom", "do laundry", "have fun"]
+
 
   def new
     render plain: "added 'new' task"
   end
 
   def index
-    @tasks
+    @tasks = ["complete the death star", "clean the bathroom", "do laundry", "have fun"]
     # render plain: "added 'index' task"
     # render plain: @tasks = ["complete the death star", "clean the bathroom", "do laundry", "have fun"]
 

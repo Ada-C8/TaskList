@@ -6,3 +6,10 @@
   <%= link_to "All Tasks", tasks_path %>
 
 </nav>
+
+<h2>Your Tasks</h2>
+<ol>
+  <% @tasks.each_with_index do |task, index| %>
+  <li><%= task %></li>
+  <% end %>
+</ol>
