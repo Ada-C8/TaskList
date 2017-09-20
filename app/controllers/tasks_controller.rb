@@ -1,9 +1,4 @@
 class TasksController < ApplicationController
-  # TASKS = [
-  #   {id: 1, description: "Feed Harriet", due_date: "Wednesday"},
-  #   {id: 2, description: "Call Car 2 Go", due_date: "Friday"},
-  #   {id: 3, description: "Finish TaskList", due_date: "10/1/17"}
-  # ]
 
   def index
     @tasks = Task.order(:completion_date)
@@ -15,6 +10,12 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.new(name: params[:task][:name], completion_date: params[:task][:completion_date], description: params[:task][:description])
+    if @task.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def update
@@ -26,13 +27,17 @@ class TasksController < ApplicationController
   end
 
   def edit
-    name = params[:name]
-    @task = Task.find_by(name)
+    id = params[:id].to_i
+    @task = Task.find(id)
   end
 
   def destory
     name = params[:name]
     @task = Task.find_by(name)
+  end
+
+  def new
+    @task = Task.new
   end
 
 end

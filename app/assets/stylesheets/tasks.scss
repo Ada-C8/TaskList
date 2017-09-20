@@ -19,7 +19,7 @@ body {
 }
 
 .navigation:first-of-type li {
-  font-size: 3em;
+  font-size: 5em;
   flex-grow: 2;
   color: magenta;
   text-shadow: 1;
@@ -46,6 +46,11 @@ body {
 ul {
   list-style: none;
 }
+.all-task-actions li{
+  height: 120px;
+  width: 300px;
+  overflow: hidden;
+}
 
 .all-task-actions li a{
   background-color: transparent;
@@ -69,6 +74,8 @@ ul {
 .task-list {
   background-color: #e57ac0;
   width: 50%;
+  min-width: 350px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   // flex-shrink: 1;
@@ -77,6 +84,7 @@ ul {
   font-family: 'Vibur';
   padding: 1em;
   font-size: 2em;
+  overflow: hidden;
 }
 
 .tasks {
