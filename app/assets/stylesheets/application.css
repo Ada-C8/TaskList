@@ -13,3 +13,96 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  max-width: 30%;
+  height: 100%;
+  border: black solid 1px;
+  order: 1;
+}
+
+header, main {
+  display: inline-block;
+  order: 2;
+  vertical-align: top;
+}
+
+ header {
+   text-align: center;
+   padding: 20px;
+   overflow: scroll;
+ }
+
+ .action-buttons {
+   box-sizing: border-box;
+ }
+
+ .button_to {
+   /*margin-top: 15px;*/
+   margin-right: 20px;
+ }
+
+ li {
+   margin-bottom: 20px;
+ }
+
+ .actions {
+   margin-top: 5px;
+ }
+
+ .actions a {
+   padding-right: 5px;
+ }
+
+footer {
+  background-color: lightgray;
+}
+
+.button {
+  background-color: orange;
+  margin: 10px;
+  /*padding: 5px;*/
+  border-radius: 15px;
+  font-size: 1.2em;
+}
+
+/*.side-action-buttons {
+  border: black solid 1px;
+  display: flex;
+  order: 1;
+  width: 40%;
+}*/
+
+main {
+  width: 69%;
+  margin: auto;
+  border: green solid 2px;
+}
+
+.all-tasks {
+  border: red solid 2px;
+  max-width: 60%;
+  margin: auto;
+  /*float: right;*/
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+main {
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+}
+
+body {
+  box-sizing: border-box;
+}
+
+ /*header {
+   position: fixed;
+   top: 0;
+   border-bottom: black solid .5px;
+ }*/

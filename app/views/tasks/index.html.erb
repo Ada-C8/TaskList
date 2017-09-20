@@ -1,2 +1,48 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+
+<section class = "all-tasks">
+  <!-- ordered list style -->
+  <h2><strong>All Tasks</strong></h2>
+  <ol>
+    <% @tasks.each do |task| %>
+      <li>
+        <strong>
+          <p <%= task.status ? "class = complete": "class = incomplete"%>>
+            <%=task.name%>
+          </p>
+        </strong>
+        <section class = "actions">
+          <%= link_to( (task.status ? "Unmark Complete": "Mark Complete"), mark_completion_task_path(task.id), method: :patch,  alt: 'link_to')%>
+          <%= link_to "Show", task_path(task.id)%>
+          <%= link_to("Edit", edit_task_path(task.id), alt: 'link_to')%>
+          <%= link_to "Delete", delete_task_path(task.id), method: :delete%>
+        </section>
+      </li>
+    <%end%>
+  </ol>
+
+</section>
+<!-- unordered list style, creating lists based on task ids instead -->
+
+<!-- <% @tasks.each do |task| %>
+  <ul>
+    <li>
+      <strong><%=task[:id]%>. <%=task[:name]%> </strong>
+      <section>
+        <%= link_to("Mark Complete", update_task_path(task[:id]), method: :patch,  alt: 'link_to')%>
+        <%= link_to("Edit", edit_task_path(task[:id]), alt: 'link_to')%>
+        <%= link_to "Delete", delete_task_path(task[:id]), method: :delete%>
+      </section>
+    </li>
+  </ul>
+
+<%end%> -->
+
+<!-- <p>Find me in app/views/tasks/index.html.erb</p> -->
+
+<!-- <header>
+  <h1>Task List</h1>
+  <section = "action-buttons">
+    <span>Add Task</span>
+    <span>All Tasks</span>
+  </section>
+</header> -->
