@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   #( Need to add a method to the controller )
 
-  get '/tasks/new', to: 'tasks#new', as: 'new_task' #new_book_path
+  get '/tasks/new', to: 'tasks#new', as: 'new_task' #new_task_path
 
   get '/tasks/:id', to: 'tasks#show', as: 'task' #task_path
 
