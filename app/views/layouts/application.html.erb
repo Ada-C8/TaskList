@@ -10,7 +10,24 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <h2>Task List</h2>
+        <ul>
+          <li>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <%= link_to "Add Task", new_task_path, class: "button"%>
+          </li>
+          <li>
+            <i class="fa fa-list-alt" aria-hidden="true"></i>
+            <%= link_to "All Tasks", tasks_path, class: "button" %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <%= yield %>
+
     <footer>
       <p>&copy; 2017 | By Isaac Del Rosario</p>
     </footer>
