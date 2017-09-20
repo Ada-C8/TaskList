@@ -18,7 +18,7 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(2)
-    
+
     #@task = Task.find(params[:id])
     # @task = Task.find_by(params[:id])
     # title: params[:book_id]

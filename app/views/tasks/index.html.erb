@@ -1,18 +1,14 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>Tasks I Probably Won't Do</h1>
 
-<p>
-  <%= "These are the breaks" %>
-</p>
+<h3>
+  <%= "To-Do" %>
+</h3>
 
-<p>
-  <%= link_to "Show Task 1", show_path(1) %>
-</p>
 
-<ul>
-  <% @tasks.each do |task| %>
+<ul class="task-data">
+  <% @tasks.each_with_index do |task, index| %>
   <li>
-    <%= "#{task[:title]}: #{task[:description]}   due date: #{task[:date]}" %>
+    <%= link_to "#{task[:title]}", show_path(index + 1) %>
   </li>
   <% end %>
 </ul>
