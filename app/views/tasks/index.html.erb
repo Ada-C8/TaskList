@@ -1,13 +1,13 @@
 <h2>YOUR TASKS</h2>
 <ol>
-  <% Task.all.each do |task|%>
+  <% @tasks.each do |task|%>
     <li>
       <strong><%= link_to "#{task.title}", task_path(task.id) %></strong>
       <p>
         <em><%= task.description%></em>
       </p>
       <p>
-        <%= task.complete %> | <%= link_to "Edit", edit_task_path(task.id) %> | <%= task.due_date %>
+        <%= link_to "#{task.complete}", complete_task_path(task.id)  %>  | <%= link_to "Edit", edit_task_path(task.id) %> | <%= task.due_date %>
       </p>
     </li>
   <% end %>
