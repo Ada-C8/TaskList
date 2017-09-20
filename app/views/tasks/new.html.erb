@@ -1,2 +1,21 @@
 <h1>Tasks#new</h1>
+
+<%= form_for @task do |f| %>
+  <%= f.label :owner %>
+  <%= f.text_field :owner %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= text_area_tag(:message, "Haha", size: "24x6") %>
+
+  <hr />
+  <%= select_date Date.today, prefix: :start_date %>
+
+  <%= f.submit %>
+<% end %>
+
+
 <p>Find me in app/views/tasks/new.html.erb</p>

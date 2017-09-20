@@ -2,10 +2,12 @@
 <h1 class="fourohfour">Task does not exist</h1>
 <% else %>
 <h1 class= "task_title"><%= @task[:title] %></h1>
+<h2 class="task_owner">owner: <%= @task[:owner] %></h2>
+<h3 class="task_deadline">deadline: <strong><%= (@task[:deadline]).to_s.chomp('00:00:00 UTC') %></strong></h3>
+
 <section class ="description">
-  <h4>description:</h4>
-  <p>
-    <%= @task[:description] %>
-  </p>
+  <h4>description:</h4> <%= @task[:description] %>
+
 </section>
+
 <% end %>

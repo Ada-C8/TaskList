@@ -23,7 +23,7 @@ header {
   text-shadow: #AAA 0px 10px 40px;
   font-size: 1.3em;
   position: absolute;
-  /*top: -1em;*/
+  top: -1em;
 }
 
 /*.nav_box {
@@ -105,7 +105,7 @@ a {
     background-color: #EEE;
     max-width: none;
     /*display: flex;*/
-    width: 200%;
+    width: 100%;
     margin-left: 0;
     box-shadow: #AAA 0px 1px 5px;
   }
@@ -117,7 +117,7 @@ a {
   .button {
     line-height: 5em;
     display: inline;
-    margin-left: 10%;
+    margin-left: 20%;
   }
 
   header {

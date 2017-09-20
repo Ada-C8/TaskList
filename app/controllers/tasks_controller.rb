@@ -55,9 +55,17 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def create
+    task = Task.new(owner: params[:task][:owner], title: params[:task][:title], description: params[:task][:description], deadline: Date.civil(params[:start_date][:year].to_i, params[:start_date][:month].to_i, params[:start_date][:day].to_i))
+    if task.save
+      redirect_to '/tasks'
+    else
+      render :new
+    end
+
   end
 
   def destroy
