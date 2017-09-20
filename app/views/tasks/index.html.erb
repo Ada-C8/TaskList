@@ -22,7 +22,7 @@
       <ul id="task-box">
         <% @tasks.each do |task| %>
           <li class="tasks">
-            <img class="donut-image" src="../app/assets/images/donut-transparent.png" /><%= task[:name] %>
+            <img class="donut-image" src=<%= image_path('donut-transparent.png')%>/><%= task[:name] %>
           </li>
         <div class="task-actions">
           <li class="action">Mark Complete</li>
