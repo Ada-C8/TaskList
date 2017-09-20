@@ -20,7 +20,7 @@
   <input type="submit" value="Submit">
 </form> -->
 
-<%= form_tag tasks_path, method: :post do %>
+<!-- <%= form_tag tasks_path, method: :post do %>
 
   <%= label_tag "task[title]", "Title" %>
   <%= text_field_tag "task[title]" %>
@@ -35,4 +35,20 @@
   <%= text_field_tag "task[status]" %>
 
   <%= submit_tag "Add Task" %>
+<% end %> -->
+
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :due_date %>
+  <%= f.text_field :due_date %>
+
+  <%= f.label :status %>
+  <%= f.text_field :status %>
+
+  <%= f.submit "New Task"%>
 <% end %>

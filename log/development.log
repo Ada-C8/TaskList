@@ -3090,3 +3090,68 @@ Processing by TasksController#new as HTML
 Completed 200 OK in 37ms (Views: 33.4ms)
 
 
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:35:46 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    37:   <%= submit_tag "Add Task" %>
+    38: <% end %>
+    39: 
+    40: <%= form_for @book do |f| %>
+    41:   <%= f.label :title %>
+    42:   <%= f.text_field :title %>
+    43: 
+  
+app/views/tasks/new.html.erb:40:in `_app_views_tasks_new_html_erb__1340785857442510479_70263923374500'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:36:04 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (50.5ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `author' for #<Task:0x007fcf2c794a98>):
+    42:   <%= f.text_field :title %>
+    43: 
+    44:   <%= f.label :author %>
+    45:   <%= f.text_field :author %>
+    46: 
+    47:   <%= f.submit%>
+    48: <% end %>
+  
+app/views/tasks/new.html.erb:45:in `block in _app_views_tasks_new_html_erb__1340785857442510479_70263922005420'
+app/views/tasks/new.html.erb:40:in `_app_views_tasks_new_html_erb__1340785857442510479_70263922005420'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:36:28 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:37:11 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:37:43 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:38:11 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
