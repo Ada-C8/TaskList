@@ -1,19 +1,4 @@
 <main>
-  <header>
-    <nav>
-      <h2>Task List</h2>
-      <ul>
-        <li>
-          <i class="fa fa-plus" aria-hidden="true"></i>
-          <%= link_to "Add Task", new_task_path, class: "button"%>
-        </li>
-        <li>
-          <i class="fa fa-list-alt" aria-hidden="true"></i>
-          <%= link_to "All Tasks", tasks_path, class: "button" %>
-        </li>
-      </ul>
-    </nav>
-  </header>
 
   <section class="task-list">
     <h1>Your Tasks</h1>
@@ -39,8 +24,8 @@
           </p>
         <% end %>
         <section class="task-action-buttons">
-          <%= link_to "Edit", edit_task_path(task.id), class: "button" %>
-          <%= link_to "Delete", delete_task_path(task.id), method: :delete, class: "button" %>
+          <%= link_to "", edit_task_path(task.id), class: "fa fa-pencil-square-o", alt: "Edit Task" %>
+          <%= link_to "", delete_task_path(task.id), method: :delete, class: "fa fa-trash", alt: "Delete Task" %>
         </section>
         </li>
 

@@ -16,6 +16,7 @@ header {
   border: 1px black solid;
   background-color: rgba(193, 193, 193, 0.5);
   float: left;
+  overflow: hidden;
   position: absolute;
   top: 50px;
   left: 50px;
@@ -65,7 +66,7 @@ section h1{
 
 .task-list{
   border: 1px black solid;
-  width: 400px;
+  width: 45vw;
   float: right;
   background-color: #FEFEFE;
   /* position: absolute would make all my body CSS disappear :/ */
@@ -94,8 +95,20 @@ section h1{
   margin: 0;
 }
 
+.task-list ul li > p:nth-child(2){
+  display: inline;
+}
+
 .task-list ul li a{
   color: black;
+}
+
+.task-action-buttons{
+  display: inline-block;
+}
+
+.task-action-buttons a{
+  text-decoration: none;
 }
 
 @media (max-width: 770px){
@@ -108,6 +121,10 @@ section h1{
     margin-bottom: 30px;
   }
 
+  .task-list ul li{
+    padding-left: 0;
+  }
+
   header {
     width: 90%;
     float: none;
@@ -116,4 +133,39 @@ section h1{
     position: inherit;
   }
 
+  .button{
+    width: 80%;
+  }
+
 }
+
+
+/* SHOW CSS */
+
+.task-info, .new-task-form {
+  border-radius: 10px;
+  border: 1px black solid;
+  width: 400px;
+  float: right;
+  background-color: #FEFEFE;
+  /* position: absolute would make all my body CSS disappear :/ */
+  /* probably because everything's position: absolute or floated */
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  overflow: auto;
+  padding-left: 20px;
+}
+
+@media (max-width: 770px){
+  .task-info{
+    width: 87%;
+    float: none;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+/* END SHOW CSS */
