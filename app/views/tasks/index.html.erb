@@ -12,10 +12,10 @@
               <%= link_to "Mark Complete", task %> |
             </li>
             <li>
-              <%= link_to "Edit", task %> |
+              <%= link_to "Edit", edit_task_path(task) %> |
             </li>
             <li>
-              <%= link_to "Delete", task %>
+              <%= link_to "Delete", task_path(task), method: :delete %>
             </li>
           </ul>
         </nav>
