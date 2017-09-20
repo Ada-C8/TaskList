@@ -30,7 +30,8 @@ article.your-tasks ol li p.task {
 span.task-name {
   margin-top: 0;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 2em;
+  font-family: 'Sacramento', cursive;
 }
 span.task-status {
   font-style: italic;
