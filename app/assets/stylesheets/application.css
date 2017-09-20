@@ -32,6 +32,63 @@ h1 {
   font-size: 50px;
 }
 
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.normal {
+  text-decoration: none;
+}
+
+.squaredThree {
+  width: 20px;
+  position: relative;
+  margin: 20px auto;
+  label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(top, #222 0%, #45484d 100%);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+    &:after {
+      content: '';
+      width: 9px;
+      height: 5px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border: 3px solid #fcfff4;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+    &:hover::after {
+      opacity: 0.3;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}
+
+/*.sublist_and_box {
+display: inline-block;
+list-style-type: none;
+}*/
+
+/*.bullet_list {
+display: flex;
+}*/
+
 .button {
   padding: 10px;
   background-color: #ef1a56;
@@ -76,6 +133,7 @@ h1 {
   border: 1px solid black;
   border-radius: 27%;
   padding: 40px;
+  margin-bottom: 70px;
 }
 
 #to_do {
@@ -94,16 +152,19 @@ footer {
   background-color: white;
   display: flex;
   justify-content: center;
-  align-content: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  padding-right: 40px;
+  align-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+body {
+  padding:10px;
+  /*padding-bottom:60px;*/
 }
 
 .grad {
+
   background: red; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(lightblue, lightgray); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(lightblue, lightgray); /* For Opera 11.1 to 12.0 */

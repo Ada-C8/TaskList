@@ -1,19 +1,21 @@
 class TasksController < ApplicationController
 
-  TASKS = [
-    {id: 1, task: "Hotel", status: :incomplete},
-    {id: 2, task: "Meowspace", status: :incomplete},
-    {id: 3, task: "CS Fun", status: :incomplete}
-  ]
+  # TASKS = [
+  #   {id: 1, task: "Hotel", status: :incomplete},
+  #   {id: 2, task: "Meowspace", status: :incomplete},
+  #   {id: 3, task: "CS Fun", status: :incomplete}
+  # ]
 
   def index
-    @tasks = TASKS
+    @tasks = Task.order(:id)
   end
 
   def create
   end
 
   def destroy
+    # @task = Task.find( params[:id].to_i)
+
   end
 
   def edit
@@ -23,15 +25,21 @@ class TasksController < ApplicationController
   end
 
   def show
-    id = params[:id].to_i
-    @tasks = nil
-    TASKS.each do |task|
-      if task[:id] == id
-        @tasks = task
-      end
-    end
+    @task = Task.find( params[:id].to_i)
   end
 
   def update
   end
+
+  def mark_complete
+
+    @task = Task.find (params[:id].to_i)
+    if @task.status == false
+      @task.update(status: true)
+    else
+      @task.update(status: false)
+    end
+    redirect_to root_path
+  end
+
 end

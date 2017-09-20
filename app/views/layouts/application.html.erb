@@ -10,15 +10,15 @@
 
 <header>
   <section id="robot_container">
-  <h1 id="robot_name">*Tasky*</h1>
-  <span id="robot_pic">
-    <%=  image_tag(src="https://image.freepik.com/free-vector/coloured-robot-design_1148-9.jpg", alt: "helpful robot", size: "125x125") %></span>
-  </section>
+    <h1 id="robot_name">*Tasky*</h1>
+    <span id="robot_pic">
+      <%=  image_tag(src="https://image.freepik.com/free-vector/coloured-robot-design_1148-9.jpg", alt: "helpful robot", size: "125x125") %></span>
+    </section>
 
-      <div id="header_text">
+    <div id="header_text">
 
-    <h2>Your helpful coding task tracker</h2>
-    <h4>ProTip: Remember to commit regularly!!</h4>
+      <h2>Your helpful coding task tracker</h2>
+      <h4>ProTip: Remember to commit regularly!!</h4>
     </div>
 
   </header>
@@ -33,13 +33,14 @@
     </nav>
 
     <article>
+      <%= yield %>
+    </article>
 
-    <%= yield %>
-  </article>
+    <footer>
+      <span> &copy; 2017 </span>
+    </footer>
 
   </body>
 
-  <footer>
-    <span> &copy; 2017 </span>
-  </footer>
+
   </html>

@@ -2,19 +2,37 @@
 
 <section id="index_container">
   <h2 id="to_do"> # TODO</h2>
-<ul class="to_do_list">
-  <% @tasks.each do |task| %>
+  <ul class="to_do_list">
+    <% @tasks.each do |task| %>
     <li>
-        #<%= task[:id] %>)
-      <%= task[:task] %>
-    </li>
-    <li> Status:
-      <%= task[:status] %>
-    </li>
-    <p></p>
-    <%= link_to("Mark Complete", update_task_path(task[:id]), {method: :patch, alt: "link to mark complete", class: "task_link" }) %>
-    <%= link_to("Edit", edit_task_path(task[:id]), {alt: "link to edit", class: "task_link", id: "edit_link"}) %>
-    <%= link_to("Delete", delete_task_path, {method: :delete, alt: "link to delete", class: "task_link" }) %>
-    <% end %>
-</ul>
-</section>
+      #<%= task.id %>)
+      <span <%= task.status ? "class=strikethrough"  : "class=normal" %>> <%= task.name %> </span>
+
+      <span class="sublist_and_box">
+        <ul class="bullet_list">
+          <li >
+            <label>Initial Commit</label>
+            <div class="squaredThree">
+              <input type="checkbox" value="None" id="squaredThree" name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
+              <label for="squaredThree"></label>
+            </div>
+          </li>
+
+          <li >
+              <label class="sublist_and_box">Final Pull Request</label>
+              <div class="squaredThree">
+                <input type="checkbox" value="None" id="squaredThree" name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
+                <label for="squaredThree"></label>
+              </div>
+          </li>
+        </ul>
+      </li>
+
+      <p>
+        <%= link_to(task.status ? "Unmark Complete" : "Mark Complete", mark_complete_task_path(task.id), {method: :patch, alt: "link to mark complete", class: "task_link" }) %>
+        <%= link_to("Edit", edit_task_path(task.id), {alt: "link to edit", class: "task_link", id: "edit_link"}) %>
+        <%= link_to("Delete", delete_task_path, {method: :delete, alt: "link to delete", class: "task_link" }) %>
+        <% end %>
+      </p>
+    </ul>
+  </section>
