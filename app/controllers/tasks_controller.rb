@@ -8,6 +8,9 @@ class TasksController < ApplicationController
   end
 
   def create
+    task = Task.new(task: params[:task], description: params[:description], due_date: params[:due_date])
+    task.save
+    redirect_to('/tasks')
   end
 
   def show

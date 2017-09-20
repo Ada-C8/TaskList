@@ -4225,3 +4225,378 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 10:44:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 50ms (Views: 41.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:44:26 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 10:44:54 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"egRtIH5nc1QXJgsCevl+kAbM1WfkC3gFT5wylXPgJTeICGyob2DElrN2NSyJropJkP6uk9FJXMyxljkdha83Og==", "task"=>"Drink more coffee", "due_date"=>"2017-09-20", "description"=>"There is no such thing as too much coffee. That's not true. There is such a thing. Oh nooooo this text box is very messed up and does not work. "}
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 10:44:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 10:44:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 10:48:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:48:24 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:48:34 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:50:10 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:50:57 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:51:10 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 80ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:51:18 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:51:32 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:51:38 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:51:59 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:52:05 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:52:10 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:52:30 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:52:40 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:53:05 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:53:12 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:53:16 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:54:51 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:55:17 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:55:56 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:56:28 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 10:57:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 39ms (Views: 32.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/7" for 127.0.0.1 at 2017-09-20 10:57:15 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"7"}
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `param' for #<TasksController:0x007fa3cee5b4a0>
+Did you mean?  params
+               params=):
+  
+app/controllers/tasks_controller.rb:16:in `show'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 10:57:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 10:57:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 42ms (Views: 34.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:57:58 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 10:57:59 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"/oaMhv2Ae2fJdQ5q93MM2cxH17594Z0vlomN96OOvqkMio0O7IfMpW0lMEQEJPgAWnWsSkijueZog4Z/VcGspA==", "task"=>"", "due_date"=>"", "description"=>""}
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 10:57:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 10:58:07 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 81ms (Views: 76.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 10:58:29 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 70ms (Views: 66.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 10:59:06 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"qth7IHyAi9AuWGFDH0OwDLUugRqtcSt3m5yevElfST1Y1HqobYc8EooIX23sFETVIxz67pgzD75llpU0vxBbMA==", "task"=>"Drink more coffee", "due_date"=>"2017-09-20", "description"=>"There is no such thing as too much coffee when you are this sleepy. Heyyyyyyy what's up the textarea is working! Now if I write a whole lot I can use it to debug my #show page. "}
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tasks_controller.rb:12:in `create'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 11:01:34 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 11:01:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 11:01:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 11:02:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 11:02:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 91ms (Views: 88.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 11:02:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 11:03:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 11:03:07 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 11:04:12 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 51.7ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 11:04:59 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"9bozIermum/+yM4GUqT/NU7TaAfqvcZlxnx2DpxtQKMHtjKp++ENrVqY8Cih8wvs2OET89//4qw4dn2GaiJSrg==", "task"=>"Drink more coffee", "due_date"=>"2017-09-20", "description"=>"I'm going to write several lines about coffee. Coffee is good. Espresso is better but what can you do. I do not know what kind of magic the coffee people do that makes the espresso better than mine. What dark ritual must I complete to become a coffee warlock? "}
+Completed 500 Internal Server Error in 126ms
+
+
+  
+NameError (undefined local variable or method `due_date' for #<TasksController:0x007fa3cf01bb78>):
+  
+app/controllers/tasks_controller.rb:11:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 11:05:27 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"9bozIermum/+yM4GUqT/NU7TaAfqvcZlxnx2DpxtQKMHtjKp++ENrVqY8Cih8wvs2OET89//4qw4dn2GaiJSrg==", "task"=>"Drink more coffee", "due_date"=>"2017-09-20", "description"=>"I'm going to write several lines about coffee. Coffee is good. Espresso is better but what can you do. I do not know what kind of magic the coffee people do that makes the espresso better than mine. What dark ritual must I complete to become a coffee warlock? "}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task", "created_at", "updated_at", "due_date", "description") VALUES (?, ?, ?, ?, ?)[0m  [["task", "Drink more coffee"], ["created_at", "2017-09-20 18:05:27.095826"], ["updated_at", "2017-09-20 18:05:27.095826"], ["due_date", "2017-09-20"], ["description", "I'm going to write several lines about coffee. Coffee is good. Espresso is better but what can you do. I do not know what kind of magic the coffee people do that makes the espresso better than mine. What dark ritual must I complete to become a coffee warlock? "]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 32ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 11:05:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/10" for 127.0.0.1 at 2017-09-20 11:05:30 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+

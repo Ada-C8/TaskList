@@ -6,8 +6,7 @@
   // border: 1px solid lawngreen;
 }
 
-.menu {
-  /*border-radius: 3rem;*/
+.container.menu {
   min-width: 12.5rem;
   width: 30%;
 }
@@ -28,7 +27,7 @@
   width: 75%;
 }
 
-.tasks {
+.container.tasks {
   padding: 0 0 5rem 0;
   min-width: 25rem;
   width: 60%;
@@ -97,6 +96,6 @@ label p {
   line-height: 0;
 }
 
-input[name="description"] {
+textarea {
   height: 4rem;
 }
