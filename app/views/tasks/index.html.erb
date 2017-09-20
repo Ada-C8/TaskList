@@ -1,0 +1,37 @@
+<body>
+  <h1>Task List</h1>
+
+  <nav>
+    <li>
+      Add task
+    </li>
+    <li>
+      All tasks
+    </li>
+  </ul>
+</nav>
+
+<div>
+<h2>My tasks</h2>
+  <ol>
+    <% @tasks.each do |task|  %>
+
+    <li>
+      <h3><%= task[:title]%></h3>
+      Description: <%= task[:description]%>
+      <br>
+      Due Date: <%=task[:due_date].month%> -
+      <%=task[:due_date].day%> -
+      <%=task[:due_date].year%>
+      <br>
+      Status: <%=
+      if task[:complete]==true
+        "Done!"
+      elsif task[:complete]==false
+      "Incomplete"
+    end %>
+    </li>
+    <% end %>
+  </ol>
+</div>
+</body>

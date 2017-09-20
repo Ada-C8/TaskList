@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+
+.margin {
+  border: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  padding: 2%;
+}
+
+footer {
+  margin: 20px 0 0 0;
+  padding: 5%;
+  border-style: solid;
+}
