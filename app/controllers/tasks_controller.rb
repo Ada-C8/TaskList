@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], completion_date: params[:task][:completion_date], description: params[:task][:description])
+    @task = Task.new(name: params[:task][:name], completion_date: params[:task][:completion_date], description: params[:task][:description], status: :incomplete)
     if @task.save
       redirect_to root_path
     else
@@ -35,8 +35,11 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-    # id = params[:id].to_i
-    # @task = Task.find(id)
+    id = params[:id].to_i
+    @task = Task.find(id)
+    @task.completion_date = Date.today
+    @task.save
+    @task.status = :complete
   end
 
   def edit
