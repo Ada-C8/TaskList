@@ -2,8 +2,7 @@
   <h2>Your Tasks</h2>
   <ul>
     <% @tasks.each_with_index do |task, i| %>
-    <li class="task">
-      <button>
+    <li class="task button">
         <p>
           <strong><%= link_to "#{i + 1}. #{task[:task]}", task %></strong>
         </p><br />
@@ -20,7 +19,6 @@
             </li>
           </ul>
         </nav>
-      </button>
     </li>
     <% end %>
   </ul>
