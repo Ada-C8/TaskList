@@ -1,20 +1,21 @@
 class TasksController < ApplicationController
   def index
-    @tasks = [
-      {title: "Study for Mock Interview", description: "buy tomatoes and apples", due_date:"sept 4, 2017", status: "done"},
-      {title: "Bake Bread", description: "clean kitchen", due_date:"sept 22, 2017", status: "done"},
-      {title: "Watch Star Wars", description: "read assignment", due_date:"sept 15, 2017", status: "done"}
-    ]
+    @tasks = Task.all
+  end
+
+  def new #only cares about showing the form
 
   end
 
-  def new
-  end
-
-  def create
+  def create # has access to user data, from the form
+    # puts params
+    task = Task.new(name: params[:task][:name], description: params[:task][:description], due_date: params[:task][:due_date])
+    task.save
+    redirect_to('/tasks')
   end
 
   def show
+    @task = Task.find (params[:id].to_i)
   end
 
   def edit

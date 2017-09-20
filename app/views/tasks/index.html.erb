@@ -7,8 +7,10 @@
 <ol>
   <% @tasks.each do |task| %>
     <li>
-      <%= task[:title] %>
+      <!-- <%= task[:name] %> -->
+      <%= link_to(task.name, task_path(task.id)) %>
       <!-- due: <%= task[:due_date] %> -->
+      <p> Mark Complete | Edit | Delete</p>
     </li>
     <% end %>
 </ol>
