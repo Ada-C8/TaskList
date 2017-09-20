@@ -35,7 +35,7 @@ a {
 
 p {
   color: #D7263D;
-  font-family: 'Fredoka One', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   font-size: 1.75rem;
 }
 
@@ -119,10 +119,18 @@ form {
 input {
   display: block;
   margin: auto;
+  width: 30%;
 }
 
 input[type="submit"] {
+  background-color: #1B998B;
+  border-radius: 3rem;
+  color: #FFB238;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 1.5rem;
+  padding: .5rem;
   margin: 1rem auto;
+  width: 20%;
 }
 
 .inline {
