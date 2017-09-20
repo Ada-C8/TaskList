@@ -17,7 +17,10 @@
             <form>
 
             <div class="squaredThree">
-              <label for="checkbox-input" <%= task.status ? "class=strikethrough"  : "class=normal" %>>Initial Commit</label>
+              <label for="checkbox-input" <%= task.status ? "class=strikethrough"  : "class=normal" %>>
+
+                  <%= link_to("Initial Commit", mark_initial_complete_path(task.id), {method: :patch, alt: "link to mark initial complete"}) %>
+              </label>
               <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
               <label for="squaredThree"></label>
             </div>
@@ -29,8 +32,12 @@
             <form>
 
               <div class="squaredThree">
-                <label for="checkbox-input" <%= task.status ? "class=strikethrough"  : "class=normal" %>>Final Pull Request</label>
-                <input type="checkbox" id="checkbox-input" value="None"  name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
+                <label for="checkbox-input" <%= task.status ? "class=strikethrough"  : "class=normal" %>>
+
+                    <%= link_to("Final Pull Request", mark_final_complete_path(task.id), {method: :patch, alt: "link to mark final complete"}) %>
+
+                </label>
+                <input type="checkbox" id="checkbox-input" value="None"  name="check" <%= task.final_status ? "checked" : "unchecked" %> />
                 <label for="squaredThree"></label>
               </div>
             </form>

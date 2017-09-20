@@ -25,6 +25,13 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id].to_i)
+    # @task(name: params[:task][:name], description: params[:task][:description])
+    # if @task.save
+    #   redirect_to root_path
+    # else
+    #   render :edit
+    # end
   end
 
   def new
@@ -32,7 +39,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find( params[:id].to_i)
+    @task = Task.find(params[:id].to_i)
   end
 
   def update
@@ -40,12 +47,23 @@ class TasksController < ApplicationController
 
   def mark_complete
     @task = Task.find (params[:id].to_i)
-    if @task.status == false
-      @task.update(status: true)
-    else
-      @task.update(status: false)
-    end
+    @task.status ? @task.update(status: false) : @task.update(status: true)
+
     redirect_to root_path
+  end
+
+  def mark_initial_complete
+    @task = Task.find (params[:id].to_i)
+    @task.initial_status ? @task.update(initial_status: false) : @task.update(initial_status: true)
+    redirect_to root_path
+
+  end
+
+  def mark_final_complete
+    @task = Task.find (params[:id].to_i)
+    @task.final_status ? @task.update(final_status: false) : @task.update(final_status: true)
+    redirect_to root_path
+
   end
 
 end
