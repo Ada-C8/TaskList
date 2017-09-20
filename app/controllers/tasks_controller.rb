@@ -1,21 +1,30 @@
 class TasksController < ApplicationController
+
   def index
-    @tasks = ["Wash dishes", "Vacuum carpet", "Buy groceries", "Take vitamins", "Eat veggies" ]
+    @tasks = Task.all
   end
 
   def edit
   end
 
   def new
+    @task = Task.new
   end
 
   def show
+    @task = Task.find( params[:id] )
   end
 
   def update
   end
 
   def create
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
+    if @task.save #successful = @task.save, if successful
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy

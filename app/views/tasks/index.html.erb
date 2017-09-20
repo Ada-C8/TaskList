@@ -1,14 +1,22 @@
 <main>
-<h1>TaskList</h1>
-
+<nav class="sidebar">
+<h1>
+  TaskList
+</h1>
+<div class="clearfix"></div>
+<%= button_to "Add Task", new_task_path, method: :get %>
+<%= button_to "All Tasks", tasks_path, method: :get %>
+</nav>
 <ul>
   <h2>My Tasks</h2>
   <% @tasks.each do |task| %>
-    <li><%= task %></li>
+    <li>
+      <%= link_to(task.name, task_path(task.id), alt: "link to task.name") %>
+    </li>
     <section class = "buttons">
-    <%= button_to "Mark as Complete" + "  | " %>
-    <%= button_to "Edit" + "  | " %>
-    <%= button_to "Delete" %>
+    <%= button_to "Mark Complete", toggle_complete_path(task.id), method: :patch %>
+    <%= button_to "Edit", edit_task_path(task.id), method: :get %>
+    <%= button_to "Delete", delete_task_path(task.id), method: :delete %>
     <div class="clearfix"></div>
     </section>
   <% end %>

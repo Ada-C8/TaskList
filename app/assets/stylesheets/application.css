@@ -21,22 +21,22 @@ body {
 main {
   margin: auto;
   width: 70vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 h1 {
   float: left;
-  width: 35%;
-  height: 80vh;
+  width: 100%;
+  height: auto;
   font-family: 'Pacifico', cursive;
   font-size: 3em;
   text-align: center;
-  border: 1px solid black;
+  border: 10px double #F45B69;
+  border-radius: 10%;
 }
 ul {
   font-family: 'Shadows Into Light', cursive;
@@ -44,12 +44,13 @@ ul {
   background: #D5CDCB;
   border-radius: 5%;
   width: 50%;
-  height: auto;
+  height: 80%;
   padding-left: 10%;
   padding-bottom: 2%;
   border: 5px solid #028090;
   box-shadow: -2px 2px 2px #114B5F;
 }
+
 input {
   display: inline-block;
   float: left;
@@ -59,7 +60,28 @@ input {
   border: 0;
   outline:none;
   color: #F45B69;
+  /*border: 1px solid black;*/
 }
+
 .clearfix {
   clear: both;
+}
+
+.sidebar {
+  width: 30%;
+  height: 80%;
+}
+
+.sidebar input {
+  width: 70%;
+  height: 100%;
+  padding: 10px 20px;
+  margin-left: 15%;
+  margin-bottom: 10px;
+  float: none;
+  font-size: 1.5em;
+  background: #D5CDCB;
+  border-radius: 45%;
+  border: 5px solid #028090;
+  box-shadow: -2px 2px 2px #114B5F;
 }
