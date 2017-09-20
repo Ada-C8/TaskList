@@ -7649,3 +7649,126 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:33:47 -0700
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NameError (uninitialized constant TasksController::Book):
+  
+app/controllers/tasks_controller.rb:7:in `new'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 14:34:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 58ms (Views: 51.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:34:06 -0700
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant TasksController::Book):
+  
+app/controllers/tasks_controller.rb:7:in `new'
+Started PUT "/__web_console/repl_sessions/eb88b793a8b39104a10010a689ab6c14" for 127.0.0.1 at 2017-09-20 14:34:15 -0700
+Started PUT "/__web_console/repl_sessions/eb88b793a8b39104a10010a689ab6c14" for 127.0.0.1 at 2017-09-20 14:34:15 -0700
+Started PUT "/__web_console/repl_sessions/eb88b793a8b39104a10010a689ab6c14" for 127.0.0.1 at 2017-09-20 14:34:17 -0700
+Started PUT "/__web_console/repl_sessions/eb88b793a8b39104a10010a689ab6c14" for 127.0.0.1 at 2017-09-20 14:34:17 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:34:30 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 23.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:35:58 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    33: <% end %>
+    34: -->
+    35: 
+    36: <%= form_for @task do |f| %>
+    37:   <%= f.label :task %>
+    38:   <%= f.text :task %>
+    39: <% end %>
+  
+app/views/tasks/new.html.erb:36:in `_app_views_tasks_new_html_erb___1393540121093222363_70170811600100'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:36:28 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (160.5ms)
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for #<ActionView::Helpers::FormBuilder:0x007fa3d4b5f2f0>):
+    35: 
+    36: <%= form_for @task do |f| %>
+    37:   <%= f.label :task %>
+    38:   <%= f.text :task %>
+    39: <% end %>
+    40: 
+    41: </div>
+  
+app/views/tasks/new.html.erb:38:in `block in _app_views_tasks_new_html_erb___1393540121093222363_70170758864560'
+app/views/tasks/new.html.erb:36:in `_app_views_tasks_new_html_erb___1393540121093222363_70170758864560'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:36:54 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:37:56 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:38:21 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:38:38 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:39:19 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:39:41 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 14:39:58 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+

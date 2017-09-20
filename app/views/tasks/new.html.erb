@@ -18,17 +18,31 @@
     <input type="submit" value="Submit">
   </form>
 -->
-<%= form_tag tasks_path, method: :post do %>
-  <%= label_tag "task[task]", "Task" %>
-  <%= text_field_tag "task[task]" %>
 
-  <%= label_tag "task[due_date]", "Due Date" %>
-  <%= date_field_tag "task[due_date]" %>
+ <%# form_tag tasks_path, method: :post do %>
+  <%# label_tag "task[task]", "Task" %>
+  <%# text_field_tag "task[task]" %>
 
-  <%= label_tag "task[description]", "Description" %>
-  <%= text_area_tag "task[description]" %>
+  <%# label_tag "task[due_date]", "Due Date" %>
+  <%# date_field_tag "task[due_date]" %>
 
-  <%= submit_tag "Create" %>
+  <%# label_tag "task[description]", "Description" %>
+  <%# text_area_tag "task[description]" %>
+
+  <%# submit_tag "Create" %>
+<%# end %>
+
+<%= form_for @task do |t| %>
+  <%= t.label :task %>
+  <%= t.text_field :task %>
+
+  <%= t.label :due_date, "Due Date" %>
+  <%= t.date_field :due_date %>
+
+  <%= t.label :description %>
+  <%= t.text_area :description %>
+
+  <%= t.submit "Create" %>
 <% end %>
 
 </div>
