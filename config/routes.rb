@@ -1,19 +1,19 @@
 Rails.application.routes.draw do
   get 'tasks/index'
 
-  get '/tasks', to: "tasks#index"
+  get '/tasks', to: "tasks#index", as: 'books'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get "/tasks/new", to: "books#new", as: "new_task"
+  get "/tasks/new", to: "tasks#new", as: "new_task"
+  post'/tasks', to: 'tasks#create'
 
+  get '/tasks/:id/edit', to: 'tasks#edit', as: "edit_task"
 
-  get '/tasks/:title/edit', to: 'tasks#edit', as: "edit_task"
+  get "/tasks/:id", to: "tasks#show", as: "task"
 
-  get "/tasks/:title", to: "tasks#show", as: "task"
-
-  patch '/tasks/:title', to: 'tasks#update'
+  patch '/tasks/:id', to: 'tasks#update'
 
   get "/tasks", to: "tasks#index"
 
-  delete "/tasks/:title", to: "tasks#destroy"
+  delete "/tasks/:id", to: "tasks#destroy"
 end
