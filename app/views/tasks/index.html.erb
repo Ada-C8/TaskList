@@ -1,13 +1,17 @@
 <h1 id="app_name">Gitturdun</h1>
 <ul id="index_list">
   <% @tasks.each do |task| %>
-    <p class="done"><%= button_to "All Dun", update_task_path(@tasks.id) %></p>
-    <li class="task"><%= task.name %></li>
+    <p class="done"><%= button_to "All Dun", update_task_path(task.id), method: :patch %></p>
+    <% unless task.complete? %>
+    <li class="task"><%= link_to task.name, task_path(task.id) %></li>
+    <% else %>
+    <li class="strike"><%= task.name %></li>
+    <% end %>
     <section class="task_buttons">
-      <p class="edit"><%= button_to "Edit", edit_task_path(@tasks.id) %></p>
-      <p class="delete"><%= button_to "Delete", delete_task_path(@tasks.id) %></p>
+      <p class="edit"><%= button_to "Edit", edit_task_path(task.id), method: :get %></p>
+      <p class="delete"><%= button_to "Delete", delete_task_path(task.id), method: :get %></p>
     </section<
   <% end %>
 <ul>
-<p class="add"><%= button_to "+", new_task_path %></p>
-<p class="all"><%= button_to "All", tasks_path %></p>
+<p class="add"><%= button_to "+", new_task_path, method: :get %></p>
+<p class="all"><%= button_to "All", tasks_path, method: :get %></p>
