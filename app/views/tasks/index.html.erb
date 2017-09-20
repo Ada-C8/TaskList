@@ -1,24 +1,25 @@
-<h1>Tasks</h1>
-params are: <%= params %>
-</p>
-<% @tasks.each do |task| %>
-<ul>
-  <li>
-    <strong><%= task[:id] %></strong>
-  </li>
-  <li>
-    <strong><%= task[:title] %></strong>
-  </li>
-  <li>
-    Due: <%=task[:due]%>
-  </li>
-  <li>
-    Priority: <%=task[:priority]%>
-  </li>
-  <li>
-    Completed: <%=task[:completed]%>
-  </li>
-  </ul>
-  <% end %>
 
-<p>Find me in app/views/tasks/index.html.erb</p>
+<nav class="nav wrapper">
+  <h2> Task List </h2>
+    <a href="">Add task</a>
+    <a href="">All tasks</a>
+  <!-- </section> -->
+</nav>
+
+<article class="list-of-tasks wrapper">
+  <h3>TO DO :</h3>
+
+  <ol>
+    <% @tasks.each do |task| %>
+    <li>
+      <%= task.name %>
+    </li>
+    <ul>
+      <li class="right-border">
+        <%= task.description %>
+      </li>
+      <li class="right-border">
+      </li>
+    </ul>
+      <% end %>
+  </ol>

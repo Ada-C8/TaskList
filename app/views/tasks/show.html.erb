@@ -6,12 +6,12 @@ params are : <%= params %>
 
 <%if @task %>
 <h2>
-  <%= @task[:title] %>
-  <%=link_to "Edit", edit_task_path(@task[:id]) %>
-  <%=link_to "Delete", delete_task_path(@task[:id]), method: :delete %>
+  <%= @task.title %>
+  <%=link_to "Edit", edit_task_path(@task.id) %>
+  <%=link_to "Delete", delete_task_path(@task.id), method: :delete %>
   </h2>
   <h3>
-    <%= @task[:description] %>
+    <%= @task.description %>
   </h3>
   <h3>
     <%= @task[:due] %>
@@ -20,7 +20,7 @@ params are : <%= params %>
     <%= @task[:priority] %>
   </h3>
   <h3>
-    <%= @task[:compeleted] %>
+    <%= @task[:completed] %>
   </h3>
   <%else%>
   <h1> 404 : Not Found !</h1>

@@ -458,3 +458,745 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 18ms (Views: 16.4ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "task-list_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "task-list_test"[0m
+  [1m[35m (514.6ms)[0m  [1m[35mCREATE DATABASE "task-list_development" ENCODING = 'unicode'[0m
+  [1m[35m (401.9ms)[0m  [1m[35mCREATE DATABASE "task-list_test" ENCODING = 'unicode'[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3827420325922003335)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20170920000605)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "name" character varying, "description" character varying, "date_completed" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170920000605"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-20 00:08:32.208109"], ["updated_at", "2017-09-20 00:08:32.208109"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3827420325922003335)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Complete Homework"], ["description", "Finish Rails for Zombies Part 1"], ["created_at", "2017-09-20 02:00:07.904005"], ["updated_at", "2017-09-20 02:00:07.904005"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sleep"], ["description", "defrag brain"], ["created_at", "2017-09-20 02:01:20.408977"], ["updated_at", "2017-09-20 02:01:20.408977"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Grocery Shopping"], ["description", "buy eggs, cheese and pickles"], ["created_at", "2017-09-20 02:02:12.588965"], ["updated_at", "2017-09-20 02:02:12.588965"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:16:45 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/tasks_controller.rb:10:in `index'
+Started GET "/task" for 127.0.0.1 at 2017-09-19 19:17:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/task"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:17:14 -0700
+Processing by TasksController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/tasks_controller.rb:10:in `index'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:19:17 -0700
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:19:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (12.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."title" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 12.4ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column tasks.title does not exist
+LINE 1: SELECT "tasks".* FROM "tasks" ORDER BY "tasks"."title" ASC
+                                               ^
+: SELECT "tasks".* FROM "tasks" ORDER BY "tasks"."title" ASC):
+    1: <h1>Tasks</h1>
+    2: params are: <%= params %>
+    3: </p>
+    4: <% @tasks.each do |task| %>
+    5: <ul>
+    6:   <li>
+    7:     <strong><%= task.id %></strong>
+  
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___3610959038292776118_70150201321060'
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."title" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column tasks.title does not exist
+LINE 1: SELECT "tasks".* FROM "tasks" ORDER BY "tasks"."title" ASC
+                                               ^
+: SELECT "tasks".* FROM "tasks" ORDER BY "tasks"."title" ASC):
+    1: <h1>Tasks</h1>
+    2: params are: <%= params %>
+    3: </p>
+    4: <% @tasks.each do |task| %>
+    5: <ul>
+    6:   <li>
+    7:     <strong><%= task.id %></strong>
+  
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___3610959038292776118_70150201321060'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:19:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Task:0x007f9a39a4d7a8>):
+     7:     <strong><%= task.id %></strong>
+     8:   </li>
+     9:   <li>
+    10:     <strong><%= task.title %></strong>
+    11:   </li>
+    12:   <li>
+    13:     Due: <%=task[:due]%>
+  
+app/views/tasks/index.html.erb:10:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150184708060'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___3610959038292776118_70150184708060'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:20:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 246ms (Views: 243.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:43:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial tasks/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tanjastroble/Desktop/Week7/TaskList/app/views"
+):
+    1: <section class="container">
+    2:   <!-- <%= render partial: "header" %> -->
+    3: 
+    4:   <article class="body">
+    5:     <section id="list">
+  
+app/views/tasks/index.html.erb:2:in `_app_views_tasks_index_html_erb___3610959038292776118_70150185842600'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:43:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial tasks/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tanjastroble/Desktop/Week7/TaskList/app/views"
+):
+    1: <section class="container">
+    2:   <%= render partial: "header" %>
+    3: 
+    4:   <article class="body">
+    5:     <section id="list">
+  
+app/views/tasks/index.html.erb:2:in `_app_views_tasks_index_html_erb___3610959038292776118_70150250533780'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:45:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial tasks/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tanjastroble/Desktop/Week7/TaskList/app/views"
+):
+    1: <section class="container">
+    2:   <%= render partial: "header" %>
+    3: 
+    4:   <article class="body">
+    5:     <section id="list">
+  
+app/views/tasks/index.html.erb:2:in `_app_views_tasks_index_html_erb___3610959038292776118_70150236126640'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:45:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial tasks/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tanjastroble/Desktop/Week7/TaskList/app/views"
+):
+    1: <section class="container">
+    2:   <%= render partial: "header" %>
+    3: 
+    4:   <article class="body">
+    5:     <section id="list">
+  
+app/views/tasks/index.html.erb:2:in `_app_views_tasks_index_html_erb___3610959038292776118_70150185937480'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:46:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `completed' for #<Task:0x007f9a420ff378>):
+     6: 
+     7:       <% @tasks.each do |task| %>
+     8:         <% @button_text = "" %>
+     9:         <% if task.completed != nil %>
+    10:         <%  @button_text = "not done" %>
+    11:         <% else %>
+    12:         <%  @button_text = "done" %>
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150236446840'
+app/views/tasks/index.html.erb:7:in `_app_views_tasks_index_html_erb___3610959038292776118_70150236446840'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:46:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `completed' for #<Task:0x007f9a3fe85b58>):
+     6: 
+     7:       <!-- <% @tasks.each do |task| %>
+     8:         <% @button_text = "" %>
+     9:         <% if task.completed != nil %>
+    10:         <%  @button_text = "not done" %>
+    11:         <% else %>
+    12:         <%  @button_text = "done" %>
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150236994260'
+app/views/tasks/index.html.erb:7:in `_app_views_tasks_index_html_erb___3610959038292776118_70150236994260'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:46:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/tanjastroble/Desktop/Week7/TaskList/app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:47:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered tasks/index.html.erb within layouts/application (215.9ms)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007f9a39d0e6b8>:0x007f9a3adfdb90>
+Did you mean?  @tasks):
+     7: 
+     8:         <ul class="main-nav">
+     9:           <li class="task-title">
+    10:             <div class="<%= 'task-done' if task.completed != nil %>">
+    11: 
+    12:             <%= link_to task.title, task_path(task.id) %>
+    13:           </li>
+  
+app/views/tasks/index.html.erb:10:in `_app_views_tasks_index_html_erb___3610959038292776118_70150194723380'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:47:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered tasks/index.html.erb within layouts/application (204.2ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007f9a39d0e6b8>:0x007f9a3fe15f10>
+Did you mean?  @tasks):
+     8:         <ul class="main-nav">
+     9:           <li class="task-title">
+    10: 
+    11:             <%= link_to task.title, task_path(task.id) %>
+    12:           </li>
+    13:           <li class="hidden">
+    14:             <%= link_to "delete", task_delete_path(task.id), method: :delete, data: { confirm: 'really delete this task?' } %>
+  
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3610959038292776118_70150236714100'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:47:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered tasks/index.html.erb within layouts/application (189.5ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007f9a39d0e6b8>:0x007f9a3bca0cb0>
+Did you mean?  @tasks):
+    11: 
+    12:           </li>
+    13:           <li class="hidden">
+    14:             <%= link_to "delete", task_delete_path(task.id), method: :delete, data: { confirm: 'really delete this task?' } %>
+    15:           </li>
+    16:           <li class="hidden">
+    17:             <%= link_to "edit", task_edit_path(task.id), method: :get %>
+  
+app/views/tasks/index.html.erb:14:in `_app_views_tasks_index_html_erb___3610959038292776118_70150202397380'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:48:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered tasks/index.html.erb within layouts/application (264.6ms)
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007f9a39d0e6b8>:0x007f9a4185a9e8>
+Did you mean?  @tasks):
+    14:             
+    15:           </li>
+    16:           <li class="hidden">
+    17:             <%= link_to "edit", task_edit_path(task.id), method: :get %>
+    18:           </li>
+    19:           <li class="hidden">
+    20:             <%= link_to @button_text, complete_task_path(task.id), method: :patch %>
+  
+app/views/tasks/index.html.erb:17:in `_app_views_tasks_index_html_erb___3610959038292776118_70150250486240'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:48:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:48:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:52:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial tasks/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tanjastroble/Desktop/Week7/TaskList/app/views"
+):
+    1: <section class="container">
+    2:   <%= render partial: "header" %>
+    3: 
+    4:   <article class="body">
+    5:     <section id="list">
+  
+app/views/tasks/index.html.erb:2:in `_app_views_tasks_index_html_erb___3610959038292776118_70150254850260'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:53:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (168.7ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `date' for #<#<Class:0x007f9a39d0e6b8>:0x007f9a3fd567a0>):
+     6: 
+     7:       <% @tasks.each do |task| %>
+     8:         <% @button_text = "" %>
+     9:         <% if date.completed != nil %>
+    10:         <%  @button_text = "not done" %>
+    11:         <% else %>
+    12:         <%  @button_text = "done" %>
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150236322120'
+app/views/tasks/index.html.erb:7:in `_app_views_tasks_index_html_erb___3610959038292776118_70150236322120'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:53:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (175.3ms)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `date_completed' for #<#<Class:0x007f9a39d0e6b8>:0x007f9a3ff34180>
+Did you mean?  date_select):
+     6: 
+     7:       <% @tasks.each do |task| %>
+     8:         <% @button_text = "" %>
+     9:         <% if date_completed != nil %>
+    10:         <%  @button_text = "not done" %>
+    11:         <% else %>
+    12:         <%  @button_text = "done" %>
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150237300220'
+app/views/tasks/index.html.erb:7:in `_app_views_tasks_index_html_erb___3610959038292776118_70150237300220'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 19:54:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:12:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:16:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "</main>": expected "{", was ""):
+    4:     <title>TaskList</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/tasks.scss:116
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4206562054608200836_70150236748320'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:17:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `done' for #<Task:0x007f9a4185b550>):
+    45:     <ul>
+    46:       <% @tasks.each do |task| %>
+    47:         <li>
+    48:         <% if task.done %>
+    49:           <p class="done">
+    50:             <i class="fa fa-check-square-o" aria-hidden="true"></i>
+    51:             <%= link_to(task.name, task_path(task.id), alt: "link to") %>
+  
+app/views/tasks/index.html.erb:48:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150235798000'
+app/views/tasks/index.html.erb:46:in `_app_views_tasks_index_html_erb___3610959038292776118_70150235798000'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:17:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `done' for #<Task:0x007f9a3bf952b8>):
+    45:     <ul>
+    46:       <% @tasks.each do |task| %>
+    47:         <li>
+    48:         <% if task.done %>
+    49:           <p class="done">
+    50:             <i class="fa fa-check-square-o" aria-hidden="true"></i>
+    51:             <%= link_to(task.name, task_path(task.id), alt: "link to") %>
+  
+app/views/tasks/index.html.erb:48:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150250567920'
+app/views/tasks/index.html.erb:46:in `_app_views_tasks_index_html_erb___3610959038292776118_70150250567920'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:18:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `completed' for #<Task:0x007f9a419002f8>):
+    45:     <ul>
+    46:       <% @tasks.each do |task| %>
+    47:         <li>
+    48:         <% if task.completed %>
+    49:           <p class="done">
+    50:             <i class="fa fa-check-square-o" aria-hidden="true"></i>
+    51:             <%= link_to(task.name, task_path(task.id), alt: "link to") %>
+  
+app/views/tasks/index.html.erb:48:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150250838100'
+app/views/tasks/index.html.erb:46:in `_app_views_tasks_index_html_erb___3610959038292776118_70150250838100'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:23:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Task:0x007f9a420152a0>):
+    38:   <ol>
+    39:     <% @tasks.each do |task| %>
+    40:     <li>
+    41:       <%= task.title %>
+    42:     </li>
+    43:     <ul>
+    44:       <li class="right-border">
+  
+app/views/tasks/index.html.erb:41:in `block in _app_views_tasks_index_html_erb___3610959038292776118_70150254604640'
+app/views/tasks/index.html.erb:39:in `_app_views_tasks_index_html_erb___3610959038292776118_70150254604640'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:24:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:26:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:31:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/google.com" for 127.0.0.1 at 2017-09-19 20:31:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/google.com"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:32:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:33:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:33:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:34:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:34:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:35:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:36:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:37:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:38:35 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 21:11:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 21:17:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 21:20:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 21:20:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 21:20:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
