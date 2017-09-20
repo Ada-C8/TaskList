@@ -1,22 +1,22 @@
 class TasksController < ApplicationController
 
-  TASKS = []
-  
   def index
+    @tasks = Task.order(:id)
   end
 
   def show
+    @task = Task.find( params[:id].to_i)
   end
+  
+def create
+end
 
-  def create
-  end
+def update
+end
 
-  def update
-  end
+def destroy
+end
 
-  def destroy
-  end
-
-  def edit
-  end
+def edit
+end
 end

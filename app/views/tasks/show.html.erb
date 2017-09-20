@@ -1,2 +1,11 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1>Stef's To-Do List</h1>
+
+<% @tasks.each do |task| %>
+
+<h2>
+  <strong><%= task.name %></strong>
+</h2>
+
+<% end %>
+
+<%= link_to "Home", tasks_path %>
