@@ -33,7 +33,7 @@ a {
   text-decoration: none;
 }
 
-p {
+p, label {
   color: #D7263D;
   font-family: 'Comfortaa', sans-serif;
   font-size: 1.75rem;
@@ -70,6 +70,10 @@ h4 {
   font-size: 2rem;
   font-weight: normal;
   line-height: 0;
+}
+
+ul {
+  padding-left: 0;
 }
 
 header {
@@ -126,6 +130,7 @@ form {
 }
 
 input, textarea {
+  color: #1B998B;
   display: block;
   border: none;
   border-radius: 1rem;
@@ -133,18 +138,6 @@ input, textarea {
   margin: auto;
   resize: none;
   width: 50%;
-}
-
-input[type="submit"] {
-  background-color: #1B998B;
-  border-radius: 3rem;
-  color: #FFB238;
-  /*color: #2A2B2A;*/
-  font-family: 'Fredoka One', sans-serif;
-  font-size: 1.5rem;
-  padding: .5rem;
-  margin: 1rem auto;
-  width: 20%;
 }
 
 .inline {
@@ -195,4 +188,11 @@ input[type="submit"] {
 
 .menu .button:active {
   border-style: inset;
+}
+
+#show h2 {
+  line-height: 1;
+  max-width: 90%;
+  margin-top: ;
+  margin: 1.5rem auto;
 }
