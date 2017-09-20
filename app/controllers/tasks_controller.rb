@@ -8,7 +8,7 @@ class TasksController < ApplicationController
   end
 
   def create # has access to user data, from the form
-    task = Task.new(title: params[:title] ,description: params[:description], due_date: params[:due_date], status: params[:status])
+    task = Task.new(title: params[:task][:title] ,description: params[:task][:description], due_date: params[:task][:due_date], status: params[:task][:status])
     task.save
     redirect_to('/tasks')
   end
@@ -24,6 +24,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
+
   end
 
 end

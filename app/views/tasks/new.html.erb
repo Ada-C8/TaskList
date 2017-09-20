@@ -1,7 +1,7 @@
 <h1>In the new tasks ERB file</h1>
 
-<form action="/tasks" method="post" accept-charset="utf-8">
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+<!-- <form action="/tasks" method="post" accept-charset="utf-8">
+  SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
 
@@ -18,4 +18,21 @@
   <input type="text" name="status" value="" id="status">
 
   <input type="submit" value="Submit">
-</form>
+</form> -->
+
+<%= form_tag tasks_path, method: :post do %>
+
+  <%= label_tag "task[title]", "Title" %>
+  <%= text_field_tag "task[title]" %>
+
+  <%= label_tag "task[description]", "Description" %>
+  <%= text_field_tag "task[description]" %>
+
+  <%= label_tag "task[due_date]", "Due Date" %>
+  <%= text_field_tag "task[due_date]" %>
+
+  <%= label_tag "task[status]", "Status" %>
+  <%= text_field_tag "task[status]" %>
+
+  <%= submit_tag "Add Task" %>
+<% end %>
