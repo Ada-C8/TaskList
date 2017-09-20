@@ -1,0 +1,22 @@
+<main>
+  <div class="container">
+    <h2>Create New Task</h2>
+
+    <form action="/books" method="post" accept-charset="utf-8">
+      <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+
+      <label for="task"><p>Task</p></label>
+      <input type="text" name="task" value="" id="task">
+
+      <label for="due_date"><p>Due Date</p></label>
+      <input type="date" name="due_date" value="" id="due_date">
+
+      <label for="description"><p>Description</p></label>
+      <input type="text" name="description" value="" id="description">
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</main>

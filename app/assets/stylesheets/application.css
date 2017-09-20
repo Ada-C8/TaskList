@@ -112,6 +112,24 @@ footer {
   width: 100%;
 }
 
+form {
+  margin: 2rem;
+}
+
+input {
+  display: block;
+  margin: auto;
+}
+
+input[type="submit"] {
+  margin: 1rem auto;
+}
+
 .inline {
   display: inline;
+}
+
+.container {
+  width: 95%;
+
 }

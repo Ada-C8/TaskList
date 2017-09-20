@@ -55,8 +55,6 @@
 .task p {
   color: inherit;
   display: inline-block;
-  font-family: 'Fredoka One', sans-serif;
-  font-size: 1.75rem;
   margin: auto;
   text-align: left;
   width: 80%;
@@ -75,20 +73,21 @@
   font-size: 1.25rem;
 }
 
-.task-container {
-  width: 95%;
-}
-
-.task-container ul {
+.task.container ul {
   list-style: none;
   margin: 2rem;
 }
 
-.task-container li {
+.task.container li {
   margin: 1rem;
 }
 
-.task-name {
+.task .name {
   font-family: 'Fredoka One', sans-serif;
   font-weight: bold;
+}
+
+label p {
+  font-size: 1rem;
+  line-height: 0;
 }
