@@ -4528,3 +4528,47 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 15:27:27 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completion_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (142.2ms)
+Completed 200 OK in 172ms (Views: 154.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:27:31 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (7.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 36.1ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:28:18 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2017-09-20 15:28:22 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:28:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.6ms)
+
+

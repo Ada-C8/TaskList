@@ -6,4 +6,8 @@
     <li class="tasks">
       Complete by: <%= @task[:completion_date] %>
     </li>
+
+    <div class="task-actions">
+      <li class="action"><%= link_to "Edit", edit_task_path(@task.id) %></li>
+    </div>
 </ul>
