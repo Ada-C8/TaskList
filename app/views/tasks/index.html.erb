@@ -27,7 +27,8 @@
         <div class="task-actions">
           <li class="action">Mark Complete</li>
           <li class="action">Edit</li>
-          <li class="action">Delete</li>
+          <li class="action"><%= link_to "Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+          </li>
           <li class="action"><%= link_to "Show", task_path(task.id) %></li>
 
         </div>

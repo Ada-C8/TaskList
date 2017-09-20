@@ -19,6 +19,19 @@ class TasksController < ApplicationController
   end
 
   def update
+
+    id = params[:id].to_i
+    @task = Task.find(id)
+
+    @task.name = params[:task][:name]
+    @task.completion_date = params[:task][:completion_date]
+    @task.description = params[:task][:description]
+
+    if @task.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def mark_complete
@@ -27,13 +40,16 @@ class TasksController < ApplicationController
   end
 
   def edit
-    # id = params[:id].to_i
-    # @task = Task.find(id)
+    id = params[:id].to_i
+    @task = Task.find(id)
   end
 
-  def destory
-    # name = params[:name]
-    # @task = Task.find_by(name)
+  def destroy
+    id = params[:id].to_i
+    @task = Task.find(id)
+    if @task.destroy
+      redirect_to root_path
+    end
   end
 
   def new
