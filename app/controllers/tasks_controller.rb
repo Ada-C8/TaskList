@@ -8,6 +8,10 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id].to_i)
   end
 
+  def new
+    @task = Task.new
+  end
+
   def create
     @task = Task.new(name: params[:task][:name], description: params[:task][:description])
 
@@ -23,13 +27,8 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id].to_i)
   end
-
-  def new
-    @task = Task.new
-  end
-
-
 
   def update
   end

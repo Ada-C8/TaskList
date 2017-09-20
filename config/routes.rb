@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/tasks', to: 'tasks#index', as: 'tasks' #tasks_path
 
-  get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_tasks' #edit_book_path
+  get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_task' #edit_task_path
 
   patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'mark_complete_task' # mark_complete_task_path
 
