@@ -3,5 +3,23 @@
 <h1>404: Not Found</h1>
 <% end %>
 
-<h1><%=@task.id %> <%=@task.name %>
-</h1>
+<h2><%=@task.id %> <%=@task.name %>
+</h2>
+
+<%= link_to "Edit", edit_task_path(@task.id) %>
+  <%= button_to "Delete", delete_task_path(@task.id), method: :delete %>
+<h3>
+  Name of the task: <%= @task.name %>
+</h3>
+<h3>
+  About the task: <%= @task.description %>
+</h3>
+<h3>
+  Due date: <%= @task.due_date %>
+</h3>
+<h3>
+  Status: <%= @task.status %>
+</h3>
+
+
+<%= link_to "All Tasks", tasks_path %>
