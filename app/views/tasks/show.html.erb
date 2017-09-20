@@ -1,6 +1,7 @@
 <h1>Task List</h1>
 
-<% if @task %>
+<section class="individual">
+
   <h3>
     To do: <%= @task.name %>
   </h3>
@@ -12,4 +13,7 @@
   <h3>
     Get this done by: <%= @task.completion_date %>
   </h3>
-<% end %>
+
+</section>
+
+<%= link_to "Home", tasks_path %>
