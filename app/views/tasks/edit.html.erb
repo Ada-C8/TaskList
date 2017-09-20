@@ -1,8 +1,14 @@
-<h2>You are in Edit</h2>
+<h2>Edit task:</h2>
 
-<!-- <p>
-  you've edited your data
-</p> -->
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
 
-<!-- need to do something to "patch/put" -->
-<!-- <%# button_to "Submit", task_path(task.id) %> -->
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :due_date %>
+  <%= f.date_field :due_date %>
+
+  <%= f.submit "Edit Task"%>
+<%end%>

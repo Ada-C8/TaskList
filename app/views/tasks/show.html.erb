@@ -1,1 +1,13 @@
-<h2>You are in show</h2>
+
+
+
+<p>
+    <strong><%= link_to "#{@task.title}", task_path(@task.id) %></strong>
+    <p>
+      <em><%= @task.description%></em> :
+      <%= @task.due_date %>
+    </p>
+    <p>
+       <%= link_to "#{@task.complete}", complete_task_path(@task.id)%> | <%= link_to "Edit", edit_task_path(@task.id) %> | <%= link_to "Delete", task_path(@task.id) %>
+    </p>
+</p>

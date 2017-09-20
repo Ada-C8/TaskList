@@ -1,6 +1,22 @@
 <h2>Add a new task:</h2>
-<form action="/tasks" method="post" accept-charset="utf-8">
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :due_date %>
+  <%= f.date_field :due_date %>
+
+  <%= f.submit "Add Task"%>
+<%end%>
+
+
+
+<!-- this is generic html form - don't use with rails. -->
+<!-- <form action="/tasks" method="post" accept-charset="utf-8">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
 
@@ -14,8 +30,27 @@
   <label for="due_date">Due Date</label>
   <input type="date" name="due_date" value="" id="due_date">
 
-  <!-- <label for="complete">Complete?</label>
-  <input type="checkbox" name="complete" id="complete"> -->
+  <label for="complete">Complete?</label>
+  <input type="checkbox" name="complete" id="complete">
 
   <input type="submit" value="Submit">
-</form>
+</form> -->
+
+
+<!-- use this for forms not associated with a model. -->
+<%# form_tag tasks_path do %>
+  <%# label_tag "task[title]", "Title" %>
+  <%# text_field_tag "task[title]" %>
+
+  <%# label_tag "task[description]", "description" %>
+  <%# text_field_tag "task[description]" %>
+
+  <%# label_tag "task[due_date]", "Due Date" %>
+  <%# date_field_tag "task[description]" %>
+
+  <%# label_tag "task[complete]", "Complete" %>
+  <%# check_box_tag "task[complete]" %>
+
+  <%# submit_tag "Add Task" %>
+
+<%#end%>
