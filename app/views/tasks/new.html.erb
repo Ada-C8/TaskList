@@ -1,0 +1,12 @@
+<div class="task-list">
+  <%= form_for @task do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :completion_date %>
+    <%= f.date_field :completion_date %>
+    <%= f.submit "add task"%>
+  <% end %>
+
+</div>

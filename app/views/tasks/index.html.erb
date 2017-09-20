@@ -1,0 +1,12 @@
+
+  <div class="task-list">
+    <h2>Your Tasks</h1>
+    <ul>
+      <% counter = 0 %>
+      <% @tasks.each do |task| %>
+        <% counter += 1 %>
+        <li class="task"><%=counter%>. <%= task.name %></li>
+        <li class="task-options"><%= link_to("Mark completed", method: :patch, alt: 'link to') %> | <%= link_to("Edit", edit_task_path(task.id), alt: 'link to') %> | <%= link_to("Show", show_task_path(task.id), alt: 'link to') %> | <%= link_to("Delete", delete_task_path(task.id), method: :delete) %></li>
+      <% end %>
+    </ul>
+  </div>

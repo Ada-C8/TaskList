@@ -1,0 +1,7 @@
+
+  <div class="task-list">
+    <h2><%= @task.name %></h1>
+    <h4>Description: <%= @task.description %></h4>
+    <h4>Completion date: <%= @task.completion_date.to_s %></h4>
+    <p><%= link_to("Mark completed", method: :patch, alt: 'link to') %> | <%= link_to("Edit", edit_task_path(@task.id), alt: 'link to') %> | <%= link_to("Back to task list", tasks_path, alt: 'link to') %> | <%= link_to("Delete", delete_task_path(@task.id), method: :delete) %></p>
+  </div>
