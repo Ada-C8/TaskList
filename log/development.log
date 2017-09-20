@@ -873,3 +873,150 @@ Processing by TasksController#new as HTML
 Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:28:40 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Congratulations! You've already on the way to completing the task by adding the task to your task list! Just fill in the following detailsan then you deserve a break for completing the task of adding a task to your TaskList!</h2>
+    2: 
+    3: <%= form_for @task do |f| %>
+    4:   <%= f.label :name %>
+    5:   <%= f.text_field :name %>
+    6:   <%= f.label :desciption %>
+  
+app/views/tasks/new.html.erb:3:in `_app_views_tasks_new_html_erb__3131465923134716337_70223253093320'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:29:57 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 15:32:13 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2bPYbiYvlm9OexaTe98qeDs8LFvqtJdQTSjTm2GdN5mh6KLu2wdhTKZ4+N/XyHz3UtR8FJVE18YL4kvqI60LoQ==", "task"=>{"name"=>"Greet the world", "description"=>"Create a hello world program in at least 5 different programming languages. Then learn how to say \"Hello World\" in at least 5 different spoken languages."}, "commit"=>"Create Task"}
+  Rendering tasks/create.html.erb within layouts/application
+  Rendered tasks/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 15:32:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:32:47 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 15:32:57 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u5kGDiTLtN6Ezoer//5jHNGKE8IadBt1gLZztBN3yl8yriRH7KBab63EWv4CuWhHOFd/sIgZ8txqE9EKOjjGPA==", "task"=>{"name"=>"Hello World", "description"=>"Hello how are you?"}, "commit"=>"Create Task"}
+  Rendering tasks/create.html.erb within layouts/application
+  Rendered tasks/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 15:36:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 47ms (Views: 39.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 15:37:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:37:53 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 15:38:47 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rvklYLiZo3x8+97XutE8rMx1JVpBEu7KzhIW2aMoZicnzgcpcPJNzVXxA4JHljf3JahJKNN/B2Mkt7RnimdqRA==", "task"=>{"name"=>"Hello World", "description"=>"Write a \"Hello World\" program in at least 5 different programming languages and learn to say \"Hello World\" in at least 5 different spoken languages."}, "commit"=>"Create Task"}
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `task' for #<TasksController:0x007fbc3e645e90>
+Did you mean?  @task):
+  
+app/controllers/tasks_controller.rb:14:in `create'
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:39:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:39:39 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 15:39:53 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eu5IghFgPdr5D5orfxqQHfPlVYg+ndBbeTDAgVqC2QLz2WrL2QvTa9AFR36CXZtGGjg5+qzwOfKTlWI/c83VYQ==", "task"=>{"name"=>"Hello World", "description"=>"Write a \"Hello World\" program in at least 5 different programming languages and learn to say \"Hello World\" in at least 5 different spoken languages."}, "commit"=>"Create Task"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Hello World"], ["created_at", "2017-09-20 22:39:53.954746"], ["updated_at", "2017-09-20 22:39:53.954746"], ["description", "Write a \"Hello World\" program in at least 5 different programming languages and learn to say \"Hello World\" in at least 5 different spoken languages."]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:39:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:40:09 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 15:40:38 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"liJAuLozS5F6nZkvIRc5VtgFi0dS9cH/3zxGfENUm1QfFWLxclilIFOXRHrcUDINMdjnNcCYKFY1meTCahuXNw==", "task"=>{"name"=>"Walk the PCT", "description"=>"Try to do it in under a month. I dare you. No, that sounds like a way to get injured. You won't make it. "}, "commit"=>"Create Task"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Walk the PCT"], ["created_at", "2017-09-20 22:40:38.387695"], ["updated_at", "2017-09-20 22:40:38.387695"], ["description", "Try to do it in under a month. I dare you. No, that sounds like a way to get injured. You won't make it. "]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:40:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
