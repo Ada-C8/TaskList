@@ -9,6 +9,37 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+
+
+    <body>
+      <header>
+        <ul class="navigation">
+          <li>Donut Forget!</li>
+        </ul>
+      </header>
+
+      <section class="task-body">
+        <div class="all-task-actions">
+          <ul>
+            <li><%= link_to "Add Task", new_task_path %></li>
+            <li><%= link_to "All Tasks", tasks_path %></li>
+          </ul>
+        </div>
+
+        <div class="information-box">
+          <%= yield %>
+        </div>
+      </section>
+
+      <footer>
+        &copy;Kimberley Mackenzie 2017
+      </footer>
+    </body>
+
+
+
   </body>
 </html>

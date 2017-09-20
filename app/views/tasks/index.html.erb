@@ -2,7 +2,7 @@
 <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
 
 
-<body>
+<!-- <body>
   <header>
     <ul class="navigation">
       <li>Donut Forget!</li>
@@ -15,9 +15,9 @@
         <li><%= link_to "Add Task", new_task_path %></li>
         <li><%= link_to "All Tasks", tasks_path %></li>
       </ul>
-    </div>
+    </div> -->
 
-    <div class="task-list">
+    <!-- <div class="information-box"> -->
       <h2 class="task-heading">You Need To...</h2>
       <ul id="task-box">
         <% @tasks.each do |task| %>
@@ -28,13 +28,15 @@
           <li class="action">Mark Complete</li>
           <li class="action">Edit</li>
           <li class="action">Delete</li>
+          <li class="action"><%= link_to "Show", task_path(task.id) %></li>
+
         </div>
         <% end %>
       </ul>
-    </div>
+    <!-- </div>
   </section>
 
   <footer>
     &copy;Kimberley Mackenzie 2017
-  </footer>
+  </footer> -->
 </body>

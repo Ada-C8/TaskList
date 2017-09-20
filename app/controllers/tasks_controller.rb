@@ -22,18 +22,18 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-    id = params[:id].to_i
-    @task = Task.find(id)
+    # id = params[:id].to_i
+    # @task = Task.find(id)
   end
 
   def edit
-    id = params[:id].to_i
-    @task = Task.find(id)
+    # id = params[:id].to_i
+    # @task = Task.find(id)
   end
 
   def destory
-    name = params[:name]
-    @task = Task.find_by(name)
+    # name = params[:name]
+    # @task = Task.find_by(name)
   end
 
   def new
