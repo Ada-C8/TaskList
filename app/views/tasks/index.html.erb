@@ -8,7 +8,7 @@
 <ul>
   <% @tasks.each do |task| %>
   <li>
-    <%= "#{task[:name]} is #{task[:status]}" %>
+    <%= "#{task[:title]} is #{task[:description]}" %>
   </li>
   <% end %>
 </ul>
