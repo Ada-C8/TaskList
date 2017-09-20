@@ -9,20 +9,11 @@ class TasksController < ApplicationController
   # ]
 
   def index
-    # @tasks = TASKS
     @tasks = Task.order(:id)
   end
 
   def show
     @task = Task.find( params[:id].to_i)
-    # id = params[:id].to_i
-    # @task = nil
-    #
-    # @tasks.each do |task|
-    #   if task[:id] == id
-    #     @task = task
-    #   end
-    # end
   end
 
   def edit
@@ -33,12 +24,23 @@ class TasksController < ApplicationController
 
 
   def new
+    @task = Task.new
   end
 
   def create
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
+
+    if @task.save
+      redirect_to root_path
+    else
+      render :new
+      # render just replaces the view within that template.
+    end
   end
 
+
   def destroy
+    @tasks = Task.find(params[:id]).destroy
   end
 
   # might need to add a new file to views/tasks file

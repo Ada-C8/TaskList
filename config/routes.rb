@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  # get 'tasks/index'
+  root to: 'tasks#index'
+
   get '/tasks/', to: 'tasks#index', as: 'tasks' #tasks_path
 
   # get 'tasks/edit'
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   post '/tasks/', to: 'tasks#create', as:'create_task' #create_task_path
 
   # get 'tasks/destroy'
-  delete '/tasks', to: 'tasks#destroy', as: 'delete_task' #delete_book_path
+  delete '/tasks/:id', to: 'tasks#destroy', as: 'delete_task' #delete_book_path
 
   # may need to move this up so that it is correctly placed.
   # patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'task_complete'
