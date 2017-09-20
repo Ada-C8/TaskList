@@ -13,8 +13,8 @@ class TasksController < ApplicationController
     redirect_to('/tasks')
   end
 
-  # def show
-  # end
+  def show
+  end
 
   def edit
   end
