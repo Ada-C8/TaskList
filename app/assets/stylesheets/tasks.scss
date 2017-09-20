@@ -60,8 +60,9 @@
   color: #FFB238;
 }
 
+#index .task p {color: inherit;}
+
 .task p {
-  color: inherit;
   display: inline-block;
   margin: auto;
 }
