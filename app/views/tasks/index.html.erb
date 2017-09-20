@@ -5,25 +5,36 @@
   <ul class="to_do_list">
     <% @tasks.each do |task| %>
     <li>
-      #<%= task.id %>)
-      <span <%= task.status ? "class=strikethrough"  : "class=normal" %>> <%= task.name %> </span>
+      <%= task.id %>)
+      <span <%= task.status ? "class=strikethrough"  : "class=normal" %>>
+
+          <%= link_to(task.name, task_path(task.id)) %>
+      </span>
 
       <span class="sublist_and_box">
         <ul class="bullet_list">
           <li >
-            <label>Initial Commit</label>
+            <form>
+
             <div class="squaredThree">
-              <input type="checkbox" value="None" id="squaredThree" name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
+              <label for="checkbox-input" <%= task.status ? "class=strikethrough"  : "class=normal" %>>Initial Commit</label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
               <label for="squaredThree"></label>
             </div>
+          </form>
+
           </li>
 
           <li >
-              <label class="sublist_and_box">Final Pull Request</label>
+            <form>
+
               <div class="squaredThree">
-                <input type="checkbox" value="None" id="squaredThree" name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
+                <label for="checkbox-input" <%= task.status ? "class=strikethrough"  : "class=normal" %>>Final Pull Request</label>
+                <input type="checkbox" id="checkbox-input" value="None"  name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
                 <label for="squaredThree"></label>
               </div>
+            </form>
+
           </li>
         </ul>
       </li>

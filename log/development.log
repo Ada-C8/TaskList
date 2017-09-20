@@ -3988,3 +3988,1707 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2017-09-19 22:37:33 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 200ms (Views: 188.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 09:36:56 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (4.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 342ms (Views: 317.7ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 09:38:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 09:38:46 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"3dH0sRwrJQb25reu03/JZ4SdEztw1gLYzi4M3/u3MFl2xZsRSGLAKPljKwtccWtpR3JCjbzv/0eYiwk1ROY9DA==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-20 16:38:46.997643"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 09:38:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 09:38:49 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"mGK5PKhMNbsioNd9sQilp1cvXaTQI9Qv4F2r5hcdBtAzdtac/AXQlS0lS9g+BgeplMAMEhwaKbC2+K4MqEwLhQ==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-20 16:38:49.357730"], ["id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 09:38:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 36ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:12:49 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 288ms (Views: 266.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:12:54 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:13:51 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:13:54 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:15:12 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:15:21 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:16:00 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:18:36 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a New Task</h1>
+    2: 
+    3: <%= form_for @task do |f| %>
+    4: <%= f.label :name %>
+    5: <%= f.text_field :name %>
+    6: 
+  
+app/views/tasks/new.html.erb:3:in `_app_views_tasks_new_html_erb__1645249910582718635_70350724427900'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:19:14 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 62ms (Views: 36.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:19:54 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:20:41 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 15:20:55 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mFRV3veWdaDMu1c5XMotKoByenEth7+Oho7zKN34XsK8eYQavUKvjqSrhxXB2HByWBDxkyyjWlCtFLZZO7NjQ==", "task"=>{"name"=>"Capstone", "description"=>"Final Ada Project "}, "commit"=>"Save Task"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Capstone"], ["description", "Final Ada Project "], ["created_at", "2017-09-20 22:20:55.851646"], ["updated_at", "2017-09-20 22:20:55.851646"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:20:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 15:21:37 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"ISHQM9OFGJclGBQVoNscRNkksULtrxr+LUkWFPFV1cfFsWd0wq5L/5y4V1USr1UxukU7bWWriWlV538BNsz5MQ==", "id"=>"1"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-20 22:21:37.849981"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:21:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 15:21:40 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"ofWILImz6K7Jbjqqjlvz4cShn6+OlDksDLsj52uB+4dFZT9rmJi7xnDOeeo8L7qUp8AVgAaQqrt0FUryrBjXcQ==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-20 22:21:40.574105"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:21:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:27:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:27:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:27:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:27:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected '<'
+      </span>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:20: unknown regexp options - labl
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <input type="checkbox" id="chec
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+     <input type="checkbox" id="checkbox-input" value="None"
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+box" id="checkbox-input" value="None" name="check" '.freeze;
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+ckbox-input" value="None" name="check" '.freeze;@output_buff
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '>'
+output_buffer.safe_append=' />
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:26: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:28: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:32: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:32: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:38: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:42: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:48: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:12: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:20: unknown regexp options - labl
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tasks/index.html.erb:21: syntax error, unexpected '>'
+app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: unknown regexp options - dv
+app/views/tasks/index.html.erb:24: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:26: unknown regexp option - l
+app/views/tasks/index.html.erb:28: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:32: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:32: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: unknown regexp options - dv
+app/views/tasks/index.html.erb:36: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:38: unknown regexp option - l
+app/views/tasks/index.html.erb:39: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:40: unknown regexp option - l
+app/views/tasks/index.html.erb:42: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:48: unknown regexp option - l
+app/views/tasks/index.html.erb:49: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:29:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:29:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:29:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:34:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:13: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:27: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:41: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:13: unknown regexp options - pa
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:24: unknown regexp options - dv
+app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:27: unknown regexp option - l
+app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:36: unknown regexp options - dv
+app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:39: unknown regexp option - l
+app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:41: unknown regexp option - l
+app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unknown regexp option - l
+app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:50: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:35:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:13: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:27: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:41: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:13: unknown regexp options - pa
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:24: unknown regexp options - dv
+app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:27: unknown regexp option - l
+app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:36: unknown regexp options - dv
+app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:39: unknown regexp option - l
+app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:41: unknown regexp option - l
+app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unknown regexp option - l
+app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:50: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:35:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:13: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:27: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:41: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:13: unknown regexp options - pa
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:24: unknown regexp options - dv
+app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:27: unknown regexp option - l
+app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:36: unknown regexp options - dv
+app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:39: unknown regexp option - l
+app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:41: unknown regexp option - l
+app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unknown regexp option - l
+app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:50: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:36:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:13: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:27: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:41: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:13: unknown regexp options - pa
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:24: unknown regexp options - dv
+app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:27: unknown regexp option - l
+app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:36: unknown regexp options - dv
+app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:39: unknown regexp option - l
+app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:41: unknown regexp option - l
+app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unknown regexp option - l
+app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:50: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:36:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:13: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:27: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:41: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:13: unknown regexp options - pa
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:24: unknown regexp options - dv
+app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:27: unknown regexp option - l
+app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:36: unknown regexp options - dv
+app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:39: unknown regexp option - l
+app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:41: unknown regexp option - l
+app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unknown regexp option - l
+app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:50: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:37:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:13: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:27: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:41: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:13: unknown regexp options - pa
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:24: unknown regexp options - dv
+app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:27: unknown regexp option - l
+app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:36: unknown regexp options - dv
+app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:39: unknown regexp option - l
+app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:41: unknown regexp option - l
+app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unknown regexp option - l
+app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:50: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:37:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:13: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:27: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:41: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:50: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:13: unknown regexp options - pa
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:17: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:22: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:24: unknown regexp options - dv
+app/views/tasks/index.html.erb:25: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:27: unknown regexp option - l
+app/views/tasks/index.html.erb:29: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:33: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:36: unknown regexp options - dv
+app/views/tasks/index.html.erb:37: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:39: unknown regexp option - l
+app/views/tasks/index.html.erb:40: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:41: unknown regexp option - l
+app/views/tasks/index.html.erb:43: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unknown regexp option - l
+app/views/tasks/index.html.erb:50: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:50: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:37:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:12: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:14: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:20: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:20: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:26: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:28: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:32: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:32: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:38: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:42: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:48: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:12: unknown regexp options - pa
+app/views/tasks/index.html.erb:14: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:20: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:20: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:21: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: unknown regexp options - dv
+app/views/tasks/index.html.erb:24: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:26: unknown regexp option - l
+app/views/tasks/index.html.erb:28: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:32: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:32: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: unknown regexp options - dv
+app/views/tasks/index.html.erb:36: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:38: unknown regexp option - l
+app/views/tasks/index.html.erb:39: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:40: unknown regexp option - l
+app/views/tasks/index.html.erb:42: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:48: unknown regexp option - l
+app/views/tasks/index.html.erb:49: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:38:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:12: unknown regexp options - pa
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:14: syntax error, unexpected '<'
+      <span class="sublist_and_box">
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+        <ul class="bullet_list">
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:20: syntax error, unexpected '<'
+              <label for="checkbox-input">Ini
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:20: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+checkbox-input">Initial Commit</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: unmatched close parenthesis: /label>
+              <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" );@output_buffer.safe_append=' /
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+              <label for="squaredThree"></lab
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:23: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:24: syntax error, unexpected '<'
+          </form>
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:26: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:28: syntax error, unexpected '<'
+          <li >
+           ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:32: syntax error, unexpected '<'
+                <label for="checkbox-input">Fin
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:32: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+or="checkbox-input">Final Pull Request</label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+                <label for="squaredThree"></lab
+                 ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+   <label for="squaredThree"></label>
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:35: unknown regexp options - dv
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:36: syntax error, unexpected '<'
+            </form>
+             ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:38: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:39: syntax error, unexpected '<'
+        </ul>
+         ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:40: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:42: syntax error, unexpected '<'
+      <p>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:48: unknown regexp option - l
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: syntax error, unexpected '<'
+  </section>
+   ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:49: unterminated regexp meets end of file):
+  
+app/views/tasks/index.html.erb:12: unknown regexp options - pa
+app/views/tasks/index.html.erb:14: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:15: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:16: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:20: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:20: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:21: unmatched close parenthesis: /label>
+app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:22: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:23: unknown regexp options - dv
+app/views/tasks/index.html.erb:24: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:26: unknown regexp option - l
+app/views/tasks/index.html.erb:28: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:32: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:32: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:34: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:35: unknown regexp options - dv
+app/views/tasks/index.html.erb:36: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:38: unknown regexp option - l
+app/views/tasks/index.html.erb:39: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:40: unknown regexp option - l
+app/views/tasks/index.html.erb:42: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:48: unknown regexp option - l
+app/views/tasks/index.html.erb:49: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:49: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:38:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected '<', expecting ')'
+      </span>
+       ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:20: unknown regexp options - labl
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+              <input type="checkbox" id="chec
+               ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+     <input type="checkbox" id="checkbox-input" value="None"
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+box" id="checkbox-input" value="None" name="check" <%= task.
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+ckbox-input" value="None" name="check" <%= task.initial_stat
+                              ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:12: syntax error, unexpected '<', expecting ')'
+app/views/tasks/index.html.erb:20: unknown regexp options - labl
+app/views/tasks/index.html.erb:21: syntax error, unexpected '<'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tasks/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:39:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:39:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:40:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:41:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/s.wigg/Documents/Doc_icloud/rails/TaskList/app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:46: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:52: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:54: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:42:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:42:45 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:42:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:43:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:43:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:43:29 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:43:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:43:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:45:10 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:47:15 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 61ms (Views: 18.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:48:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:49:48 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 15:49:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2017-09-20 15:49:56 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 15:50:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:50:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:50:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 15:50:30 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 15:50:46 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O4O1yeOD+V1SBs/6ZJehvyh/DbBEcB96A4OiVq8ppm3fEwKO8qiqNeumjLrW4+jKSx6Hn8x0jO17LctDaLCKmw==", "task"=>{"name"=>"Interview Prep", "description"=>"Practice, Practice, Practice!"}, "commit"=>"Save Task"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Interview Prep"], ["description", "Practice, Practice, Practice!"], ["created_at", "2017-09-20 22:50:46.013238"], ["updated_at", "2017-09-20 22:50:46.013238"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:50:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/4" for 127.0.0.1 at 2017-09-20 15:51:52 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 15:51:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 15:55:53 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 15:55:57 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"KOEfkLlSYzAc/ieDiODHxlzbbFB6Lr4qkhdzKAutfDbMcajXqHkwWKVeZMM6lI6zP7rmf/IqLb3quRo9zDRQwA==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-20 22:55:57.194958"], ["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 15:55:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 33ms (Views: 26.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 16:05:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 16:05:25 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"HVw1IiCc2ijEVuFHSQmrHk9qExxE+19znk6lJWrqmif5zIJlMbeJQH32ogf7feJrLAuZM8z/zOTm4MwwrXO20Q==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-20 23:05:25.651754"], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 16:05:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-20 16:05:27 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 16:05:30 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"/Rl+UGtBrYfzP7/lLB//RmAembR2FhSSsacCUZ5TQrMZickXemr+70qf/KWea7YzA38Tm/4ShwXJCWtEWcpuRQ==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-20 23:05:30.785028"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 16:05:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 16:05:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 16:05:48 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"DWrAxvhSTtnrIuEXXWQie5OQUujgcGoKzVWHT1GD82/p+neB6XkdsVKColfvEGsO8PHYx2h0+Z21++5alhrfmQ==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-20 23:05:48.142466"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 16:05:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 16:05:49 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"WAih9bPR1rlH1+/t8WGu3xe1hTEimSD1u1vvuazETui8mBayovqF0f53rK1DFeeqdNQPHqqds2LD9Yasa11iHg==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-20 23:05:49.761874"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 16:05:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-20 16:05:50 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"TvExdj7Qj8xjYXw7ot2yO/tOV2iaBllpuuQu0p2uQlWqYYYxL/vcpNrBP3sQqftOmC/dRxICyv7CSkfHWjduow==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-20 23:05:50.918442"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 16:05:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2017-09-20 16:07:20 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2017-09-20 16:07:56 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2: 
+    3: <article>
+    4: 
+    5: <%= form_for @task do |f| %>
+    6: <%= f.label :name %>
+    7: <%= f.text_field :name %>
+    8: 
+  
+app/views/tasks/edit.html.erb:5:in `_app_views_tasks_edit_html_erb___900513373215237467_70350736224960'

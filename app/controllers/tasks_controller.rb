@@ -11,6 +11,12 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], status: params[:task][:status])
+    if @task.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -22,6 +28,7 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def show
@@ -32,7 +39,6 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-
     @task = Task.find (params[:id].to_i)
     if @task.status == false
       @task.update(status: true)
