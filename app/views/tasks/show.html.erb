@@ -3,11 +3,24 @@
 <h1>404: Not Found</h1>
 <% end %>
 
-<h2><%=@task.id %> <%=@task.name %>
-</h2>
+<h1>Task #<%=@task.id %>: <%=@task.name %>
+</h1>
 
-<%= link_to "Edit", edit_task_path(@task.id) %>
-  <%= button_to "Delete", delete_task_path(@task.id), method: :delete %>
+<div class="edit_pic">
+
+<%= link_to image_tag("http://www.clker.com/cliparts/B/l/1/P/z/N/edit-icon-hi.png", alt: "Image goes to edit task page") , edit_task_path(@task.id) %>
+</div>
+
+<div class="delete_pic">
+
+<%= link_to image_tag("https://image.flaticon.com/icons/png/128/61/61391.png", alt: "Image goes to delete page") , delete_task_path(@task.id), method: :delete %>
+</div>
+
+<div class="all_tasks_pic">
+<%= link_to  image_tag("http://www.jeansforgenesday.org/static/images/up/checklist-large-2015.gif", alt: "Image goes to all tasks page"), tasks_path(@task) %>
+</div>
+
+<div class = tasks>
 <h3>
   Name of the task: <%= @task.name %>
 </h3>
@@ -20,6 +33,4 @@
 <h3>
   Status: <%= @task.status %>
 </h3>
-
-
-<%= link_to "All Tasks", tasks_path %>
+</div>
