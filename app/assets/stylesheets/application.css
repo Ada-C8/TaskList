@@ -31,14 +31,16 @@ footer p {
   border-radius: 2em;
   display: inline-block;
   padding: 2%;
+  width: 25%;
 }
 .your-tasks li {
   padding: 2%;
+
 }
 .button {
   float: left;
   display: block;
-  width: 40%;
+  width: 30%;
   text-align: center;
 }
 .button a {
@@ -46,4 +48,14 @@ footer p {
   padding: 5%;
   display: inline-block;
   border-radius: 2em;
+}
+.show-task ul{
+  list-style-type: none;
+}
+.show-task {
+  border: 4px black solid;
+  border-radius: 2em;
+  display: inline-block;
+  padding: 2%;
+  width: 30%;
 }

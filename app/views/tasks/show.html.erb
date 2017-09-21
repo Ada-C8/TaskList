@@ -1,9 +1,19 @@
-<h1>show erb</h1>
-<h2>Task #<%= @task.id %></h2>
-<p>
-  <strong>Title:</strong> <%= @task.title %><br/>
-  <strong>Description:</strong> <%= @task.description %><br/>
-  <strong>Due Date:</strong> <%= @task.due_date %><br/>
-  <br/>Mark Complete | Edit | Delete
+<!-- <h1>show erb</h1> -->
 
-</p>
+<div class="show-task">
+  <h2>Task #<%= @task.id %></h2>
+  <ul>
+    <li>
+      <strong>Title:</strong> <%= @task.title %>
+    </li>
+    <li>
+      <strong>Description:</strong> <%= @task.description %>
+    </li>
+    <li>
+      <strong>Due Date:</strong> <%= @task.due_date %>
+    </li>
+    <li>
+      Mark Complete | Edit | Delete
+    </li>
+  </ul>
+</div>
