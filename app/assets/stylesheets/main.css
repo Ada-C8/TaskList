@@ -16,10 +16,10 @@ a {
 a:hover { cursor: pointer; }
 h2 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-weight: bold;
-  margin-bottom: 5%;
-  padding-bottom: 3%;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -45,6 +45,9 @@ section.task-options a.button {
   text-align: center;
 }
 .fa-circle { color: #62d1d1; }
+section.task-options a.button span:hover i.fa-circle{
+  color: #8293c4;
+}
 section.task-options figure { margin-top: 5%; }
 section.task-options figure img {
   max-width: 270px;

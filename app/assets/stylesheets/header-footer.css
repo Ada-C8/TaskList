@@ -1,19 +1,19 @@
 /* header */
 header {
   text-align: center;
-  padding: 3% 10% 2.5%;
+  padding: 2% 10% 2%;
 }
 header h1 {
-  padding: 2% 2% 1.5%;
+  padding: 2% 2% 1%;
   vertical-align: middle;
   font-family: 'Mr Bedfort', cursive;
-  font-size: 4.5em;
+  font-size: 3em;
   font-weight: bold;
 }
 
 /* footer */
 footer {
-  padding: 2% 10% 6%;
+  padding: 1% 0 3%;
   border-top: 3px solid #666;
   background: #777;
   color: #fefefe;

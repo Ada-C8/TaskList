@@ -1,29 +1,40 @@
 <article class="your-tasks">
   <h2>Your Tasks</h2>
   <ol>
-    <% by_date = @tasks.sort_by { |task| task[:due] } %>
-    <% by_date.each do |task|  %>
-    <% if task[:status] == "Complete" %>
-    <li class="complete">
-      <a class="task-action edit-status" href="#"><i class="fa fa-check-square-o fa-lg"></i></a>
-    <% elsif task[:status] == "Incomplete" && Date.today >= task[:due] %>
-    <li class="overdue">
-      <a class="task-action edit-status" href="#"><i class="fa fa-square-o fa-lg"></i></a>
-    <% else %>
-    <li>
-      <a class="task-action edit-status" href="#"><i class="fa fa-square-o fa-lg"></i></a>
+    <% @tasks.each do |task|  %>
+    <li class="<%=
+      if task[:status] == "Complete"
+        "complete"
+      elsif task[:status] == "Incomplete" && Date.today >= task[:due]
+        "overdue"
+      end
+    %>">
+    <%= form_for task, :url => update_status_path, :method => "put" do %>
+      <%= text_field_tag :id, task.id, type: "hidden"  %>
+      <%= button_tag type: "submit", class: "task-action edit-status" do %>
+        <% if task[:status] == "Complete" %>
+          <i class="fa fa-check-square-o fa-lg"></i>
+        <% else %>
+          <i class="fa fa-square-o fa-lg"></i>
+        <% end %>
+      <% end %>
     <% end %>
-        <p class="task">
-        <span class="task-name"><%= task[:name] %></span> <span class="task-status">(<%= task[:status]%>)</span>
-        <br />Date: <%= task[:created].strftime("%m/%d/%Y")%> ~ <%= task[:due].strftime("%m/%d/%Y") %>
-        <br /><%= task[:description]%>
-        <br />
-        <span class="action-icons">
-          <a href="#" class="task-action edit-task"><i class="fa fa-pencil-square-o"></i></a>
-          <a href="#" class="task-action delete-task"><i class="fa fa-trash-o"></i></a>
-        </span>
-      </span>
+    <p class="task">
+      <span class="task-name"><%= task[:name] %></span>
+      <br />Date: <%= task[:created].strftime("%m/%d/%Y")%> ~ <%= task[:due].strftime("%m/%d/%Y") %>
+      <br /><%= task[:description]%>
+    </p>
+    <div class="action-icons">
+      <%= link_to task_path(task.id), :class => 'task-action edit-task' do %>
+        <i class="fa fa-pencil-square-o"></i>
+      <% end %>
+      <%= form_tag task_path(task.id), :method => "delete" do %>
+        <%= button_tag(type: "submit", class: "task-action delete-task") do %>
+            <i class="fa fa-trash-o"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <% end %>
     </li>
-    <% end %>
   </ol>
 </article>

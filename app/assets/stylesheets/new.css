@@ -1,0 +1,67 @@
+form#new-form {
+  width: 100%;
+  margin-top: 2%;
+  padding: 3%;
+  font-size: 1.1em;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;*/
+}
+
+form#new-form input, form#new-form textarea {
+  padding: 1% 1% 1.2%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  vertical-align: middle;
+  font-size: 0.8em;
+}
+form#new-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 1% 2%;
+}
+
+form label { vertical-align: middle; }
+
+form#new-form div.name-wrapper {
+  margin-bottom: 3%;
+}
+form#new-form div.name-wrapper label,
+form#new-form div.desc-wrapper label {
+  display: inline-block;
+  width: 20%;
+  margin-right: 2%;
+}
+form#new-form: div.name-wrapper input,
+form#new-form: div.desc-wrapper textarea
+ {
+  display: inline-block;
+  width: 60%;
+}
+form#new-form div.desc-wrapper {}
+
+form#new-form div.date-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+form#new-form div.status-wrapper {}
+form#new-form div.submit-wrapper {
+  margin: 5% 0;
+  text-align: center;
+}
+form#new-form div.submit-wrapper input {
+  padding: 3% 6%;
+  background: #62D1D1;
+  color: #fefefe;
+  border: none;
+  font-size: 1.1em;
+}
+form#new-form div.submit-wrapper input:hover {
+  cursor: pointer;
+  background: #8293c4;
+}

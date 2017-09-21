@@ -1,9 +1,50 @@
 require 'date'
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    # @tasks = Task.all
+    @tasks = Task.order(:due)
   end
+
   def new
-    @new = Task.new
+    @task = Task.new
+  end
+
+  def create
+    task = Task.new(
+      name: params[:task][:name],
+      description: params[:task][:description],
+      created: params[:task][:created],
+      due: params[:task][:due],
+      status: params[:task][:status]
+    )
+    task.save
+    redirect_to('/tasks')
+  end
+
+  def show
+    @task = Task.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def update_status
+    task = Task.find(params[:id])
+    if task.status == "Complete"
+      task.status = "Incomplete"
+    else
+      task.status = "Complete"
+    end
+    task.save
+    redirect_to('/tasks')
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to('/tasks')
   end
 end

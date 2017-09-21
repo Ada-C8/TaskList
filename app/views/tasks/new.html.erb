@@ -1,3 +1,43 @@
 <article class="new-task">
   <h2>Create a new Task</h2>
+
+  <form action="/tasks" method="post" accept-charset="utf-8" id="new-form">
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <div class="name-wrapper">
+    <label for="name">Task Name</label>
+    <input type="text" name="task[name]" value="" id="name" placeholder="Example: Buy cookies">
+  </div>
+
+  <div class="desc-wrapper">
+    <label for="description">Description</label>
+    <textarea name="task[description]" id="description" rows="6" cols="50" placeholder="Give a little more detail about your task?"></textarea>
+  </div>
+
+  <div class="date-wrapper">
+    <div class="created-wrap">
+      <label for="created">Date Created</label>
+      <input type="date" name="task[created]" value="" id="created">
+    </div>
+    <div class="due-wrap">
+      <label for="due">Date Due</label>
+      <input type="date" name="task[due]" value="" id="due">
+    </div>
+  </div>
+
+  <div class="status-wrapper">
+    <label for="status">Status</label>
+    <select name="task[status]">
+      <option value="Incomplete" selected>&nbsp;Incomplete&nbsp;&nbsp;&nbsp;&nbsp;</option>
+      <option value="Complete">&nbsp;Complete&nbsp;&nbsp;&nbsp;&nbsp;</option>
+    </select>
+  </div>
+
+  <div class="submit-wrapper">
+    <input type="submit" value="Add to Task List">
+  </div>
+</form>
+
+
 </article>
