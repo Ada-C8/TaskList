@@ -156,6 +156,10 @@ article#task-wrapper h2 {
   margin-bottom: 0;
 }
 
+article h2 .complete_status {
+  text-decoration: line-through;
+}
+
 nav#task-links ul {
   padding: 0;
 }

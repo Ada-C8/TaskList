@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   def create
     # NO INSTANCE METHOD IN A CREATE METHOD
     # task = Task.new(title: params[:title], author: params[:author])
-    task = Task.new(title: params[:task][:title], description: params[:task][:description], due_date: params[:task][:due_date], status: false)
+    task = Task.new(title: params[:task][:title], description: params[:task][:description], due_date: params[:task][:due_date])
     task.save
     redirect_to('/tasks')
 
@@ -19,16 +19,42 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
-
-    # Params key [] will match whatever we put in the route so in this case it is id
   end
 
   def edit
+    # Directed from index.html
+    @task = Task.find(params[:id])
   end
 
   def update
+    # Params task is saving the entire hash into the task_updates variable
+    # Save each entry into the specified @Task that was called
+    @task = Task.find(params[:id])
+    task_updates = params[:task]
+    @task.title = task_updates[:title]
+    @task.description = task_updates[:description]
+    @task.due_date = task_updates[:due_date]
+
+    @task.save
+    redirect_to task_path(@task)
+  end
+
+  def complete
+    @task = Task.find(params[:id])
+    @task.status = true
+    @task.save
+    redirect_to('/tasks')
+  end
+
+  def not_complete
+    @task = Task.find(params[:id])
+    @task.status = false
+    @task.save
+    redirect_to('/tasks')
   end
 
   def destroy
+    Task.find(params[:id]).destroy
+    redirect_to('/tasks')
   end
 end

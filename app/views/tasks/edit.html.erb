@@ -1,0 +1,36 @@
+<article>
+
+<h1 class="increase-font">&#10004; EDIT THIS TASK</h1>
+
+<%= form_for @task do |f| %>
+  <div class="input-wrapper">
+    <%= f.label :title, "Name of task:" %>
+    <%= f.text_field :title, class: "input-border" %>
+  </div>
+
+  <div class="input-wrapper">
+    <%= f.label :description, "What do you need to accomplish?" %>
+    <%= f.text_field :description, class: "input-border" %>
+  </div>
+
+  <div class="input-wrapper">
+    <%= f.label :due_date, "Reachable due date?" %>
+    <%= f.text_field :due_date, class: "input-border"%>
+  </div>
+
+  <div class ="submit-wrapper">
+    <%= f.submit "Make Changes!", class: "submit-button" %>
+    <!-- Params hash would arrive in the controller and looks like this   {
+
+    "utf8" => "✓",
+    "authenticity_token" => "X/be9deLjFilsqYcOVBMM5Fj1vf7OWAr1K9F97JVhbhFmp/Ig9HSp2urbytRAgIoRAupAeZczOtdwbP49R1i8w==",
+    "book" => {
+      "author" => "J.K. Rowling" },
+      "title" => "Harry Potter and The Chamber of Secrets"
+    }
+  }-->
+  </div>
+<% end %>
+
+
+</article>
