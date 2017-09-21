@@ -5,18 +5,23 @@ class TasksController < ApplicationController
   end
 
   def new
+
   end
 
   def create
-    n = Task.new(title: params[:task][:title], description: params[:task][:description], date: params[:task][:date], status: params[:task][:status])
-
+    n = Task.new(title: params[:title], description: params[:description], date: params[:date], status: params[:status])
+    n.save
+    redirect_to('/tasks')
   end
 
   def show
-    @task = Task.find(params[:id])
+    @task  = Task.find(params[:id])
+
+
   end
 
   def edit
+    @task = Task.find(params[:id])
 
   end
 

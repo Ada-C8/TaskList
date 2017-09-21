@@ -6,8 +6,8 @@
   <ul>
     <% @tasks.each do |task| %>
     <li class = "task">
-      <strong><%= link_to task.title, task_path(task.id)%></strong>,  <%= task[:description] %>, <%= task[:date] %>, <%= task[:status] %>
+      <strong> <%= link_to task.title, task_path(task.id)%> </strong>,  <%= task[:description] %>, <%= task[:date] %>, <%= task[:status] %>
     </li>
-    <% end%>
+    <% end %>
   </ul>
 </p>
