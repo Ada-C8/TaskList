@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170919222522) do
     t.string "title"
     t.string "description"
     t.date "date"
-    t.boolean "status"
+    t.boolean "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

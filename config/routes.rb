@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   get "/tasks", to: "tasks#index"
 
-  delete "/tasks/:id", to: "tasks#destroy"
+  delete "/tasks/:id", to: "tasks#destroy", as: "delete_task"
 end

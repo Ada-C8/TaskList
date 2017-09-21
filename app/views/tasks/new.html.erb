@@ -5,13 +5,10 @@
   <%= text_field_tag "[title]" %>
 
   <%= label_tag "task[:description]", "Description" %>
-  <%= text_field_tag "task[:description]" %>
+  <%= text_field_tag "[description]" %>
 
   <%= label_tag "task[:date]", "Date" %>
-  <%= text_field_tag "task[:date]" %>
-
-  <%= label_tag "task[:status]", "Status" %>
-  <%= text_field_tag "task[:status]" %>
+  <%= text_field_tag "[date]" %>
 
   <%= submit_tag "Save Book", class: "book-button" %>
 

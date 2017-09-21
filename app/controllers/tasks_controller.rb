@@ -25,9 +25,24 @@ class TasksController < ApplicationController
 
   end
 
+  def status_complete
+      @task = Task.find(params[:id])
+  end
+
   def update
+    task_updates = params[:task]
+    @task = Task.find(params[:id])
+    @task.title = task_updates[:title]
+    @task.description = task_updates[:description]
+    @task.date = task_updates[:date]
+    @task.status = task_updates[:status]
+    @task.save
+    redirect_to task_path(@task)
   end
 
   def destroy
+    @task = Task.find(params[:id])
+    @task.delete
+    redirect_to('/tasks')
   end
 end

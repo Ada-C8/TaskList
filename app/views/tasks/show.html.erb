@@ -1,20 +1,4 @@
-<h2><%= @task.title %></h2>
 
-<%= form_for @task do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-
-<%= f.label :description %>
-<%= f.text_field :description %>
-
-<%= f.label :date %>
-<%= f.text_field :date %>
-
-<%= f.label :status %>
-<%= f.text_field :status %>
-
-<%= f.submit "Submit" %>
-<% end %>
 
   <h2><strong> <%=  @task[:title] %> </strong></h2>
   <ul>
@@ -24,3 +8,7 @@
   <li><%= @task[:status] %></li>
 
  </ul>
+
+  <%= link_to "Edit", edit_task_path(@task.id) %>
+  <%= link_to "Delete", delete_task_path(@task.id), method: :delete %>
+  <%# link_to "Mark as Completed", %>
