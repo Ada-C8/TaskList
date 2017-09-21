@@ -1,0 +1,37 @@
+<h1>TaskList</h1>
+
+<nav>
+  <%= link_to "Add Task", new_task_path %>
+
+</nav>
+<ol>
+  <% @tasks.each do |item| %>
+  <li>
+    <div id = "task">
+      <strong><%=item['task']%></strong>
+    </div>
+
+    <div id = "description">
+      <%=item['description']%>
+    </div>
+
+    <div id = "due_date">
+      <%=item['due_date']%>
+    </div>
+
+
+  <div id = "show_link">
+    <%= link_to "Show Task", task_path(item['id'])%>
+  </div>
+
+  <!-- <div id = "delete_link">
+    <%#= link_to "Delete Task", delete_task_path(item['id'])%>
+  </div> -->
+
+</li>
+<% end %>
+</ol>
+
+<footer>
+  <p>&copy 2017</p>
+</footer>
