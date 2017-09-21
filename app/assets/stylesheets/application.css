@@ -43,7 +43,10 @@ html, body {
   text-decoration: none;
 }
 
-/******** HOVER FROM CENTER FOR LINKS *********/
+.visited-links {
+  color: black;
+}
+/******** HOVER FROM CENTER FOR APPLICATION.HTML LINKS *********/
 
 .hvr-border-fade {
   display: inline-block;
@@ -56,7 +59,7 @@ html, body {
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
   box-shadow: inset 0 0 0 10px #D4E6F1, 0 0 1px transparent;
-  border-radius: 3em;
+  border-radius: 1em;
   padding: 20px;
   color: black;
   /* Hack to improve aliasing on mobile/tablet devices */
@@ -149,10 +152,68 @@ article#task-wrapper {
   border-top: 1px dashed black ;
 }
 
-nav#task-links ul li {
-  padding-right: 10px;
-  display: inline;
+article#task-wrapper h2 {
+  margin-bottom: 0;
 }
+
+nav#task-links ul {
+  padding: 0;
+}
+
+nav#task-links ul li {
+  display: inline;
+  padding-right: 20px;
+}
+
+/* MARK COMPLETE GREEN HOVER */
+
+.hover-green:hover {
+  color: #0F9E5E;
+  transition-duration: 0.5s;
+}
+
+/* EDIT BLUE HOVER */
+
+.hover-blue:hover {
+  color: #2098D1;
+  transition-duration: 0.5s;
+}
+
+/* DELETE RED HOVER */
+
+.hover-red:hover {
+  color: red;
+  transition-duration: 0.5s;
+}
+
+/* ICON FADE FOR MARK COMPLETE */
+/*.hvr-icon-fade {
+display: inline-block;
+vertical-align: middle;
+-webkit-transform: perspective(1px) translateZ(0);
+transform: perspective(1px) translateZ(0);
+box-shadow: 0 0 1px transparent;
+position: relative;
+padding-right: 1.5em;
+}
+
+.hvr-icon-fade:before {
+content: "\f00c";
+position: absolute;
+right: 0.2em;
+padding: 5px 1px;
+font-family: FontAwesome;
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+-webkit-transition-duration: 0.5s;
+transition-duration: 0.5s;
+-webkit-transition-property: color;
+transition-property: color;
+}
+
+.hvr-icon-fade:hover:before, .hvr-icon-fade:focus:before, .hvr-icon-fade:active:before {
+color: #0F9E5E;
+}*/
 
 /******** YIELD TO NEW.HTML.ERB *********/
 
@@ -190,33 +251,38 @@ nav#task-links ul li {
   color: white;
 }
 
-  /******** YIELD TO SHOW.HTML.ERB *********/
+/******** YIELD TO SHOW.HTML.ERB *********/
 
+.zero-margin-bottom {
+  margin-bottom: 0;
+}
 
+.left-padding {
+  padding-left: 25px;
+}
+/******** FOOTER *********/
 
-  /******** FOOTER *********/
+#main-footer {
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 10px;
+}
 
-  #main-footer {
-    text-align: center;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-size: 10px;
-  }
+/******** CLEARFIX *********/
 
-  /******** CLEARFIX *********/
-
-  .clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-  }
-  .clearfix { display: inline-block; }
-  /* start commented backslash hack \*/
-  * html .clearfix { height: 1%; }
-  .clearfix { display: block; }
-  /* close commented backslash hack */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

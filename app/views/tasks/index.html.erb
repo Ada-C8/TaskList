@@ -9,15 +9,15 @@
 <article id="task-wrapper">
   <header>
     <h2>
-      <%= link_to task.title, show_task_path(task.id), class: "no-underline" %>
+      <%= link_to task.title, show_task_path(task.id), class: "no-underline visited-links" %>
     </h2>
   </header>
 
   <nav id="task-links">
     <ul class="no-bullet">
-      <li><a href="#">MARK COMPLETE</a></li>
-      <li><a href="#">EDIT</a></li>
-      <li><a href="#">DELETE</a></li>
+      <li><a href="#" class="no-underline hover-green visited-links">Mark Complete</a></li>
+      <li><a href="#" class="no-underline hover-blue visited-links">Edit</a></li>
+      <li><a href="#" class="no-underline hover-red visited-links">Delete</a></li>
     </ul>
   </nav>
 

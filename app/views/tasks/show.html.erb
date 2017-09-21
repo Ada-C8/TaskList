@@ -1,20 +1,21 @@
 <article>
 
   <header>
-    <h1><%= @task.title %></h1>
-    <h3>DUE DATE: <%= @task.due_date %></h3>
-    <h3>COMPLETE?
+    <h1 class="increase-font"><%= @task.title %></h1>
+    <h3 class="zero-margin-bottom">Due: <%= @task.due_date %></h3>
+    <h3 class="zero-margin-bottom">Complete?
       <% if @task.status == false %>
-          NO!
+          NO!!!
       <% else %>
-          HOORAY FOR BEING ONE STEP CLOSER TO YOUR GOALS!
+          HOORAY FOR BEING ONE STEP CLOSER TO BEING A HUMAN!!!
       <% end %>
     </h3>
   </header>
 
   <section>
-    <p>
-      MY NOTES: <%= @task.description %>
+    <h3 class="zero-margin-bottom">NOTES TO MYSELF:</h3>
+    <p class="left-padding">
+      <%= @task.description %>
     </p>
   </section>
 

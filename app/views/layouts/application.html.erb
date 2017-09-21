@@ -6,6 +6,7 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 </head>
 
 <body id="grad1">
@@ -22,10 +23,10 @@
         </header>
         <ul class="no-bullet">
           <li>
-            <%= link_to "Add a task", new_task_path, class: ["hvr-border-fade", "no-underline", "equal-width"] %>
+            <%= link_to "Add a task", new_task_path, class: "hvr-border-fade no-underline equal-width" %>
           </li>
           <li>
-            <%= link_to "All tasks", tasks_path, class: ["hvr-border-fade", "no-underline", "equal-width"] %>
+            <%= link_to "All tasks", tasks_path, class: "hvr-border-fade no-underline equal-width" %>
           </li>
         </ul>
       </nav>
