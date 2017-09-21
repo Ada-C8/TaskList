@@ -57,5 +57,8 @@ footer p {
   border-radius: 2em;
   display: inline-block;
   padding: 2%;
-  width: 30%;
+  width: 25%;
+}
+h2 {
+  margin: 5% 0;
 }
