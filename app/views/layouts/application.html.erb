@@ -11,6 +11,15 @@
     <h1>Your Personalized Agenda</h1>
   </header>
 
+  <nav>
+  <li>
+      <%= link_to "List All Tasks", tasks_path%>
+  </li>
+  <li>
+    <%= link_to "New Task", new_task_path %>
+  </li>
+  </nav>
+
   <body>
     <div>
     <%= yield %>

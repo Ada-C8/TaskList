@@ -17,6 +17,22 @@
 html{
   background-color: yellow;
 }
+
+.status_complete{
+  text-decoration: line-through;
+}
+
+nav{
+  display: flex;
+  flex-direction:  row;
+}
+
+nav li {
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
 h1{
   font-family: 'Faster One', cursive;
   text-align: center;
@@ -26,11 +42,10 @@ h1{
 }
 
 body{
-  display: flex;
   flex-direction: column;
 }
 
-footer{
+footer, nav{
   display:flex;
   justify-content: center;
   align-items: flex-start | flex-end;

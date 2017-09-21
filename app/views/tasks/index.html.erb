@@ -1,13 +1,18 @@
 <h2>To Do List</h2>
 <p>
-  <%= link_to "List All Tasks", tasks_path%>
-  <%= link_to "New Task", new_task_path %>
-
-  <ul>
+  <ol>
     <% @tasks.each do |task| %>
     <li class = "task">
-      <strong> <%= link_to task.title, task_path(task.id)%> </strong>,  <%= task[:description] %>, <%= task[:date] %>, <%= task[:status] %>
+      <% if task.status == true %>
+      <strong class = "status_complete">
+        <% else %>
+        <strong>
+          <% end %>
+      <%= link_to task.title, task_path(task.id)%> </strong> Due: <%= task[:date] %>
     </li>
     <% end %>
-  </ul>
+  </ol>
+  <div>
+    <%= link_to "Remove Completed Tasks", tasks_path%>
+  </div>
 </p>

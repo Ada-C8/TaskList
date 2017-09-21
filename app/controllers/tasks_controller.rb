@@ -27,6 +27,9 @@ class TasksController < ApplicationController
 
   def status_complete
       @task = Task.find(params[:id])
+      @task.status = true
+      @task.save
+      redirect_to('/tasks')
   end
 
   def update
