@@ -2,17 +2,17 @@
 <div class="tasklist">
 
 
-<h2>Your Tasks</h2>
+  <h2>Your Tasks</h2>
 
-<ol>
-  <% @tasks.each do |task| %>
+  <ol>
+    <% @tasks.each do |task| %>
     <li>
-      <!-- <%= task[:name] %> -->
       <%= link_to(task.name, task_path(task.id)) %>
-      <!-- due: <%= task[:due_date] %> -->
-      <p> Mark Complete | Edit | Delete</p>
-    </li>
-    <% end %>
-</ol>
+      <%=button_to "Edit", edit_task_path(task.id), method: :get%>
+      <%= link_to "Delete", delete_task_path(task.id) %>
+      <p> Mark Complete | Delete</p>
+      </li>
+      <% end %>
+    </ol>
 
-</div>
+  </div>
