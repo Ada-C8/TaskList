@@ -64,3 +64,9 @@ class TasksController < ApplicationController
   #works if I don't have @task
   end
 end
+
+# private
+#
+# def task_params
+#    params.require(:task).permit(:title, :description, :due, :priority, :completed)
+# end
