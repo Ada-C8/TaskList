@@ -2,13 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
-  border: solid black 2px;
+  border: solid darkgrey 2px;
+  padding: 3px;
 }
 
 li {
-  border: solid black 1px;
+  border: solid darkgrey 1px;
   display: inline-block;
   float: left;
+  padding: 3px;
 }
 
 p.edit {

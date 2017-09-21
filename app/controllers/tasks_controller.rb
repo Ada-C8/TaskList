@@ -1,5 +1,3 @@
-TASKS = ["teach Lupin to hunt for truffles", "buy a farm", "go to space", "work for NASA", "up my style game"]
-
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
@@ -10,12 +8,20 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def edit
   end
 
   def create
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], due_date: params[:task][:due_date])
+
+    if @task.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def update

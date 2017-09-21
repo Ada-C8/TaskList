@@ -1,2 +1,15 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h1>New Task:</h1>
+
+<%= form_for @task do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.date_select :task, :due_date %>
+
+  <%= f.submit "Save Task" %>
+<% end %>
+
+<%= button_to "Cancel", tasks_path, method: :get %>
