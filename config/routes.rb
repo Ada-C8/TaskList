@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   patch 'tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'mark_complete'
 
+  patch 'tasks/:id/mark_incomplete', to: 'tasks#mark_incomplete', as: 'mark_incomplete'
+
   patch 'tasks/:id', to: 'tasks#update', as: 'update_task'
 
   get 'tasks/', to: 'tasks#index', as: 'tasks'

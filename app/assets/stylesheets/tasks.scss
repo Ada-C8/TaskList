@@ -6,6 +6,11 @@ body {
   background-size: cover;
 }
 
+a {
+  text-decoration: none;
+  color: #27cdb2;
+}
+
 .navigation {
   list-style: none;
   margin: 0;
@@ -92,7 +97,7 @@ ul {
   align-items: center;
 }
 
-.tasks .donut-image {
+.donut-image {
   animation: spin 2s linear infinite;
 }
 
@@ -103,24 +108,48 @@ ul {
 
 .task-actions {
   list-style: none;
+  text-decoration: none;
+  length: 400px;
+  color: #27cdb2;
   font-size: .5em;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  // font-family: 'Baloo Tammudu', cursive;
+
   // justify-content:space-between;
 }
 
-.incomplete {
-  animation-name: strike;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.task-actions a:hover {
+  color: magenta;
 }
 
 @keyframes strike{
   0%   { width : 0; }
   100% { width: 100%; }
+}
+
+.strike {
+  position: relative;
+  margin-left: .5em;
+  padding-right: .5em;
+  padding-left: .5em;
+}
+
+.complete-task .strike:after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  height: 3px;
+  box-shadow: 0 0 1px 1px #555;
+  background: black;
+  animation-name: strike;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 #task-box {

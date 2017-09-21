@@ -41,7 +41,14 @@ class TasksController < ApplicationController
     @task.status = "complete"
     @task.save
     redirect_to root_path
+  end
 
+  def mark_incomplete
+    id = params[:id].to_i
+    @task = Task.find(id)
+    @task.status = "incomplete"
+    @task.save
+    redirect_to root_path
   end
 
   def edit
