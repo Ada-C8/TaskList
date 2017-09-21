@@ -35,7 +35,10 @@ class TasksController < ApplicationController
   end
 
   def complete
-
+    #non crud action
+    @task = Task.find(params[:id])
+    @task.complete!
+    redirect_to tasks_path
   end
 
   def edit
