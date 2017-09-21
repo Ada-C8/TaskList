@@ -1,37 +1,6 @@
 <div class="container page" id="new">
   <h2>New Task</h2>
 
-<!--
-   <form action="/tasks" method="post" accept-charset="utf-8">
-    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-
-
-    <label for="task"><p>Task</p></label>
-    <input type="text" name="task" value="" id="task">
-
-    <label for="due_date"><p>Due Date</p></label>
-    <input type="date" name="due_date" value="" id="due_date">
-
-    <label for="description"><p>Description</p></label>
-    <textarea type="text" name="description" value="" id="description"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
--->
-
- <%# form_tag tasks_path, method: :post do %>
-  <%# label_tag "task[task]", "Task" %>
-  <%# text_field_tag "task[task]" %>
-
-  <%# label_tag "task[due_date]", "Due Date" %>
-  <%# date_field_tag "task[due_date]" %>
-
-  <%# label_tag "task[description]", "Description" %>
-  <%# text_area_tag "task[description]" %>
-
-  <%# submit_tag "Create" %>
-<%# end %>
-
 <%= form_for @task do |t| %>
   <%= t.label :task %>
   <%= t.text_field :task %>

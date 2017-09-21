@@ -4,7 +4,7 @@
     <li>
       <h4 class="inline">Due: </h4>
       <p class="inline">
-        <%= @task.due_date %>
+        <%= @task.due_date.strftime('%B %d, %Y') %>
       </p>
     </li>
     <li>
