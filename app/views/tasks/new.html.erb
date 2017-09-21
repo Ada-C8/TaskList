@@ -1,5 +1,6 @@
 <main>
     <section class="new-task-form">
+      <h1>New Task</h1>
       <%= form_for @task, url: {action: "create"} do |f| %>
         <%= f.label :name %>
         <%= f.text_field :name %>
@@ -8,7 +9,7 @@
 
         <label for="task_done" class="control control-checkbox">
             Done?
-            <input type="checkbox" id="task_done" name="task[done]" checked="checked" />
+            <input type="checkbox" id="task_done" name="task[done]" />
             <div class="control_indicator"></div>
         </label>
         <!-- <%= f.label :done %>
