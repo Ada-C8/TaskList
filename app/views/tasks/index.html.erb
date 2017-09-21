@@ -9,7 +9,7 @@
 
 <h2>Your Tasks</h2>
 <ol>
-  <% @tasks.each_with_index do |task, index| %>
+  <% @tasks.each do |task| %>
   <li><%= task %></li>
   <% end %>
 </ol>
