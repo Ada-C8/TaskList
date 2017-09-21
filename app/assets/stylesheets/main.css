@@ -4,7 +4,11 @@ html { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   width: 100%;
-  background: #B3E6E6;
+  background-color: #B3E6E6;
+  background-image: radial-gradient(#cbefef 15%, transparent 16%),
+  radial-gradient(#cbefef 15%, transparent 16%);
+  background-size:60px 60px;
+  background-position: 0 0, 30px 30px;
   color: #333;
   font-family: 'Patrick Hand', cursive;
   font-size: 16px;
@@ -32,26 +36,34 @@ main {
 }
 
 /* main - task-options*/
-section.task-options {
-  width: 40%;
+aside.task-options {
+  width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-section.task-options a.button {
+aside.task-options div.task-icons {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+aside.task-options div.task-icons a.button:first-of-type {
+  margin-right: 20%;
+}
+aside.task-options div.task-icons a.button {
   display: inline-block;
   padding-bottom: 5%;
   text-align: center;
 }
 .fa-circle { color: #62d1d1; }
-section.task-options a.button span:hover i.fa-circle{
+aside.task-options div.task-icons a.button span:hover i.fa-circle{
   color: #8293c4;
 }
-section.task-options figure { margin-top: 5%; }
-section.task-options figure img {
+aside.task-options figure { margin-top: 5%; }
+aside.task-options figure img {
   max-width: 270px;
-  border-radius: 10px;
+  border-radius: 50%;
   border: 2px solid #fefefe;
 }
 
@@ -62,5 +74,5 @@ section.main-list {
   background: #fefefe;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 3% 6% 8%;
+  padding: 3% 4% 4%;
 }

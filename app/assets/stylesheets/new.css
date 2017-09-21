@@ -1,15 +1,11 @@
-form#new-form {
+form label { vertical-align: middle; }
+form#task-form {
   width: 100%;
   margin-top: 2%;
   padding: 3%;
   font-size: 1.1em;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;*/
 }
-
-form#new-form input, form#new-form textarea {
+form#task-form input, form#task-form textarea {
   padding: 1% 1% 1.2%;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -17,51 +13,72 @@ form#new-form input, form#new-form textarea {
   vertical-align: middle;
   font-size: 0.8em;
 }
-form#new-form select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 1% 2%;
-}
 
-form label { vertical-align: middle; }
-
-form#new-form div.name-wrapper {
-  margin-bottom: 3%;
-}
-form#new-form div.name-wrapper label,
-form#new-form div.desc-wrapper label {
+/* NAME/DESC */
+form#task-form div.name-wrapper { margin-bottom: 3%; }
+form#task-form div.name-wrapper label,
+form#task-form div.desc-wrapper label {
   display: inline-block;
   width: 20%;
   margin-right: 2%;
 }
-form#new-form: div.name-wrapper input,
-form#new-form: div.desc-wrapper textarea
- {
+form#task-form div.name-wrapper input,
+form#task-form div.desc-wrapper textarea {
   display: inline-block;
-  width: 60%;
+  width: 70%;
 }
-form#new-form div.desc-wrapper {}
 
-form#new-form div.date-wrapper {
+/* DATE */
+form#task-form div.date-wrapper {
+  margin: 4% 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+form#task-form div.created-wrap,
+form#task-form div.due-wrap {
   display: flex;
   justify-content: center;
   align-content: center;
 }
+form#task-form div.created-wrap label,
+form#task-form div.due-wrap label {
+  margin: 2% 4% 0 0;
+}
 
-form#new-form div.status-wrapper {}
-form#new-form div.submit-wrapper {
-  margin: 5% 0;
+/* STATUS */
+form#task-form div.status-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+form#task-form div.status-wrapper label { margin-right: 4%; }
+
+/* SUBMIT */
+
+form#task-form div.link-wrapper,
+form#task-form div.submit-wrapper {
+  margin: 10% 0 5%;
   text-align: center;
 }
-form#new-form div.submit-wrapper input {
+form#task-form div.link-wrapper a,
+form#task-form div.submit-wrapper input {
+  font-family: "Patrick Hand", cursive;
   padding: 3% 6%;
   background: #62D1D1;
   color: #fefefe;
   border: none;
   font-size: 1.1em;
 }
-form#new-form div.submit-wrapper input:hover {
+form#task-form div.link-wrapper a:hover,
+form#task-form div.submit-wrapper input:hover {
   cursor: pointer;
   background: #8293c4;
+}
+
+/* LINK (LOOKS LIKE SUBMIT) */
+form#task-form div.link-wrapper a {
+  border-radius: 6px;
+  display: inline-block;
+  padding: 3.6% 7.2%;
 }

@@ -28,7 +28,7 @@ button.edit-status {
   background: none;
   border: none;
   font-size: 1.5em;
-  color: #4EC4E8; 
+  color: #4EC4E8;
 }
 
 /* text display */
@@ -52,7 +52,7 @@ div.action-icons {
   align-content: center;
   visibility: hidden;
 }
-div.action-icons a { font-size: 1.2em; }
+div.action-icons a { font-size: 1em; }
 div.action-icons form { display: inline; }
 a.task-action { color: #4EC4E8; }
 button.delete-task {
@@ -60,7 +60,7 @@ button.delete-task {
   background: none;
   border: none;
   color: #DD4647;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 button.delete-task:hover,
 button.edit-status:hover {

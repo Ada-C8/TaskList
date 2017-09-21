@@ -1,7 +1,6 @@
 require 'date'
 class TasksController < ApplicationController
   def index
-    # @tasks = Task.all
     @tasks = Task.order(:due)
   end
 
@@ -26,9 +25,18 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id])
   end
 
   def update
+    @task = Task.find(params[:id])
+    @task.name = params[:task][:name]
+    @task.description = params[:task][:description]
+    @task.created = params[:task][:created]
+    @task.due = params[:task][:due]
+    @task.status = params[:task][:status]
+    @task.save
+    redirect_to("/tasks/#{@task.id}")
   end
 
   def update_status

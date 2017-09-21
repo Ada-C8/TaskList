@@ -1,43 +1,39 @@
-<article class="new-task">
+<article>
   <h2>Create a new Task</h2>
 
-  <form action="/tasks" method="post" accept-charset="utf-8" id="new-form">
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <%= form_tag tasks_path, :id => 'task-form', method: :post do %>
+    <%= content_tag :div, class: 'name-wrapper' do %>
+      <%= label_tag 'task[name]', 'Task Name' %>
+      <%= text_field_tag 'task[name]', nil, {:placeholder => 'Example: Buy cookies'} %>
+    <% end -%>
 
-  <div class="name-wrapper">
-    <label for="name">Task Name</label>
-    <input type="text" name="task[name]" value="" id="name" placeholder="Example: Buy cookies">
-  </div>
+    <%= content_tag :div, class: "desc-wrapper" do %>
+      <%= label_tag "task[description]", "Description" %>
+      <%= text_area_tag "task[description]", nil, {:rows => 6, :cols => 50, :placeholder => "Give a little more detail about your task?"} %>
+    <% end -%>
 
-  <div class="desc-wrapper">
-    <label for="description">Description</label>
-    <textarea name="task[description]" id="description" rows="6" cols="50" placeholder="Give a little more detail about your task?"></textarea>
-  </div>
+    <%= content_tag :div, class: "date-wrapper" do %>
+      <%= content_tag :div, class: "created-wrap" do %>
+        <%= label_tag "task[created]", "Created" %>
+        <%= date_field_tag "task[created]"%>
+      <% end -%>
+      <%= content_tag :div, class: "due-wrap" do %>
+        <%= label_tag "task[due]", "Due" %>
+        <%= date_field_tag "task[due]"%>
+      <% end -%>
+    <% end -%>
 
-  <div class="date-wrapper">
-    <div class="created-wrap">
-      <label for="created">Date Created</label>
-      <input type="date" name="task[created]" value="" id="created">
-    </div>
-    <div class="due-wrap">
-      <label for="due">Date Due</label>
-      <input type="date" name="task[due]" value="" id="due">
-    </div>
-  </div>
+    <%= content_tag :div, class: "status-wrapper" do %>
+      <%= label_tag "task[status]", "Status", :class=> 'status-title' %>
+      <%= radio_button_tag "task[status]", "Incomplete", :checked => true %>
+      <%= label_tag "task[status]", 'Incomplete' %>
+      <%= radio_button_tag "task[status]", "Complete"%>
+      <%= label_tag "task[status]", 'Complete' %>
+    <% end -%>
 
-  <div class="status-wrapper">
-    <label for="status">Status</label>
-    <select name="task[status]">
-      <option value="Incomplete" selected>&nbsp;Incomplete&nbsp;&nbsp;&nbsp;&nbsp;</option>
-      <option value="Complete">&nbsp;Complete&nbsp;&nbsp;&nbsp;&nbsp;</option>
-    </select>
-  </div>
+    <%= content_tag :div, class: "submit-wrapper" do %>
+      <%= submit_tag "Add to Task List"%>
+    <% end -%>
 
-  <div class="submit-wrapper">
-    <input type="submit" value="Add to Task List">
-  </div>
-</form>
-
-
+  <% end -%>
 </article>

@@ -3,33 +3,33 @@
   <head>
     <title>Task List</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header>
       <h1>Task List</h1>
     </header>
     <main>
-      <section class="task-options">
-        <a class="button" href="/tasks/new">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-        <a class="button" href="/tasks">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-list fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
+      <aside class="task-options">
+        <div class="task-icons">
+          <%= link_to tasks_path, :class => 'button' do %>
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-list fa-stack-1x fa-inverse"></i>
+            </span>
+          <% end %>
+          <%= link_to new_task_path, :class => 'button' do %>
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+            </span>
+          <% end %>
+        </div>
         <figure>
-          <img src="https://s-media-cache-ak0.pinimg.com/originals/39/39/ea/3939ea41489c4d0168ff2ba5efe48aff.jpg" alt="Motivational animal image by reapersun">
+          <img src="http://www.placecage.com/c/270/320" alt="Motivating crazy Nicholas Cage image">
         </figure>
-      </section>
+      </aside>
 
       <section class="main-list">
         <%= yield %>

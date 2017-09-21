@@ -10,6 +10,4 @@ Rails.application.routes.draw do
   put '/tasks/:id', to: 'tasks#update'
   put '/tasks', to: 'tasks#update_status', as: 'update_status'
   delete '/tasks/:id', to: 'tasks#destroy'
-
-  # post '/tasks/:id/checkout', to: 'tasks#checkout', as: 'checkout_task'
 end
