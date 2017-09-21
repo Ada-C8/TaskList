@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 20170919225728) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
+    t.string "description"
+    t.string "completion_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "completion_date"
-    t.text "description"
   end
 
 end
