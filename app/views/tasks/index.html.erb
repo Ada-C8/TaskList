@@ -1,4 +1,4 @@
-<body>
+
 <div>
 <section >
   <h1>
@@ -6,7 +6,7 @@
   </h1>
   <ul>
     <il>
-      Add Task
+      <%= link_to "Add Task", new_task_path %>
     </il>
     <il>
       All Task
@@ -16,13 +16,13 @@
 
 <section id="list">
 <h2>YOUR TASKS</h2>
-<ol>
+<ul>
   <% @tasks.each do |task|  %>
     <li>
       <h3>
-        <%= task[:title] %>
+        <%= link_to task.title, task_path(task.id) %>
       </h3>
-      <P>
+      <!-- <P>
        <%= task[:description] %>
       </P>
 
@@ -32,10 +32,10 @@
 
       <p>
         Status: <%= task[:complete]%>
-      </p>
+      </p> -->
     </li>
   <% end %>
-</ol>
+</ul>
 </section>
 </div>
 
@@ -45,5 +45,3 @@
   &copy 2017
 </p>
 </footer>
-
-</body>

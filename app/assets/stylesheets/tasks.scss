@@ -13,7 +13,7 @@ div {
 
 ul {
   float: left;
-  clear: right;
+  clear: left;
   margin-top: 2%;
 }
 
@@ -34,7 +34,7 @@ ul il {
 
 #list {
   float:right;
-  // clear: left;
+  clear: right;
   border: 3px solid orange;
   border-radius: 17px;
   padding: 5%;
