@@ -1,2 +1,9 @@
 <h1>show erb</h1>
-<h2><%= @task.title %></h2>
+<h2>Task #<%= @task.id %></h2>
+<p>
+  <strong>Title:</strong> <%= @task.title %><br/>
+  <strong>Description:</strong> <%= @task.description %><br/>
+  <strong>Due Date:</strong> <%= @task.due_date %><br/>
+  <br/>Mark Complete | Edit | Delete
+
+</p>

@@ -3,13 +3,13 @@
   <ol>
     <% @tasks.each do |task| %>
       <li>
-        <strong><%=task[:title]%></strong>  <strong>Due Date: </strong><%=task[:due_date]%>   <strong>Status: </strong><%=task[:completion_status]%><br/>Mark Complete | Edit | Delete | <%= link_to "Show Task", task_path(task[:id]) %>
+        <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | Edit | Delete
 
-        <%= form_tag task_path(task.id), method: :delete, class: "delete_task_form" do %>
-          <!-- <%= text_field_tag "task[title]" , "Pet Cat" %> -->
-          <!-- <%= text_field_tag "task[title]", "Pet Cat" %>
-          <%= submit_tag "Delete Task" %> -->
-        <% end%>
+        <!-- <%= form_tag task_path(task.id), method: :delete, class: "delete_task_form" do %> -->
+          <!-- <%= text_field_tag "task[title]" , "Pet Cat" %>
+          <%= text_field_tag "task[title]", "Pet Cat" %> -->
+          <!-- <%= submit_tag "Delete Task" %> -->
+        <!-- <% end%> -->
       </li>
     <% end%>
   </ol>
