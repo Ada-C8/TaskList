@@ -3,7 +3,7 @@
 <section class="wrapper">
   <div class="leftline">
     <h1> TASKLIST</h1>
-    <h3>Add task <%= link_to task.title, task_path(task.id)%> </h3>
+    <h3> <%= link_to "Add task", new_task_path%> </h3>
     <h3>All tasks</h3>
   </div>
   <div class="box">
@@ -11,7 +11,18 @@
     <ol>
       <% @tasks.each do |task| %>
         <li>
-          <p><%= link_to task.title, task_path(task.id)%></p>
+          <p><strong><%= link_to task.title, task_path(task.id)%><strong></p>
+            <div class="choose">
+
+            <% if task.complete == "t" %>
+              <h4><%= link_to "Unmark Completed", update_task_path(task.id, :task => {:complete => "f"}), method: :patch %> |</h4>
+            <% else %>
+              <h4><%= link_to "Mark Completed", update_task_path(task.id, :task => {:complete => "t"}), method: :patch %> |</h4>
+            <% end %>
+
+            <h4><%= link_to "Edit", edit_task_path(task.id) %> |</h4>
+            <h4><%= link_to "Delete", delete_task_path(task.id), method: :delete %></h4>
+          </div>
         </li>
       <% end %>
     </ol>

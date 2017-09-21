@@ -8,23 +8,37 @@ class TasksController < ApplicationController
   end
 
   def create
-    # task = Task.new(title: params[task][:title], description: params[task][:description], due_date: params[task][due_date], complete: params[task][complete])
-    # task.save
-    # redirect_to('/tasks')
+    task = Task.new(title: params[:task][:title],
+     description: params[:task][:description],
+     due_date: params[:task][:due_date],
+     complete: "f")
+    task.save
+
+    redirect_to home_url
   end
 
   def show
     @task = Task.find(params[:id])
   end
 
-  # def edit
-  #   @book = Task.find(params[:id])
-  # end
+  def edit
+    @task = Task.find(params[:id])
+  end
 
   def update
+    task_updates = params.require(:task).permit(:title, :description, :due_date, :complete)
+    task = Task.find(params[:id])
+    task.update_attributes(task_updates)
+    task.save
+
+    redirect_to task_path(task)
   end
 
   def destroy
+    task = Task.find(params[:id])
+    task.destroy
+
+    redirect_to home_url
   end
 
 end
