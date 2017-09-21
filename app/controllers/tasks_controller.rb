@@ -35,6 +35,7 @@ class TasksController < ApplicationController
   end
 
   def complete
+
   end
 
   def edit
