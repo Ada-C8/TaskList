@@ -21,11 +21,11 @@
       <h2 class="task-heading">You Need To...</h2>
       <ul id="task-box">
         <% @tasks.each do |task| %>
-          <li class="tasks">
+          <li class="tasks ">
             <%= image_tag 'donut-transparent.png', alt: "A delicious sprinkled donut", class: "donut-image" %><%= task[:name] %>
           </li>
         <div class="task-actions">
-          <% if task[:status] == :incomplete %>
+          <% if task[:status] == "incomplete" %>
               <li class="action"><%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %></li>
           <% else %>
               <li class="action">Mark Incomplete</li>

@@ -110,6 +110,19 @@ ul {
   // justify-content:space-between;
 }
 
+.incomplete {
+  animation-name: strike;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
+}
+
 #task-box {
   padding-left: 0em;
   margin-top: 0em;

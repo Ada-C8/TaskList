@@ -38,8 +38,10 @@ class TasksController < ApplicationController
     id = params[:id].to_i
     @task = Task.find(id)
     @task.completion_date = Date.today
+    @task.status = "complete"
     @task.save
-    @task.status = :complete
+    redirect_to root_path
+
   end
 
   def edit
