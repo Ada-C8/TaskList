@@ -14,9 +14,26 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id].to_i)
   end
 
   def update
+    @task = Task.find(params[:id].to_i)
+    @task.name = params[:task][:name]
+    @task.description = params[:task][:description]
+    if params[:task][:done].to_i == 1
+      @task.done = true
+      @task.completion_date = Date.today
+    else
+      @task.done = false
+      @task.completion_date = nil
+    end
+
+    if @task.save
+      redirect_to @task
+    else
+      render "edit"
+    end
   end
 
   def new
