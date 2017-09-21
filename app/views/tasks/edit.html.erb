@@ -1,0 +1,14 @@
+<h2>edit</h2>
+
+<%= form_for @task do |f| %>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+
+   <%= f.label :description %>
+   <%= f.text_field :description %>
+
+   <%= f.label :due_date %>
+   <%= f.text_field :due_date, placeholder: "e.g., 2017-9-21" %>
+
+   <%= f.submit "Save changes" %>
+ <% end %>

@@ -1,0 +1,60 @@
+
+<section class="task-list">
+  <h3>your tasks</h3>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.status == true %>
+        <p>
+          <strong class="complete">
+          <%= task.title %>
+          </strong>
+        </p>
+        <div class="actions">
+          <span class="button"><%= link_to "actually, incomplete!", tasks_path(task.id), class: "link" %></span>
+          <span class="button"><%= link_to "edit", edit_task_path(task.id), class: "link" %></span>
+          <span class="button"><%= link_to "delete", tasks_path(task.id), class: "link" %></span>
+        </div>
+        <% else %>
+        <strong>
+          <p>
+            <%= link_to task.title, task_path(task.id), class: "link" %>
+          </p>
+        </strong>
+      </li>
+      <div class="actions">
+        <span class="button">
+          <%= link_to "mark complete!", tasks_path(task.id), class: "link" %>
+        </span>
+        <span class="button">
+          <%= link_to "edit", edit_task_path(task.id), class: "link" %>
+        </span>
+        <span class="button">
+          <%= link_to "delete", tasks_path(task.id), method: :delete, data: { confirm: "You sure?" }, class: "link" %>
+        </span>
+      </div>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <h3 class="tasks-completed">completed tasks (yay)</h3>
+    <ul>
+      <% @tasks.each do |task| %>
+        <li>
+          <% if task.status == true %>
+          <strong>
+            <%= link_to task.title, task_path(task.id), class: "link" %>
+          </strong>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+
+</section>
+
+
+
+<%# form_tag book_path(book.id), metthod: :delete do %>
+<%# text_field_tag "book[author]", "J.K.Rowling" %>
+<%# text_field_tag "book[title]", "J.K.Rowling" %>
+<%# end %>
