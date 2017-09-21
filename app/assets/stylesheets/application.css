@@ -22,7 +22,10 @@ header {
 
 header h1 {
   display: inline-block;
-  float: left;
+  /*float: left;*/
+  font-family: 'Shrikhand', cursive;
+  padding-left: 10px;
+  font-size: 3em;
 }
 
  main {
@@ -39,8 +42,6 @@ header h1 {
  }
 
  .button_to {
-   /*margin-top: 15px;*/
-   margin-right: 20px;
    display: inline-block;
  }
 
@@ -72,3 +73,9 @@ footer {
 .input {
   padding-bottom: 10px;
 }
+
+
+/*fonts*/
+/*font-family: 'Abril Fatface', cursive;
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Rufina', serif;*/
