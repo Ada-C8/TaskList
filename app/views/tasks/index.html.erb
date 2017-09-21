@@ -6,8 +6,8 @@
         <strong><%= link_to(task.name, task_path(task.id), alt: 'link to task.name task') %></strong>
         <nav>
           <a href= >Mark Complete</a> |
-          <a href= >Edit</a> |
-          <a href= >Delete</a>
+          <%= link_to('Edit', edit_task_path(task.id), alt: 'link to edit task.name') %> |
+          DELETE
         </nav>
       </li>
     <% end %>

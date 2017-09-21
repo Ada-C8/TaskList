@@ -10,13 +10,13 @@
 
 <body>
   <header>
-    <h1> TASKLIST </h1>
+    <h1> <%= link_to('TASKLIST', root_path, alt: 'link to TASKLIST') %> </h1>
   </header>
 
   <main class="group">
     <div class="left">
       <section class="button">
-        <h4><a href=''>Add Task</a></h4>
+        <h4><%= link_to('Add Task', new_task_path, alt: 'link to create new task') %></h4>
       </section>
       <section class="button">
         <h4><a href=''>All Tasks</a></h4>
