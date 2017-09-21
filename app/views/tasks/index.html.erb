@@ -3,7 +3,7 @@
 <section class="wrapper">
   <div class="leftline">
     <h1> TASKLIST</h1>
-    <h3>Add task</h3>
+    <h3>Add task <%= link_to task.title, task_path(task.id)%> </h3>
     <h3>All tasks</h3>
   </div>
   <div class="box">
@@ -11,10 +11,7 @@
     <ol>
       <% @tasks.each do |task| %>
         <li>
-          <p><strong>Title: </strong><%= task.title %></p>
-          <p><strong>Description: </strong><%= task.description%></p>
-          <p><strong>Due date: </strong><%= task.due_date%></p>
-          <p><strong>Completed: </strong><%= task.complete %></p>
+          <p><%= link_to task.title, task_path(task.id)%></p>
         </li>
       <% end %>
     </ol>
