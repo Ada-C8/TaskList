@@ -34,27 +34,24 @@ class TasksController < ApplicationController
     end
   end
 
-  def complete
-    #non crud action
-    @task = Task.find(params[:id])
-    @task.complete!
-    redirect_to tasks_path
-  end
+  # def complete
+  #   #non crud action
+  #   @task = Task.find(params[:id])
+  #   @task.complete!
+  #   redirect_to tasks_path
+  # end
 
   def edit
     @task = Task.find(params[:id]) #can do find_by(id: params[:id].to_i)
-    unless @book
-      redirect_to tasks_path
-    end
+    # unless @task
+    #   redirect_to tasks_path
+    # end
   end
 
   def update
     @task = Task.find(params[:id])
-    if @task.update(name: params[:task][:name], description: params[:task][:description])
-      redirect_to tasks_path
-    else
-      render :edit
-    end
+    @task.update_attributes(task_params)
+    redirect_to tasks_path
   end
 
   def destroy
@@ -65,8 +62,8 @@ class TasksController < ApplicationController
   end
 end
 
-# private
-#
-# def task_params
-#    params.require(:task).permit(:title, :description, :due, :priority, :completed)
-# end
+private
+
+def task_params
+   params.require(:task).permit(:title, :description, :due, :priority, :completed)
+end

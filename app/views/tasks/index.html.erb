@@ -12,15 +12,11 @@
   <ol>
     <% @tasks.each do |task| %>
     <li>
-      <%=link_to(task.name, task_path(task.id))%>
+      <%=link_to(task.name, task_path(task.id), { :class => (task.completed)? "complete" : "" })%>
     </li>
     <ul>
       <li class="right-border">
         <%= task.description %>
-      </li>
-      <li class="right-border">
-        Completed:
-        <%= task.completed %>
       </li>
     </ul>
       <% end %>

@@ -10,7 +10,11 @@ params are : <%= params %>
   <%=link_to "Edit", edit_task_path(@task.id) %>
   <%=link_to "Add Task", new_task_path %>
   <%=link_to "Delete", delete_task_path(@task.id), method: :delete %>
-  <%=link_to "Complete Task", complete_task_path(@task.id), method: :patch %>
+  <% if @task.completed %>
+      <%=link_to "Mark Incomplete", update_task_path(@task.id, :task => { :completed => false }), method: :patch %>
+  <% else %>
+      <%=link_to "Mark Complete", update_task_path(@task.id, :task => { :completed => true }), method: :patch %>
+  <% end %>
   </h2>
   <h3>
     <%= @task.description %>
