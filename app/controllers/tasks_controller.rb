@@ -1,15 +1,5 @@
+require 'Date'
 class TasksController < ApplicationController
-
-  # TASKS = [{id: 1, task_name: "Complete Weekend Warrior"},
-  #   {id: 2, task_name: "Complete Koans"},
-  #   {id: 3, task_name: "Continue Readings"},
-  #   {id: 4, task_name: "Take the dogs out"},
-  #   {id: 5, task_name: "Do the dishes"},
-  #   {id: 6, task_name: "Do the laundry"},
-  #   {id: 7, task_name: "Cook before everything goes bad"},
-  #
-  # ]
-
 
   def index
     @tasks = Task.all #probably change to due date- Task.order(:due_date)
@@ -17,14 +7,12 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find( params[:id].to_i)
+    if @task.due_date < DateTime.now
+      @task.status = "Past Due"
+    else
+      @task.status = @task.due_date
+    end
 
-    # id = params[:id].to_i
-    # @task = nil
-    # TASKS.each do |task|
-    #   if task[:id] == id
-    #     @task = task
-    #   end
-    # end
   end
 
   def edit
