@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <nav class="task-nav wrapper">
+      <h2> Task List </h2>
+      <section class="add-or-show-tasks">
+        <!-- <button type="botton" name="Add task">Add task</button>
+        <button type="botton" name="Add task">All tasks</button> -->
+        <%= link_to "All Tasks", tasks_path %>
+        <%= link_to "Add Task", new_task_path %>
+      </section>
+    </nav>
       <div class="container">
       <header id="header">
       </header>
