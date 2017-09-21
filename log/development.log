@@ -2595,3 +2595,50 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 18:38:07 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 247ms (Views: 230.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/tasks/4" for 127.0.0.1 at 2017-09-20 18:38:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 39ms (Views: 17.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/tasks/4/edit" for 127.0.0.1 at 2017-09-20 18:38:12 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.7ms)
+  Rendered tasks/edit.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/4" for 127.0.0.1 at 2017-09-20 18:38:19 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BHrivsg8V5yVjBJSpGhyDPvUDcLOrg8eaB43Ta+QRB6Xqfv6awIynoq0vZ6uPFDEi/x0fyMsx8oi0NM/LKagyA==", "task"=>{"name"=>"Get a dog already!  edited", "description"=>"get a dog , duh! edited"}, "commit"=>"Update Task", "id"=>"4"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "tasks"."id" = $4[0m  [["name", "Get a dog already!  edited"], ["description", "get a dog , duh! edited"], ["updated_at", "2017-09-21 01:38:19.255715"], ["id", 4]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 11ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 18:38:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
