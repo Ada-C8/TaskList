@@ -26,12 +26,9 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id].to_i)
-    # @task(name: params[:task][:name], description: params[:task][:description])
-    # if @task.save
-    #   redirect_to root_path
-    # else
-    #   render :edit
-    # end
+    unless @task
+      redirect_to root_path
+    end
   end
 
   def new
@@ -39,10 +36,17 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id].to_i)
+    @task = Task.find_by(id: params[:id].to_i)
   end
 
   def update
+    task = Task.find_by(id: params[:id].to_i)
+    redirect_to tasks_path unless task
+    if task.update_attributes book_params
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def mark_complete
@@ -64,6 +68,12 @@ class TasksController < ApplicationController
     @task.final_status ? @task.update(final_status: false) : @task.update(final_status: true)
     redirect_to root_path
 
+  end
+
+  private
+
+  def book_params
+    return params.require(:task).permit(:name, :description, :completion_date)
   end
 
 end

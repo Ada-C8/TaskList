@@ -91,6 +91,7 @@ display: flex;
 
 .button {
   padding: 10px;
+  margin-bottom: 10px;
   background-color: #ef1a56;
   border-radius: 27%;
   color: #000080;
@@ -170,4 +171,36 @@ body {
   background: -o-linear-gradient(lightblue, lightgray); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(lightblue, lightgray); /* For Firefox 3.6 to 15 */
   background: linear-gradient(lightblue, lightgray); /* Standard syntax */
+}
+
+#edit_container {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+#show_container {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+#add_container {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+#buttons {
+  padding-top: 20px;
 }
