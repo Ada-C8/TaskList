@@ -7,5 +7,12 @@
   <li>Description:
     <strong><%= task.description %></strong>
   </li>
+  <li>
+    <% if task.completed %>
+      <strong>Completed on <%= task.completion_date %></strong>
+    <% else %>
+      <%= button_to("Complete Task", complete_task_path(task.id), method: "patch") %>
+    <% end %>
+  </li>
   <% end %>
 </ul>
