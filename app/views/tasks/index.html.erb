@@ -2,14 +2,18 @@
   <h2>Your Tasks</h2>
   <ul>
     <% @tasks.each_with_index do |task, i| %>
-    <li class="task button">
+    <li class="task button <%= "completed" if task.completed %>">
         <p>
-          <strong><%= link_to "#{i + 1}. #{task[:task]}", task %></strong>
+          <strong><%= task.completed ? "✓ #{task[:task]}" : (link_to "#{i + 1}. #{task[:task]}", task) %></strong>
         </p><br />
         <nav class="task-options">
           <ul>
             <li>
-              <%= link_to "Mark Complete", task %> |
+              <% if task.completed %>
+              <%= link_to "Mark Incomplete", toggle_task_path(task) %> |
+              <% else %>
+              <%= link_to "Mark Complete", toggle_task_path(task) %> |
+              <% end %>
             </li>
             <li>
               <%= link_to "Edit", edit_task_path(task) %> |

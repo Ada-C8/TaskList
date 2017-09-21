@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.all.order(:completed)
   end
 
   def new
@@ -29,6 +29,17 @@ class TasksController < ApplicationController
 
   def destroy
     Task.destroy(params[:id])
+    redirect_to('/tasks')
+  end
+
+  def toggle_completed
+    task = Task.find(params[:id])
+    if task.completed
+      task.completed = false
+    else
+      task.completed = true
+    end
+    task.save
     redirect_to('/tasks')
   end
 end
