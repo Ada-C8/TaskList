@@ -22,4 +22,18 @@ class TasksController < ApplicationController
     task.save
     redirect_to('/tasks')
   end # create
+
+  def edit
+    @task = Task.find(params[:id])
+  end # edit
+
+  def update
+    @task = Task.find(params[:id])
+    @task.title = params[:task][:title]
+    @task.description = params[:task][:description]
+    @task.due_date = params[:task][:due_date]
+    @task.completion_status = params[:task][:completion_status]
+    @task.save
+    redirect_to('/tasks')
+  end #update
 end
