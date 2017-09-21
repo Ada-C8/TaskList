@@ -42,7 +42,10 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    @task = Task.find(params[:id]) #can do find_by(id: params[:id].to_i)
+    unless @book
+      redirect_to tasks_path
+    end
   end
 
   def update
