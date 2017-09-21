@@ -18,13 +18,22 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find_by(id: params[:id].to_i)
   end
 
   def show
-    @task = Task.find(params[:id].to_i)
+    @task = Task.find_by(id: params[:id].to_i)
   end
 
   def update
+    task = Task.find_by(id: params[:id].to_i)
+  redirect_to tasks_path unless task
+
+    if task.update_attributes task_params
+      redirect_to task_path(task.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -34,5 +43,11 @@ class TasksController < ApplicationController
     @task= Task.find(params[:id].to_i)
     @task.status ? @task.update(status: false): @task.update(status: true)
     redirect_to root_path
+  end
+
+  private
+
+  def task_params
+    return params.require(:task).permit(:id, :name, :description, :completion_date, :status)
   end
 end
