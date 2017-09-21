@@ -2,17 +2,17 @@
   <h2>View a selected Task</h2>
 
   <%= form_tag task_path(@task.id), :id => 'task-form', method: :get do %>
-    <%= content_tag :div, class: 'name-wrapper' do %>
+    <%= content_tag :div, class: 'name-wrapper show-div' do %>
       <%= label_tag 'task[name]', 'Task Name' %>
       <%= text_field_tag 'task[name]', @task.name, {:disabled => true} %>
     <% end -%>
 
-    <%= content_tag :div, class: "desc-wrapper" do %>
+    <%= content_tag :div, class: "desc-wrapper show-div" do %>
       <%= label_tag "task[description]", "Description" %>
       <%= text_area_tag "task[description]", @task.description, {:rows => 6, :cols => 50, :disabled => true } %>
     <% end -%>
 
-    <%= content_tag :div, class: "date-wrapper" do %>
+    <%= content_tag :div, class: "date-wrapper show-div" do %>
       <%= content_tag :div, class: "created-wrap" do %>
         <%= label_tag "task[created]", "Created" %>
         <%= date_field_tag "task[created]", @task.created, :disabled => true %>

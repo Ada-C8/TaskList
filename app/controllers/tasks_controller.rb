@@ -36,7 +36,7 @@ class TasksController < ApplicationController
     @task.due = params[:task][:due]
     @task.status = params[:task][:status]
     @task.save
-    redirect_to("/tasks/#{@task.id}")
+    redirect_to task_path(@task.id)
   end
 
   def update_status

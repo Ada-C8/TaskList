@@ -13,6 +13,11 @@ form#task-form input, form#task-form textarea {
   vertical-align: middle;
   font-size: 0.8em;
 }
+form#task-form div.show-div input,
+form#task-form div.show-div textarea {
+  border: none;
+  resize: none;
+}
 
 /* NAME/DESC */
 form#task-form div.name-wrapper { margin-bottom: 3%; }
