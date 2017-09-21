@@ -68751,3 +68751,834 @@ puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
 puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/tasks.7" for 127.0.0.1 at 2017-09-21 13:21:19 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks.7"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/tasks.8" for 127.0.0.1 at 2017-09-21 13:23:47 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks.8"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/tasks.8" for 127.0.0.1 at 2017-09-21 13:33:07 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks.8"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/tasks.7" for 127.0.0.1 at 2017-09-21 13:34:23 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks.7"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/tasks.7" for 127.0.0.1 at 2017-09-21 13:35:14 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks.7"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/tasks.7" for 127.0.0.1 at 2017-09-21 13:36:05 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks.7"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/tasks.7" for 127.0.0.1 at 2017-09-21 13:36:11 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/tasks.7"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2017-09-21 13:37:33 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 231ms (Views: 218.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:37:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-21 13:37:37 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:37:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/2" for 127.0.0.1 at 2017-09-21 13:37:46 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nbkVj+aB4FdOvSIbAGZnLnySk4ZYEgxAWI0j/VS0ZcqSDWGijndd4IEgo+mmo8SP7qcpAnuXG1oDXEMCmghjSQ==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:37:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/9" for 127.0.0.1 at 2017-09-21 13:37:56 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"D1wRJVr6jKbpzBTayO5I5DNAaf2CDgx8plK4vyzgUt8A6GUIMgwxESZRlShuK+tFoXXTeaGLG2b9g9hA4lxUXA==", "id"=>"9"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 9]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 12ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:37:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/7" for 127.0.0.1 at 2017-09-21 13:38:03 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XRgSwhE8VKp3JwJFMbR8RT8fkx/NCzFm9FDxukbE1uFSrGbvecrpHbi6g7eXcd/krSopm+6OJnyvgZFFiHjQYg==", "id"=>"7"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 7]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:38:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tasks/8" for 127.0.0.1 at 2017-09-21 13:47:18 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qiueU34i7l+c+NrPpx7fV5IMj0jWUjdsoFDqEvZfwmmln+p+FtRT6FNlWz0B23z2ADk1zPXXIHb7gYrtOOPE6g==", "id"=>"8"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 35ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:47:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-21 13:49:56 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 15.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-21 13:50:03 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nG/Wf0sLkDxPKC/T/ckDGx/1Fpc+6+cVqjGWxf0nGKdaz6cHlP8J97lHNTIvi+3p5DFhKDkNpcK5EMFGSxfawQ==", "task"=>{"title"=>"asdfadsf", "description"=>"asdfadsfadsf", "due_date"=>"2017-9-15"}, "commit"=>"Make a new task!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "due_date", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "asdfadsf"], ["description", "asdfadsfadsf"], ["due_date", "2017-09-15"], ["status", "f"], ["created_at", "2017-09-21 20:50:03.956866"], ["updated_at", "2017-09-21 20:50:03.956866"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 1.2ms)
+
+
+  
+NameError (undefined local variable or method `tasks' for #<TasksController:0x007fb0c6b77478>
+Did you mean?  task):
+  
+app/controllers/tasks_controller.rb:23:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2017-09-21 13:51:13 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nG/Wf0sLkDxPKC/T/ckDGx/1Fpc+6+cVqjGWxf0nGKdaz6cHlP8J97lHNTIvi+3p5DFhKDkNpcK5EMFGSxfawQ==", "task"=>{"title"=>"asdfadsf", "description"=>"asdfadsfadsf", "due_date"=>"2017-9-15"}, "commit"=>"Make a new task!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "due_date", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "asdfadsf"], ["description", "asdfadsfadsf"], ["due_date", "2017-09-15"], ["status", "f"], ["created_at", "2017-09-21 20:51:13.825938"], ["updated_at", "2017-09-21 20:51:13.825938"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 35ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:51:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/10" for 127.0.0.1 at 2017-09-21 13:51:19 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9pTaHeFEKXznYKntq2Oitg5DJL7kSkh5VUTeqGLdbb35IK4wibKUyyj9KB8NpgEXnHaeOsfPX2MOlb5XrGFrPg==", "id"=>"10"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 14ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:51:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 76ms (Views: 71.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1/mark_as_complete" for 127.0.0.1 at 2017-09-21 13:52:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tasks/1/mark_as_complete"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks/1/mark_as_complete" for 127.0.0.1 at 2017-09-21 13:54:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tasks/1/mark_as_complete"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks/1/mark_as_complete" for 127.0.0.1 at 2017-09-21 14:00:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tasks/1/mark_as_complete"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:00:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/tasks/4/mark_as_complete" for 127.0.0.1 at 2017-09-21 14:00:41 -0700
+Processing by TasksController#mark_as_complete as HTML
+  Parameters: {"authenticity_token"=>"uPDrMzQb6bqp2a8bjpXXRa9OKBDxlQUqcisetiFX13e3RJ8eXO1UDWZELukoUHTkPXuSlNIQEjAp+n5J7+vR9A==", "id"=>"4"}
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "t"], ["updated_at", "2017-09-21 21:00:41.851911"], ["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 15ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:00:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks.3" for 127.0.0.1 at 2017-09-21 14:05:51 -0700
+Processing by TasksController#index as 
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 69ms (Views: 52.9ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/tasks/3/mark_as_incomplete" for 127.0.0.1 at 2017-09-21 14:06:12 -0700
+Processing by TasksController#mark_as_incomplete as HTML
+  Parameters: {"authenticity_token"=>"0GCTKXxO4mzZV1Lk0enw4f0RAsd5CZuNniZmU4T61prf1OcEFLhf2xbK0xZ3LFNAbyS4Q1qMjJfF9wasSkbQGQ==", "id"=>"3"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "f"], ["updated_at", "2017-09-21 21:06:12.847817"], ["id", 3]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 16ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:06:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 100ms (Views: 97.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/11/edit" for 127.0.0.1 at 2017-09-21 14:06:18 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11" for 127.0.0.1 at 2017-09-21 14:07:04 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BOAHsH2rA7kxG+NvnQDEcvzGBtukSP8RdVq3dyVIEvsqDMJdgbHq0NBElphOxqCXxn3taLQp6MqZdZ0c0QYcbA==", "task"=>{"title"=>"Buy plants", "description"=>"Plant sale at Conservatory", "due_date"=>"2017-09-23"}, "commit"=>"Save changes", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "title" = ?, "description" = ?, "due_date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["title", "Buy plants"], ["description", "Plant sale at Conservatory"], ["due_date", "2017-09-23"], ["updated_at", "2017-09-21 21:07:04.592001"], ["id", 11]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/11
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/11" for 127.0.0.1 at 2017-09-21 14:07:04 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:07:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/3/mark_as_complete" for 127.0.0.1 at 2017-09-21 14:07:18 -0700
+Processing by TasksController#mark_as_complete as HTML
+  Parameters: {"authenticity_token"=>"9228yo3pL7Pcxc+wKcJOz41yapDx62Oqt7eXNsnbSiX42cjn5R+SBBNYTkKPB+1uH0fQFNJudLDsZvfJB2dMpg==", "id"=>"3"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "t"], ["updated_at", "2017-09-21 21:07:18.748436"], ["id", 3]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 13ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:07:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 87ms (Views: 82.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/4/mark_as_incomplete" for 127.0.0.1 at 2017-09-21 14:07:30 -0700
+Processing by TasksController#mark_as_incomplete as HTML
+  Parameters: {"authenticity_token"=>"KqyS0uCGHGi1BC3mYDQxpU7Z2VnWyOTz17GELA/Q62UlGOb/iHCh33qZrBTG8ZIE3Oxj3fVN8+mMYOTTwWzt5g==", "id"=>"4"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "f"], ["updated_at", "2017-09-21 21:07:30.354953"], ["id", 4]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:07:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 44ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:08:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:08:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 50ms (Views: 45.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:08:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:09:35 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:09:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/4/mark_as_complete" for 127.0.0.1 at 2017-09-21 14:10:06 -0700
+Processing by TasksController#mark_as_complete as HTML
+  Parameters: {"authenticity_token"=>"NSN/zR/mQNAsCw8Rm4+3R4r13LAe48SCA41oeZKUUMU6lwvgdxD9Z+OWjuM9ShTmGMBmND1m05hYXAiGXChWRg==", "id"=>"4"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "t"], ["updated_at", "2017-09-21 21:10:06.217528"], ["id", 4]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 11ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:10:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/4/mark_as_incomplete" for 127.0.0.1 at 2017-09-21 14:10:11 -0700
+Processing by TasksController#mark_as_incomplete as HTML
+  Parameters: {"authenticity_token"=>"UGcgiU49JHa1MnO7wYRWfyfn7ttUUj0iPcy93Bn13Qlf01SkJsuZwXqv8klnQfXetdJUX3fXKjhmHd0j10nbig==", "id"=>"4"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "f"], ["updated_at", "2017-09-21 21:10:11.609541"], ["id", 4]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:10:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:10:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/5/mark_as_incomplete" for 127.0.0.1 at 2017-09-21 14:12:48 -0700
+Processing by TasksController#mark_as_incomplete as HTML
+  Parameters: {"authenticity_token"=>"LUMsWTh5yvfdDWHlplaTY7P29291KsICxTKpR11Y7uQi91h0UI93QBKQ4BcAkzDCIcNN61av1Rie48m4k+ToZw==", "id"=>"5"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "f"], ["updated_at", "2017-09-21 21:12:48.994240"], ["id", 5]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:12:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2017-09-21 14:12:56 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-21 14:46:13 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 145ms (Views: 129.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:46:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-21 14:46:17 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:46:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 94ms (Views: 89.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/1/mark_as_complete" for 127.0.0.1 at 2017-09-21 14:46:28 -0700
+Processing by TasksController#mark_as_complete as HTML
+  Parameters: {"authenticity_token"=>"UZA3YBisZV6RWp+f++r4sEi5YD7hz5Vh/DdOoI+k905eJENNcFrY6V7HHm1dL1sR2ozausJKgnun5i5fQRjxzQ==", "id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "t"], ["updated_at", "2017-09-21 21:46:28.350805"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 13ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:46:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/mark_as_incomplete" for 127.0.0.1 at 2017-09-21 14:46:33 -0700
+Processing by TasksController#mark_as_incomplete as HTML
+  Parameters: {"authenticity_token"=>"ZiorPsJq4FIJprbNjD0gwQNZ3xj+EWfLrBcpP/2du85pnl8Tqpxd5cY7Nz8q+INgkWxlnN2UcNH3xknAMyG9TQ==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "f"], ["updated_at", "2017-09-21 21:46:33.707618"], ["id", 1]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 14ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:46:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 42ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/mark_as_complete" for 127.0.0.1 at 2017-09-21 14:46:52 -0700
+Processing by TasksController#mark_as_complete as HTML
+  Parameters: {"authenticity_token"=>"C4gACcgoH/BfTvX1GtMXn+fElYoGm6Feweuz3Y3QzAwEPHQkoN6iR5DTdAe8FrQ+dfEvDiUetkSaOtMiQ2zKjw==", "id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "t"], ["updated_at", "2017-09-21 21:46:52.024977"], ["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 13ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:46:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/mark_as_incomplete" for 127.0.0.1 at 2017-09-21 14:46:58 -0700
+Processing by TasksController#mark_as_incomplete as HTML
+  Parameters: {"authenticity_token"=>"nxGxcLg1d/+WMgtzVw0wSGZColGV2f5+2aAR+5f8KIWQpcVd0MPKSFmvioHxyJPp9HcY1bZc6WSCcXEEWUAuBg==", "id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", "f"], ["updated_at", "2017-09-21 21:46:58.695704"], ["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 20ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 14:46:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+

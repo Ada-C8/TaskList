@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   delete "/tasks/:id", to: "tasks#destroy"
 
   # post "books/Lid/checkout", to: "books#checkout", as: "checkout_book"
+  patch "/tasks/:id/mark_as_complete", to: "tasks#mark_as_complete", as: "mark_as_complete"
+  patch "/tasks/:id/mark_as_incomplete", to: "tasks#mark_as_incomplete", as: "mark_as_incomplete"
 
 end

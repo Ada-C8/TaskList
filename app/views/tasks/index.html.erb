@@ -11,9 +11,17 @@
           </strong>
         </p>
         <div class="actions">
-          <span class="button"><%= link_to "actually, incomplete!", tasks_path(task.id), class: "link" %></span>
-          <span class="button"><%= link_to "edit", edit_task_path(task.id), class: "link" %></span>
-          <span class="button"><%= link_to "delete", tasks_path(task.id), class: "link" %></span>
+          <span>
+            <%= link_to "mark incomplete", mark_as_incomplete_path(task.id), method: :patch, data: { confirm: "You sure you're not done this?" } %>
+          </span>
+          |
+          <span>
+            <%= link_to "edit", edit_task_path(task.id), class: "link" %>
+          </span>
+          |
+          <span>
+            <%= link_to "delete", tasks_path(task.id), class: "link" %>
+          </span>
         </div>
         <% else %>
         <strong>
@@ -23,14 +31,16 @@
         </strong>
       </li>
       <div class="actions">
-        <span class="button">
-          <%= link_to "mark complete!", tasks_path(task.id), class: "link" %>
+        <span>
+          <%= link_to "mark complete", mark_as_complete_path(task.id), method: :patch, data: { confirm: "You sure you're done this?" } %>
         </span>
-        <span class="button">
-          <%= link_to "edit", edit_task_path(task.id), class: "link" %>
+        |
+        <span>
+          <%= link_to "edit", edit_task_path(task.id) %>
         </span>
-        <span class="button">
-          <%= link_to "delete", tasks_path(task.id), method: :delete, data: { confirm: "You sure?" }, class: "link" %>
+        |
+        <span>
+          <%= link_to "delete", task_path(task.id), method: :delete, data: { confirm: "You sure?" } %>
         </span>
       </div>
       <% end %>

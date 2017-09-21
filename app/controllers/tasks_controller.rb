@@ -20,8 +20,8 @@ class TasksController < ApplicationController
     task = Task.new(title: params[:task][:title], description: params[:task][:description], due_date: params[:task][:due_date], status: false)
 
     task.save
-    redirect_to tasks
-    # redirect_to("/tasks")
+    # redirect_to tasks
+    redirect_to("/tasks")
 
     # book = Book.new(title: params[:title], author: params[:title])
 
@@ -65,7 +65,26 @@ class TasksController < ApplicationController
 
   def destroy
     # book.destroy
-    Task.find( params[:id] ).destroy
-    redirect_to tasks
+    task = Task.find(params[:id])
+    task.destroy
+    # Task.find( params[:id] ).destroy
+    # redirect_to tasks
+    redirect_to("/tasks")
+  end
+
+  def mark_as_complete
+    @task = Task.find(params[:id])
+    @task.status = true
+    @task.save
+
+    redirect_to("/tasks")
+  end
+
+  def mark_as_incomplete
+    @task = Task.find(params[:id])
+    @task.status = false
+    @task.save
+
+    redirect_to("/tasks")
   end
 end
