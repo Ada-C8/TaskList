@@ -7,7 +7,8 @@ class TasksController < ApplicationController
   end
 
   def index
-    @tasks = ["complete the death star", "clean the bathroom", "do laundry", "have fun"]
+   @tasks = Task.all
+    # @tasks = ["complete the death star", "clean the bathroom", "do laundry", "have fun"]
     # render plain: "added 'index' task"
     # render plain: @tasks = ["complete the death star", "clean the bathroom", "do laundry", "have fun"]
 

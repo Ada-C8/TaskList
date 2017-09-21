@@ -1450,3 +1450,386 @@ Completed 200 OK in 64ms (Views: 35.9ms)
   [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "complete the death star"], ["description", "get the minions, the little yellow minions not the storm troopers, to work hard for completion of the death start"], ["completed", "f"], ["created_at", "2017-09-21 02:40:20.308464"], ["updated_at", "2017-09-21 02:40:20.308464"]]
+  [1m[35m (1071.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:48:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.4ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:48:17 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 58ms (Views: 33.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "have fun"], ["description", ""], ["completed", "f"], ["created_at", "2017-09-21 02:52:22.685841"], ["updated_at", "2017-09-21 02:52:22.685841"]]
+  [1m[35m (1465.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:53:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 21ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9: 
+    10: <h2>Your Tasks</h2>
+    11: <ol>
+    12:   <% @tasks.each do |task| %>
+    13:   <li><%= task %></li>
+    14:   <% end %>
+    15: </ol>
+  
+app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb___2647623048372580819_70351760654840'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:53:36 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (18.2ms)
+Completed 500 Internal Server Error in 63ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9: 
+    10: <h2>Your Tasks</h2>
+    11: <ol>
+    12:   <% @tasks.each do |task| %>
+    13:   <li><%= task %></li>
+    14:   <% end %>
+    15: </ol>
+  
+app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb___2647623048372580819_70351787400200'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:54:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 17ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9: 
+    10: <h2>Your Tasks</h2>
+    11: <!-- <ol>
+    12:   <% @tasks.each do |task| %>
+    13:   <li><%= task %></li>
+    14:   <% end %>
+    15: </ol> -->
+  
+app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb___2647623048372580819_70351774895280'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:54:22 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 60ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9: 
+    10: <h2>Your Tasks</h2>
+    11: <!-- <ol>
+    12:   <% @tasks.each do |task| %>
+    13:   <li><%= task %></li>
+    14:   <% end %>
+    15: </ol> -->
+  
+app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb___2647623048372580819_70351761304280'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:55:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 14ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9: 
+    10: <h2>Your Tasks</h2>
+    11: <!-- <ol>
+    12:   <% @tasks.each do |task| %>
+    13:   <li><%= task %></li>
+    14:   <% end %>
+    15: </ol> -->
+  
+app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb___2647623048372580819_70351759443660'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:55:07 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 63ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9: 
+    10: <h2>Your Tasks</h2>
+    11: <!-- <ol>
+    12:   <% @tasks.each do |task| %>
+    13:   <li><%= task %></li>
+    14:   <% end %>
+    15: </ol> -->
+  
+app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb___2647623048372580819_70351768009900'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:55:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 14ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: <h2>Your Tasks</h2>
+    11: 
+    12: <!-- <ol>
+    13:   <% @tasks.each do |task| %>
+    14:   <li><%= task %></li>
+    15:   <% end %>
+    16: </ol> -->
+  
+app/views/tasks/index.html.erb:13:in `_app_views_tasks_index_html_erb___2647623048372580819_70351760243940'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:55:16 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (23.2ms)
+Completed 500 Internal Server Error in 62ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: <h2>Your Tasks</h2>
+    11: 
+    12: <!-- <ol>
+    13:   <% @tasks.each do |task| %>
+    14:   <li><%= task %></li>
+    15:   <% end %>
+    16: </ol> -->
+  
+app/views/tasks/index.html.erb:13:in `_app_views_tasks_index_html_erb___2647623048372580819_70351718673600'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:55:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 22.8ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:55:33 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 37.6ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:59:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (236.6ms)
+Completed 500 Internal Server Error in 244ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `index' for #<#<Class:0x007ff817693b08>:0x007ff81a5f51d0>):
+     9: 
+    10: <h2>Your Tasks</h2>
+    11: 
+    12: <%= index %>
+  
+app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb___2647623048372580819_70351785536960'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:59:17 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (267.6ms)
+Completed 500 Internal Server Error in 330ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `index' for #<#<Class:0x007ff817693b08>:0x007ff819702560>):
+     9: 
+    10: <h2>Your Tasks</h2>
+    11: 
+    12: <%= index %>
+  
+app/views/tasks/index.html.erb:12:in `_app_views_tasks_index_html_erb___2647623048372580819_70351777699780'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:59:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 18.1ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 19:59:38 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 76ms (Views: 48.7ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 20:00:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 18.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 20:00:12 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 79ms (Views: 51.9ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 20:00:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 30.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-20 20:00:50 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 153ms (Views: 101.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveTasksTable (20170921171458)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveTasksTable (20170921171458)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.7ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170921171458"]]
+  [1m[35m (123.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20170921171713)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "completed" boolean, "description" varchar, "due_date" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170921171713"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:31:30 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 288ms (Views: 272.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:31:30 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 59ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:32:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:32:29 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:50:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 939ms (Views: 935.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:50:17 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 88ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "completed", "description", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "complete death star"], ["completed", "f"], ["description", "minions do work"], ["due_date", "2017-02-02"], ["created_at", "2017-09-21 22:52:28.097229"], ["updated_at", "2017-09-21 22:52:28.097229"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:53:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:53:09 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "completed", "description", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "have fun"], ["completed", "f"], ["description", "by sex, drugs, and rock-and-roll"], ["due_date", "2017-02-02"], ["created_at", "2017-09-21 22:55:09.324351"], ["updated_at", "2017-09-21 22:55:09.324351"]]
+  [1m[35m (219.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:59:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 15:59:49 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 84ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 16:01:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 16:01:36 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 83ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 16:13:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 24.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-21 16:13:50 -0700
+Processing by TasksController#index as */*
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 68ms (Views: 44.1ms)
+
+
