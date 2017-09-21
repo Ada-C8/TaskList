@@ -18,6 +18,13 @@
       <li>
         <%= task.due_date %>
       </li>
+      <li>
+        <%= link_to "Edit", edit_task_path(task.id) %>
+      </li>
+      <li>
+        <%= link_to 'Delete', task_path(task.id),
+              data: {:confirm => 'Are you sure?'}, :method => :delete %>
+      </li>
     </ul>
       <% end %>
   </ol>
