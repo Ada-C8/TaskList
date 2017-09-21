@@ -9,4 +9,10 @@
 
 <h2>Your Tasks</h2>
 
-<%= @tasks %> 
+<ol>
+  <% @tasks.each do |task|%>
+  <li>
+    <%= task.title %>
+  </li>
+  <% end %>
+</ol>
