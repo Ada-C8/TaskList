@@ -21,8 +21,12 @@
           <h2 class="increase-font">OPTIONS</h2>
         </header>
         <ul class="no-bullet">
-          <li><a href="#" class="hvr-border-fade">Add a task</a></li>
-          <li><a href="#" class="hvr-border-fade">All tasks</a></li>
+          <li>
+            <%= link_to "Add a task", new_task_path, class: ["hvr-border-fade", "no-underline", "equal-width"] %>
+          </li>
+          <li>
+            <%= link_to "All tasks", tasks_path, class: ["hvr-border-fade", "no-underline", "equal-width"] %>
+          </li>
         </ul>
       </nav>
 

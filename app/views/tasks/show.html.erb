@@ -1,0 +1,21 @@
+<article>
+
+  <header>
+    <h1><%= @task.title %></h1>
+    <h3>DUE DATE: <%= @task.due_date %></h3>
+    <h3>COMPLETE?
+      <% if @task.status == false %>
+          NO!
+      <% else %>
+          HOORAY FOR BEING ONE STEP CLOSER TO YOUR GOALS!
+      <% end %>
+    </h3>
+  </header>
+
+  <section>
+    <p>
+      MY NOTES: <%= @task.description %>
+    </p>
+  </section>
+
+</article>

@@ -8,22 +8,10 @@
 
 <article id="task-wrapper">
   <header>
-    <h2><%= task.title %></h2>
-    <h3>DATE DUE: <%= task.due_date %></h3>
-    <h3>COMPLETE?
-      <% if task.status == false %>
-          NO!
-      <% else %>
-          HOORAY FOR BEING ONE STEP CLOSER TO YOUR GOALS!
-      <% end %>
-    </h3>
+    <h2>
+      <%= link_to task.title, show_task_path(task.id), class: "no-underline" %>
+    </h2>
   </header>
-
-  <section>
-    <p>
-      <%= task.description %>
-    </p>
-  </section>
 
   <nav id="task-links">
     <ul class="no-bullet">
