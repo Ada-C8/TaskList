@@ -44,8 +44,8 @@ class TasksController < ApplicationController
   end
 
   # might need to add a new file to views/tasks file
-  # def complete
-  # end
+  def complete
+  end
 
 
 end

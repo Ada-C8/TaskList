@@ -2,13 +2,29 @@
 <p>Find me in app/views/tasks/index.html.erb</p> -->
 
 <h1>List of Tasks</h1>
-<ul>
-  <% @tasks.each do |task| %>
-  <li>
-    <!-- <%= task.name %> -->
-    <%=link_to(task.name, task_path(task.id)) %>
-  </li>
-  <% end %>
-</ul>
 
-<%= link_to "New Task?", new_task_path %>
+<div class="right_tasks">
+  <ul class="tasks">
+    <h4 class="task_header">Your Tasks</h4>
+
+    <% counter = 1 %>
+    <% @tasks.each do |task| %>
+    <li>
+      <!-- <%= task.name %> -->
+      <%= "#{counter}. " %> <%=link_to(task.name, task_path(task.id)) %>
+      <% counter+=1 %>
+    </li>
+    <% end %>
+
+  </ul>
+</div>
+
+<div class="left_options">
+  <nav class="index_nav">
+    <ul>
+      <li><%= link_to "Add Task", new_task_path %></li>
+
+      <li><%= link_to "All Tasks", tasks_path %></li>
+    </ul>
+  </nav>
+</div>
