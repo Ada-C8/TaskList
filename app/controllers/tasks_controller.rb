@@ -10,7 +10,7 @@ class TasksController < ApplicationController
 
     task.save
 
-    redirect_to task_path(task[:id])
+    redirect_to task_path(task)
   end
 
   def new
@@ -26,7 +26,9 @@ class TasksController < ApplicationController
   end
 
   def update
+    # task_updates = params[:task]
     @task = Task.find(params[:id])
+    # @task.update_attributes(task_updates)
     @task.title = params[:task][:title]
     @task.description = params[:task][:description]
     @task.due_date = params[:task][:due_date]
@@ -35,7 +37,7 @@ class TasksController < ApplicationController
 
     @task.save
 
-    redirect_to task_path(params[:id])
+    redirect_to task_path(@task)
   end
 
   def complete

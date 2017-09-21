@@ -36,11 +36,6 @@ main {
   width: 65%;
 }
 
-#content :nth-child(n) {
-  /*width: inherit;*/
-}
-
-
 
 
 footer {

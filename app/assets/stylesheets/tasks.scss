@@ -6,12 +6,23 @@ form {
   display: flex;
   flex-flow: column;
   justify-content: space-around;
+  align-content: space-around;
 }
 
-form label {
-  margin-top: 1em;
+
+ol li p {
+  margin: 0;
+  padding: .5em;
 }
 
-form input {
-  margin-bottom: 1em;
+ol li {
+  margin: .5em;
+}
+#description {
+  padding: 0 0 0 1em;
+}
+
+
+.completed_task {
+  text-decoration: line-through;
 }
