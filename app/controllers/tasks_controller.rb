@@ -75,7 +75,8 @@ class TasksController < ApplicationController
   def mark_as_complete
     @task = Task.find(params[:id])
     @task.status = true
-    #change database for date_completed
+
+    @task.date_completed = Date.today
     @task.save
 
     redirect_to("/tasks")
@@ -84,6 +85,7 @@ class TasksController < ApplicationController
   def mark_as_incomplete
     @task = Task.find(params[:id])
     @task.status = false
+    @task.date_completed = ""
     @task.save
 
     redirect_to("/tasks")
