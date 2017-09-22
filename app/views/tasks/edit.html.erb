@@ -1,46 +1,8 @@
 <article>
   <h2>Edit selected Task</h2>
 
-  <%= form_tag task_path(@task.id), :id => 'task-form', method: :put do %>
-    <%= content_tag :div, class: 'name-wrapper' do %>
-      <%= label_tag 'task[name]', 'Task Name' %>
-      <%= text_field_tag 'task[name]', @task.name %>
-    <% end -%>
-
-    <%= content_tag :div, class: "desc-wrapper" do %>
-      <%= label_tag "task[description]", "Description" %>
-      <%= text_area_tag "task[description]", @task.description, {:rows => 6, :cols => 50 } %>
-    <% end -%>
-
-    <%= content_tag :div, class: "date-wrapper" do %>
-      <%= content_tag :div, class: "created-wrap" do %>
-        <%= label_tag "task[created]", "Created" %>
-        <%= date_field_tag "task[created]", @task.created%>
-      <% end -%>
-      <%= content_tag :div, class: "due-wrap" do %>
-        <%= label_tag "task[due]", "Due" %>
-        <%= date_field_tag "task[due]", @task.due %>
-      <% end -%>
-    <% end -%>
-
-    <%= content_tag :div, class: "status-wrapper" do %>
-      <%= label_tag "task[status]", "Status", :class=> 'status-title' %>
-      <% if @task.status == "Incomplete" %>
-        <%= radio_button_tag "task[status]", "Incomplete", true %>
-        <%= label_tag "task[status]", 'Incomplete' %>
-        <%= radio_button_tag "task[status]", "Complete", false %>
-        <%= label_tag "task[status]", 'Complete' %>
-      <% else %>
-        <%= radio_button_tag "task[status]", "Incomplete", false %>
-        <%= label_tag "task[status]", 'Incomplete' %>
-        <%= radio_button_tag "task[status]", "Complete", true %>
-        <%= label_tag "task[status]", 'Complete' %>
-      <% end %>
-    <% end -%>
-
-    <%= content_tag :div, class: "submit-wrapper" do %>
-      <%= submit_tag "Save Changes"%>
-    <% end -%>
-
-  <% end -%>
+  <%= render partial: "form", locals: {
+    button_text: "Save Changes",
+    modifiable: true
+  } %>
 </article>

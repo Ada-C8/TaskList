@@ -12,20 +12,14 @@
     </header>
     <main>
       <aside class="task-options">
-        <div class="task-icons">
-          <%= link_to tasks_path, :class => 'button' do %>
-            <span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-list fa-stack-1x fa-inverse"></i>
-            </span>
-          <% end %>
-          <%= link_to new_task_path, :class => 'button' do %>
-            <span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
-            </span>
-          <% end %>
-        </div>
+        <%= link_to tasks_path, :class => 'button' do %>
+          <i class="fa fa-list"></i>
+          View All Tasks
+        <% end %>
+        <%= link_to new_task_path, :class => 'button' do %>
+          <i class="fa fa-plus"></i>
+          Add New Task
+        <% end %>
         <figure>
           <img src="http://www.placecage.com/c/270/320" alt="Motivating crazy Nicholas Cage image">
         </figure>

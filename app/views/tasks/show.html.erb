@@ -1,45 +1,8 @@
 <article>
   <h2>View a selected Task</h2>
 
-  <%= form_tag task_path(@task.id), :id => 'task-form', method: :get do %>
-    <%= content_tag :div, class: 'name-wrapper show-div' do %>
-      <%= label_tag 'task[name]', 'Task Name' %>
-      <%= text_field_tag 'task[name]', @task.name, {:disabled => true} %>
-    <% end -%>
-
-    <%= content_tag :div, class: "desc-wrapper show-div" do %>
-      <%= label_tag "task[description]", "Description" %>
-      <%= text_area_tag "task[description]", @task.description, {:rows => 6, :cols => 50, :disabled => true } %>
-    <% end -%>
-
-    <%= content_tag :div, class: "date-wrapper show-div" do %>
-      <%= content_tag :div, class: "created-wrap" do %>
-        <%= label_tag "task[created]", "Created" %>
-        <%= date_field_tag "task[created]", @task.created, :disabled => true %>
-      <% end -%>
-      <%= content_tag :div, class: "due-wrap" do %>
-        <%= label_tag "task[due]", "Due" %>
-        <%= date_field_tag "task[due]", @task.due, :disabled => true %>
-      <% end -%>
-    <% end -%>
-
-    <%= content_tag :div, class: "status-wrapper" do %>
-      <%= label_tag "task[status]", "Status", :class=> 'status-title' %>
-      <% if @task.status == "Incomplete" %>
-        <%= radio_button_tag "task[status]", "Incomplete", true %>
-        <%= label_tag "task[status]", 'Incomplete' %>
-        <%= radio_button_tag "task[status]", "Complete", false, disabled: true %>
-        <%= label_tag "task[status]", 'Complete' %>
-      <% else %>
-        <%= radio_button_tag "task[status]", "Incomplete", false, disabled: true %>
-        <%= label_tag "task[status]", 'Incomplete' %>
-        <%= radio_button_tag "task[status]", "Complete", true %>
-        <%= label_tag "task[status]", 'Complete' %>
-      <% end %>
-    <% end -%>
-    <%= content_tag :div, class: "link-wrapper" do  %>
-      <%= link_to 'Edit Task', edit_task_path, :class => 'button' %>
-    <% end -%>
-
-  <% end -%>
+  <%= render partial: "form", locals: {
+    button_text: "Add to Task List",
+    modifiable: nil
+  } %>
 </article>

@@ -37,30 +37,31 @@ main {
 
 /* main - task-options*/
 aside.task-options {
-  width: 35%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: fixed;
+  top: 15%;
+  left: 2%;
 }
-aside.task-options div.task-icons {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+aside.task-options a.button {
+  width: 60%;
+  margin: 2% auto;
+  padding: 4% 10%;
+  border-radius: 8px;
+  background: #62d1d1;
+  color: #fefefe;
+  font-size: 1.4em;
 }
-aside.task-options div.task-icons a.button:first-of-type {
-  margin-right: 20%;
+aside.task-options a.button:hover {
+  background: #8293c4;
 }
-aside.task-options div.task-icons a.button {
-  display: inline-block;
-  padding-bottom: 5%;
-  text-align: center;
+aside.task-options a.button i {
+  margin-right: 5%;
 }
-.fa-circle { color: #62d1d1; }
-aside.task-options div.task-icons a.button span:hover i.fa-circle{
-  color: #8293c4;
-}
-aside.task-options figure { margin-top: 5%; }
+aside.task-options figure { margin-top: 8%; }
 aside.task-options figure img {
   max-width: 270px;
   border-radius: 50%;
@@ -70,6 +71,7 @@ aside.task-options figure img {
 /* main - main-list */
 section.main-list {
   width: 60%;
+  margin-left: 20%;
   border-top: 5px solid #62d1d1;
   background: #fefefe;
   border-bottom-left-radius: 10px;

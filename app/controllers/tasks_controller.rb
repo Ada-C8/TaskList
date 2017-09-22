@@ -17,7 +17,7 @@ class TasksController < ApplicationController
       status: params[:task][:status]
     )
     task.save
-    redirect_to('/tasks')
+    redirect_to tasks_path
   end
 
   def show
@@ -36,7 +36,7 @@ class TasksController < ApplicationController
     @task.due = params[:task][:due]
     @task.status = params[:task][:status]
     @task.save
-    redirect_to task_path(@task.id)
+    redirect_to task_path(@task)
   end
 
   def update_status
@@ -47,12 +47,12 @@ class TasksController < ApplicationController
       task.status = "Complete"
     end
     task.save
-    redirect_to('/tasks')
+    redirect_to tasks_path
   end
 
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to('/tasks')
+    redirect_to tasks_path
   end
 end

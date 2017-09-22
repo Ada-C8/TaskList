@@ -1,39 +1,8 @@
 <article>
   <h2>Create a new Task</h2>
 
-  <%= form_tag tasks_path, :id => 'task-form', method: :post do %>
-    <%= content_tag :div, class: 'name-wrapper' do %>
-      <%= label_tag 'task[name]', 'Task Name' %>
-      <%= text_field_tag 'task[name]', nil, {:placeholder => 'Example: Buy cookies'} %>
-    <% end -%>
-
-    <%= content_tag :div, class: "desc-wrapper" do %>
-      <%= label_tag "task[description]", "Description" %>
-      <%= text_area_tag "task[description]", nil, {:rows => 6, :cols => 50, :placeholder => "Give a little more detail about your task?"} %>
-    <% end -%>
-
-    <%= content_tag :div, class: "date-wrapper" do %>
-      <%= content_tag :div, class: "created-wrap" do %>
-        <%= label_tag "task[created]", "Created" %>
-        <%= date_field_tag "task[created]"%>
-      <% end -%>
-      <%= content_tag :div, class: "due-wrap" do %>
-        <%= label_tag "task[due]", "Due" %>
-        <%= date_field_tag "task[due]"%>
-      <% end -%>
-    <% end -%>
-
-    <%= content_tag :div, class: "status-wrapper" do %>
-      <%= label_tag "task[status]", "Status", :class=> 'status-title' %>
-      <%= radio_button_tag "task[status]", "Incomplete", :checked => true %>
-      <%= label_tag "task[status]", 'Incomplete' %>
-      <%= radio_button_tag "task[status]", "Complete"%>
-      <%= label_tag "task[status]", 'Complete' %>
-    <% end -%>
-
-    <%= content_tag :div, class: "submit-wrapper" do %>
-      <%= submit_tag "Add to Task List"%>
-    <% end -%>
-
-  <% end -%>
+  <%= render partial: "form", locals: {
+    button_text: "Add to Task List",
+    modifiable: true
+  } %>
 </article>
