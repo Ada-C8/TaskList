@@ -6,13 +6,6 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find ( params[:id].to_i )
-    # id = params[:id].to_i
-    # @task = nil
-    # TASKS.each do |task|
-    #   if task[:id] == id
-    #     @task = task
-    #   end
-    # end
   end
 
   def edit
@@ -24,7 +17,7 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find_by(id: params[:id].to_i)
-    redirect_to tasks_path unless task #this redirects to the books_path if the book can't be found
+    redirect_to tasks_path unless task
 
       if task.update_attributes task_params
         redirect_to task_path
@@ -57,6 +50,7 @@ class TasksController < ApplicationController
 
     if task.completed
       task.update_attribute(:completed, false)
+      task.update_attribute(:completion_date, Date.today)
     else
       task.update_attribute(:completed, true)
     end
