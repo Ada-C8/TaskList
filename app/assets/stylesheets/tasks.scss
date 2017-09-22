@@ -10,14 +10,11 @@ body {
   background-size: cover;
 }
 
-header {
+.standard {
   background-color: white;
   border: 1px solid purple;
-  width: 80%;
-  margin: auto;
   border-radius: 10px;
   padding: 5px;
-  text-align: center;
   font-size: 1.5em;
 }
 
@@ -27,6 +24,10 @@ header {
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.float_right {
+  float: right;
 }
 
 .index {
