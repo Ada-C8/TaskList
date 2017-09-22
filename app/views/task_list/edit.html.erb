@@ -1,2 +1,29 @@
-<h1>TaskList#edit</h1>
-<p>Find me in app/views/task_list/edit.html.erb</p>
+<!-- <h1>TaskList#edit</h1> -->
+
+<div class = "row1">
+
+<%= form_for @task do |f| %>
+  <%= f.label :name%>
+  <%= f.text_field :name %>
+</div>
+<div class = "row2">
+
+  <%= f.label :completion_date %>
+  <!-- <input type="date" name="myDate" min="Date.now" max="2018-08-31" id="myDate"> -->
+  <%= f.text_field :completion_date %>
+  <!-- , data:{ provide:'datepicker' } -->
+
+  <%= f.label :status %>
+  <%= f.text_field :status %>
+</div>
+<div class = "row3">
+
+  <%= f.label :action, "Task details" %>
+  <%= f.text_field :action%>
+
+  <%= f.submit "save task"%>
+<% end %>
+
+</div>
+
+<!-- <p>Find me in app/views/task_list/edit.html.erb</p> -->

@@ -7,23 +7,19 @@
 <h1>Task #<%= @task[:id]%></h1>
 
 <% if @task %>
-<%= link_to "Full Task List", task_list_path(@task) %>
+<%= link_to "Full Task List", tasks_path(@task) %>
 <%= link_to "Edit", edit_task_path(@task[:id]) %>
 <%= link_to "Delete", destroy_task_path(@task[:id]), method: :delete %>
 
-  <h2>Task #
-    <%= @task[:id]%>
-    - <%= @task[:action]%>
-  </h2>
-  <h3>Status:
-    <%= @task[:status]%>
-  </h3>
+  <h2>Task: </h2> <%=@task[:name]%>
+  <h2>Details: </h2><%= @task[:action]%>
+  <h2>Status:<%= @task[:status] ? "Completed" : "Not Yet Completed"%></h3>
 
   <%else%>
     <h1>404: Not Found</h1>
 
 <% end %>
 
-<%=link_to "Home", task_list_path %>
+<%=link_to "Home", tasks_path %>
 
 <!-- <p>Find me in app/views/task_list/show.html.erb</p> -->

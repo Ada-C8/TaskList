@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get '/task_list', to: 'task_list#index', as: 'task_list' #task_list_path
+  root to: 'task_list#index' #WHAT DOES THIS DO?
+
+  get '/task_list', to: 'task_list#index', as: 'tasks' #tasks_path
 
   get '/task_list/:id/edit', to: 'task_list#edit', as: 'edit_task' #edit_task_path
 
@@ -14,7 +16,7 @@ Rails.application.routes.draw do
 
   post '/task_list', to: 'task_list#create', as: 'create_task' #create_task_path
 
-  delete '/task_list', to: 'task_list#destroy', as: "destroy_task" #destroy_task_path
+  delete '/task_list/:id', to: 'task_list#destroy', as: "destroy_task" #destroy_task_path
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

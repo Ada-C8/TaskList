@@ -1,35 +1,37 @@
 <!-- TaskList#index -->
 
 <!-- <h1 class="index-heading">Task List</h1> -->
+<div class="all-content-container">
 
-<div class="tasks-container">
+  <div class="tasks-container">
 
-  <h2 class="your-tasks">Your Tasks:</h2>
-  <ul class="list-container">
-    <%count = 0 %>
-    <% @tasks.each do |task| %>
-      <li class="each-task">
-          <!-- <strong><%= count + 1 %></strong>. -->
-            <%if task.status%>
-              <div class="strike-through">
-                <%= count + 1 %>.<%= task.action %>
-                <!-- <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"id")%>. -->
-              </div>
+    <h2 class="your-tasks">Your Tasks:</h2>
+    <ul class="list-container">
+      <% @tasks.each do |task| %>
+        <li class="each-task">
 
-            <%else%>
-              <div class="no-strike-through">
-                <%= count + 1 %>. <%= task.action %>
-              </div>
-          <div class="counter"
-            <%=count += 1%>
-          </div>
-            <%end%>
-      </li>
-      <li class="task-actions">
-        <%= task.status ? "Unmark Complete" : "Mark Complete" %> | <%=link_to "Edit", edit_task_path(:id)%> |  <%=link_to "Delete", destroy_task_path(:id), method: :delete%>
-      </li>
-    <%end%>
-  </ul>
+              <%if task.status%>
+                <div class="strike-through">
+                  <%=task.id%>. <%=task.name%> --> due: <%= task.completion_date%>
+                  <%=task.action %>
+                  <!-- <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"id")%>. -->
+                </div>
+
+              <%else%>
+                <div class="no-strike-through">
+                  <!-- <%= link_to(task.name, task_path(task.id), alt: 'link to', class:"action") %> -->
+                  <%=task.id%>. <%=task.name%> --> due: <%= task.completion_date%>
+                  <!-- <%=task.action %> -->
+                </div>
+              <%end%>
+        </li>
+        <li class="task-actions">
+          <%=link_to (task.status ? "unmark complete" : "mark complete"), mark_complete_path(task.id), method: :patch, alt: "mark complete", class: "mark-complete" %> | <%=link_to "details", task_path(task.id)%> | <%=link_to "edit", edit_task_path(task.id)%> |  <%=link_to "delete", destroy_task_path(task.id), method: :delete %>
+        </li>
+      <%end%>
+    </ul>
+
+  </div>
 
 </div>
 <!-- <p>Find me in app/views/task_list/index.html.erb</p> -->

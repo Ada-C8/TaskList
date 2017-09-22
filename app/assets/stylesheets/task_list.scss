@@ -23,14 +23,17 @@ li {
   line-height: 2;
 }
 
+// .all-content-container {
+//   width = 100%;
+// }
+
 .tasks-container {
   display: block;
   // border: 5px dotted purple;
   background-color: rgba(255,255,255,0.7);
-  width: 400px;
+  width: 600px;
   margin: auto;
   border: 10px solid rgba(255,255,255,0.7);
-
 }
 
 .task-actions {
@@ -68,3 +71,13 @@ li {
   background-color: rgba(255,255,255,0.7);
   margin: auto;
 }
+
+// NEW.HTML
+
+.row1 {
+  // display: flex;
+}
+
+// .row2 {
+//   display: flex;
+// }
