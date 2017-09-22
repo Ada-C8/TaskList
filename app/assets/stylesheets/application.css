@@ -53,12 +53,18 @@ ul {
 a {
   text-decoration: none;
 }
-.task {
+.completed_task {
   list-style: decimal;
   font-weight: bold;
   list-style: none;
-
+  text-decoration: line-through;
 }
+.uncomplete_task {
+  list-style: decimal;
+  font-weight: bold;
+  list-style: none;
+}
+
 .button-container {
   float: left;
   position: static;
@@ -100,4 +106,44 @@ h2 {
   text-align: center;
   padding-bottom: 10px;
   font-size: 2rem;
+}
+.no_task {
+  text-align: center;
+  line-height: 300px;
+}
+
+label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  margin-top: 20px;
+  margin-left: 45px;
+}
+input {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  margin-top: 20px;
+
+
+}
+textarea {
+  display: inline-block;
+  /*float: left;*/
+  clear: both;
+  width: 300px;
+  height: 100px;
+  /*margin: 10px;*/
+  margin-top: 5px;
+  margin-left: 45px;
+}
+[type="submit"] {
+  display: block;
+  clear: both;
+  margin: 10px;
+  width: 120px;
+  height: 100px;
+  margin-left: calc((400px - 120px)/2);
+  margin-top: 75px;
+
 }
