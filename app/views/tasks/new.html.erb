@@ -1,0 +1,15 @@
+<h1>This is the input page</h1>
+
+
+
+<%= form_for @task do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+  <%= t.label :due_date %>
+  <%= t.date_field :due_date %>
+  <%= t.label :complete %>
+  <%= t.text_field :complete %>
+  <%= t.submit %>
+<% end %>

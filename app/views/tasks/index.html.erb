@@ -3,7 +3,7 @@
 
   <nav>
     <li>
-      Add task
+      <%= link_to "Add task", new_task_path, class: "link"%>
     </li>
     <li>
       All tasks
@@ -15,23 +15,22 @@
 <h2>My tasks</h2>
   <ol>
     <% @tasks.each do |task|  %>
-
     <li>
-      <h3><%= task[:title]%></h3>
+      <h3><%=link_to task.title, task_path(task.id)%></h3>
       Description: <%= task[:description]%>
       <br>
-      Due Date: <%=task[:due_date].month%> -
-      <%=task[:due_date].day%> -
-      <%=task[:due_date].year%>
+      Due Date: <%=task[:due_date]%>
       <br>
       Status: <%=
       if task[:complete]==true
         "Done!"
       elsif task[:complete]==false
       "Incomplete"
-    end %>
+      end
+      %>
     </li>
-    <% end %>
+    <%end%>
   </ol>
+
 </div>
 </body>
