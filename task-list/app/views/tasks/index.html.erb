@@ -9,14 +9,19 @@
       <%= link_to task.title, task_path(task.id), class: "link" %>
     </li>
     <ul>
-      <li class="right-border">
-        <%= task.description %>
-      </li>
-      <li class="right-border">
-        <%= task.completion_status %>
+      <li>
+       <%= task.description %>
       </li>
       <li>
-        <%= task.due_date %>
+        Due date: <%= task.due_date %>
+      </li>
+      <li>
+        <%# stated workin on this, so I'll need to make them link_to to call the method. Also will need to remove the above li %>
+        <% if ! task.completion_status %>
+          <%= link_to "Mark Completed", completed_task_path(task), method: :patch, class: "link" %>
+        <% else %>
+          <%= link_to "Mark Uncompleted", uncompleted_task_path(task), method: :patch, class: "link"   %>
+        <% end %>
       </li>
       <li>
         <%= link_to "Edit", edit_task_path(task.id), class: "link" %>

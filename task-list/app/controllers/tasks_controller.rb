@@ -52,9 +52,16 @@ class TasksController < ApplicationController
 
   def completed
     @task = Task.find(params[:id])
-    # TODO: figure out how to set default value to false instead of true for completion_status column
-    @task.competion_status = false
+    @task.completion_status = true
+    @task.date_completed = DateTime.current
     @task.save
     redirect_to tasks_path
   end # completed
+
+  def uncompleted
+    @task = Task.find(params[:id])
+    @task.completion_status = false
+    @task.save
+    redirect_to tasks_path
+  end # uncompleted
 end

@@ -1,18 +1,15 @@
 <p>
-
-</p>
-<%= form_for @task do |f| %>
-
+<%= form_for @task,  :html => {:class => 'form'}  do |f| %>
+<% button_text ||= "The button" %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, size: "50" %>
 
   <%= f.label :description %>
-  <%= f.date_field :description %>
+  <%= f.text_field :description, size: "50" %>
 
   <%= f.label :due_date %>
   <%= f.datetime_field :due_date %>
 
-  <%= f.label :completion_status %>
-  <%= f.text_field :completion_status %>
-
-<%= f.submit "Edit Task" %>
+  <%= f.submit button_text, :class => 'submit'%>
+<% end %>
+</p>

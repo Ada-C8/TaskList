@@ -1,18 +1,6 @@
+<div class="edit">
 <h2>Edit Task</h2>
-
-<%= form_for @task do |f| %>
-
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.label :due_date %>
-  <%= f.datetime_field :due_date %>
-
-  <%= f.label :completion_status %>
-  <%= f.text_field :completion_status %>
-
-  <p><%= f.submit "Edit Task" %></p>
-<% end %>
+<p class="edit-form">
+  <%= render partial: "form", locals: { button_text: "Edit Task"} %>
+</p>
+</div>

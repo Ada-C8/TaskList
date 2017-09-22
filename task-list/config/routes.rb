@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get "/tasks/:id/edit", to: "tasks#edit", as: "edit_task"
   patch "/tasks/:id", to: "tasks#update"
   delete '/tasks/:id', to: "tasks#destroy"
+  patch "/tasks/:id/complete", to: 'tasks#completed', as: 'completed_task'
+  # have to add /complete and /uncomplete for these to work
+  patch '/tasks/:id/uncomplete', to: 'tasks#uncompleted', as: 'uncompleted_task'
 end
