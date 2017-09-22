@@ -30,12 +30,14 @@ class TasksController < ApplicationController
     # Params task is saving the entire hash into the task_updates variable
     # Save each entry into the specified @Task that was called
     @task = Task.find(params[:id])
+
     task_updates = params[:task]
     @task.title = task_updates[:title]
     @task.description = task_updates[:description]
     @task.due_date = task_updates[:due_date]
-
+    @task.status = task_updates[:status]
     @task.save
+
     redirect_to task_path(@task)
   end
 
@@ -46,12 +48,19 @@ class TasksController < ApplicationController
     redirect_to('/tasks')
   end
 
-  def not_complete
+  def incomplete
     @task = Task.find(params[:id])
     @task.status = false
     @task.save
     redirect_to('/tasks')
   end
+  
+  # def remove
+  #   @tasks = Task.where(status: true)
+  #   @tasks.destroy
+  #   @tasks.save
+  #   redirect_to('/tasks')
+  # end
 
   def destroy
     Task.find(params[:id]).destroy
