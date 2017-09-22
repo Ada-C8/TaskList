@@ -2,20 +2,24 @@
 <ol>
   <% @tasks.each do |task|%>
     <li>
-         <p class="<%= 'completed_task' if task.complete %>"><strong ><%= link_to "#{task.title}", task_path(task.id) %></strong></p>
-         <p id='description'>
-           <em><%= task.description%></em> : <%= task.due_date %>
-         </p>
+      <%# check_box_tag 'completed[]', task.complete -%>
 
+      <p class="<%= 'completed_task' if task.complete %>"><strong ><%= link_to "#{task.title}", task_path(task.id) %></strong></p>
+
+      <p id='description'>
+        <em><%= task.description%></em>
+      </p>
+
+      <p>
+        <%= task.due_date %> | <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+      </p>
 
       <p>
         <% if task.complete == true %>
-          <%= link_to "Unmark Complete", uncomplete_task_path(task.id), method: :put %>
+        <%= link_to "Unmark Complete", uncomplete_task_path(task.id), method: :put %>
         <% else%>
-          <%= link_to "Mark Complete", complete_task_path(task.id), method: :put %> <% end %> | <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+        <%= link_to "Mark Complete", complete_task_path(task.id), method: :put %> <% end %>
       </p>
     </li>
   <% end %>
 </ol>
-
-<!-- in css set #boolean to strikethrough -->

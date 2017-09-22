@@ -58,6 +58,11 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  # if task.complete == true 
+  #   link_to "Unmark Complete", uncomplete_task_path(task.id), method: :put
+  # else
+  # link_to "Mark Complete", complete_task_path(task.id), method: :put end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy

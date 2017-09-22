@@ -1,21 +1,19 @@
 
-<p>
-    <strong><%= link_to "#{@task.title}", task_path(@task.id) %></strong>
-    <p>
-      <em><%= @task.description%></em> :
-      <%= @task.due_date %>
-    </p>
-    <p>
-      <% if @task.complete == true %>
-         <%= link_to "Unmark Complete", uncomplete_task_path(@task.id), method: :put %>
-      <% else %>
-        <%= link_to "Mark Complete", complete_task_path(@task.id), method: :put %>
-      <% end %>
+<section>
+  <p class="<%= 'completed_task' if @task.complete %>"><strong ><%= "#{@task.title}" %></strong></p>
 
-        | <%= link_to "Edit", edit_task_path(@task.id) %> |
+  <p id='description'>
+    <em><%= @task.description%></em>
+  </p>
 
-      <%= form_tag task_path(@task.id), method: :delete do%>
-        <%submit_tag "Delete" %>
-       <% end %>
-    </p>
-</p>
+  <p>
+    <%= @task.due_date %> | <%= link_to "Edit", edit_task_path(@task.id) %> | <%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+  </p>
+
+  <p>
+    <% if @task.complete == true %>
+    <%= link_to "Unmark Complete", uncomplete_task_path(@task.id), method: :put %>
+    <% else%>
+    <%= link_to "Mark Complete", complete_task_path(@task.id), method: :put %> <% end %>
+  </p>
+</section>
