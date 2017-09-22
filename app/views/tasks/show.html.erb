@@ -9,7 +9,12 @@ params are : <%= params %>
   <%= @task.name%>
   <%=link_to "Edit", edit_task_path(@task.id) %>
   <%=link_to "Add Task", new_task_path %>
-  <%=link_to "Delete", delete_task_path(@task.id), method: :delete %>
+  <!-- <%= link_to 'Delete', confirm_task_path(@task.id)%> -->
+  <%= link_to 'Delete',
+             delete_task_path(@task.id),
+                         method: :delete,
+                         data: { confirm: 'Are you sure?' } %>
+  <!-- <%=link_to "Delete", delete_task_path(@task.id), method: :delete %> -->
   <% if @task.completed %>
       <%=link_to "Mark Incomplete", update_task_path(@task.id, :task => { :completed => false }), method: :patch %>
   <% else %>
