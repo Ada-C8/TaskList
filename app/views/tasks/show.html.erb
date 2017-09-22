@@ -12,8 +12,7 @@
     <li>
       <strong>Due Date:</strong> <%= @task.due_date %>
     </li>
-    <li>
-      Mark Complete | <%= link_to "edit", edit_task_path(@task[:id]) %> | Delete
-    </li>
+    <!-- needs local variable name task to be in an array because in indesx tasks an array -->
+    <%= render partial: "action_bar", locals: { tasks: [@task] } %>
   </ul>
 </div>

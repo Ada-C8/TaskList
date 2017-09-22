@@ -20,6 +20,7 @@ class TasksController < ApplicationController
 
   def show
     # this needs to be an instance variable b/c you will pass this to HTML to display
+    # @tasks = [Task.find(params[:id])]
     @task = Task.find(params[:id])
   end
 

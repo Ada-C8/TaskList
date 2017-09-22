@@ -5884,3 +5884,734 @@ Processing by TasksController#edit as HTML
 Completed 200 OK in 54ms (Views: 45.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 12:22:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/sarahrb/Documents/Ada/week7/TaskList/app/views/tasks/index.html.erb:6: syntax error, unexpected tSTRING_DEND, expecting ')'
+ render partial: "action_bar"} );@output_buffer.safe_append=
+                              ^
+/Users/sarahrb/Documents/Ada/week7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end
+                 ^
+/Users/sarahrb/Documents/Ada/week7/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/sarahrb/Documents/Ada/week7/TaskList/app/views/tasks/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:6: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 12:24:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/sarahrb/Documents/Ada/week7/TaskList/app/views/tasks/index.html.erb:6: syntax error, unexpected tSTRING_DEND, expecting ')'
+ render partial: "action_bar"} );@output_buffer.safe_append=
+                              ^
+/Users/sarahrb/Documents/Ada/week7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end
+                 ^
+/Users/sarahrb/Documents/Ada/week7/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/sarahrb/Documents/Ada/week7/TaskList/app/views/tasks/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:6: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 12:24:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (311.1ms)
+  Rendered tasks/index.html.erb within layouts/application (319.5ms)
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fe1701e2680>:0x007fe1751dd018>
+Did you mean?  @tasks):
+    1: <p>
+    2:   <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    3:   <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+    4: </p>
+  
+app/views/tasks/_action_bar.html.erb:2:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303151558740'
+app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb__1694416876809906714_70303154630580'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb__1694416876809906714_70303154630580'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 12:25:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (241.9ms)
+  Rendered tasks/index.html.erb within layouts/application (245.1ms)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fe1701e2680>:0x007fe172d7d628>
+Did you mean?  @tasks):
+    1: <p>
+    2:   <strong><%= link_to "#{task[:title]}", task_path(@task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    3:   <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+    4: </p>
+  
+app/views/tasks/_action_bar.html.erb:2:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303104780540'
+app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb__1694416876809906714_70303135575720'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb__1694416876809906714_70303135575720'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 12:25:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (6.1ms)
+  Rendered tasks/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <p>
+    2:   <strong><%= link_to "#{@task[:title]}", task_path(@task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(@task[:id]) %> |
+    3:   <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+    4: </p>
+  
+app/views/tasks/_action_bar.html.erb:2:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303152585760'
+app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb__1694416876809906714_70303156243960'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb__1694416876809906714_70303156243960'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 12:25:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (686.7ms)
+  Rendered tasks/index.html.erb within layouts/application (692.9ms)
+Completed 500 Internal Server Error in 706ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fe1701e2680>:0x007fe16fbe5070>
+Did you mean?  @tasks):
+    1: <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    2: <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303114051780'
+app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb__1694416876809906714_70303109559420'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb__1694416876809906714_70303109559420'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:27:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (2.2ms)
+  Rendered tasks/index.html.erb within layouts/application (233.9ms)
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fe1701e2680>:0x007fe174a40a30>
+Did you mean?  @tasks):
+    3:   <ol>
+    4: 
+    5:           <%= render partial: "action_bar" %>
+    6:         <!-- <%= form_tag task_path(task.id), method: :delete, class: "delete_task_form" do %> -->
+    7:           <!-- <%= text_field_tag "task[title]" , "Pet Cat" %>
+    8:           <%= text_field_tag "task[title]", "Pet Cat" %> -->
+    9:           <!-- <%= submit_tag "Delete Task" %> -->
+  
+app/views/tasks/index.html.erb:6:in `_app_views_tasks_index_html_erb__1694416876809906714_70303150639800'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:27:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (2.2ms)
+  Rendered tasks/index.html.erb within layouts/application (239.4ms)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fe1701e2680>:0x007fe174a53798>
+Did you mean?  @tasks):
+    3:   <ol>
+    4: 
+    5:           <%= render partial: "action_bar" %>
+    6:         <!-- <%= form_tag task_path(task.id), method: :delete, class: "delete_task_form" do %> -->
+    7:           <!-- <%= text_field_tag "task[title]" , "Pet Cat" %>
+    8:           <%= text_field_tag "task[title]", "Pet Cat" %> -->
+    9:           <!-- <%= submit_tag "Delete Task" %> -->
+  
+app/views/tasks/index.html.erb:6:in `_app_views_tasks_index_html_erb__1694416876809906714_70303154700540'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:28:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (1.8ms)
+  Rendered tasks/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2/edit" for 127.0.0.1 at 2017-09-22 13:33:20 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 57ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:33:26 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:34:01 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (3.5ms)
+  Rendered tasks/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303135738820'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303135938220'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:35:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (16.4ms)
+  Rendered tasks/show.html.erb within layouts/application (23.3ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Task:0x007fe174b66478>):
+    1: <% @task.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303109099200'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303151236780'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:37:02 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (247.2ms)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fe1701e2680>:0x007fe16fbbd728>
+Did you mean?  @task):
+    12:     <li>
+    13:       <strong>Due Date:</strong> <%= @task.due_date %>
+    14:     </li>
+    15:     <%= render partial: "action_bar", locals: {task: task} %>
+    16:   </ul>
+    17: </div>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303109477240'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:37:43 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (3.0ms)
+  Rendered tasks/show.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303151111320'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303151174080'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-22 13:39:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered tasks/index.html.erb within layouts/application (249.9ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tasks' for #<#<Class:0x007fe1701e2680>:0x007fe174d9d7c8>
+Did you mean?  @tasks):
+    1: <div class="your-tasks">
+    2:   <h2>YOUR TASKS</h2>
+    3:   <ol>
+    4:     <%= render partial: "action_bar", locals: {task: tasks} %>
+    5:   </ol>
+    6: </div>
+  
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb__1694416876809906714_70303152403080'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-22 13:39:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (3.2ms)
+  Rendered tasks/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/2/edit" for 127.0.0.1 at 2017-09-22 13:39:16 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 52ms (Views: 43.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:39:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (7.1ms)
+  Rendered tasks/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 58ms (Views: 52.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:39:20 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (4.5ms)
+  Rendered tasks/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303109607120'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303114121080'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:40:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (7.8ms)
+  Rendered tasks/show.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Task:0x007fe1752f3088>):
+    1: <% @task.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303113629740'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303155194940'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-22 13:40:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (2.0ms)
+  Rendered tasks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 52ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:40:35 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (7.2ms)
+  Rendered tasks/show.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303152230140'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303152314060'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:41:20 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (5.4ms)
+  Rendered tasks/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Task:0x007fe17059d7e8>):
+    1: <% @task.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303150852580'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303114650140'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:41:25 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (6.8ms)
+  Rendered tasks/show.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303136717060'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303106849500'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:42:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <!-- <h1>show erb</h1> -->
+    2: 
+    3: <div class="show-task">
+    4:   <h2>Task #<%= @task.id %></h2>
+    5:   <ul>
+    6:     <li>
+    7:       <strong>Title:</strong> <%= @task.title %>
+  
+app/views/tasks/show.html.erb:4:in `_app_views_tasks_show_html_erb__1106296957501101685_70303108908800'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:42:36 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <!-- <h1>show erb</h1> -->
+    2: 
+    3: <div class="show-task">
+    4:   <h2>Task #<%= @task.id %></h2>
+    5:   <ul>
+    6:     <li>
+    7:       <strong>Title:</strong> <%= @tasks.title %>
+  
+app/views/tasks/show.html.erb:4:in `_app_views_tasks_show_html_erb__1106296957501101685_70303114166780'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:42:54 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (6.7ms)
+  Rendered tasks/show.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Task:0x007fe16fa09260>):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303105346040'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303105463620'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:43:25 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <!-- <h1>show erb</h1> -->
+    2: 
+    3: <div class="show-task">
+    4:   <h2>Task #<%= @task.id %></h2>
+    5:   <ul>
+    6:     <li>
+    7:       <strong>Title:</strong> <%= @task.title %>
+  
+app/views/tasks/show.html.erb:4:in `_app_views_tasks_show_html_erb__1106296957501101685_70303154559580'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:43:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (3.7ms)
+  Rendered tasks/show.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303155762320'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303155854660'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:43:47 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (3.4ms)
+  Rendered tasks/show.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303109950160'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303156473160'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-22 13:44:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (2.1ms)
+  Rendered tasks/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:44:16 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (4.1ms)
+  Rendered tasks/show.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303110452220'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303114679860'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:47:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (232.4ms)
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fe175433150>:0x007fe16f6e3798>
+Did you mean?  @task):
+    12:     <li>
+    13:       <strong>Due Date:</strong> <%= @task.due_date %>
+    14:     </li>
+    15:     <%= render partial: "action_bar", locals: {task: task} %>
+    16:   </ul>
+    17: </div>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303106943000'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:48:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (10.5ms)
+  Rendered tasks/show.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303114238080'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303152490200'
+Started GET "/tasks/" for 127.0.0.1 at 2017-09-22 13:48:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (1.8ms)
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:48:44 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (6.4ms)
+  Rendered tasks/show.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303106423400'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303135665400'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:49:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <!-- <h1>show erb</h1> -->
+    2: 
+    3: <div class="show-task">
+    4:   <h2>Task #<%= @task.id %></h2>
+    5:   <ul>
+    6:     <li>
+    7:       <strong>Title:</strong> <%= @task.title %>
+  
+app/views/tasks/show.html.erb:4:in `_app_views_tasks_show_html_erb__1106296957501101685_70303107422460'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:50:25 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (0.7ms)
+  Rendered tasks/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:52:00 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (2.9ms)
+  Rendered tasks/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @tasks.each do |task| %>
+    2:   <li>
+    3:     <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> |
+    4:     <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  
+app/views/tasks/_action_bar.html.erb:1:in `_app_views_tasks__action_bar_html_erb__991953871583784919_70303113354720'
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb__1106296957501101685_70303154834960'
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:52:45 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (0.9ms)
+  Rendered tasks/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:52:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (2.7ms)
+  Rendered tasks/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:54:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_action_bar.html.erb (2.2ms)
+  Rendered tasks/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 48ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-22 13:54:03 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_action_bar.html.erb (1.2ms)
+  Rendered tasks/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 48ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
