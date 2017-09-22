@@ -8,7 +8,7 @@
       </li>
     <% else %>
       <li class="tasks">
-      <%= image_tag 'donut-transparent.png', alt: "A delicious sprinkled donut", class: "donut-image" %><p><%= task[:name] %></p>
+      <%= image_tag 'donut-transparent.png', alt: "A delicious sprinkled donut", class: "donut-image" %><%= task[:name] %>
       </li>
     <% end %>
 
