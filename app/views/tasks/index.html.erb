@@ -4,10 +4,7 @@
     <ul>
       <% @tasks.each do |task| %>
       <li>
-        <input type="checkbox" unchecked value = "complete" /> <%= link_to(task.name, task_path(task.id)) %>
-        <!-- <p>
-          Description: <%=task.description%>
-        </p> -->
+        <%= link_to(task.name, task_path(task.id)) %>
       </li>
       <%end%>
     </ul>

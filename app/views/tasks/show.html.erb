@@ -19,7 +19,9 @@
     It is <%=@task.date%>
   </h2>
   <h2>Task ID number: <%= @task.id %> </h2>
+  <h2>Completed: <%=@task.completion_date %></h2>
 
   <%= link_to("Edit", edit_task_path(@task.id.to_i)) %>
   <%= link_to("Delete", remove_task_path(@task.id.to_i)) %>
+  <%= link_to("Mark Complete", mark_complete_path(@task.id), method: :patch) %>
   <%end%>

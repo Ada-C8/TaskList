@@ -8,7 +8,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description])
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], date: params[:task][:date], completion_date: nil)
     if @task.save
       redirect_to root_path
     else
@@ -35,15 +35,12 @@ class TasksController < ApplicationController
     task.description = params[:task][:description]
     task.date = params[:task][:date]
 
+
     if task.update(name: task.name, description: task.description, date: task.date)
-      redirect_to task_path
+      redirect_to task_path #CHANNNGE!
     else
       render :edit
     end
-  end
-
-  def mark_complete
-
   end
 
   def remove
@@ -56,6 +53,18 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def mark_complete
+    task = Task.find_by(id: params[:id].to_i)
+
+    if task.completion_date == nil
+      task.completion_date = Date.today
+    else
+      task.completion_date = nil
+    end
+
+    task.save
+
+  end
 
   private
 
