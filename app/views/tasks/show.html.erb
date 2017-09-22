@@ -1,6 +1,6 @@
 <% if @task %>
   <h1>
-    <%= @task.id %>. <%= @task.name %>
+    Task: <%= @task.name %>
   </h1>
   <p>
     Status: <%=@task.status%>
@@ -18,3 +18,4 @@
 
 <%= link_to "Home", tasks_path %>
 <%= link_to("Edit", edit_task_path(@task.id), alt: 'link_to')%>
+<%= link_to 'Delete', delete_task_path(@task.id), method: :delete, data: {confirm: "Are you sure?"} %>

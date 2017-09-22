@@ -14,7 +14,9 @@
           <%= link_to( (task.status ? "Unmark Complete": "Mark Complete"), mark_completion_task_path(task.id), method: :patch,  alt: 'link_to')%>
           <%= link_to "Show", task_path(task.id)%>
           <%= link_to("Edit", edit_task_path(task.id), alt: 'link_to')%>
-          <%= link_to "Delete", delete_task_path(task.id), method: :delete%>
+          <!-- <%= link_to "Delete", confirm_delete_path(task.id)%> -->
+
+          <%= link_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
         </section>
       </li>
     <%end%>

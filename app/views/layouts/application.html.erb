@@ -13,16 +13,12 @@
   <body>
     <header>
       <h1>Task List</h1>
-      <section = class= "action-buttons">
-        <%= button_to("All Tasks", tasks_path, method: :get,  alt: 'button_to', class: "button")%>
-        <%= button_to("Add Task", new_task_path, method: :get,  alt: 'button_to', class: "button")%>
-      </section>
     </header>
-    <!-- <section = class= "side-action-buttons">
+
+    <section = class= "action-buttons">
       <%= button_to("All Tasks", tasks_path, method: :get,  alt: 'button_to', class: "button")%>
       <%= button_to("Add Task", new_task_path, method: :get,  alt: 'button_to', class: "button")%>
-    </section> -->
-
+    </section>
 
     <main>
       <%= yield %>

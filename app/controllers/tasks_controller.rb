@@ -37,12 +37,21 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    task = Task.find_by(id: params[:id])
+
+    if task.destroy
+      redirect_to root_path
+    end
   end
 
   def mark_completion
     @task= Task.find(params[:id].to_i)
-    @task.status ? @task.update(status: false): @task.update(status: true)
+    @task.status ? @task.update(status: false, completion_date: " "): @task.update(status: true, completion_date: Date.today.to_s)
     redirect_to root_path
+  end
+
+  def confirm_delete
+    @task = Task.find_by(id: params[:id])
   end
 
   private
