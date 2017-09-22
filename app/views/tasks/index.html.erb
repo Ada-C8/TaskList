@@ -1,46 +1,27 @@
-
-<button type="button" name="add-task">Add Task</button>
-<button type="button" name="all-task">All Task</button>
-
+<%= button_to "Add Task", {:controller => :tasks,
+:action => 'new' }, :method => :get %>
+<%= button_to "All Tasks", {:controller => :tasks,
+:action => 'index' }, :method => :get %>
 <h2>Your Tasks</h2>
 
-<!-- <ol>
-  <li>Task One</li>
-    <ul>
-      <li>Mark Complete</li>
-      <li>Edit</li>
-      <li>Delete</li>
-    </ul>
-  <li>Task Two</li>
-  <ul>
-    <li>Mark Complete</li>
-    <li>Edit</li>
-    <li>Delete</li>
-  </ul>
-  <li>Task Three</li>
-  <ul>
-    <li>Mark Complete</li>
-    <li>Edit</li>
-    <li>Delete</li>
-  </ul>
-  <li>Task Four</li>
-  <ul>
-    <li>Mark Complete</li>
-    <li>Edit</li>
-    <li>Delete</li>
-  </ul>
-</ol> -->
-
-<ul>
+<ol>
   <% @tasks.each do |task| %>
     <li>
-      <strong><%= task[:name] %></strong>
+      <strong><%= link_to task[:name], task_path(task.id) %></strong> |
       description: <em><%= task[:description] %></em>
       completion_date: <em><%= task[:completion_date] %></em>
-      <%# This is a comment %>
+      <ul>
+        <li>Mark Complete</li>
+        <li><%= button_to "edit", {:controller => :tasks,
+      :action => 'edit', :id => task[:id] }, :method => :get %></li>
+        <li><%= button_to "delete", {:controller => :tasks,
+      :action => 'destroy', :id => task[:id] }, :method => :delete %></li>
+      </ul>
     </li>
+
+
   <% end %>
-</ul>
+</ol>
 
 <footer>
   &copy; 2017
