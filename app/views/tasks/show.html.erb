@@ -10,7 +10,7 @@
   <li><%= link_to "delete", delete_task_path(@task.id), method: :delete, data: { confirm: "Really?" } %></li>
 </ul>
 <h4><%= @task.completion_date %>
-  <% if Date.parse(@task.completion_date) > Date.today() %>
+  <% if @task.completion_date > Date.today() %>
     <%='😸' %>
   <% else %>
     <%='🙀' %>
