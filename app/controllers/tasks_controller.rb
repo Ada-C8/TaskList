@@ -39,7 +39,7 @@ class TasksController < ApplicationController
 
   def show
     # must be an instance variable because you will be passing this to HTML to display
-    @task = Task.find( params[:id].to_i )
+    @task = Task.find( params[:id] )
   end
 
   def edit
@@ -75,6 +75,7 @@ class TasksController < ApplicationController
   def mark_as_complete
     @task = Task.find(params[:id])
     @task.status = true
+    #change database for date_completed
     @task.save
 
     redirect_to("/tasks")
@@ -86,5 +87,9 @@ class TasksController < ApplicationController
     @task.save
 
     redirect_to("/tasks")
+  end
+
+  def completed_tasks
+    @tasks = Task.all
   end
 end

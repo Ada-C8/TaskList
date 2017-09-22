@@ -4,7 +4,7 @@
     <title>TaskList</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -15,9 +15,16 @@
       </header>
       <nav>
         <ul>
-          <li class="button"><%= link_to "add task", new_task_path, class: "link" %></li>
-          <%# <a href="books" class="link">Name of link</a> %>
-          <li class="button"><%= link_to "all tasks", tasks_path %></li>
+          <li class="button">
+            <%# <a href="books" class="link">Name of link</a> %>
+            <%= link_to "add task", new_task_path %>
+          </li>
+          <li class="button">
+            <%= link_to "all tasks", tasks_path %>
+          </li>
+          <li class="button">
+            <%= link_to "feel good", completed_tasks_path %>
+          </li>
         </ul>
       </nav>
 
