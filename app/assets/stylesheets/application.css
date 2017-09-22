@@ -47,6 +47,16 @@ header {
   margin-left: 25%;
 }
 
+.notice {
+  font-size: 1em;
+  text-shadow: pink 0px 10px 40px;
+  display: block;
+  position: absolute;
+  margin-left: 50%;
+  text-align: right;
+  margin-right: 5%;
+}
+
 .button {
 line-height: 12em;
   margin-left: 20px;
@@ -74,6 +84,7 @@ a {
   background-color: yellow;
   border-bottom-right-radius: 10%;
   box-shadow: #AAA 0px 15px 20px;
+  overflow-y: scroll;
 }
 
 .content li {

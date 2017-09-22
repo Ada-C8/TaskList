@@ -17,7 +17,8 @@
   <article class="task_edits">
     <%= link_to "mark incomplete", mark_complete_task_path(task.id), method: :patch %>
     <%= link_to "edit", edit_tasks_path(task.id) %>
-    <%= link_to "delete", delete_task_path(task.id), method: :delete %></article>
+    <%= link_to "delete", delete_task_path(task.id), method: :delete, data: { confirm: "ARE YOU SURE?!!?" } %>
+  </article>
   <% end %>
 
 <% end %>
