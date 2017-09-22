@@ -2,12 +2,19 @@
 
   <header>
     <h1 class="increase-font"><%= @task.title %></h1>
-    <h3 class="zero-margin-bottom">Due: <%= @task.due_date %></h3>
-    <h3 class="zero-margin-bottom">Complete?
-      <% if @task.status == false %>
-          NO!!!
+    <h3 class="zero-margin-bottom">
+      <% if @task.status %>
+        Date completed: <%= @task.date_complete %>
       <% else %>
-          HOORAY FOR BEING ONE STEP CLOSER TO BEING A HUMAN!!!
+        Due: <%= @task.due_date %>
+      <% end %>
+    </h3>
+
+    <h3 class="zero-margin-bottom">Complete?
+      <% if @task.status %>
+        HOORAY FOR BEING ONE STEP CLOSER TO BEING A HUMAN!!!
+      <% else %>
+        NO!!!
       <% end %>
     </h3>
   </header>

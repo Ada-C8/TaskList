@@ -36,11 +36,13 @@ class TasksController < ApplicationController
     @task.due_date = task_updates[:due_date]
     @task.status = task_updates[:status]
     @task.save
+    redirect_to(@task)
   end
 
   def complete
     @task = Task.find(params[:id])
     @task.status = true
+    @task.date_complete = DateTime.now
     @task.save
     redirect_to('/tasks')
   end
@@ -48,6 +50,7 @@ class TasksController < ApplicationController
   def incomplete
     @task = Task.find(params[:id])
     @task.status = false
+    @task.date_complete = nil
     @task.save
     redirect_to('/tasks')
   end

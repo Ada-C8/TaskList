@@ -9,7 +9,7 @@
 <article id="task-wrapper">
   <header>
     <h2>
-      <% if task.status == true %>
+      <% if task.status %>
         <%= link_to task.title, task_path(task.id), class: "no-underline visited-links complete_status" %>
       <% else %>
         <%= link_to task.title, task_path(task.id), class: "no-underline visited-links" %>
