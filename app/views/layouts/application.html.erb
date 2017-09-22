@@ -19,11 +19,11 @@
         <h4><%= link_to('Add Task', new_task_path, alt: 'link to create new task') %></h4>
       </section>
       <section class="button">
-        <h4><a href=''>All Tasks</a></h4>
+        <h4><%= link_to('All Tasks', root_path, alt: 'link to all tasks') %></h4>
       </section>
     </div>
 
-    <div class="right">
+    <div class="right" id="yield">
       <%= yield %>
     </div>
 

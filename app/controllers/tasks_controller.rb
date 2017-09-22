@@ -5,6 +5,11 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find_by(id: params[:id].to_i)
+
+    unless @task
+      redirect_to root_path
+    end
   end
 
   def new
@@ -16,6 +21,15 @@ class TasksController < ApplicationController
   end
 
   def update
+    task = Task.find_by(id: params[:id])
+    redirect_to root_path unless task
+
+    if task.update_attributes task_params
+      redirect_to root_path # could also be edit_task_path or a way to go back to previous screen
+    else
+      render :edit
+    end
+
   end
 
   def create
@@ -30,5 +44,10 @@ class TasksController < ApplicationController
 
   def destroy
     Task.find(params[:id]).destroy
+  end
+
+  private
+  def task_params
+    return params.require(:task).permit(:name, :description) #stranger danger! see strong params
   end
 end

@@ -1,5 +1,6 @@
 <article class="index">
   <h2>YOUR TASKS</h2>
+  <div id="list_view">
   <ol>
     <% @tasks.each do |task| %>
       <li>
@@ -7,9 +8,10 @@
         <nav>
           <a href= >Mark Complete</a> |
           <%= link_to('Edit', edit_task_path(task.id), alt: 'link to edit task.name') %> |
-          DELETE
+          Delete
         </nav>
       </li>
     <% end %>
   </ol>
+</div>
 </article>
