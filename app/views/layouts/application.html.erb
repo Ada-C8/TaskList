@@ -8,39 +8,41 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<header>
-  <section id="robot_container">
-    <h1 id="robot_name">*Tasky*</h1>
-    <span id="robot_pic">
-      <%=  image_tag(src="https://image.freepik.com/free-vector/coloured-robot-design_1148-9.jpg", alt: "helpful robot", size: "125x125") %></span>
-    </section>
-
-    <div id="header_text">
-
-      <h2>Your helpful coding task tracker</h2>
-      <h4>ProTip: Remember to commit regularly!!</h4>
-    </div>
-
-  </header>
-
-
 
   <body class="grad">
-    <nav id="buttons">
-      <%= button_to("Add Task", new_task_path, {class: 'button', method: :get, alt: "button to add task"} ) %>
+    <div id="before_footer">
 
-      <%= button_to("All Tasks", tasks_path, {class: 'button', method: :get, alt: "button to all tasks"} ) %>
-    </nav>
+    <header>
+      <section id="robot_container">
+        <h1 id="robot_name">*Tasky*</h1>
+        <span id="robot_pic">
+          <%=  image_tag(src="https://image.freepik.com/free-vector/coloured-robot-design_1148-9.jpg", alt: "helpful robot", size: "125x125") %></span>
+        </section>
 
-    <article>
-      <%= yield %>
-    </article>
+        <div id="header_text">
 
-    <footer>
-      <span> &copy; 2017 </span>
-    </footer>
+          <h2>Your helpful coding task tracker</h2>
+          <h4>ProTip: Remember to commit regularly!!</h4>
+        </div>
 
-  </body>
+      </header>
+
+      <nav id="buttons">
+        <%= button_to("Add Task", new_task_path, {class: 'button', method: :get, alt: "button to add task"} ) %>
+
+        <%= button_to("All Tasks", tasks_path, {class: 'button', method: :get, alt: "button to all tasks"} ) %>
+      </nav>
+
+      <article>
+        <%= yield %>
+      </article>
+    </div>
+
+      <footer>
+        <span> &copy; 2017 </span>
+      </footer>
+
+    </body>
 
 
   </html>
