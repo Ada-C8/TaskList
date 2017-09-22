@@ -19,26 +19,7 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id].to_i)
-
-    # task.update_attributes (saves simultaneously)
-    # task.update_attributes params[:task][:name], params[:task][:completion_date], params[:task][:description]
-
-    # strong params
-    # can also use in create or update actions
-    # make this into a method?
-    # task.update_attributes params.require(:task).permit(:name, :completion_date, :description)
-    #
-    # private
-    #   def task_params
-    #     return params.require(:task).permit(:name, :completion_date, :description)
-    #   end
-    #
-    #
-
-    @task.name = params[:task][:name]
-    @task.due_date = params[:task][:due_date]
-    @task.description = params[:task][:description]
-
+    @task.update_attributes task_params
     if @task.save
       redirect_to root_path
     else
@@ -77,6 +58,11 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+  end
+
+private
+  def task_params
+    return params.require(:task).permit(:name, :completion_date, :description)
   end
 
 end
