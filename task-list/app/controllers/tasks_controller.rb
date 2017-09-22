@@ -49,4 +49,12 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to tasks_path
   end # destroy
+
+  def completed
+    @task = Task.find(params[:id])
+    # TODO: figure out how to set default value to false instead of true for completion_status column
+    @task.competion_status = false
+    @task.save
+    redirect_to tasks_path
+  end # completed
 end

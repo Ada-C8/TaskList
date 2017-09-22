@@ -1,12 +1,13 @@
+<p>
 
-<%# in DOM for is = "task_title" instead of title, same for the rest of the fors, maybe this is why it isn't working? %>
-
+</p>
 <%= form_for @task do |f| %>
+
   <%= f.label :title %>
   <%= f.text_field :title %>
 
   <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.date_field :description %>
 
   <%= f.label :due_date %>
   <%= f.datetime_field :due_date %>
@@ -14,6 +15,4 @@
   <%= f.label :completion_status %>
   <%= f.text_field :completion_status %>
 
-
-  <%= f.submit "Add Task" %>
-<% end %>
+<%= f.submit "Edit Task" %>
