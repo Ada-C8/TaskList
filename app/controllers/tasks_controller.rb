@@ -26,7 +26,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    task_updates = params.require(:task).permit(:title, :description, :due_date, :complete)
+    task_updates = params.require(:task).permit(:title, :description, :due_date, :complete, :completed_at)
     task = Task.find(params[:id])
     task.update_attributes(task_updates)
     task.save
@@ -35,6 +35,7 @@ class TasksController < ApplicationController
     else
       redirect_to task_path(task)
     end
+
    end
   def destroy
     task = Task.find(params[:id])
