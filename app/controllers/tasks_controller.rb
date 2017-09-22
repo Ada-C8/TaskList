@@ -40,10 +40,20 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    Task.find_by(id: params[:id]).delete
+    redirect_to root_path
   end
 
   def toggle_complete
+   task = Task.find_by(id: params[:id])
 
+    if task.status
+      task.status = false
+    elsif
+      task.status = true
+    end
+    task.save
+    redirect_to root_path
   end
 
   private

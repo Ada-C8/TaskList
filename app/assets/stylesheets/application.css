@@ -104,3 +104,11 @@ ul {
   border: 3px solid #028090;
   box-shadow: -2px 2px 2px #114B5F;
 }
+
+.none {
+  text-decoration: none;
+}
+
+.complete {
+  text-decoration: line-through;
+}

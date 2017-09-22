@@ -11,15 +11,27 @@
 <ul>
   <h2>My Tasks</h2>
   <% @tasks.each do |task| %>
+    <%if task.status  %>
     <li>
-      <%= link_to(task.name, task_path(task.id), alt: "link to task.name") %>
+      <%= link_to(task.name, task_path(task.id), alt: "link to task.name", class: "complete") %>
     </li>
+    <%else  %>
+    <li>
+      <%= link_to(task.name, task_path(task.id), alt: "link to task.name", class: "none") %>
+    </li>
+    <% end  %>
     <section class = "task-buttons">
+
+    <% if task.status %>
+    <%= link_to "Completed", toggle_complete_path(task.id), method: :patch, class: "button" %>
+    <% else %>
     <%= link_to "Mark Complete", toggle_complete_path(task.id), method: :patch, class: "button" %>
+      <% end %>
+
     <p class = "button">|</p>
     <%= link_to "Edit", edit_task_path(task.id), class: "button"%>
     <p class = "button">|</p>
-    <%= link_to "Delete", delete_task_path(task.id), method: :delete, class: "button" %>
+    <%= link_to "Delete", delete_task_path(task.id), method: :delete, data: {confirm: "But are you sure though?" }, class: "button" %>
     <div class="clearfix"></div>
     </section>
   <% end %>

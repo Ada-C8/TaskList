@@ -4772,3 +4772,1521 @@ puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
 puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-21 13:46:23 -0700
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 318ms (Views: 290.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 13:46:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 37ms (Views: 26.2ms | ActiveRecord: 9.2ms)
+
+
+Started DELETE "/tasks.2" for 127.0.0.1 at 2017-09-21 13:46:31 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"rWrw2+LcO/z/+fzZsksJ+gwUUf5jnSEH/1z1/3SzZcm+vBb1/jmzwaxLmUTvhyPkqO+u+BSNV7LfRCIhQTBgkw=="}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:60:in `task_params'
+app/controllers/tasks_controller.rb:46:in `destroy'
+Started DELETE "/tasks.2" for 127.0.0.1 at 2017-09-21 13:49:10 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"rWrw2+LcO/z/+fzZsksJ+gwUUf5jnSEH/1z1/3SzZcm+vBb1/jmzwaxLmUTvhyPkqO+u+BSNV7LfRCIhQTBgkw=="}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:46:in `destroy'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:49:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/tasks.1" for 127.0.0.1 at 2017-09-21 13:49:18 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"GNBRhaSs72bmwhhQpqeFG+yK2hZ0GB9HOi+5BdJctf4LBreruElnW7Vwfc37a68FSHElEAMIafIaN27b59+wpA=="}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:46:in `destroy'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:52:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:52:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-21 13:56:34 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 118ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 15:10:22 -0700
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 315ms (Views: 290.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-21 15:11:02 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 90ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 15:11:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (123.4ms)
+Completed 200 OK in 151ms (Views: 137.6ms | ActiveRecord: 10.4ms)
+
+
+Started DELETE "/tasks.1" for 127.0.0.1 at 2017-09-21 15:11:08 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"/72sS2gpQI7bMAYRwPfs3QpmQ6hRrP/TW0LUNYFe3K7sa0pldMzIs4iCY4ydO8bDrp28ria8iWZ7WgPrtN3Z9A=="}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:46:in `destroy'
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:33:18 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 325ms (Views: 295.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-22 11:33:23 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 13.3ms | ActiveRecord: 44.8ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-22 11:35:04 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<ActionController::Parameters:0x007fd9305d6568>):
+    1: <h1>Tasks#show</h1>
+    2: <%= params.name %>
+    3: <section class = "show">
+    4: 
+    5: <h2>
+  
+app/views/tasks/show.html.erb:2:in `_app_views_tasks_show_html_erb__3610934925353169381_70285397518460'
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:35:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-22 11:35:41 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<ActionController::Parameters:0x007fd9343ef4f8>):
+    1: <h1>Tasks#show</h1>
+    2: <%= params.name %>
+    3: <section class = "show">
+    4: 
+    5: <h2>
+  
+app/views/tasks/show.html.erb:2:in `_app_views_tasks_show_html_erb__3610934925353169381_70285430579420'
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-22 11:48:54 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:59:51 -0700
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 401ms (Views: 364.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 12:11:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 78ms (Views: 52.2ms | ActiveRecord: 5.8ms)
+
+
+Started DELETE "/tasks.1" for 127.0.0.1 at 2017-09-22 12:11:35 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"wfBdH096+Yqn65bKzWjjZe4Sk+yHGtK7Fv3KnD3WexY4I/Tv4sw3hfakfwlqoQhuiKIiywFflafXWnwdbdJVQA=="}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `delete' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:43:in `destroy'
+Started DELETE "/tasks.1" for 127.0.0.1 at 2017-09-22 12:13:07 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"wfBdH096+Yqn65bKzWjjZe4Sk+yHGtK7Fv3KnD3WexY4I/Tv4sw3hfakfwlqoQhuiKIiywFflafXWnwdbdJVQA=="}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `delete' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:43:in `destroy'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 12:13:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/tasks.1" for 127.0.0.1 at 2017-09-22 12:13:13 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"twoVnP4prL6Bd3IFMEQ7XSkP7FnNg3pCG8d9RlXC5HhO2bxsU59isdA4m8aXjdBWT79dfkvGPV7aYMvHBcbKLg=="}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `delete' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:43:in `destroy'
+Started GET "/" for 127.0.0.1 at 2017-09-22 12:16:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 62ms (Views: 45.1ms | ActiveRecord: 3.2ms)
+
+
+Started DELETE "/tasks/1" for 127.0.0.1 at 2017-09-22 12:16:43 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fDhQidZkOgnVk0HewEV/XeonzAy9jRcvxKgXN9e0gUeF6/l5e9L0BoTcqB1njJRWjJd9KzvIUDMFD6G2h7CvEQ==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (12.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 12:16:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 12:19:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jocelyngonzalez/ada/TaskList/app/views/tasks/index.html.erb:22: syntax error, unexpected keyword_class, expecting ')'
+ are you sure though?" } class: "button" );@output_buffer.sa
+                              ^):
+  
+app/views/tasks/index.html.erb:22: syntax error, unexpected keyword_class, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 12:59:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jocelyngonzalez/ada/TaskList/app/views/tasks/index.html.erb:22: syntax error, unexpected keyword_class, expecting ')'
+ are you sure though?" } class: "button" );@output_buffer.sa
+                              ^):
+  
+app/views/tasks/index.html.erb:22: syntax error, unexpected keyword_class, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 12:59:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-22 12:59:27 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (81.7ms)
+Completed 200 OK in 107ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-22 12:59:45 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mvuj9JTlC19Kt0ds72gsL8QqI9BDszguuoPWgQKhM4VvRM9fi1fSR1GgWnwKTQnKWr1AfpyyfmUxssqnTOFoEQ==", "task"=>{"name"=>"Play Monopoly", "description"=>"Psych. ", "completion_date"=>"10-3-17"}, "commit"=>"add task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "completion_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Play Monopoly"], ["description", "Psych. "], ["completion_date", "10-3-17"], ["created_at", "2017-09-22 19:59:45.778949"], ["updated_at", "2017-09-22 19:59:45.778949"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 12:59:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/10" for 127.0.0.1 at 2017-09-22 12:59:52 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fGbQ4hsYY3TjfpfwjdcA+cn/hA4y/F87ubmu2AqhrOKFtXkStq6te7IxfjMqHuvyr081KbS5GCd4HhhZWqWCtA==", "id"=>"10"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 10]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 12:59:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-22 13:00:46 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:03:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 73ms (Views: 67.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:11:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-22 13:11:14 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-22 13:11:58 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1DVHtPVODUIWR+14rUKcz9ydp/XrFb1/LJz9hahuiIWJiisf6vzUWg1Q8GhIZ7kqQgrEWzQU+zSnreGj5i7TEQ==", "task"=>{"name"=>"Give Mice Cookies", "description"=>"All of THEM", "completion_date"=>"10-9-17"}, "commit"=>"add task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "completion_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Give Mice Cookies"], ["description", "All of THEM"], ["completion_date", "10-9-17"], ["created_at", "2017-09-22 20:11:58.471129"], ["updated_at", "2017-09-22 20:11:58.471129"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:11:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/11" for 127.0.0.1 at 2017-09-22 13:18:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:31:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 189ms (Views: 179.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:31:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 13:31:49 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"qU4ndNQ/qaNyXVzRMlokAfBOGf2OOkQQGIQ3u2IReBhQnY6EeYlnrCMStRKVk88Klv6o2gh/AwzZI4E6MhVWTg==", "id"=>"8"}
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 0.0ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 13:31:53 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"qU4ndNQ/qaNyXVzRMlokAfBOGf2OOkQQGIQ3u2IReBhQnY6EeYlnrCMStRKVk88Klv6o2gh/AwzZI4E6MhVWTg==", "id"=>"8"}
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 47ms (ActiveRecord: 0.0ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 13:31:55 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"qU4ndNQ/qaNyXVzRMlokAfBOGf2OOkQQGIQ3u2IReBhQnY6EeYlnrCMStRKVk88Klv6o2gh/AwzZI4E6MhVWTg==", "id"=>"8"}
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 0.0ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 13:32:37 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"qU4ndNQ/qaNyXVzRMlokAfBOGf2OOkQQGIQ3u2IReBhQnY6EeYlnrCMStRKVk88Klv6o2gh/AwzZI4E6MhVWTg==", "id"=>"8"}
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:38:56 -0700
+  
+SyntaxError (/Users/jocelyngonzalez/ada/TaskList/app/controllers/tasks_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tasks_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:45:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 80ms (Views: 61.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:57:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 13:57:25 -0700
+  
+AbstractController::ActionNotFound (The action 'toggle_complete' could not be found for TasksController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-22 14:13:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 82ms (Views: 60.3ms | ActiveRecord: 6.0ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:13:58 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:13:59 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:00 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:01 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 53ms (ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:01 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:02 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:02 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:03 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:03 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 59ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:03 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:04 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 55ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 14:14:19 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"b1yJrL+EfDXKEskix6/wesrZhsMFXY3wiYqJ1P9CUKWWjyBcEjKyOptdIOFgZhtxrGk35IMYyuxILT9Vr0Z+8w==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:11:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 88ms (Views: 73.0ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for 127.0.0.1 at 2017-09-22 15:12:02 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"GYcuTZ4cIRz0iOUoeQ6PJ1g3gWpX32A0zzAFOC3+Z2jgVIe9M6rvE6XHDOvex2QsPocwTdGaJygOl7O5ffpJPg==", "id"=>"1"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `status=' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:49:in `toggle_complete'
+Started PATCH "/tasks/1/toggle_complete" for 127.0.0.1 at 2017-09-22 15:12:28 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"GYcuTZ4cIRz0iOUoeQ6PJ1g3gWpX32A0zzAFOC3+Z2jgVIe9M6rvE6XHDOvex2QsPocwTdGaJygOl7O5ffpJPg==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `status=' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:49:in `toggle_complete'
+Started PATCH "/tasks/1/toggle_complete" for 127.0.0.1 at 2017-09-22 15:20:37 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"GYcuTZ4cIRz0iOUoeQ6PJ1g3gWpX32A0zzAFOC3+Z2jgVIe9M6rvE6XHDOvex2QsPocwTdGaJygOl7O5ffpJPg==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:21:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 3.4ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:21:05 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"4CFUwVbrZpAqcKPYqEOZP9M2dj8BA+fd4PT8NhL3qcYZ8v0x+12on3s/ShsPinI0tYbHGIdGoMEhU0q3QvOHkA==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 53ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:21:07 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"4CFUwVbrZpAqcKPYqEOZP9M2dj8BA+fd4PT8NhL3qcYZ8v0x+12on3s/ShsPinI0tYbHGIdGoMEhU0q3QvOHkA==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 52ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:21:08 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"4CFUwVbrZpAqcKPYqEOZP9M2dj8BA+fd4PT8NhL3qcYZ8v0x+12on3s/ShsPinI0tYbHGIdGoMEhU0q3QvOHkA==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:21:09 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"4CFUwVbrZpAqcKPYqEOZP9M2dj8BA+fd4PT8NhL3qcYZ8v0x+12on3s/ShsPinI0tYbHGIdGoMEhU0q3QvOHkA==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:21:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:21:56 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"X/Il1KIuY7ksxkrCobo8JPu7uzCz99v0IRqFkhBiuzGmIYwkD5ittn2JowEGc9cvnQsKFzWynOjgvTMTQGaVZw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:21:57 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"X/Il1KIuY7ksxkrCobo8JPu7uzCz99v0IRqFkhBiuzGmIYwkD5ittn2JowEGc9cvnQsKFzWynOjgvTMTQGaVZw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 52ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:21:59 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"X/Il1KIuY7ksxkrCobo8JPu7uzCz99v0IRqFkhBiuzGmIYwkD5ittn2JowEGc9cvnQsKFzWynOjgvTMTQGaVZw==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:00 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"X/Il1KIuY7ksxkrCobo8JPu7uzCz99v0IRqFkhBiuzGmIYwkD5ittn2JowEGc9cvnQsKFzWynOjgvTMTQGaVZw==", "id"=>"8"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:22:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:22:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 51ms (Views: 30.2ms | ActiveRecord: 4.1ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:15 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"QqSopilVnS3a/L7GPOgrkYp8vNkIC08kWLT5NtcTqtG7dwFWhONTIouzVwWbIcCa7MwN/o5OCDiZE0+3hxeEhw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:16 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"QqSopilVnS3a/L7GPOgrkYp8vNkIC08kWLT5NtcTqtG7dwFWhONTIouzVwWbIcCa7MwN/o5OCDiZE0+3hxeEhw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:16 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"QqSopilVnS3a/L7GPOgrkYp8vNkIC08kWLT5NtcTqtG7dwFWhONTIouzVwWbIcCa7MwN/o5OCDiZE0+3hxeEhw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:17 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"QqSopilVnS3a/L7GPOgrkYp8vNkIC08kWLT5NtcTqtG7dwFWhONTIouzVwWbIcCa7MwN/o5OCDiZE0+3hxeEhw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:17 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"QqSopilVnS3a/L7GPOgrkYp8vNkIC08kWLT5NtcTqtG7dwFWhONTIouzVwWbIcCa7MwN/o5OCDiZE0+3hxeEhw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 47ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:17 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"QqSopilVnS3a/L7GPOgrkYp8vNkIC08kWLT5NtcTqtG7dwFWhONTIouzVwWbIcCa7MwN/o5OCDiZE0+3hxeEhw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 52ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:22:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:37 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"LEnzX8CEN7a7ZdiLHFmXE0Shj+AMwHhDNfcXDGtHS4XVmlqvbTL5ueoqMUi7kHwYIhE+x4qFP1/0UKGNO0Nl0w==", "id"=>"11"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:38 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"LEnzX8CEN7a7ZdiLHFmXE0Shj+AMwHhDNfcXDGtHS4XVmlqvbTL5ueoqMUi7kHwYIhE+x4qFP1/0UKGNO0Nl0w==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 53ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:38 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"LEnzX8CEN7a7ZdiLHFmXE0Shj+AMwHhDNfcXDGtHS4XVmlqvbTL5ueoqMUi7kHwYIhE+x4qFP1/0UKGNO0Nl0w==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:38 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"LEnzX8CEN7a7ZdiLHFmXE0Shj+AMwHhDNfcXDGtHS4XVmlqvbTL5ueoqMUi7kHwYIhE+x4qFP1/0UKGNO0Nl0w==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 53ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:22:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:22:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:55 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"Vxnix4yo60giFg2nfkScWQjELOubN+NqJfiH9xg+pAmuyks3IR4lR3NZ5GTZjXdSbnSdzB1ypHbkXzF2SDqKXw==", "id"=>"8"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:56 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"Vxnix4yo60giFg2nfkScWQjELOubN+NqJfiH9xg+pAmuyks3IR4lR3NZ5GTZjXdSbnSdzB1ypHbkXzF2SDqKXw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 53ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:56 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"Vxnix4yo60giFg2nfkScWQjELOubN+NqJfiH9xg+pAmuyks3IR4lR3NZ5GTZjXdSbnSdzB1ypHbkXzF2SDqKXw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 57ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:22:56 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"Vxnix4yo60giFg2nfkScWQjELOubN+NqJfiH9xg+pAmuyks3IR4lR3NZ5GTZjXdSbnSdzB1ypHbkXzF2SDqKXw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:23:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:23:52 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"eJBxkTHtU4quEVoIr+8gLx87UnS4wqLDbCmEjEiUsayBQ9hhnFudhf9es8sIJsskeYvjUz6H5d+tjjINGJCf+g==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:23:53 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"eJBxkTHtU4quEVoIr+8gLx87UnS4wqLDbCmEjEiUsayBQ9hhnFudhf9es8sIJsskeYvjUz6H5d+tjjINGJCf+g==", "id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/9/toggle_complete" for 127.0.0.1 at 2017-09-22 15:23:55 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"eJBxkTHtU4quEVoIr+8gLx87UnS4wqLDbCmEjEiUsayBQ9hhnFudhf9es8sIJsskeYvjUz6H5d+tjjINGJCf+g==", "id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:23:56 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"eJBxkTHtU4quEVoIr+8gLx87UnS4wqLDbCmEjEiUsayBQ9hhnFudhf9es8sIJsskeYvjUz6H5d+tjjINGJCf+g==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 52ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:24:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `status=' for nil:NilClass):
+    16:     </li>
+    17:     <section class = "task-buttons">
+    18: 
+    19:     <% if @task.status = false  %>
+    20:     <%= link_to "Mark Complete", toggle_complete_path(task.id), method: :patch, class: "button complete" %>
+    21:     <% else %>
+    22:     <%= link_to "Mark NOT Complete", toggle_complete_path(task.id), method: :patch, class: "button none" %>
+  
+app/views/tasks/index.html.erb:19:in `block in _app_views_tasks_index_html_erb__3658078047686416521_70354775636280'
+app/views/tasks/index.html.erb:13:in `_app_views_tasks_index_html_erb__3658078047686416521_70354775636280'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:27:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 40ms (Views: 26.1ms | ActiveRecord: 3.4ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:27:39 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"iADvmIaw/QmEREKJZJy32KPRsY2Ls4FwuWK70N4vY25x00ZoKwYzBtULq0rDVVzTxWEAqg32xmx4xQ1RjitNOA==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:27:40 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"iADvmIaw/QmEREKJZJy32KPRsY2Ls4FwuWK70N4vY25x00ZoKwYzBtULq0rDVVzTxWEAqg32xmx4xQ1RjitNOA==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 60ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:28:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/8" for 127.0.0.1 at 2017-09-22 15:28:11 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTask Load (5.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 70ms (Views: 59.8ms | ActiveRecord: 5.0ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:14 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:16 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 52ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:17 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 52ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/9/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:18 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:20 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/9/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:21 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"9"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 55ms (ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:22 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:23 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 60ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/9/toggle_complete" for 127.0.0.1 at 2017-09-22 15:28:24 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cwQcHYpIYjb1aPwrhrk4LSqKiNx+H/GXATjRxXtdWA+K17XtJ/6sOaQnFeghcNMmTDo5+/hatovAn2dEK1l2WQ==", "id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 57ms (ActiveRecord: 0.2ms)
+
+
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:36:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 34ms (Views: 22.2ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:36:49 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"vVFjkmj/Q24KC8M9fM3iPl5ALSKD+3q8+RO5zl9tbB1EgspixUmNYVtEKv7bBAk1OPCcBQW+PaA4tA9PD2lCSw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:36:50 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"vVFjkmj/Q24KC8M9fM3iPl5ALSKD+3q8+RO5zl9tbB1EgspixUmNYVtEKv7bBAk1OPCcBQW+PaA4tA9PD2lCSw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/9/toggle_complete" for 127.0.0.1 at 2017-09-22 15:37:04 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"vVFjkmj/Q24KC8M9fM3iPl5ALSKD+3q8+RO5zl9tbB1EgspixUmNYVtEKv7bBAk1OPCcBQW+PaA4tA9PD2lCSw==", "id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 59ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:37:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 45ms (Views: 31.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:37:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:37:30 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"RgBZVsn62fKF3xU201E7Nm0iP7HnQ6LTeHPXfO5MlGm/0/CmZEwX/dSQ/PV0mNA9C5KOlmEG5c+51GH9vki6Pw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:37:32 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"RgBZVsn62fKF3xU201E7Nm0iP7HnQ6LTeHPXfO5MlGm/0/CmZEwX/dSQ/PV0mNA9C5KOlmEG5c+51GH9vki6Pw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:37:32 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"RgBZVsn62fKF3xU201E7Nm0iP7HnQ6LTeHPXfO5MlGm/0/CmZEwX/dSQ/PV0mNA9C5KOlmEG5c+51GH9vki6Pw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+No template found for TasksController#toggle_complete, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 15:38:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 37ms (Views: 24.0ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:38:22 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"l++SG5hwP3JNoKKnqbm9FP9uquaC9UV/Em/b/+hWB2xuPDvrNcbxfRzvS2QOcFYfmd4bwQSwAmPTyG1+uFIpOg==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.9ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-22 22:38:22.788820"], ["id", 8]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 23.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:38:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:38:26 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"aaX3ZQAeD08ruGxfBl1NEfn8XLlvrum1pYtbY6GPQKWQdl6VrajBQHr3hZyhlKYan0ztnunrrqlkLO3i8Ytu8w==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-22 22:38:26.089976"], ["id", 11]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:38:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:39:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:39:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:39:36 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"VP12G0OEK/tGZIAyKpWDRGDyEDIyaIAGZRLLPty37y6tLt/r7jLl9BcrafGNXGhPBkKhFbQtxxqktX2/jLPBeA==", "id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-22 22:39:36.331703"], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:39:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/9/toggle_complete" for 127.0.0.1 at 2017-09-22 15:39:42 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"Hsp7zG0qpCpmJcY0XXhFr1ipfOulgrFtUZ57fWd8y+TnGdI8wJxqJTdqL/f6sa6kPhnNzCPH9nGQOc38N3jlsg==", "id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-22 22:39:42.797610"], ["id", 9]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:39:42 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:42:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:47:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:47:35 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"Cxoa45XyfIQtCXVvr/5Kokxjehe4PWcZPBRADwKsZhnyybMTOESyi3xGnKwIN6GpKtPLMD54IAX9s/aOUqhITw==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-22 22:47:35.964570"], ["id", 8]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:47:35 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:47:39 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"STlcwKGX2hIo6Y1g2GudCzVUqD6N97WkN6BDoiOeWruw6vUwDCEUHXmmZKN/onYAU+QZGQuy8rj2B/Ujc5p07Q==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-22 22:47:39.100340"], ["id", 11]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:47:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:47:41 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"9akULHAGvMEMoVAWL/1wJ0Pab7CDR295kl7k8vM4nb4Mer3c3bByzl3uudWINJssJWrelwUCKGVT+VJzozyz6A==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-22 22:47:41.585023"], ["id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:47:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/9/toggle_complete" for 127.0.0.1 at 2017-09-22 15:47:47 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"hN7JKZziYcnGAMJVyCIPntg0j0pP81b66X/r2IGyOSd9DWDZMVSvxpdPK5Zv6+SVvoQ+bcm2EeYo2F1Z0bYXcQ==", "id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-22 22:47:47.314540"], ["id", 9]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:47:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:48:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:48:36 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"Q8pmHYnG1X5N91KdUh/SxjoUBU6vQvG9Ddiea6BWoAC6Gc/tJHAbcRy4u1711jnNXKS0aSkHtqHMfyjq8FKOVg==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-22 22:48:36.161515"], ["id", 8]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:48:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:49:22 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"kCn8gLrn/wTNZuZltjRX0TszY8tlv/ehSIWu35poLgpp+lVwF1ExC5wpD6YR/bzaXYPS7OP6sL2JIhheymwAXA==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-22 22:49:22.046267"], ["id", 8]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:49:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:49:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:49:59 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"YX/9RfiXW7YOx6q/uAJnRBXrqNMW9w+AsnfWhQoOyCyYrFS1VSGVuV+IQ3wfy4xPc1sZ9JCySJxz0GAEWgrmeg==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-22 22:49:59.247017"], ["id", 11]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:49:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:52:13 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"+2DC0akGC353C1cE8pn/Yc1aPXG8dWY5+QmoBXy9POkCs2shBLDFcSZEvsdVUBRqq+qMVjowISU4rh6ELLkSvw==", "id"=>"8"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-22 22:52:13.591834"], ["id", 8]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:52:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for 127.0.0.1 at 2017-09-22 15:52:17 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"9uYFRzwgxpHqjLRXdxZ7fHN+alBebuwRdg1nhUsziNcPNay3kZYInrvDXZTQ35B3Fc7bd9grqw23qtEEGzemgQ==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-22 22:52:17.172755"], ["id", 11]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:52:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:54:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:54:55 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"emnrFxGJ3R7jMrTaMxQ2iVnJY6j0A50YPpxIZdYeytyDukLnvD8TEbJ9XRmU3d2CP3nSj3JG2gT/O/7khhrkig==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "t"], ["updated_at", "2017-09-22 22:54:55.197764"], ["id", 2]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:54:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/8/toggle_complete" for 127.0.0.1 at 2017-09-22 15:55:00 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"1PjTqq+wfaERN4s9ois8qzDkefQdfnK/swQ3PW4YKqctK3paAgazrkB4Yv4F4tegVlTI05s7NaNyo4G8PhwE8Q==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-22 22:55:00.925802"], ["id", 8]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:55:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for 127.0.0.1 at 2017-09-22 15:55:04 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"5QLtssvp32aPsZW+23aJnZMcLUYeFYmbvy5+ukbS3n0c0URCZl8Rad7+fH18v2KW9aycYZhQzod+icg7FtbwKw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "f"], ["updated_at", "2017-09-22 22:55:04.633808"], ["id", 2]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 15:55:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
