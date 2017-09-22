@@ -1,0 +1,43 @@
+<% if input_priority == 0
+    tag = "Unsorted"
+  elsif input_priority == 1
+    tag = "Do right away!!!!"
+  elsif input_priority == 2
+    tag = "Plan to do ASAP"
+  elsif input_priority == 3
+    tag = "Delegate later"
+  elsif input_priority == 4
+    tag = "Just for fun (-:"
+  end%>
+
+
+<h1><%="Priority Level #{input_priority}" %></h1>
+<h3><%="#{tag}" %></h3>
+
+
+<section class="your_tasks">
+<ol>
+
+
+<%= @tasks.each do |task| %>
+
+
+
+<% if !(task.completed) && task.priority == input_priority %>
+<li><strong><%= link_to(task.title, task_path(task.id)) %></strong> </li>
+<article class="task_edits">
+<%= link_to "mark complete", mark_complete_task_path(task.id), method: :patch %>
+<%= link_to "edit", edit_tasks_path(task.id) %>
+<%= link_to "delete", delete_task_path(task.id), method: :delete %></article>
+<%elsif task.priority == input_priority%>
+<li><strong class="completed"><%= link_to(task.title, task_path(task.id)) %></strong></li>
+<article class="task_edits">
+  <%= link_to "mark incomplete", mark_complete_task_path(task.id), method: :patch %>
+  <%= link_to "edit", edit_tasks_path(task.id) %>
+  <%= link_to "delete", delete_task_path(task.id), method: :delete, data: { confirm: "ARE YOU SURE?!!?" } %>
+</article>
+<% end %>
+
+<% end %>
+</ol>
+</section>

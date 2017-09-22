@@ -16,6 +16,7 @@ class TasksController < ApplicationController
   def index
     # @tasks = TASKS
     @tasks = Task.order(:completed)
+    # @priority_one = Task.find_by 
   end
 
   def show
@@ -62,7 +63,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(owner: params[:task][:owner], title: params[:task][:title], description: params[:task][:description], deadline: Date.civil(params[:start_date][:year].to_i, params[:start_date][:month].to_i, params[:start_date][:day].to_i), completed: false)
+    task = Task.new(owner: params[:task][:owner], title: params[:task][:title], description: params[:task][:description], deadline: Date.civil(params[:start_date][:year].to_i, params[:start_date][:month].to_i, params[:start_date][:day].to_i), completed: false, priority: params[:task][:priority].to_i)
     if task.save
       flash[:notice] = "#{task.title} by #{task.owner} was successfully created"
       redirect_to '/tasks'

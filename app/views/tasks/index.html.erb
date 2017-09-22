@@ -1,26 +1,50 @@
-<h1>List of Tasks</h1>
+<article class="content">
+
+<!-- <h1>List of Tasks</h1>
+
 
 <section class="your_tasks">
+<ol> -->
+
+<%= render partial: "priority", locals: { input_priority: 0 } %>
+
+
+
+<!-- </ol>
+</section> -->
+</article>
+<article class="content priority1">
+<section class ="your_tasks ">
 <ol>
-
-<% @tasks.each do |task| %>
-
-
-  <% if !(task.completed) %>
-  <li><strong><%= link_to(task.title, task_path(task.id)) %></strong> </li>
-  <article class="task_edits">
-  <%= link_to "mark complete", mark_complete_task_path(task.id), method: :patch %>
-  <%= link_to "edit", edit_tasks_path(task.id) %>
-  <%= link_to "delete", delete_task_path(task.id), method: :delete %></article>
-  <%else%>
-  <li><strong class="completed"><%= link_to(task.title, task_path(task.id)) %></strong></li>
-  <article class="task_edits">
-    <%= link_to "mark incomplete", mark_complete_task_path(task.id), method: :patch %>
-    <%= link_to "edit", edit_tasks_path(task.id) %>
-    <%= link_to "delete", delete_task_path(task.id), method: :delete, data: { confirm: "ARE YOU SURE?!!?" } %>
-  </article>
-  <% end %>
-
-<% end %>
+  <%= render partial: "priority", locals: { input_priority: 1 } %>
 </ol>
+
 </section>
+</article>
+
+<article class="content priority2">
+<section class ="your_tasks ">
+<ol>
+  <%= render partial: "priority", locals: { input_priority: 2 } %>
+</ol>
+
+</section>
+</article>
+
+<article class="content priority3">
+<section class ="your_tasks ">
+<ol>
+  <%= render partial: "priority", locals: { input_priority: 3 } %>
+</ol>
+
+</section>
+</article>
+
+<article class="content priority3">
+<section class ="your_tasks ">
+<ol>
+  <%= render partial: "priority", locals: { input_priority: 4 } %>
+</ol>
+
+</section>
+</article>
