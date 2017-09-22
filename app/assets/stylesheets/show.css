@@ -1,0 +1,9 @@
+#table{
+  display: flex;
+  flex-direction:  column;
+}
+
+#show_nav{
+  display: flex;
+  flex-direction:  column;
+}

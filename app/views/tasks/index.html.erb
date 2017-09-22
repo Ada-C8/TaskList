@@ -1,7 +1,7 @@
 <h2>To Do List</h2>
 <p>
   <ol>
-    <% @tasks.each do |task| %>
+    <% @tasks.order(date: :asc).each do |task| %>
     <li class = "task">
       <% if task.status == true %>
       <strong class = "status_complete">
@@ -12,7 +12,5 @@
     </li>
     <% end %>
   </ol>
-  <div>
-    <%= link_to "Remove Completed Tasks", tasks_path%>
-  </div>
+
 </p>

@@ -18,6 +18,9 @@
   <li>
     <%= link_to "New Task", new_task_path %>
   </li>
+  <li>
+    <%= link_to "Remove All Completed Tasks",  delete_completed_path, method: :delete, data: { confirm: "Are you sure you want to delete these tasks?" }  %>
+  </li>
   </nav>
 
   <body>

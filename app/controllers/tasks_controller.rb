@@ -26,10 +26,21 @@ class TasksController < ApplicationController
   end
 
   def status_complete
+      task_updates = params[:task]
       @task = Task.find(params[:id])
       @task.status = true
+      @task.completed = task_updates[:completed]
       @task.save
-      redirect_to('/tasks')
+      redirect_to task_path(@task)
+  end
+
+  def status_incomplete
+    @task = Task.find(params[:id])
+    @task.status = false
+    @task.completed = nil
+    @task.save
+    redirect_to task_path(@task)
+
   end
 
   def update
@@ -48,4 +59,13 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to('/tasks')
   end
+
+  def delete_complete
+    @tasks = Task.all
+    @tasks.each do |task|
+    task.destroy if task.status == true
+    end
+    redirect_to('/tasks')
+  end
+
 end

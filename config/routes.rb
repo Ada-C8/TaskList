@@ -15,7 +15,11 @@ Rails.application.routes.draw do
 
   get "/tasks", to: "tasks#index"
 
+  patch 'tasks/:id/status_incomplete', to: 'tasks#status_incomplete', as: 'status_incomplete'
+
   patch 'tasks/:id/status_complete', to: "tasks#status_complete", as: "update_status"
 
   delete "/tasks/:id", to: "tasks#destroy", as: "delete_task"
+
+  delete '/tasks', to: 'tasks#delete_complete', as: 'delete_completed'
 end
