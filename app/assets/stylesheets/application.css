@@ -14,10 +14,14 @@
  *= require_self
  */
 
+html{
+  background-color: LIGHTSTEELBLUE;
+}
 
  .wrapper{
    width: 70%;
    margin: 0 auto;
+   background-color: beige;
  }
 
 .leftline{
@@ -25,33 +29,34 @@
   width: 20%;
   padding: 25px;
   clear: right;
-}
 
-h1{
-  text-align: center;
 }
 
 .leftline h3{
+  text-align: center;
   margin-top: 35px;
   border: groove;
-  border-radius: 5px;
+  border-radius: 1em;
+  background-color: lightyellow;
   padding: 25px;
+  font-family: fantasy;
+}
+
+
+.leftline h1{
+  text-align: center;
+  font-family: fantasy;
 }
 
 .box h1{
   font-weight: bold;
+  text-align: center;
+  font-family: fantasy;
 }
 
-/*.box ul li{
-  display: inline-block;
-  width: 50%;
-  padding: 25px;
-}*/
-p{
-  padding left: 20px;
-}
 
 .box{
+
   overflow: scroll;
   height: 400px;
   float: right;
@@ -59,7 +64,8 @@ p{
   margin-top: 110px;
   margin-right: 0px;
   border: groove;
-  border-radius: 5px;
+  border-radius: 1em;
+  background-color: lightyellow;
   padding: 5px;
   vertical-align: top;
 }
@@ -70,4 +76,16 @@ p{
 .choose h4{
   display: inline-block;
   width: 30%;
+}
+
+.requested, #addlink, #editlink{
+  float: left;
+  width: 55%;
+  margin-top: 120px;
+  margin-left: 100px;
+  padding: 40px;
+  border: groove;
+  border-radius: 2em;
+  background-color: beige;
+  font-family: fantasy;
 }
