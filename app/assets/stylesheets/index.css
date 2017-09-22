@@ -10,18 +10,10 @@ article.your-tasks ol li {
   align-content: flex-start;
   line-height: 1.3;
 }
-article.your-tasks ol li:hover {
-  background: #fafafa;
-}
-article.your-tasks ol li:hover div.action-icons {
-  visibility: visible;
-}
-article.your-tasks ol li.complete span.task-name {
-  text-decoration: line-through;
-}
-article.your-tasks ol li.overdue span.task-name {
-  color: #DD4647;
-}
+article.your-tasks ol li:hover { background: #fafafa; }
+article.your-tasks ol li:hover div.action-icons { visibility: visible; }
+li.complete span.task-name { text-decoration: line-through; }
+li.overdue span.task-name { color: #DD4647; }
 
 /* completion button */
 button.edit-status {

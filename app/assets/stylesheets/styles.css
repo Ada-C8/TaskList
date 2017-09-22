@@ -27,7 +27,7 @@ h2 {
   border-bottom: 1px solid #f0f0f0;
 }
 
-/* main */
+/* main tag */
 main {
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ main {
   padding: 2% 10% 6%;
 }
 
-/* main - task-options*/
+/* main - fixed aside */
 aside.task-options {
   width: 30%;
   display: flex;
@@ -55,12 +55,8 @@ aside.task-options a.button {
   color: #fefefe;
   font-size: 1.4em;
 }
-aside.task-options a.button:hover {
-  background: #8293c4;
-}
-aside.task-options a.button i {
-  margin-right: 5%;
-}
+aside.task-options a.button:hover { background: #8293c4; }
+aside.task-options a.button i { margin-right: 5%; }
 aside.task-options figure { margin-top: 8%; }
 aside.task-options figure img {
   max-width: 270px;
