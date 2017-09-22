@@ -1920,3 +1920,401 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-22 11:01:00 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-22 11:01:26 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G/t1s/ogh+58tlvj12Vyl0/8vK9DZ9Wr3crQvQk5oKSC6dBx7cRUtAcV/559VFNH0c5y8XA/tRUmsT63CZRCDg==", "task"=>{"name"=>"Bake cookies", "description"=>"chocolate chip cookies", "completion_date"=>"Sunday"}, "commit"=>"Create Task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "completion_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bake cookies"], ["description", "chocolate chip cookies"], ["completion_date", "chocolate chip cookies"], ["created_at", "2017-09-22 18:01:26.036571"], ["updated_at", "2017-09-22 18:01:26.036571"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:01:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:16:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/maria/Documents/Ada_C8/rails/TaskList/app/views/tasks/index.html.erb:9: syntax error, unexpected ',', expecting ')'
+er.append=( link_to ("Delete", delete_task_path(task.id), me
+                              ^
+/Users/maria/Documents/Ada_C8/rails/TaskList/app/views/tasks/index.html.erb:9: syntax error, unexpected ',', expecting ')'
+e", delete_task_path(task.id), method: :delete) );@output_bu
+                              ^
+/Users/maria/Documents/Ada_C8/rails/TaskList/app/views/tasks/index.html.erb:9: syntax error, unexpected ')', expecting keyword_end
+h(task.id), method: :delete) );@output_buffer.safe_append='
+                              ^
+/Users/maria/Documents/Ada_C8/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/tasks/index.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/tasks/index.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/tasks/index.html.erb:9: syntax error, unexpected ')', expecting keyword_end
+app/views/tasks/index.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.6ms)
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:17:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (108.1ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fc88bd32510>:0x007fc88e012a58>
+Did you mean?  delete_book_path
+               edit_task_path):
+     6:   <li>
+     7:    <%= link_to(task.name, task_path(task.id)) %>
+     8:    <%= link_to( "Edit Task", edit_task_path(task.id)) %>
+     9:    <%= link_to("Delete", delete_task_path(task.id), method: :delete) %>
+    10:  </li>
+    11: <% end %>
+    12: 
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb__3734365708360558326_70249676315300'
+app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__3734365708360558326_70249676315300'
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.0ms)
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:17:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (99.9ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fc88bd32510>:0x007fc88971b5c0>
+Did you mean?  delete_book_path
+               edit_task_path):
+     6:   <li>
+     7:    <%= link_to(task.name, task_path(task.id)) %>
+     8:    <%= link_to( "Edit Task", edit_task_path(task.id)) %>
+     9:    <%= link_to("Delete", delete_task_path(task.id), method: :delete) %>
+    10:  </li>
+    11: <% end %>
+    12: 
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb__3734365708360558326_70249638070220'
+app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__3734365708360558326_70249638070220'
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.8ms)
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:18:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (100.6ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fc88d99e7a8>:0x007fc88d99d4c0>
+Did you mean?  delete_book_path
+               edit_task_path):
+     6:   <li>
+     7:    <%= link_to(task.name, task_path(task.id)) %>
+     8:    <%= link_to( "Edit Task", edit_task_path(task.id)) %>
+     9:    <%= link_to("Delete", delete_task_path(task.id), method: :delete) %>
+    10:  </li>
+    11: <% end %>
+    12: 
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb__3734365708360558326_70249672932440'
+app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__3734365708360558326_70249672932440'
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.0ms)
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:19:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (97.6ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fc88d99e7a8>:0x007fc8895f1dc0>
+Did you mean?  delete_book_path
+               edit_task_path):
+     6:   <li>
+     7:    <%= link_to(task.name, task_path(task.id)) %>
+     8:    <%= link_to( "Edit Task", edit_task_path(task.id)) %>
+     9:    <%= link_to("Delete", delete_task_path(task.id)) %>
+    10:  </li>
+    11: <% end %>
+    12: 
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb__3734365708360558326_70249637452260'
+app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__3734365708360558326_70249637452260'
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.7ms)
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:19:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tasks.8" for 127.0.0.1 at 2017-09-22 11:19:40 -0700
+Processing by TasksController#index as 
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks.8" for 127.0.0.1 at 2017-09-22 11:19:42 -0700
+Processing by TasksController#index as 
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks.8" for 127.0.0.1 at 2017-09-22 11:20:05 -0700
+Processing by TasksController#index as 
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 52ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks.4" for 127.0.0.1 at 2017-09-22 11:20:07 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"gr+BQM9NkSUYYy0t2m7w6cFlYc/EGUxGBQsMowuvkIUpoAHBn3qwNy6TFL1+j6aTZzT0tXeoPpAiyEqP0KJaQA=="}
+  Rendering tasks/destroy.html.erb within layouts/application
+  Rendered tasks/destroy.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/tasks.4" for 127.0.0.1 at 2017-09-22 11:21:06 -0700
+Processing by TasksController#destroy as 
+  Parameters: {"authenticity_token"=>"gr+BQM9NkSUYYy0t2m7w6cFlYc/EGUxGBQsMowuvkIUpoAHBn3qwNy6TFL1+j6aTZzT0tXeoPpAiyEqP0KJaQA=="}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:51:in `destroy'
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.8ms)
+Started GET "/tasks.8" for 127.0.0.1 at 2017-09-22 11:23:19 -0700
+Processing by TasksController#index as 
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 56ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/8" for 127.0.0.1 at 2017-09-22 11:23:21 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OKCOLNs79Pq8hmRtw7aQt/O7o/MC6etm9Jr7UEnScRGTvw6tiwzV6Ip2Xf1nV8bNVeo2ibFYmbDTWb18kt+71A==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering tasks/destroy.html.erb within layouts/application
+  Rendered tasks/destroy.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 22.6ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/tasks/4" for 127.0.0.1 at 2017-09-22 11:23:28 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OKCOLNs79Pq8hmRtw7aQt/O7o/MC6etm9Jr7UEnScRGTvw6tiwzV6Ip2Xf1nV8bNVeo2ibFYmbDTWb18kt+71A==", "id"=>"4"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering tasks/destroy.html.erb within layouts/application
+  Rendered tasks/destroy.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 22.3ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/tasks/8" for 127.0.0.1 at 2017-09-22 11:24:11 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OKCOLNs79Pq8hmRtw7aQt/O7o/MC6etm9Jr7UEnScRGTvw6tiwzV6Ip2Xf1nV8bNVeo2ibFYmbDTWb18kt+71A==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:51:in `destroy'
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.0ms)
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:27:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 37ms (Views: 27.7ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/tasks/1" for 127.0.0.1 at 2017-09-22 11:27:16 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KfMNaf5YZqT2zZurAulLHL2vbW+26ox8VNhjBQ81KdGC7I3orm9HtsA9ojumCB1mG/74FQVb/qpzGyUp1DjjFA==", "id"=>"1"}
+  [1m[36mTask Load (2.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:27:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:29:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tasks/7" for 127.0.0.1 at 2017-09-22 11:29:25 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dEZZ951UBpCFLZOZR4ElzdHS0ELlocpTUHAO7rPgV9nfWdl2zWMngrPdqgnjYHO3d4NFOFYQuIV3s0jCaO2dHA==", "id"=>"7"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:29:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:29:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/maria/Documents/Ada_C8/rails/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/maria/Documents/Ada_C8/rails/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/maria/Documents/Ada_C8/rails/TaskList/app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:17: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/maria/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.9ms)
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:30:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tasks/6" for 127.0.0.1 at 2017-09-22 11:30:47 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"H/GknN08l1xsgf3Hw4pGvYBY2jZ5S+hnDnWCa7ORWGq07iQdjQu2TlpxxFdnaxDHJglPTMr6mrEptsRHaJySrw==", "id"=>"6"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 11:30:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
