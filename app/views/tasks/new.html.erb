@@ -1,5 +1,6 @@
 <h2>new task</h2>
-
+<%= render partial: "form", locals: { button_text: "Make me a task!" } %>
+<!--
 <%= form_for @task do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title, placeholder: "e.g., Food needs" %>
@@ -10,7 +11,7 @@
   <%= f.label :due_date %>
   <%= f.text_field :due_date, placeholder: "e.g., 2017-9-21" %>
   <%= f.submit "Make a new task!"%>
-<% end %>
+<% end %> -->
 
 
 <!-- <form action="/tasks" method="post" accept-charset="utf-8"> -->

@@ -1,5 +1,6 @@
 <h2>edit</h2>
-
+<%= render partial: "form", locals: { button_text: "Save changes" } %>
+<!--
 <%= form_for @task do |f| %>
    <%= f.label :title %>
    <%= f.text_field :title %>
@@ -8,7 +9,7 @@
    <%= f.text_field :description %>
 
    <%= f.label :due_date %>
-   <%= f.text_field :due_date, placeholder: "e.g., 2017-9-21" %>
+   <%= f.text_field :due_date %>
 
    <%= f.submit "Save changes" %>
- <% end %>
+ <% end %> -->
