@@ -3,19 +3,25 @@
 <%#hide_placeholder_text ||= false %>
 <%#form_class ||= "" %>
 
-<%= form_for @task do |f| %>
-   <%= f.label :title %>
-   <%= f.text_field :title, placeholder: "e.g., Food needs" %>
-
-   <%= f.label :description %>
-   <%= f.text_field :description, placeholder: "e.g., carrots, ginger" %>
-
-   <%= f.label :due_date %>
-   <%= f.text_field :due_date, placeholder: "e.g., 2017-9-21" %>
-
-   <%= f.submit button_text %>
- <% end %>
-
+<ul class="form">
+  <%= form_for @task do |f| %>
+  <li>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: "e.g., Food needs" %>
+  </li>
+  <li>
+    <%= f.label :description %>
+    <%= f.text_field :description, placeholder: "e.g., carrots, ginger" %>
+  </li>
+  <li>
+    <%= f.label :due_date %>
+    <%= f.text_field :due_date, placeholder: "e.g., 2017-9-21" %>
+  </li>
+  <li>
+    <%= f.submit button_text, class:"button"%>
+  </li>
+  <% end %>
+</ul>
 
 <%#<% button_text ||= "The button" %>
 <%#<% form_class ||= "" %>
