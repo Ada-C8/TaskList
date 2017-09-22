@@ -3,14 +3,10 @@
     <h2><%= @task.name %></h2>
     <h3><%= @task.description %></h3>
     <p>Done? <%= @task.done ? "Yes" : "No" %></p>
-    <% if @task.done %>
-      <p>Date Completed:
-        <%= @task.completion_date%>
-      </p>
-    <% end %>
+    <p>Deadline: <%= @task.completion_date%></p>
     <section class="task-action-buttons">
       <%= link_to "Edit", edit_task_path(@task.id), class: "button" %>
-      <%= link_to "Delete", delete_task_path(@task.id), method: :delete, class: "button" %>
+      <%= link_to "Delete", delete_task_path(@task.id), data: { confirm: 'Are you sure?' }, method: :delete, class: "button" %>
     </section>
   <% end %>
 </section>
