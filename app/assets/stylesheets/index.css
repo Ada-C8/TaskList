@@ -1,0 +1,49 @@
+
+/******* YIELD TO INDEX.HTML.ERB *********/
+
+#main-article-wrapper article {
+  padding: 0 1em 1em 1em;
+  display: inline-block;
+}
+
+section#task-wrapper {
+  border-top: 1px dashed black ;
+}
+
+section#task-wrapper h2 {
+  margin-bottom: 0;
+}
+
+section h2 .complete_status {
+  text-decoration: line-through;
+}
+
+nav#task-links ul {
+  padding: 0;
+}
+
+nav#task-links ul li {
+  display: inline;
+  padding-right: 20px;
+}
+
+/* MARK COMPLETE GREEN HOVER */
+
+.hover-green:hover {
+  color: #0F9E5E;
+  transition-duration: 0.5s;
+}
+
+/* EDIT BLUE HOVER */
+
+.hover-blue:hover {
+  color: #2098D1;
+  transition-duration: 0.5s;
+}
+
+/* DELETE RED HOVER */
+
+.hover-red:hover {
+  color: red;
+  transition-duration: 0.5s;
+}

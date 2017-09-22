@@ -9,7 +9,6 @@ class TasksController < ApplicationController
 
   def create
     # NO INSTANCE METHOD IN A CREATE METHOD
-    # task = Task.new(title: params[:title], author: params[:author])
     task = Task.new(title: params[:task][:title], description: params[:task][:description], due_date: params[:task][:due_date])
     task.save
     redirect_to('/tasks')
