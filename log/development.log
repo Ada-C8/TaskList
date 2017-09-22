@@ -9878,3 +9878,509 @@ Processing by TasksController#new as HTML
 Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-22 13:28:12 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.8ms)
+  Rendered tasks/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 30ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:28:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-22 13:28:15 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-22 13:30:15 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQm7tcViQOWrE8/1Pvv9oJd50tOC6PGOI2M61dE39azMIq74Mo2YEW/7FkUOsSNa1sO/fqPnL0+HTCaHR+A8+g==", "task"=>{"name"=>"Feed the dog", "description"=>"two cats", "due_date"=>"2017-09-19"}, "commit"=>"New"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Feed the dog"], ["description", "two cats"], ["due_date", "2017-09-19"], ["status", "incomplete"], ["created_at", "2017-09-22 20:30:15.609502"], ["updated_at", "2017-09-22 20:30:15.609502"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:30:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `div' for Wed, 14 Aug 2030:Date):
+    13:     <% end %>
+    14: 
+    15:     <div class="task-actions">
+    16:       <% if task[:status] == "incomplete" && (Date.new(task[:due_date]) < Date.today) %>
+    17:         <li class="action overdue"><%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %></li>
+    18:       <% elsif task[:status] == "incomplete" %>
+    19:         <li class="action"><%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %></li>
+  
+app/views/tasks/index.html.erb:16:in `new'
+app/views/tasks/index.html.erb:16:in `block in _app_views_tasks_index_html_erb___2426874593639198608_70360806364660'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___2426874593639198608_70360806364660'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:30:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Date into String):
+    13:     <% end %>
+    14: 
+    15:     <div class="task-actions">
+    16:       <% if task[:status] == "incomplete" && (Date.parse(task[:due_date]) < Date.today) %>
+    17:         <li class="action overdue"><%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %></li>
+    18:       <% elsif task[:status] == "incomplete" %>
+    19:         <li class="action"><%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %></li>
+  
+app/views/tasks/index.html.erb:16:in `parse'
+app/views/tasks/index.html.erb:16:in `block in _app_views_tasks_index_html_erb___2426874593639198608_70360859771740'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___2426874593639198608_70360859771740'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:32:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:32:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:33:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:33:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:34:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:34:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:34:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-22 13:36:30 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-22 13:36:52 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gc91HXDwDGltDGNTF9S0hv6/oBYW5DIgq9EwhepwvIHs5GBQhx/UnankuuMnnmp8vwXNuzfr7OEP/izXfKd11w==", "task"=>{"name"=>"Buy milk", "description"=>"two gallons", "due_date"=>"2017-09-17"}, "commit"=>"New"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "due_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Buy milk"], ["description", "two gallons"], ["due_date", "2017-09-17"], ["status", "incomplete"], ["created_at", "2017-09-22 20:36:52.028472"], ["updated_at", "2017-09-22 20:36:52.028472"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:36:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:40:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:40:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:41:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:41:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:42:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/15/mark_complete" for 127.0.0.1 at 2017-09-22 13:42:55 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"lSQaqFwKDyEtgEUJLtNMUVUtG3QgKOTd6b2iOh4Z6ataD+jBAzkL5wmSkIXmOndzBNStWmB+2IzQrhq1HcwF8w==", "id"=>"15"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = $1, "status" = $2, "updated_at" = $3 WHERE "tasks"."id" = $4[0m  [["completion_date", "2017-09-22"], ["status", "complete"], ["updated_at", "2017-09-22 20:42:55.055072"], ["id", 15]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:42:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/15/mark_incomplete" for 127.0.0.1 at 2017-09-22 13:43:01 -0700
+Processing by TasksController#mark_incomplete as HTML
+  Parameters: {"authenticity_token"=>"fdxY5+ju4DsQSZ7RrMPJEXzuslQQ5iDQbiuZ1QBf0bGy96qOt93k/TRbS11kKvIzLRcEelCwHIFXOCFaA4o96Q==", "id"=>"15"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "incomplete"], ["updated_at", "2017-09-22 20:43:01.980194"], ["id", 15]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:43:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:45:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;     else 
+                  ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_else, expecting ')'
+app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:45:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_elsif, expecting ')'
+'.freeze;     elsif 
+                   ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_elsif, expecting ')'
+app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:46:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;     else 
+                  ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_else, expecting ')'
+app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:46:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_elsif, expecting ')'
+'.freeze;     elsif 
+                   ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_elsif, expecting ')'
+app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:48:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_elsif, expecting ')'
+'.freeze;     elsif 
+                   ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_elsif, expecting ')'
+app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:49:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;     else 
+                  ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:15: syntax error, unexpected keyword_else, expecting ')'
+app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:50:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;     else 
+                  ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/kimberley/ada/week-seven/TaskList/app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_else, expecting ')'
+app/views/tasks/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:50:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:51:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:52:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:52:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:53:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:54:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:54:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/12/mark_incomplete" for 127.0.0.1 at 2017-09-22 13:54:57 -0700
+Processing by TasksController#mark_incomplete as HTML
+  Parameters: {"authenticity_token"=>"89EcKfLxB3EY3Zxy/q3N526AJUDSB56rCcURdP8B1yo8+u5ArcIDtzzPSf42RPbFP3mTbpJRovow1qn7/NQ7cg==", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "status" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["status", "incomplete"], ["updated_at", "2017-09-22 20:54:57.303833"], ["id", 12]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:54:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."due_date" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+

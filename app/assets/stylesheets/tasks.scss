@@ -87,6 +87,10 @@ ul {
 }
 
 //each individual listed task on index pages
+.tasks p {
+  padding-left: .75em;
+}
+
 .tasks, .complete-task {
   display: flex;
   align-items: center;
@@ -155,10 +159,9 @@ ul {
   animation-timing-function: linear;
 }
 
-//
-// .overdue li {
-//   color: red;
-// }
+.overdue{
+  color: red;
+}
 
 //show view
 .descriptor {
