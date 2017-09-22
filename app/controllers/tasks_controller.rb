@@ -16,7 +16,11 @@ class TasksController < ApplicationController
   def index
     # @tasks = TASKS
     @tasks = Task.order(:completed)
-    # @priority_one = Task.find_by 
+    @priority_zero = Task.find_by(priority: 0)
+    @priority_one = Task.find_by(priority: 1)
+    @priority_two = Task.find_by(priority: 2)
+    @priority_three = Task.find_by(priority: 3)
+    @priority_four = Task.find_by(priority: 4)
   end
 
   def show
