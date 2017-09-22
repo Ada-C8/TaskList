@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   #get 'tasks/update'
   patch 'tasks/:id', to: 'tasks#update', as: 'update_task' #=> update_task_path
 
+  patch 'tasks/:id/mark', to: 'tasks#mark', as: 'mark_task'
+
   #get 'tasks/create'
   post 'tasks', to: 'tasks#create', as: 'create_task' #=> create_task_path
 

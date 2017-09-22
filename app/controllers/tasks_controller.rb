@@ -29,7 +29,20 @@ class TasksController < ApplicationController
     else
       render :edit
     end
+  end
 
+  def mark
+    task = Task.find_by(id: params[:id])
+
+    if task.completion_date == nil
+      if task.update_attribute :completion_date, Date.today
+        redirect_to root_path # could also be edit_task_path or a way to go back to previous screen
+      end
+    else
+      if task.update_attribute :completion_date, nil
+        redirect_to root_path # could also be edit_task_path or a way to go back to previous screen
+      end
+    end
   end
 
   def create
@@ -44,11 +57,11 @@ class TasksController < ApplicationController
 
   def destroy
     Task.find_by(id: params[:id]).destroy
-    redirect_to root_path
+    redirect_to tasks_path
   end
 
   private
   def task_params
-    return params.require(:task).permit(:name, :description) #stranger danger! see strong params
+    return params.require(:task).permit(:name, :description, :completion_date) #stranger danger! see strong params
   end
 end

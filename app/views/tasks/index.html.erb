@@ -4,7 +4,6 @@
   <ol>
     <% @tasks.each do |task| %>
       <li>
-        <strong><%= link_to(task.name, task_path(task.id), alt: 'link to task.name task') %></strong>
           <%= render partial: "task_tools", locals: {task: task}%>
       </li>
     <% end %>

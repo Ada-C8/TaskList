@@ -1,5 +1,12 @@
 <nav>
-  <a href= >Mark Complete</a> |
-<%= link_to('Edit', edit_task_path(task.id)) %> |
-<%= link_to('Delete', delete_task_path(task.id), method: :delete) %>
+  <% if task.completion_date == nil %>
+  <h3><%= link_to(task.name, task_path(task.id), class: "not_completed") %></h3>
+  <%= button_to('Mark Complete', mark_task_path(task.id), method: :patch) %>
+  <% else %>
+  <h3><%= link_to(task.name, task_path(task.id), class: "completed") %></h3>
+  <%= button_to("Completed #{task.completion_date.to_s}, Mark Incomplete", mark_task_path(task.id), method: :patch, class: "complete_button") %>
+  <% end %>
+  |
+  <%= link_to('Edit', edit_task_path(task.id)) %> |
+  <%= link_to('Delete', delete_task_path(task.id), method: :delete, data: {confirm: 'Ultra sure? No take backs...'}) %>
 </nav>
