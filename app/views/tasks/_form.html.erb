@@ -1,13 +1,18 @@
-<%= form_for @book do |f| %>
-  <%= f.label :author %>
-  <%= f.text_field :author %>
+<%= form_for @task do |f| %>
+  <%= f.label :owner %>
+  <%= f.text_field :owner %>
 
   <%= f.label :title %>
   <%= f.text_field :title %>
-<hr />
+
   <%= f.label :description %>
   <%= f.text_field :description %>
 
+  <hr />
+  <%= select_date Date.today, prefix: :start_date %>
+  <hr />
+  <%= f.label :priority %>
+  <%= f.text_field :priority %>
 
-  <%= f.submit %>
+  <%= f.submit action_name %>
 <% end %>
