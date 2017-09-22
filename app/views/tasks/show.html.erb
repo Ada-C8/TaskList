@@ -21,7 +21,8 @@
 <% end %>
 
 <%= link_to "Home", tasks_path %>
-
 <%= link_to "Edit", edit_task_path(@task.id) %>
+<%= link_to "Delete", delete_task_path(@task), method: :delete, data: {confirm: "Are you sure?"}%>
 
-<%= link_to "Delete", delete_task_path(@task.id), method: :delete %>
+
+<!-- <a rel="nofollow" data-method="delete" data-confirm="Are you sure you want to delete?" href="/tasks/<%= @task.id %>">Delet </a> -->

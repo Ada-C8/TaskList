@@ -12,14 +12,25 @@ Rails.application.routes.draw do
   # get 'tasks/show'
   get '/tasks/:id', to: 'tasks#show', as: 'task' #task_path
 
-  # get 'tasks/update'
-  patch '/tasks/:id', to: 'tasks#update', as:'update_book' #update_task_path
 
-  # get 'tasks/create'
+
+
+  # patch 'tasks/completed'
+  patch '/tasks/:id/completed', to: 'tasks#completed', as:'completed' #completed_path
+
+
+
+
+  # patch 'tasks/update'
+  patch '/tasks/:id', to: 'tasks#update', as:'update_task' #update_task_path
+
+  # post 'tasks/create'
   post '/tasks/', to: 'tasks#create', as:'create_task' #create_task_path
 
-  # get 'tasks/destroy'
+  # delete 'tasks/destroy'
   delete '/tasks/:id', to: 'tasks#destroy', as: 'delete_task' #delete_task_path
+
+
 
   # may need to move this up so that it is correctly placed.
   # patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'task_complete'

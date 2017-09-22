@@ -11,7 +11,7 @@
     <% @tasks.each do |task| %>
     <li>
       <!-- <%= task.name %> -->
-      
+
       <div class="task_name">
         <%= "#{counter}. " %> <%=link_to(task.name, task_path(task.id)) %>
       </div>
@@ -19,7 +19,14 @@
 
       <div class="edit_delete">
         <%= link_to("Edit", edit_task_path(task[:id])) %>
-        <%= link_to("Delete", delete_task_path(task[:id]), method: :delete) %>
+
+        <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %>
+
+        <%= link_to("Complete", completed_path(task[:id]), method: :patch) %>
+
+        <!-- <%= button_to task.completion_date ? "Task Complete": "Not Complete", completed_path(task.id), method: :patch %> -->
+
+
       </div>
     </li>
     <% end %>
