@@ -1,23 +1,18 @@
 <main class="index_main">
 
-<h1 class="index">TASKLIST</h1>
-<aside class = "nav_buttons">
-  <article>
-    <%= link_to("Add Task", new_task_path) %>
-  </article>
-  <article>
-    All Tasks
-  </article>
-</aside>
+<!-- <h1 class="index">TASKLIST</h1> -->
+<%= render partial: "nav_buttons" %>
+
 <section class="task_list">
   <h2>YOUR TASKS</h2>
   <ol>
     <% @tasks.each do |task| %>
     <li>
-      <%= link_to(task.name, task_path(task.id)) %>
-      <p>
-      Mark Complete  |
-      <%= link_to("Edit", edit_task_path(task.id)) %>  |  Delete
+      <p class="<%= completed_status_class(task) %>">
+        <%= link_to(task.name, task_path(task.id)) %>
+      </p>
+      <%= link_to(task.completed ? "Unmark Complete" : "Mark Complete", mark_complete_path(task.id), method: :patch) %>  |
+      <%= link_to("Edit", edit_task_path(task.id)) %>  |  <%= link_to("Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Do you REALLY want to delete me?!"}) %>
       </p>
     </li>
     <% end %>

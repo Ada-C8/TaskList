@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_task' #edit_task_path
 
-  patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'mark_complete_task' # mark_complete_task_path
+  patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'mark_complete' # mark_complete_path
 
   #( Need to add a method to the controller )
 

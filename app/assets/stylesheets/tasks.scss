@@ -4,13 +4,29 @@
 // * {
 //   border: 1px black solid;
 // }
-* {
-  margin: 0;
-}
 
 body {
-  background-image: url(sunset.JPG);
+  background-image: url(colors.JPG);
   background-size: cover;
+}
+
+header {
+  background-color: white;
+  border: 1px solid purple;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.statement{
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .index {
@@ -25,9 +41,11 @@ body {
 .task_list {
   width: 60%;
   max-width: 600px;
+  max-height: 580px;
+  overflow: scroll;
 }
 
-.nav_buttons, .task_list{
+.nav_buttons, .task_list, .form{
   float: left;
   margin: 2%;
 }
@@ -38,11 +56,12 @@ body {
   width: 150px;
 }
 
-.task_list, .nav_buttons article {
-  border: 1px black solid;
+.task_list, .nav_buttons article, .form {
+  border: 1px orange solid;
   border-radius: 10px;
   padding: 10px;
   font-size: 2em;
+  background-color: white;
 }
 
 .task_list h2 {
@@ -59,13 +78,39 @@ body {
   margin: 25px 0;
 }
 
+
+.form div {
+  margin: 20px auto;
+}
+
+
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 50px;
-  border: 1px solid black;
+  border: 1px solid yellow;
   text-align: center;
   margin-top: 50px;
   background-color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+a {
+  text-decoration: none;
+  color:#313131;
+  color: #fff;
+    -webkit-animation: random 5s infinite;
+    animation: random 5s infinite;
+}
+
+@keyframes random {
+  15% { color: red; }
+  30% { color: purple; }
+  45% { color: green; }
+  60% { color: blue; }
+  75% { color: orange; }
 }

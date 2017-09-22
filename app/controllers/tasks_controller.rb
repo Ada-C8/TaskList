@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    @tasks = Task.all.order(:id)
   end
 
   def show
@@ -15,7 +15,6 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
 
-
     # (name: params[:task][:name], description: params[:task][:description])
 
     if @task.save
@@ -27,6 +26,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    Task.find_by(id: params[:id]).destroy
+    redirect_to root_path
   end
 
   def edit
@@ -57,7 +58,18 @@ class TasksController < ApplicationController
     end
   end
 
-  private
+  def mark_complete
+    @task = Task.find(params[:id].to_i)
+
+    if @task.completed
+      @task.update_attributes(completed: false)
+    else
+      @task.update_attributes(completed: true)
+    end
+
+    redirect_to root_path
+
+  end
 
   # # def task_params
   #   return {name: params[:task][:name],
@@ -66,7 +78,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    return params.require(:task).permit(:name, :description, :completion_date)
+    return params.require(:task).permit(:name, :description, :completion_date, :completed)
   end
 
 end
