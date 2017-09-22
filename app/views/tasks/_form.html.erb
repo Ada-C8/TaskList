@@ -1,9 +1,6 @@
-<div class="your-tasks">
-  <h2>Edit erb</h2>
-  <%= render partial: "form", locals: {button_text: "Update Task"} %>
-</div>
+<!-- default button text variable -->
+<% button_text ||= "The Button" %>
 
-<!--
 <%= form_for @task do |f| %>
 <div>
   <%= f.label :title %>
@@ -21,6 +18,5 @@
   <%= f.label :status %>
   <%= f.text_field :status %>
 </div>
-<%= f.submit "Update Task"%>
+  <%= f.submit button_text%>
 <% end %>
- -->
