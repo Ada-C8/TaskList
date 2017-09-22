@@ -6,10 +6,16 @@
       <% print_status = "mark incomplete" %>
       <li class="complete">
       <%= link_to task.name, task_path(task.id), class: "complete" %>
+
+    <% elsif task.completion_date <= Date.today() %>
+      <% print_status = "mark complete" %>
+      <li>
+      <%= link_to task.name, task_path(task.id), class: "overdue" %>
+
     <% else %>
+      <% print_status = "mark complete" %>
       <li>
       <%= link_to task.name, task_path(task.id) %>
-      <% print_status = "mark complete" %>
     <% end %>
     <p>
       <%= task.completion_date %>

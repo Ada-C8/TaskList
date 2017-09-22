@@ -69,6 +69,26 @@ a.complete {
   text-decoration: line-through;
 }
 
+a.overdue {
+  color: #f54160;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 0.8em;
+  }
+  30% {
+    font-size: 1.0em;
+  }
+  100% {
+    font-size: 0.9em;
+  }
+}
+
+ol li {
+  margin-top: 15px;
+}
 
 ul>li {
   display: inline;
