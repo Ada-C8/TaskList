@@ -31,7 +31,7 @@
       <%= link_to edit_task_path(task.id), :class => 'task-action edit-task' do %>
         <i class="fa fa-pencil-square-o"></i>
       <% end %>
-      <%= form_tag task_path(task.id), :method => "delete" do %>
+      <%= form_tag task_path(task.id), :method => "delete", data: { confirm: "Are you sure?" } do %>
         <%= button_tag(type: "submit", class: "task-action delete-task") do %>
             <i class="fa fa-trash-o"></i>
         <% end %>
