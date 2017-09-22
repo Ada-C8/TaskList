@@ -1,2 +1,13 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h2>new task</h2>
+
+<%= form_for @task do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task, placeholder: "e.g., Food needs" %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description, placeholder: "e.g., carrots, ginger" %>
+
+  <%= f.label :due %>
+  <%= f.text_field :due, placeholder: "e.g., 2017-9-21" %>
+  <%= f.submit "Make a new task!"%>
+<% end %>

@@ -9,7 +9,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(task: params[:task][:task], description: params[:task][:description], due_date: params[:task][:due], status: false)
+    task = Task.new(task: params[:task][:task], description: params[:task][:description], due: params[:task][:due], status: false)
     task.save
     redirect_to('/tasks')
   end
@@ -24,11 +24,11 @@ class TasksController < ApplicationController
 
   def update
     task_updates = params[:task]
-    @task = Task.find( params[:id] )
+    @task = Task.find(params[:id])
 
-    @task.title = task_updates[:title]
+    @task.task = task_updates[:task]
     @task.description = task_updates[:description]
-    @task.due_date = task_updates[:due_date]
+    @task.due = task_updates[:due]
 
     @task.save
     redirect_to task_path(@task)
