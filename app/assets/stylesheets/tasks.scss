@@ -1,11 +1,49 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.to_do_list {
+.to_do_list, .form {
+  background-color: white;
   position: relative;
-  left: 19vw;
+  left: 6vw;
   top: 6vw;
   border: solid;
+  border-radius: 2vw;
   padding: 2vw;
-  width: 20vw;
+  min-width: 20vw;
+  display: inline-block;
+}
+
+.to_do_list h2, h1.view_title {
+  font-size: 2em;
+
+}
+
+.to_do_list li {
+  font-size: 1.5em;
+  padding-bottom: 2vw;
+}
+
+.form p {
+  font-size: 1.5em;
+  width: 100%;
+}
+
+input {
+  text-align: center;
+  width: 85%;
+  padding: 2vw;
+  margin-left: 2vw;
+  border-width: .5vw;
+  border-color: #ed104b;
+}
+
+.submit_container {
+  width: 100%;
+}
+
+.submit{
+  width: 100%;
+  padding: 1vw;
+  font-size: 1.5em;
+  font-family: 'Shrikhand', cursive;
 }

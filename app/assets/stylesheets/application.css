@@ -14,34 +14,45 @@
  *= require_self
  */
 
+body {
+  background-image: url("https://visitkohrong.com/wp-content/uploads/2016/03/Royal-Sands-Hotel-on-Koh-Rong-Island-in-Cambodia-Chill-Bar-and-Grill-Cocktials-2-768x432.jpg");
+  background-size: cover;
+}
 
  #Tasklist {
-   position: fixed;
-   left: 5vw;
+   position: relative;
+   width: 100%;
+   background-color: #ed104b;
+   left: 0;
    top: 0;
+   margin: 0;
+   padding: 2vw;
+   font-family: 'Shrikhand', cursive;
+   color: white;
+   font-size: 3em;
  }
 
  #add_button, #all_button {
     border: solid;
-    display: block;
+    background-color: white;
+    border-radius: 2vw;
     padding: 2vw;
-    position: fixed;
-    top: 5vw;
-    left: 5vw;
+    margin: 5vw;
+    margin-right: 3vw;
   }
 
-  #all_button {
-     top: 15vw;
-  }
+aside {
+  display: inline-block;
+}
 
   footer p {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%;
-    height: 4vw;
-    text-align: center;
-    border: dotted;
-    display: inline;
-    padding-top: 4vw;
+    height: 2vw;
+    padding-top: 1vw;
+    padding-left: 5vw;
+    color: white;
+    z-index: 1;
   }

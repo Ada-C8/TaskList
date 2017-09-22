@@ -1,0 +1,25 @@
+<h1>Tasks#show</h1>
+ <p>
+   Params are <%= params %>
+ </p>
+
+ <p>
+   Task is <%= @task %>
+ </p>
+
+ <% if @task %>
+  <h1>
+    Task: <%= @task.name %>
+  </h1>
+  <h2>
+    Description: <%= @task.description %>
+  </h2>
+  <h2>
+    Oh look, there is also a date for reasons!
+    It is <%=@task.date%>
+  </h2>
+  <h2>Task ID number: <%= @task.id %> </h2>
+
+  <%= link_to("Edit", edit_task_path(@task.id.to_i)) %>
+  <%= link_to("Delete", remove_task_path(@task.id.to_i)) %>
+  <%end%>

@@ -1,10 +1,15 @@
-<body class="to_do_list">
-  <h2>To Do:</h2>
-  <ul>
-    <% @tasks.each do |task| %>
-    <li>
-      Task: <%=task[:task]%>
-    </li>
-    <%end%>
-  </ul>
+<body>
+  <div class="to_do_list">
+    <h2>To Do:</h2>
+    <ul>
+      <% @tasks.each do |task| %>
+      <li>
+        Task: <%= link_to(task.name, task_path(task.id)) %>
+        <!-- <p>
+          Description: <%=task.description%>
+        </p> -->
+      </li>
+      <%end%>
+    </ul>
+  </div>
 </body>

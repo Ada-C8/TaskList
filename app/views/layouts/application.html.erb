@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaskList</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <header>
-      <h1 id="Tasklist">Tasklist</h1>
-    </header>
-    <body>
-      <%= yield %>
-      <h3 id="add_button"><%= link_to("Add Task", add_task_path)%></h3>
-      <h3 id="all_button"><%= link_to("All Tasks", tasks_path) %></h3>
-    </body>
-    <footer>
-      <p>
-        Im a footer!
-      </p>
-    </footer>
-  </html>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<header>
+  <h1 id="Tasklist">Tasklist</h1>
+</header>
+<body>
+  <aside>
+    <h3 id="add_button"><%= link_to("Add Task", add_task_path)%></h3>
+    <h3 id="all_button"><%= link_to("All Tasks", tasks_path) %></h3>
+  </aside>
+  <%= yield %>
+</body>
+<footer>
+  <p>
+    Im a footer!
+  </p>
+</footer>
+</html>
