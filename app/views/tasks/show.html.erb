@@ -13,7 +13,7 @@
       <strong>Due Date:</strong> <%= @task.due_date %>
     </li>
     <li>
-      Mark Complete | Edit | Delete
+      Mark Complete | <%= link_to "edit", edit_task_path(@task[:id]) %> | Delete
     </li>
   </ul>
 </div>

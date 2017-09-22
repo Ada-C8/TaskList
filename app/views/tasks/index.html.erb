@@ -3,8 +3,8 @@
   <ol>
     <% @tasks.each do |task| %>
       <li>
-        <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete |  | Delete
-        <!-- <%= link_to "Edit", edit_task_path(task[:id]) %> -->
+        <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>Mark Complete | <%= link_to "edit", edit_task_path(task[:id]) %> | Delete
+
         <!-- <%= form_tag task_path(task.id), method: :delete, class: "delete_task_form" do %> -->
           <!-- <%= text_field_tag "task[title]" , "Pet Cat" %>
           <%= text_field_tag "task[title]", "Pet Cat" %> -->
