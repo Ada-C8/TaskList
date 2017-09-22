@@ -12,35 +12,35 @@
         </p>
         <div class="actions">
           <span>
-            <%= link_to "mark incomplete", mark_as_incomplete_path(task.id), method: :patch, data: { confirm: "You sure you're not done this?" } %>
+            <%= link_to "mark incomplete", mark_as_incomplete_path(task.id), method: :patch, data: { confirm: "You sure you're not done this?" }, class: "link" %>
           </span>
           |
           <span>
-            <%= link_to "edit", edit_task_path(task.id) %>
+            <%= link_to "edit", edit_task_path(task.id), class: "link" %>
           </span>
           |
           <span>
-            <%= link_to "delete", tasks_path(task.id) %>
+            <%= link_to "delete", tasks_path(task.id), class: "link" %>
           </span>
         </div>
         <% else %>
         <strong>
           <p>
-            <%= link_to task.title, task_path(task.id) %>
+            <%= link_to task.title, task_path(task.id), class: "link" %>
           </p>
         </strong>
       </li>
       <div class="actions">
         <span>
-          <%= link_to "mark complete", mark_as_complete_path(task.id), method: :patch, data: { confirm: "You sure you're done this?" } %>
+          <%= link_to "mark complete", mark_as_complete_path(task.id), method: :patch, data: { confirm: "You sure you're done this?" }, class: "link" %>
         </span>
         |
         <span>
-          <%= link_to "edit", edit_task_path(task.id) %>
+          <%= link_to "edit", edit_task_path(task.id), class: "link" %>
         </span>
         |
         <span>
-          <%= link_to "delete", task_path(task.id), method: :delete, data: { confirm: "You sure?" } %>
+          <%= link_to "delete", task_path(task.id), method: :delete, data: { confirm: "You sure?" }, class: "link" %>
         </span>
       </div>
       <% end %>

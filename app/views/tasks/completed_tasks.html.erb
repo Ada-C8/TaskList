@@ -5,7 +5,7 @@
       <li>
         <% if task.status == true %>
         <strong>
-          <%= link_to task.title, task_path(task.id)%>
+          <%= link_to task.title, task_path(task.id), class: "link"%>
         </strong>
         <% end %>
       </li>
