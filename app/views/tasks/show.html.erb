@@ -1,4 +1,6 @@
 <article class="index">
   <h2><%= @task.name %></h2>
   <p> <%= @task.description %></p>
+  <%= render partial: "task_tools", locals: {task: @task}%>
+
 </article>

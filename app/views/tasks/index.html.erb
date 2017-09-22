@@ -5,11 +5,7 @@
     <% @tasks.each do |task| %>
       <li>
         <strong><%= link_to(task.name, task_path(task.id), alt: 'link to task.name task') %></strong>
-        <nav>
-          <a href= >Mark Complete</a> |
-          <%= link_to('Edit', edit_task_path(task.id), alt: 'link to edit task.name') %> |
-          Delete
-        </nav>
+          <%= render partial: "task_tools", locals: {task: task}%>
       </li>
     <% end %>
   </ol>
