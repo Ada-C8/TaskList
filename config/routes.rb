@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'tasks/:id/remove', to: 'tasks#remove', as: 'remove_task'
 
+  delete 'tasks/:id/confirm_remove', to: 'tasks#confirm_remove', as: 'confirm_remove'
+
   post 'tasks/', to: 'tasks#create', as: 'create_task'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -7,14 +7,17 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
-  def show
-    @task = Task.find( params[:id].to_i )
+  def create
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description])
+    if @task.save
+      redirect_to root_path
+    else
+      render :add
+    end
   end
 
-  def remove
-    Task.find_by(id: params[:id]).destroy
-
-    redirect_to root_path
+  def show
+    @task = Task.find( params[:id].to_i )
   end
 
   def edit
@@ -39,14 +42,20 @@ class TasksController < ApplicationController
     end
   end
 
-  def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description])
-    if @task.save
-      redirect_to root_path
-    else
-      render :add
-    end
+  def mark_complete
+
   end
+
+  def remove
+    @task = Task.find_by(id: params[:id])
+  end
+
+  def confirm_remove
+    Task.find_by(id: params[:id]).destroy
+
+    redirect_to root_path
+  end
+
 
   private
 

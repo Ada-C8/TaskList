@@ -1,2 +1,3 @@
 <h1>Tasks#remove</h1>
-<p>Find me in app/views/tasks/remove.html.erb</p>
+<p>Are you sure you want to remove <%= @task.name %>? </p>
+<%= link_to("Remove Task", confirm_remove_path(@task.id), method: :delete) %>
