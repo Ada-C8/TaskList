@@ -1,0 +1,13 @@
+<% if task.complete %>
+  <div id = "task-completed">
+    <strong>
+      <%= link_to task.name, task_path(task.id) %>
+    </strong>
+  </div>
+<% else %>
+  <div id = "task-not-completed">
+    <strong>
+      <%= link_to task.name, task_path(task.id) %>
+    </strong>
+  </div>
+<% end %>

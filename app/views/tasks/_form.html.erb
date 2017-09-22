@@ -1,40 +1,30 @@
 <% button_text ||= "The Button" %>
 <% hide_placeholder_text ||= false %>
 
-<div id="edit-tasklist">
-<ul>
-  <li>
-    <%= link_to "Add Task", new_task_path %>
-  </li>
-  <li>
-    <%= link_to "All Tasks", tasks_path %>
-  </li>
-</ul>
-</div>
+<%= render partial: "tasks_all_add" %>
+
 
 <div id="add-form">
-<h2> <strong>Add Task</strong></h2>
-<%= form_for @task do |f| %>
-<ul>
-<li>
-
-  <%= f.label :name %>
-  <%= f.text_field :name, placeholder: hide_placeholder_text ? "" : "Name of Task" %>
-</li>
-
-<li>
-  <%= f.label :description %>
-  <%= f.text_field :description, placeholder: hide_placeholder_text ? "" : "Description of Task" %>
-</li>
-
-<li>
-  <%= f.label :completion_date %>
-  <%= f.text_field :completion_date, placeholder: hide_placeholder_text ? "" : "YYYYMMDD" %>
-</li>
-
-  <%= f.submit button_text, id:"submit-button" %>
-
-</ul>
+  <h2>
+    <strong>
+      Add Task
+    </strong>
+  </h2>
+  <%= form_for @task do |f| %>
+  <ul>
+  <li>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: hide_placeholder_text ? "" : "Name of Task" %>
+  </li>
+  <li>
+    <%= f.label :description %>
+    <%= f.text_field :description, placeholder: hide_placeholder_text ? "" : "Description of Task" %>
+  </li>
+  <li>
+    <%= f.label :completion_date %>
+    <%= f.text_field :completion_date, placeholder: hide_placeholder_text ? "" : "YYYYMMDD" %>
+  </li>
+    <%= f.submit button_text, id:"submit-button" %>
+  </ul>
+  <% end %>
 </div>
-
-<% end %>
