@@ -5,11 +5,11 @@ class TasksController < ApplicationController
   end
 
   def new
-
+    @task = Task.new
   end
 
   def create
-    n = Task.new(title: params[:title], description: params[:description], date: params[:date], status: params[:status])
+    n = Task.new(title: params[:task][:title], description: params[:task][:description], date: params[:task][:date], status: params[:task][:status])
     n.save
     redirect_to('/tasks')
   end
@@ -45,7 +45,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task = Task.find(params[:id])
-    @task.delete
+    @task.destroy
     redirect_to('/tasks')
   end
 end
