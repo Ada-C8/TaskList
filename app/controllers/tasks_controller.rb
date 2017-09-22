@@ -13,10 +13,7 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find_by(id: params[:id].to_i)
-
-    unless @task
-      redirect_to task_path
-    end
+    redirect_to task_path unless @task
   end
 
   def create
@@ -41,6 +38,22 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    Task.find_by(id: params[:id]).destroy
+
+    redirect_to root_path, notice: "Task deleted."
+  end
+
+  def complete
+    task = Task.find_by(id: params[:id].to_i)
+    redirect_to tasks_path unless task
+
+    if task.complete?
+      task.update_attribute(:completion_date, nil)
+    else
+      task.update_attribute(:completion_date, Date.current)
+    end
+    
+    redirect_to root_path
   end
 
   private

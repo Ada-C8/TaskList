@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
 
   def complete?
-    self[:complete]
+    !(self.completion_date.nil?)
   end
 end
