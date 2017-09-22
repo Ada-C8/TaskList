@@ -1,0 +1,15 @@
+<!-- sets default value for variable -->
+<%# button_text ||= "button" %>
+
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :due_date %>
+  <%= f.date_field :due_date %>
+
+  <%= f.submit button_text %>
+<%end%>

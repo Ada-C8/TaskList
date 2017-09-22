@@ -1,14 +1,3 @@
 <h2>Edit task:</h2>
 
-<%= form_for @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.label :due_date %>
-  <%= f.date_field :due_date %>
-
-  <%= f.submit "Edit Task"%>
-<%end%>
+<%= render partial: "form", locals: { button_text: "Edit Task"}%>
