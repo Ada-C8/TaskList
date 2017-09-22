@@ -6,7 +6,7 @@ class TasksController < ApplicationController
   # done : boolean
 
   def index
-    @tasks = Task.order(:done)
+    @tasks = Task.order(:completion_date)
   end
 
   def show

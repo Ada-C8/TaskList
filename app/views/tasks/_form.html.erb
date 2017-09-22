@@ -1,14 +1,14 @@
 <%= form_for @task do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, required: true %>
   <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.text_field :description, required: true %>
   <%= f.label :completion_date %>
-  <%= f.date_field :completion_date %>
+  <%= f.date_field :completion_date, required: true %>
 
   <label for="task_done" class="control control-checkbox">
       Done?
-      <%= f.check_box :done %>
+      <%= f.check_box :done, required: true %>
       <div class="control_indicator"></div>
   </label>
 
