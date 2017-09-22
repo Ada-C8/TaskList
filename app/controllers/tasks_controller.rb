@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   def create
     task = Task.new(task: params[:task][:task], description: params[:task][:description], due_date: params[:task][:due_date], completed: false)
     task.save
-    redirect_to('/tasks')
+    redirect_to task_path(task)
   end
 
   def show
@@ -24,12 +24,12 @@ class TasksController < ApplicationController
   def update
     task = Task.find(params[:id])
     task.update(task: params[:task][:task], description: params[:task][:description], due_date: params[:task][:due_date])
-    redirect_to('/tasks')
+    redirect_to task_path(task)
   end
 
   def destroy
     Task.destroy(params[:id])
-    redirect_to('/tasks')
+    redirect_to tasks_path
   end
 
   def toggle_completed
@@ -40,6 +40,6 @@ class TasksController < ApplicationController
       task.completed = true
     end
     task.save
-    redirect_to('/tasks')
+    redirect_to tasks_path
   end
 end

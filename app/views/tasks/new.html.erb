@@ -1,17 +1,6 @@
 <div class="container page" id="new">
   <h2>New Task</h2>
 
-<%= form_for @task do |t| %>
-  <%= t.label :task %>
-  <%= t.text_field :task %>
-
-  <%= t.label :due_date, "Due Date" %>
-  <%= t.date_field :due_date %>
-
-  <%= t.label :description %>
-  <%= t.text_area :description %>
-
-  <%= t.submit "Create" %>
-<% end %>
+<%= render partial: "form", locals: {button_text: "Create"} %>
 
 </div>

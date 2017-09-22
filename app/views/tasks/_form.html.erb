@@ -1,0 +1,12 @@
+<%= form_for @task do |t| %>
+  <%= t.label :task %>
+  <%= t.text_field :task %>
+
+  <%= t.label :due_date, "Due Date" %>
+  <%= t.date_field :due_date %>
+
+  <%= t.label :description %>
+  <%= t.text_area :description %>
+
+  <%= t.submit button_text %>
+<% end %>
