@@ -22,16 +22,15 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def all
+    @tasks = Task.all.order(:status)
+  end
+
   def update
-    task_updates = params[:task]
-    @task = Task.find(params[:id])
-
-    @task.title = task_updates[:title]
-    @task.description = task_updates[:description]
-    @task.due_date = task_updates[:due_date]
-
-    @task.save
-    redirect_to task_path(@task)
+    task = Task.find(params[:id])
+    task.update(task: params[:task][:task], description: params[:task][:description], due: params[:task][:due])
+    
+    redirect_to('/tasks')
   end
 
   def status

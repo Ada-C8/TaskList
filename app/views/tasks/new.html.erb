@@ -2,12 +2,13 @@
 
 <%= form_for @task do |f| %>
   <%= f.label :task %>
-  <%= f.text_field :task, placeholder: "e.g., Food needs" %>
+  <%= f.text_field :task, placeholder: "task name here" %>
 
   <%= f.label :description %>
-  <%= f.text_field :description, placeholder: "e.g., carrots, ginger" %>
+  <%= f.text_field :description, placeholder: "description here" %>
 
   <%= f.label :due %>
-  <%= f.text_field :due, placeholder: "e.g., 2017-9-21" %>
-  <%= f.submit "Make a new task!"%>
+  <%= f.date_field :due %>
+
+  <%= f.submit "Create"%>
 <% end %>
