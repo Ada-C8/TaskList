@@ -1,6 +1,11 @@
 <div class="your-tasks">
   <h2>YOUR TASKS</h2>
   <ol>
-    <%= render partial: "action_bar", locals: { tasks: @tasks} %>
+    <% @tasks.each do |task| %>
+      <li>
+        <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>
+        <%= render partial: "action_bar", locals: { tasks: @tasks} %>
+      </li>
+    <% end%>
   </ol>
 </div>
