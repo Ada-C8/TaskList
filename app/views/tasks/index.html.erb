@@ -15,16 +15,19 @@
             <div class="choose">
 
               <% if task.complete == "t" %>
-                <h4 class = "unmark"><%= link_to "Unmark Completed", update_task_path(task.id, :task => {:complete => "f"}), method: :patch %> |</h4>
+                <h4 class = "unmark"><%= link_to "Unmark Completed", update_task_path(task.id, {:task => {:complete => "f"}, :refresh => true}), method: :patch %> |</h4>
               <% else %>
-                <h4><%= link_to "Mark Completed", update_task_path(task.id, :task => {:complete => "t"}), method: :patch %> |</h4>
+                <h4><%= link_to "Mark Completed", update_task_path(task.id, {:task => {:complete => "t"}, :refresh => true}), method: :patch %> |</h4>
               <% end %>
 
             <h4><%= link_to "Edit", edit_task_path(task.id) %> |</h4>
-            <h4><%= link_to "Delete", delete_task_path(task.id), method: :delete %></h4>
+            <h4><%= link_to "Delete", task_path(task), method: :delete , data: {confirm: "Are you sure?" }  %></h4>
           </div>
         </li>
       <% end %>
     </ol>
   </div>
 </section>
+
+
+<!-- delete_task_path(task.id) -->

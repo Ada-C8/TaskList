@@ -30,10 +30,12 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.update_attributes(task_updates)
     task.save
-
-    redirect_to task_path(task)
-  end
-
+    if params[:refresh]
+      redirect_to home_url
+    else
+      redirect_to task_path(task)
+    end
+   end
   def destroy
     task = Task.find(params[:id])
     task.destroy
