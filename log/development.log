@@ -10268,3 +10268,30 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.2ms)
 
 
+Started DELETE "/tasks/16" for 127.0.0.1 at 2017-09-22 09:57:41 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rRIMIjuSD69wzjmkhwd738Ekp3U49+Wu9aP/XL8XHNpfHg2qKpW4bdSeB4p0UI8GVxbcgQ21wWcLqfTUSVgO1w==", "id"=>"16"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 16]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 21ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 09:57:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 10:09:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 73ms (Views: 59.1ms | ActiveRecord: 1.2ms)
+
+
