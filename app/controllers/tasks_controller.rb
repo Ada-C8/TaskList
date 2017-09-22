@@ -13,7 +13,7 @@ class TasksController < ApplicationController
     # was different so the way we pulled it out was also different
     #book = Book.new(title: params[:title] ,description: params[:description], due_date: params[:due_date], status: params[:status])
 
-    task = Task.new(title: params[:task][:title] ,description: params[:task][:description], due_date: params[:task][:due_date], status: params[:task][:status])
+    task = Task.new(title: params[:task][:title] ,description: params[:task][:description], due_date: params[:task][:due_date], complete: params[:task][:complete])
     task.save
     redirect_to('/tasks')
   end
@@ -36,7 +36,7 @@ class TasksController < ApplicationController
     @task.title = task_updates[:title]
     @task.description = task_updates[:description]
     @task.due_date = task_updates[:due_date]
-    @task.status = task_updates[:status]
+    @task.complete = task_updates[:complete]
     @task.save
 
     redirect_to task_path(@task)
