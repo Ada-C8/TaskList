@@ -2,13 +2,11 @@
   This is the new page. It is for new things.
 </p>
 
-<form action="/tasks" method="post" accept-charset="utf-8">
+<!-- <form action="/tasks" method="post" accept-charset="utf-8"> -->
   <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-
+  <!-- <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
   <label for="title">Task Name:</label>
-
   <input type="string" name="title" value="" placeholder="This is where words go" id="title">
 
   <label for="description">Description:</label>
@@ -18,4 +16,17 @@
   <input type="date" name="date" value="" id="date">
 
   <input type="submit" value="Press This Button">
-</form>
+</form> -->
+
+<%= form_tag ('/tasks') do %>
+<%= label_tag "task[title]", "TASK NAME" %>
+<%= text_field_tag "task[title]" %>
+
+<%= label_tag "task[description]", "TASK DESCRIPTION" %>
+<%= text_field_tag "task[description]" %>
+
+<%= label_tag "task[date]", "DATE" %>
+<%= date_field_tag "task[date]" %>
+
+<%= submit_tag "Press This Button" %>
+<% end %>
