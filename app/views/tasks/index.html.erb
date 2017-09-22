@@ -3,12 +3,14 @@
 <section id="index_container">
   <h2 id="to_do"> # TODO</h2>
   <ul class="to_do_list">
+    <% counter = 0 %>
     <% @tasks.each do |task| %>
+    <% counter += 1 %>
     <li>
-      <%= task.id %>)
+      <%= counter %>)
       <span <%= task.status ? "class=strikethrough"  : "class=normal" %>>
 
-          <%= link_to(task.name, task_path(task.id)) %>
+          <%= link_to(task.name, task_path(task.id), alt: "link to task name", class: "task_link") %>
       </span>
 
       <span class="sublist_and_box">
@@ -19,7 +21,7 @@
             <div class="squaredThree">
               <label for="checkbox-input" <%= task.status ? "class=strikethrough"  : "class=normal" %>>
 
-                  <%= link_to("Initial Commit", mark_initial_complete_path(task.id), {method: :patch, alt: "link to mark initial complete"}) %>
+                  <%= link_to("Initial Commit", mark_initial_complete_path(task.id), {method: :patch, alt: "link to mark initial complete", class: "task_link"}) %>
               </label>
               <input type="checkbox" id="checkbox-input" value="None" name="check" <%= task.initial_status ? "checked" : "unchecked" %> />
               <label for="squaredThree"></label>
@@ -34,7 +36,7 @@
               <div class="squaredThree">
                 <label for="checkbox-input" <%= task.status ? "class=strikethrough"  : "class=normal" %>>
 
-                    <%= link_to("Final Pull Request", mark_final_complete_path(task.id), {method: :patch, alt: "link to mark final complete"}) %>
+                    <%= link_to("Final Pull Request", mark_final_complete_path(task.id), {method: :patch, alt: "link to mark final complete", class: "task_link"}) %>
 
                 </label>
                 <input type="checkbox" id="checkbox-input" value="None"  name="check" <%= task.final_status ? "checked" : "unchecked" %> />
