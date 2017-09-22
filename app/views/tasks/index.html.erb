@@ -1,19 +1,22 @@
 <h1>Tasklist</h1>
 
 <div class=task_block>
-<h2>
-  Your Tasks:
-</h2>
-<p>
-  <%= link_to "Add Task", new_task_path(@task) %>
-</p>
-<ol>
-<% @tasks.each do |task| %>
-  <li>
-    <strong>
-      <%= link_to(task.name[task.name], task_path(task.id), alt: 'link to', class:"task_list" ) %>
-    </strong>
-  </li>
-<% end %>
-</ol>
+  <h2>
+    Your Tasks:
+  </h2>
+  <p>
+    <%= link_to "Add Task", new_task_path(@task) %>
+  </p>
+  <ol>
+    <% @tasks.each do |task| %>
+    <li>
+      <strong>
+        <%= link_to(task.name[task.name], task_path(task.id), alt: 'link to', class:"task_list" ) %>
+        <%= link_to("Edit", edit_task_path(task.id)) %>
+        <%= link_to("Delete", delete_task_path(task.id), method: :delete) %>
+        <!-- default method for delete is get, so need method delete -->
+      </strong>
+    </li>
+    <% end %>
+  </ol>
 </div>

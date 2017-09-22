@@ -71,5 +71,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    Task.find_by(id: params[:id]).destroy
+    redirect_to root_path
   end
 end
