@@ -13,7 +13,7 @@
 
 <div class="delete_pic">
 
-<%= link_to image_tag("https://image.flaticon.com/icons/png/128/61/61391.png", alt: "Image goes to delete page") , delete_task_path(@task.id), method: :delete  %>
+<%= link_to image_tag("https://image.flaticon.com/icons/png/128/61/61391.png", alt: "Image goes to delete page") , delete_task_path(@task.id), method: :delete, data: {confirm: "Are you sure?"}   %>
 </div>
 
 <div class="all_tasks_pic">
