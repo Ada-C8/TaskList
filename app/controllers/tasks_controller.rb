@@ -52,9 +52,20 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def mark_complete
+    task = Task.find_by(id: params[:id])
+
+    if task.completed
+      task.update_attribute(:completed, false)
+    else
+      task.update_attribute(:completed, true)
+    end
+    redirect_to root_path
+  end
+
   private
 
   def task_params
-   return params.require(:task).permit(:name, :description, :completion_date)
+   return params.require(:task).permit(:name, :description, :completion_date, :completed)
   end
 end
