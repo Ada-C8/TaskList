@@ -15,7 +15,7 @@
         <li><%= button_to "edit", {:controller => :tasks,
       :action => 'edit', :id => task[:id] }, :method => :get %></li>
         <li><%= button_to "delete", {:controller => :tasks,
-      :action => 'destroy', :id => task[:id] }, :method => :delete %></li>
+      :action => 'destroy', :id => task[:id] }, :method => :delete, data: { confirm: "Are you sure?" } %></li>
       </ul>
     </li>
 
