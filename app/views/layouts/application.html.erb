@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TaskList Home</title>
+  <title>TaskList</title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,9 @@
 </head>
 
 <body>
+  <header>
+    <h1>Tasklist</h1>
+  </header>
   <%= yield %>
 
   <footer>

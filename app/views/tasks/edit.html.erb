@@ -1,5 +1,3 @@
 <h1>Tasks edit</h1>
 <%= render partial: "form" %>
-
-
-<%= button_to("Back to all tasks", tasks_path(@task)) %>
+<%= button_to("Back to all tasks", tasks_path, method: :get) %>
