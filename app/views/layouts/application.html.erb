@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaskList</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<body>
+  <header>
+    <ul class="navigation">
+      <li>Donut Forget!</li>
+    </ul>
+  </header>
 
-  <body>
+  <section class="task-body">
 
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+    <div class="all-task-actions">
+      <ul>
+        <li><%= link_to "Add Task", new_task_path %></li>
+        <li><%= link_to "All Tasks", tasks_path %></li>
+      </ul>
+    </div>
 
+    <div class="information-box">
+      <%= yield %>
+    </div>
 
-    <body>
-      <header>
-        <ul class="navigation">
-          <li>Donut Forget!</li>
-        </ul>
-      </header>
+  </section>
 
-      <section class="task-body">
-        <div class="all-task-actions">
-          <ul>
-            <li><%= link_to "Add Task", new_task_path %></li>
-            <li><%= link_to "All Tasks", tasks_path %></li>
-          </ul>
-        </div>
+  <footer>
+    &copy;Kimberley Mackenzie 2017
+  </footer>  
+</body>
 
-        <div class="information-box">
-          <%= yield %>
-        </div>
-      </section>
-
-      <footer>
-        &copy;Kimberley Mackenzie 2017
-      </footer>
-    </body>
-
-
-
-  </body>
 </html>

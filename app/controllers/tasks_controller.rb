@@ -5,8 +5,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    id = params[:id].to_i
-    @task = Task.find(id)
+    @task = Task.find(params[:id].to_i)
   end
 
   def create
@@ -19,9 +18,7 @@ class TasksController < ApplicationController
   end
 
   def update
-
-    id = params[:id].to_i
-    @task = Task.find(id)
+    @task = Task.find(params[:id].to_i)
 
     # task.update_attributes (saves simultaneously)
     # task.update_attributes params[:task][:name], params[:task][:completion_date], params[:task][:description]
@@ -50,8 +47,7 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-    id = params[:id].to_i
-    @task = Task.find(id)
+    @task = Task.find(params[:id].to_i)
     @task.completion_date = Date.today
     @task.status = "complete"
     @task.save
@@ -59,8 +55,7 @@ class TasksController < ApplicationController
   end
 
   def mark_incomplete
-    id = params[:id].to_i
-    @task = Task.find(id)
+    @task = Task.find(params[:id].to_i)
     @task.status = "incomplete"
     @task.completion_date = Date.today
     @task.save
@@ -68,17 +63,14 @@ class TasksController < ApplicationController
   end
 
   def edit
-    id = params[:id].to_i
-    @task = Task.find(id)
+    @task = Task.find(params[:id].to_i)
     unless @task
       redirect_to root_path
     end
   end
 
   def destroy
-    id = params[:id].to_i
-    @task = Task.find(id)
-    if @task.destroy
+    if Task.find_by(id: params[:id]).destroy
       redirect_to root_path
     end
   end

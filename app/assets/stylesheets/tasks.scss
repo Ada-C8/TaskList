@@ -1,6 +1,4 @@
-// Place all the styles related to the Tasks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// general settings for selectors
 body {
   background-image: url(http://i.imgur.com/qozv4.png);
   background-size: cover;
@@ -11,16 +9,17 @@ a {
   color: #27cdb2;
 }
 
+ul {
+  list-style: none;
+}
+
+// header
 .navigation {
   list-style: none;
   margin: 0;
   font-family: 'Baloo Tammudu', cursive;
   background-color: #27cdb2;
   border-radius: 15px 50px;
-
-  // display: flex;
-  // flex-flow: row wrap;
-  // justify-content: flex-end;
 }
 
 .navigation:first-of-type li {
@@ -30,14 +29,13 @@ a {
   text-shadow: 1;
 }
 
-
+// all-item task list/root path
 .task-body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content:flex-start;
   width: 100%;
-  // align-items: stretch;
   align-content: center;
   align-items: center;
   margin: 2em;
@@ -48,9 +46,6 @@ a {
   text-align: center;
 }
 
-ul {
-  list-style: none;
-}
 .all-task-actions li{
   height: 120px;
   width: 300px;
@@ -112,7 +107,6 @@ ul {
 
 .task-actions {
   margin-left: 3em;
-
 }
 
 .task-actions li{
@@ -125,29 +119,15 @@ ul {
   font-size: .5em;
   display: inline;
   padding-left: 1em;
-  // font-family: 'Baloo Tammudu', cursive;
-
-  // justify-content:space-between;
+  font-family: 'Maven Pro';
+  font-weight: bold;
 }
-
-// .task-actions {
-//   list-style: none;
-//   text-decoration: none;
-//   length: 400px;
-//   color: #27cdb2;
-//   font-size: .5em;
-//   display: flex;
-//   flex-flow: row wrap;
-//   justify-content: space-evenly;
-//   // font-family: 'Baloo Tammudu', cursive;
-//
-//   // justify-content:space-between;
-// }
 
 .task-actions a:hover {
   color: magenta;
 }
 
+//strikeout animation for completed tasks in root path
 @keyframes strike{
   0%   { width : 0; }
   100% { width: 100%; }
@@ -176,16 +156,39 @@ ul {
   animation-fill-mode: forwards;
 }
 
+
 #task-box {
   padding-left: 0em;
   margin-top: 0em;
   margin-bottom: 0em;
 }
 
-.actions {
-  // display: inline-block;
+.overdue li {
+  color: red;
 }
 
+.descriptor {
+  font-family: 'Maven Pro';
+  padding-right: .5em;
+}
+
+//edit & add new forms
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid magenta;
+    border-radius: 4px
+//     background-color: #3CBC8D;
+// color: white;
+}
+
+input[type=text]:focus {
+  border: 3px solid #27cdb2;
+}
+
+//footer
 footer {
   font-size: 1em;
   width:100%;
