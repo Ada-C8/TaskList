@@ -12,16 +12,13 @@
 
               <%if task.status%>
                 <div class="strike-through">
-                  <%=task.id%>. <%=task.name%> --> due: <%= task.completion_date%>
-                  <%=task.action %>
-                  <!-- <%= link_to(task[:id], task_path(task[:id]), alt: 'link to', class:"id")%>. -->
+                  <%=task.id%>. <%=task.name%>
                 </div>
+                <div class="completion-date"> --> completed on: <%= task.completion_date%></div>
 
               <%else%>
                 <div class="no-strike-through">
-                  <!-- <%= link_to(task.name, task_path(task.id), alt: 'link to', class:"action") %> -->
-                  <%=task.id%>. <%=task.name%> --> due: <%= task.completion_date%>
-                  <!-- <%=task.action %> -->
+                  <%=task.id%>. <%=task.name%> --> not yet complete
                 </div>
               <%end%>
         </li>

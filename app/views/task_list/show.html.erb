@@ -8,8 +8,8 @@
 
 <% if @task %>
 <%= link_to "Full Task List", tasks_path(@task) %>
-<%= link_to "Edit", edit_task_path(@task[:id]) %>
-<%= link_to "Delete", destroy_task_path(@task[:id]), method: :delete %>
+<%= link_to "Edit", edit_task_path(@task.id) %>
+<%= link_to "Delete", destroy_task_path(@task.id), method: :delete %>
 
   <h2>Task: </h2> <%=@task[:name]%>
   <h2>Details: </h2><%= @task[:action]%>

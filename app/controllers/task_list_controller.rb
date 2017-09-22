@@ -71,6 +71,11 @@ class TaskListController < ApplicationController
     redirect_to root_path
   end
 
+  def create_completion_date
+    @task = Task.find(params[:id].to_i)
+    @task.status ? @task.update(completion_date: Date.now) : @task.update(completion_date: nil)
+    redirect_to root_path
+  end
 
   private
 
