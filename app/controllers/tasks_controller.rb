@@ -6,7 +6,7 @@ class TasksController < ApplicationController
   # done : boolean
 
   def index
-    @tasks = Task.order(:id)
+    @tasks = Task.order(:done)
   end
 
   def show
@@ -19,17 +19,7 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find_by(id: params[:id].to_i)
-    @task.name = params[:task][:name]
-    @task.description = params[:task][:description]
-    if params[:task][:done].to_i == 1
-      @task.done = true
-      @task.completion_date = Date.today
-    else
-      @task.done = false
-      @task.completion_date = nil
-    end
-
-    if @task.save
+    if @task.update_attributes task_parameters
       redirect_to @task
     else
       render "edit"
@@ -41,15 +31,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    complete_date = ""
     done_boolean = false
-    if params[:task][:done]
+    if params[:task][:done].to_i == 1
       done_boolean = true
-      complete_date = Date.today
     end
     @task = Task.new(name: params[:task][:name],
                      description: params[:task][:description],
-                     completion_date: complete_date,
+                     completion_date: params[:task][:completion_date],
                      done: done_boolean)
     if @task.save
       redirect_to @task
@@ -72,6 +60,14 @@ class TasksController < ApplicationController
   end
 
   def delete
+    Task.find_by(id: params[:id]).destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def task_parameters
+    return params.require(:task).permit(:name, :description, :done, :completion_date)
   end
 
 end
