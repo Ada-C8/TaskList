@@ -5,7 +5,7 @@ body {
   border-style: solid;
   border-width: 1px;
 
-  width: 450px;
+  width: 600px;
   height: auto;
 }
 
@@ -27,7 +27,8 @@ h3 {
   width: 50%;
   float: right;
   margin-right: 20px;
-  height: 280px;
+  // height: 280px;
+  height: auto;
 }
 
 .left_options {
@@ -58,6 +59,7 @@ h3 {
   border-radius: 10px;
   text-align: center;
   margin: 10px 0 10px 0;
+  color: black;
 }
 
 .gif {
@@ -67,6 +69,7 @@ h3 {
 
 .index_nav a {
   text-decoration: none;
+  color: black;
 }
 
 .tasks {
@@ -76,7 +79,7 @@ h3 {
   border: 1px solid black;
   border-radius: 10px;
   text-align: left;
-  height: 280px;
+  height: 400px;
 }
 
 .tasks li {
@@ -87,7 +90,22 @@ h3 {
 
 .tasks a {
   text-decoration: none;
+  color: black;
 }
+
+// -----------------------
+.task_name {
+  float: left;
+  width: 50%;
+
+}
+
+.edit_delete {
+  float: right;
+  width: 40%;
+}
+
+// ------------------------
 
 footer {
   margin-top: 80%;

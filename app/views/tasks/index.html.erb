@@ -11,8 +11,16 @@
     <% @tasks.each do |task| %>
     <li>
       <!-- <%= task.name %> -->
-      <%= "#{counter}. " %> <%=link_to(task.name, task_path(task.id)) %>
+      
+      <div class="task_name">
+        <%= "#{counter}. " %> <%=link_to(task.name, task_path(task.id)) %>
+      </div>
       <% counter+=1 %>
+
+      <div class="edit_delete">
+        <%= link_to("Edit", edit_task_path(task[:id])) %>
+        <%= link_to("Delete", delete_task_path(task[:id]), method: :delete) %>
+      </div>
     </li>
     <% end %>
 
@@ -32,7 +40,7 @@
   </div>
 
   <div>
-    <img class="gif" src="https://media.giphy.com/media/YLHwkqayc1j7a/200.gif">
+    <img class="gif" src="https://media.giphy.com/media/YLHwkqayc1j7a/200.gif" alt="jafar gif">
   </div>
 
 </div>

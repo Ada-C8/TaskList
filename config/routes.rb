@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post '/tasks/', to: 'tasks#create', as:'create_task' #create_task_path
 
   # get 'tasks/destroy'
-  delete '/tasks/:id', to: 'tasks#destroy', as: 'delete_task' #delete_book_path
+  delete '/tasks/:id', to: 'tasks#destroy', as: 'delete_task' #delete_task_path
 
   # may need to move this up so that it is correctly placed.
   # patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'task_complete'

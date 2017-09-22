@@ -14,9 +14,14 @@
   Description: <%= @task[:description] %>
 </h4>
 
+<h4>Completion Date: <%= @task[:completion_date] %></h4>
+
 <% else %>
 < h1>404: Not Found</h1>
 <% end %>
 
 <%= link_to "Home", tasks_path %>
+
+<%= link_to "Edit", edit_task_path(@task.id) %>
+
 <%= link_to "Delete", delete_task_path(@task.id), method: :delete %>

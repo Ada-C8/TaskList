@@ -1,3 +1,4 @@
+require 'date'
 class TasksController < ApplicationController
 
   # TASKS = @tasks = [
@@ -14,12 +15,6 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find( params[:id].to_i)
-  end
-
-  def edit
-  end
-
-  def update
   end
 
 
@@ -47,5 +42,29 @@ class TasksController < ApplicationController
   def complete
   end
 
+
+  def update
+    task = Task.find_by(id: params[:id].to_i)
+    task.name = params[:task][:name]
+    task.description = params[:task][:description]
+    task.completion_date = params[:task][:completion_date]
+    task.save
+
+    if task.save
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+
+  def edit
+    @task = Task.find_by(id: params[:id].to_i)
+  end
+
+  # private
+  # def task_params
+  #   return params.require(:task).permit(:name, :description, :completion_date)
+  # end
 
 end
