@@ -16,23 +16,27 @@
   <li id="task-name">
     <% if task.complete %>
     <div id = "task-completed">
-    <strong><%= link_to task.name, task_path(task.id) %>      </strong>
+    <strong>
+      <%= link_to task.name, task_path(task.id) %>
+    </strong>
     </div>
     <% else %>
     <div id = "task-not-completed">
-    <strong><%= link_to task.name, task_path(task.id) %>      </strong>
+    <strong>
+      <%= link_to task.name, task_path(task.id) %>
+    </strong>
     </div>
     <% end %>
   </li>
   <p id="complete-status">
     <%if task.complete %>
-      <%= link_to "Unmark Complete", update_task_path(task.id, {:task => {:complete => false}, :refresh => true}), method: :patch   %>
+      <%= link_to "Unmark Complete", update_task_path(task.id, {:task => {:complete => false}, :refresh => true}), method: :patch %>
     <% else %>
-      <%= link_to "Mark complete", update_task_path(task.id, {:task => {:complete => true}, :refresh => true} ), method: :patch %>
+      <%= link_to "Mark complete", update_task_path(task.id, {:task => {:complete => true, :completion_date => Date.today }, :refresh => true} ), method: :patch %>
     <%end%>
 
-     | <%= link_to "Edit", edit_task_path(task.id)%> |
-      <%= link_to "Delete", delete_task_path(task.id), method: :delete, data: {:confirm => "Are you sure you want to delete this task?"} %>
+     | <%= link_to "Edit", edit_task_path(task)%> |
+      <%= link_to "Delete", task_path(task), method: :delete, data: {:confirm => "Are you sure you want to delete this task?"} %>
   </p>
   </li>
   <% end %>
