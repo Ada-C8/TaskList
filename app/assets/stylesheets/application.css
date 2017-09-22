@@ -15,7 +15,6 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=The+Girl+Next+Door');
-@import url('https://fonts.googleapis.com/css?family=Nixie+One');
 
 /******** BACKGROUND *********/
 
@@ -23,7 +22,7 @@ html, body {
   height: 100%;
 }
 
-#grad1 {
+#gradient {
   background: #afeeee; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, #D4E6F1, #98ACD0); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #D4E6F1, #98ACD0); /* For Opera 11.1 to 12.0 */
@@ -46,6 +45,15 @@ html, body {
 .visited-links {
   color: black;
 }
+
+.no-bullet {
+  list-style-type: none;
+}
+
+.equal-width {
+  width: 100px;
+}
+
 /******** HOVER FROM CENTER FOR APPLICATION.HTML LINKS *********/
 
 .hvr-border-fade {
@@ -79,7 +87,7 @@ body {
 
 /******** APPLICATION HEADER *********/
 
-#body-header {
+#header-wrapper {
   height: 18%;
   text-align: center;
   background-color: #2274A5;
@@ -87,7 +95,7 @@ body {
   border-bottom: 1px dashed black;
 }
 
-#body-header h1 {
+#header-wrapper h1 {
   padding-top: 1%;
   margin: 0;
   color: white;
@@ -103,7 +111,7 @@ body main {
   height: 74%;
 }
 
-#nav-article-wrapper {
+#nav-and-article-wrapper {
   margin: 1em;
   height: 85%;
   border: 1px dashed black;
@@ -127,36 +135,28 @@ body main {
   padding: 5px;
 }
 
-#article-wrapper {
+#main-article-wrapper {
   height: 100%;
   overflow: scroll;
   border-left: 1px dashed black;
 }
 
-.no-bullet {
-  list-style-type: none;
-}
-
-.equal-width {
-  width: 100px;
-}
-
 /******* YIELD TO INDEX.HTML.ERB *********/
 
-div#article-wrapper article {
+#main-article-wrapper article {
   display: inline-block;
   padding: 0 1em 1em 1em;
 }
 
-article#task-wrapper {
+section#task-wrapper {
   border-top: 1px dashed black ;
 }
 
-article#task-wrapper h2 {
+section#task-wrapper h2 {
   margin-bottom: 0;
 }
 
-article h2 .complete_status {
+section h2 .complete_status {
   text-decoration: line-through;
 }
 
@@ -189,35 +189,6 @@ nav#task-links ul li {
   color: red;
   transition-duration: 0.5s;
 }
-
-/* ICON FADE FOR MARK COMPLETE */
-/*.hvr-icon-fade {
-display: inline-block;
-vertical-align: middle;
--webkit-transform: perspective(1px) translateZ(0);
-transform: perspective(1px) translateZ(0);
-box-shadow: 0 0 1px transparent;
-position: relative;
-padding-right: 1.5em;
-}
-
-.hvr-icon-fade:before {
-content: "\f00c";
-position: absolute;
-right: 0.2em;
-padding: 5px 1px;
-font-family: FontAwesome;
--webkit-transform: translateZ(0);
-transform: translateZ(0);
--webkit-transition-duration: 0.5s;
-transition-duration: 0.5s;
--webkit-transition-property: color;
-transition-property: color;
-}
-
-.hvr-icon-fade:hover:before, .hvr-icon-fade:focus:before, .hvr-icon-fade:active:before {
-color: #0F9E5E;
-}*/
 
 /******** YIELD TO NEW.HTML.ERB *********/
 

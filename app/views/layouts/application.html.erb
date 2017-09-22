@@ -8,14 +8,15 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 </head>
 
-<body id="grad1">
-  <header id ="body-header">
+<body id="gradient">
+  <header id ="header-wrapper">
     <h1>FINISH YOUR LIFE THINGS</h1>
   </header>
 
   <main>
 
-    <div id="nav-article-wrapper" class="clearfix">
+    <div id="nav-and-article-wrapper" class="clearfix">
+
       <nav id="main-nav">
         <header>
           <h2 class="increase-font">OPTIONS</h2>
@@ -30,10 +31,10 @@
         </ul>
       </nav>
 
-      <div id="article-wrapper">
+      <div id="main-article-wrapper">
 
         <%= yield %>
-
+        <%# Yield to the index %>
       </div>
 
     </main>
