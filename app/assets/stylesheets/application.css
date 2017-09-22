@@ -235,6 +235,10 @@ nav#task-links ul li {
 
 /******** YIELD TO SHOW.HTML.ERB *********/
 
+#info-wrapper {
+  padding: 20px;
+}
+
 .zero-margin-bottom {
   margin-bottom: 0;
 }
@@ -242,6 +246,15 @@ nav#task-links ul li {
 .left-padding {
   padding-left: 25px;
 }
+
+.green {
+  color: #0F9E5E;
+}
+
+.red {
+  color: red;
+}
+
 /******** FOOTER *********/
 
 #main-footer {
