@@ -7,22 +7,22 @@
 <div id="add-form">
   <h2>
     <strong>
-      Add Task
+      <%= task_action %>
     </strong>
   </h2>
   <%= form_for @task do |f| %>
   <ul>
   <li>
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: hide_placeholder_text ? "" : "Name of Task" %>
+    <%= f.label :name %>:
+    <%= f.text_field :name, class: "form-field", placeholder: hide_placeholder_text ? "" : "Name of Task" %>
   </li>
   <li>
-    <%= f.label :description %>
-    <%= f.text_field :description, placeholder: hide_placeholder_text ? "" : "Description of Task" %>
+    <%= f.label :description %>:
+    <%= f.text_field :description, class: "form-field", placeholder: hide_placeholder_text ? "" : "Description of Task" %>
   </li>
   <li>
-    <%= f.label :completion_date %>
-    <%= f.text_field :completion_date, placeholder: hide_placeholder_text ? "" : "YYYYMMDD" %>
+    <%= f.label :completion_date %>:
+    <%= f.text_field :completion_date, class: "form-field", placeholder: hide_placeholder_text ? "" : "YYYYMMDD" %>
   </li>
     <%= f.submit button_text, id:"submit-button" %>
   </ul>
