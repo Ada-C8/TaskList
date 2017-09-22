@@ -1,3 +1,5 @@
+<main class="index_main">
+
 <h1 class="index">TASKLIST</h1>
 <aside class = "nav_buttons">
   <article>
@@ -14,8 +16,8 @@
     <li>
       <%= link_to(task.name, task_path(task.id)) %>
       <p>
-      Mark Complete |
-      <%= link_to("Edit", edit_task_path(:id)) %> | Delete
+      Mark Complete  |
+      <%= link_to("Edit", edit_task_path(task.id)) %>  |  Delete
       </p>
     </li>
     <% end %>
@@ -24,3 +26,6 @@
 <footer>
   <h4>copywrite 2017</h4>
 </footer>
+
+
+</main>
