@@ -8,7 +8,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], date: params[:task][:date], completion_date: nil)
+    @task = Task.new( name: params[:task][:name], description: params[:task][:description], date: params[:task][:date], completion_date: nil )
     if @task.save
       redirect_to root_path
     else
@@ -21,40 +21,35 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find_by(id: params[:id].to_i)
+    @task = Task.find_by( id: params[:id].to_i )
     unless @task
       redirect_to root_path
     end
   end
 
   def update
-    task = Task.find_by(id: params[:id].to_i)
+    task = Task.find_by( id: params[:id].to_i )
     redirect_to root_path unless task
 
-    task.name = params[:task][:name]
-    task.description = params[:task][:description]
-    task.date = params[:task][:date]
-
-
-    if task.update(name: task.name, description: task.description, date: task.date)
-      redirect_to task_path #CHANNNGE!
+    if task.update_attributes task_params
+      redirect_to task_path
     else
       render :edit
     end
   end
 
   def remove
-    @task = Task.find_by(id: params[:id])
+    @task = Task.find_by( id: params[:id].to_i )
   end
 
   def confirm_remove
-    Task.find_by(id: params[:id]).destroy
+    Task.find_by( id: params[:id].to_i ).destroy
 
     redirect_to root_path
   end
 
   def mark_complete
-    task = Task.find_by(id: params[:id].to_i)
+    task = Task.find_by( id: params[:id].to_i )
 
     if task.completion_date == nil
       task.completion_date = Date.today
@@ -64,11 +59,12 @@ class TasksController < ApplicationController
 
     task.save
 
+    redirect_to tasks_path
   end
 
   private
 
   def task_params
-    return params.require(task).permit(:name, :description, :date)
+    return params.require(:task).permit(:name, :description, :date)
   end
 end

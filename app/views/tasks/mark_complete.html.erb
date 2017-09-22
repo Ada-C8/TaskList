@@ -1,5 +1,5 @@
 <h1>Task#MarkComplete</h1>
-params are <%=params %>
+params are <%= params %>
 
 <% task = Task.find_by(id: params[:id]) %>
-<h2>task is <%= task.completion_date %></h2>
+<h2>Completion date is <%= task.completion_date %></h2>
