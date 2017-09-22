@@ -8,9 +8,33 @@
       </p>
     </li>
     <li>
+      <h4 class="inline">Status: </h4>
+      <p class="inline">
+        <%= @task.completed_date ? "Completed #{@task.completed_date.strftime('%B %d, %Y')}" : "Incomplete"  %>
+      </p>
+    </li>
+    <li>
       <p>
         <%= @task.description %>
       </p>
     </li>
   </ul>
+
+  <nav class="task-options">
+    <ul>
+      <li>
+        <% if @task.completed %>
+        <%= link_to "Mark Incomplete", toggle_task_path(@task) %> |
+        <% else %>
+        <%= link_to "Mark Complete", toggle_task_path(@task) %> |
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "Edit", edit_task_path(@task) %> |
+      </li>
+      <li>
+        <%= link_to "Delete", delete_task_path(@task), method: :delete, data: {confirm: "Are you sure you want to permanently delete this task?"} %>
+      </li>
+    </ul>
+  </nav>
 </div>

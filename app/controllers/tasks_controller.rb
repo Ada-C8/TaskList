@@ -36,8 +36,10 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     if task.completed
       task.completed = false
+      task.completed_date = nil
     else
       task.completed = true
+      task.completed_date = Date.today
     end
     task.save
     redirect_to tasks_path
