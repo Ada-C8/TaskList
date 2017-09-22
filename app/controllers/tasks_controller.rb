@@ -1,10 +1,8 @@
+require 'date'
+
+
 class TasksController < ApplicationController
 
-  # TASKS = [
-  #   {id: 1, task: "Hotel", status: :incomplete},
-  #   {id: 2, task: "Meowspace", status: :incomplete},
-  #   {id: 3, task: "CS Fun", status: :incomplete}
-  # ]
 
   def index
     @tasks = Task.order(:id)
@@ -50,9 +48,10 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-    @task = Task.find (params[:id].to_i)
-    @task.status ? @task.update(status: false) : @task.update(status: true, initial_status: true, final_status: true)
+    @today = Date.today
 
+    @task = Task.find (params[:id].to_i)
+    @task.status ? @task.update(status: false, completion_date: nil) : @task.update(status: true, initial_status: true, final_status: true, completion_date: @today)
     redirect_to root_path
   end
 
