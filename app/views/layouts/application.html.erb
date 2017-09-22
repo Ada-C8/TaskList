@@ -3,13 +3,10 @@
   <head>
     <title>TaskList</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-
-    
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   </head>
 
   <body>
@@ -18,8 +15,8 @@
     </header>
     <main>
       <div class="button-container">
-        <p class="button"><%= link_to("Add Task", new_task_path, alt: 'link to')%></p>
-        <p class="button"><%= link_to("All Tasks", tasks_path, alt: 'link to')%></p>
+          <p class="button"><%= link_to("Add Task", new_task_path, alt: 'link to')%></p>
+          <p class="button"><%= link_to("All Tasks", tasks_path, alt: 'link to')%></p>
       </div>
       <%= yield %>
     </main>

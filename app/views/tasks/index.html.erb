@@ -3,7 +3,19 @@
     <h2>Your Tasks</h1>
 
       <%if @tasks.count == 0%>
-        <h3 class="no_task">No task... Wine time!</h3>
+
+        <div class="wrap">
+          <div class="glass">
+            <div class="wine">
+            </div>
+            <div class="stem">
+            </div>
+            <div class="base">
+            </div>
+
+          </div>
+          <h3 class="no_task">Your To Do List is empty.<br />Wine time!</h3>
+        </div>
       <% else %>
         <ul>
           <% counter = 0 %>
