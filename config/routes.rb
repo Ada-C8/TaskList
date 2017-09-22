@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   patch '/tasks/:id', to: 'tasks#update', as: 'update_task'
 
+  patch '/tasks/:id/markdone', to: 'tasks#markdone', as: 'markdone_task'
+
   post '/tasks', to: 'tasks#create', as: 'create_task'
 
   delete '/tasks', to: 'tasks#delete', as: 'delete_task'

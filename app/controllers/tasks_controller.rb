@@ -14,11 +14,11 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id].to_i)
+    @task = Task.find_by(id: params[:id].to_i)
   end
 
   def update
-    @task = Task.find(params[:id].to_i)
+    @task = Task.find_by(id: params[:id].to_i)
     @task.name = params[:task][:name]
     @task.description = params[:task][:description]
     if params[:task][:done].to_i == 1
@@ -58,6 +58,17 @@ class TasksController < ApplicationController
       # would have been to render the "create" view.
       render "new"
     end
+  end
+
+  def markdone
+    @task = Task.find(params[:id].to_i)
+    if @task.done == true
+      @task.update_attribute(:done, false)
+    else
+      @task.update_attribute(:done, true)
+    end
+    @task.save
+    redirect_to root_path
   end
 
   def delete

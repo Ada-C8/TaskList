@@ -7,26 +7,36 @@
         <li>
         <% if task.done %>
           <p class="done">
-            <i class="fa fa-check-square-o" aria-hidden="true"></i>
+            <%= link_to "", markdone_task_path(task.id), method: :patch, class: "fa fa-check-square-o", alt: "Mark Task Not Done" %>
             <%= link_to(task.name, task_path(task.id), alt: "link to") %>
           </p>
           <p>
             <%= task.description %>
           </p>
+          <section class="task-action-buttons">
+            <%= link_to "", edit_task_path(task.id), class: "fa fa-pencil-square-o", alt: "Edit Task" %>
+            <%= link_to "", delete_task_path(task.id), method: :delete, class: "fa fa-trash", alt: "Delete Task" %>
+          </section>
         <% else %>
           <!--  Would be nice to figure out how to update the status of a task :/ -->
           <p>
-            <a href="#" title="mark as done"><i class="fa fa-square-o" aria-hidden="true"></i></a>
+            <%= link_to "", markdone_task_path(task.id), method: :patch, class: "fa fa-square-o", alt: "Mark Task Done" %>
             <%= link_to(task.name, task_path(task.id), alt: "link to") %>
           </p>
           <p>
             <%= task.description %>
           </p>
+          <section class="task-action-buttons">
+            <%= link_to "", edit_task_path(task.id), class: "fa fa-pencil-square-o", alt: "Edit Task" %>
+            <!-- <%= link_to "", delete_task_path(task.id), method: :delete, class: "fa fa-trash", alt: "Delete Task" %> -->
+            <%= link_to "",
+                delete_task_path(),
+                         method: :delete,
+                         data: { confirm: 'Are you sure?' },
+                         class: "fa fa-trash",
+                         alt: "Delete Task"%>
+          </section>
         <% end %>
-        <section class="task-action-buttons">
-          <%= link_to "", edit_task_path(task.id), class: "fa fa-pencil-square-o", alt: "Edit Task" %>
-          <%= link_to "", delete_task_path(task.id), method: :delete, class: "fa fa-trash", alt: "Delete Task" %>
-        </section>
         </li>
 
       <% end %>
