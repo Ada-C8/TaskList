@@ -1,26 +1,36 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$side-margin: 5%;
+$top-margin: 2rem;
+$footer_size: 3rem;
 
 * {
   margin: 0;
   padding: 0;
   font-size: 1em;
-}
-
-h1 {
-  // background-image: image-url('this_is_fine_dog.png');
-  // background-size: cover;
-  // background-position: center;
-  // height: 15rem;
+  box-sizing: border-box;
 }
 
 /* FONTS */
-h1, ul, li {
+h1, ul, li, p, label {
   font-family: 'Arial', helvetica, sans-serif;
 }
 
-h1 {
+label {
+  font-size: 1.25rem;
+}
+input {
+  font-family: monospace;
+  font-size: 1.25rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.home h1 {
   font-size: 3rem;
 }
 
@@ -38,38 +48,43 @@ ul > li {
 }
 
 .complete {
+  font-weight: bold;
   text-decoration: line-through;
 }
 
-/* DISPLAY */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/* LAYOUT */
+html, body, .container {
+  height: 100%;
 }
 
-.index-container {
-  flex: 1;
-  margin: 3% 8%;
+main {
+  margin: 0 $side-margin;
 }
 
-h1, h2 {
-  display: flex;
+header h1 {
+  margin-left: $side-margin;
+  position: relative;
+  top: $top-margin;
 }
 
-h2 {
-  margin-bottom: 1.5rem;
-}
-
-.list {
-  float: right;
-  padding: 2rem 2rem 2rem 4rem;
-  border: 2px black solid;
-  border-radius: 2rem;
+h1  {
+  margin-right: 5rem;
 }
 
 footer {
+  background-color: black;
+  color: lightgray;
   text-align: center;
+  height: $footer_size;
+  font-family: helvetica, sans-serif;
+  position: relative;
+  top: -($footer_size);
+}
+
+footer span {
+  font-size: 1rem;
+  position: relative;
+  top: 38%;
 }
 
 /* STYLE LINKS */
@@ -81,7 +96,98 @@ a {
   text-decoration: none;
 }
 
-// .button {
-//   margin: 2rem;
-//   font-size: 2rem;
-// }
+.button {
+  font-size: 2rem;
+  margin: 1rem 0 2rem 0;
+  // border: 1px black solid;
+}
+
+.options li {
+  display: inline-block;
+  width: 18%;
+}
+
+.options li:first-of-type {
+  width: 48%;
+}
+
+
+
+@media all and(min-width: 900px) {
+  .main-image {
+    // padding-right: 5rem;
+    // max-width: 50%;
+    width: 52%;
+    min-width: 35rem;
+  }
+
+  .list {
+    display: inline-block;
+    border: 2px black solid;
+    border-radius: 2rem;
+    margin: 0;
+
+    min-width: 20rem;
+    max-width: 37%;
+    vertical-align: top;
+    position: relative;
+    left: 10%;
+
+    // height: 20rem;
+  }
+
+  .list ol {
+    padding: 1rem 2rem 2rem 4rem;
+  }
+
+  .task {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  .list h2 {
+    padding: 2rem 1.25rem 0 2rem;
+  }
+
+}
+
+
+.show h1 {
+  font-size: 2rem;
+}
+
+.status {
+  font-family: monospace;
+  margin-top: 1.5rem;
+}
+
+label, input {
+  display: block;
+  padding: .25rem 0;
+}
+
+label {
+  margin-top: 2rem;
+}
+
+.checkbox {
+  display: inline-block;
+}
+
+label.checkbox {
+  margin-right: 1rem;
+}
+
+input.checkbox {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 1px darkgray solid;
+  border-radius: 3px;
+  vertical-align: text-bottom;
+
+}
+
+input.checkbox:checked {
+  background-color: orange;
+}

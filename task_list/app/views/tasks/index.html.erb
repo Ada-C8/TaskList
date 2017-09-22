@@ -1,43 +1,50 @@
-<div class='index-container'>
-  <h1>Task List</h1>
-  <ul>
-    <li>
-      <%= button_to('Add Task', create_task_path, class: 'button') %>
-    </li>
-    <li>
-      <%= button_to('All Tasks', tasks_path, method: :get, class: 'button') %>
-    </li>
-  </ul>
+<div class='container'>
 
-  <div class='list'>
+  <header class="home">
+    <h1>Task List</h1>
+  </header>
+  <main class="index">
+    <%= image_tag('this_is_fine_dog.png', alt: 'This is Fine cartoon', class: "main-image") %>
 
-    <h2>The Clock is Ticking...</h2>
-    <ol>
+    <div class='list'>
+
+      <h2>The Clock is Ticking...</h2>
+      <ol>
       <% @tasks.each do |task| %>
-      <li>
-        <% if task[:complete] %>
-        <strong class='complete'><%= task[:task_name].capitalize %></strong>
-        <% else %>
-        <%= task[:task_name].capitalize %>
-        <% end %>
-        <ul>
+        <% @status = task.complete ? 'complete' : 'incomplete' %>
+        <li class= "task <%= @status %>" >
+          <%= link_to(task.name.capitalize, task_path(task.id)) %>
+        </li>
+        <ul class='options'>
           <li>
-            <% if task[:complete] %>
-            <%= 'Unmark Complete' %>
-            <% else %>
-            <%= 'Mark Complete' %>
-            <% end %>
+            <% @toggle = task.complete ? 'Unmark Complete' : 'Mark Complete' %>
+            <%= link_to(@toggle, complete_task_path(task.id), method: :patch) %>
           </li>
           <li>
-            <%= link_to 'Edit', edit_task_path(task[:id]) %>
+            <%= link_to 'Edit', edit_task_path(task.id) %>
           </li>
           <li>
-            <%= link_to 'Delete', delete_task_path(task[:id]) %>
+            <%= link_to('Delete', delete_task_path(task.id), method: :delete) %>
           </li>
         </ul>
-      </li>
+        </li>
 
       <% end %>
-    </ol>
-  </div>
+      </ol>
+    </div>
+
+    <div class='buttons'>
+
+      <ul>
+        <li class='button'>
+          <%# link_to('Add Task', create_task_path, method: :new) %>
+          <%= button_to('Add Task', new_task_path, method: :get) %>
+        </li>
+        <li class='button'>
+          <%# link_to('All Tasks', tasks_path) %>
+          <%= button_to('All Tasks', tasks_path, method: :get) %>
+        </li>
+      </ul>
+    </div>
+  </main>
 </div>
