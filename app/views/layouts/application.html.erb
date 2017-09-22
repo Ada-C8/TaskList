@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList!</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans">
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>tasklist</h1>
+        <%= link_to "Add Task", new_task_path %>
+        <%= link_to "All Tasks", tasks_path %>
+      </header>
+
+      <article class="list">
+        <%= yield %>
+      </article>
+
+      <footer>
+        <p>
+          &copy;2017 - built with &#x2764 and &#x2615  by Averi Kitsch 👩🏼‍💻
+        </p>
+      </footer>
+
+    </div>
+  </body>
+</html>

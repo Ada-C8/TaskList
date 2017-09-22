@@ -1,0 +1,150 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-color: #f88379;
+$secondary-color: #fff0e0;
+$accent-color: #f8a379;
+$soft-color: #a5a5a5;
+
+body {
+  box-sizing: border-box;
+  background-color: $primary-color;
+}
+
+#wrapper {
+  font-family: 'Open Sans';
+  text-align: center;
+  margin: 5% 25%;
+  // 1vh 15vh 2vh 15vh;
+  // .5em 25em 2em 25em;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: 'Abril Fatface';
+  border-bottom: 1px solid;
+}
+
+header a {
+  border: 1px solid $accent-color;
+  color: $accent-color;
+  background-color: $secondary-color;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  margin: 2em;
+}
+
+article.list {
+  background-color: $secondary-color;
+  padding: 0.5em 2em 1em 2em;
+  margin-top: 2em;
+}
+
+.list ol {
+  text-align: justify;
+}
+
+.list h2 {
+  margin-top: 0;
+}
+
+footer {
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  width: 100%;
+}
+
+
+li.complete {
+  color: #a5a5a5;
+}
+
+a.complete {
+  color: #a5a5a5;
+  text-decoration: line-through;
+}
+
+
+ul>li {
+  display: inline;
+}
+
+ul>li:first-child::before {
+  content: "|"
+}
+
+ul>li::after {
+  content: "|"
+}
+
+ul{
+  padding-left: 0;
+  color: $accent-color;
+}
+
+ul>li a{
+  color: $accent-color;
+}
+
+p.description {
+  text-align: center;
+}
+
+strong {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+li p {
+  margin: 0;
+  color: $soft-color;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#new_task {
+  text-align: justify;
+  margin: 0 5em;
+}
+
+label {
+  display: block;
+  width: 30%;
+  margin: 0 0 1em 0;
+  clear: left;
+  float: left;
+}
+
+input, textarea {
+  // margin: 0 0em 1em 4em;
+  width: 40%;
+  margin-bottom: 1em;
+}
+
+textarea {
+  width: 17em;
+height: 5em;
+}
+
+input[type="submit"] {
+  display: block;
+  font-size: 1em;
+  border: 1px solid $accent-color;
+  color: $accent-color;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  margin: auto;
+}

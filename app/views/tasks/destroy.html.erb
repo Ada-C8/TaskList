@@ -1,0 +1,3 @@
+<h2>Do you want to delete?</h2>
+<%= link_to "yes", delete_task_path(params[:id].to_i), method: :de %>
+<%= link_to "no", task_path(params[:id].to_i)%>
