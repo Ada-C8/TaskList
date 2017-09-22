@@ -12,7 +12,6 @@
     <li>
       <strong>Due Date:</strong> <%= @task.due_date %>
     </li>
-    <!-- needs local variable name task to be in an array because in indesx tasks an array -->
-    <%= render partial: "action_bar", locals: { tasks: [@task] } %>
+    <%= render partial: "action_bar", locals: { task: @task } %>
   </ul>
 </div>
