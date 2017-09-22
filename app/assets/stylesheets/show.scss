@@ -1,0 +1,31 @@
+#task-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  border: solid;
+  border-radius: 2em;
+  background-color: #E27D60;
+}
+
+main {
+  padding: 10% 5%;
+}
+
+#task-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.7rem;
+}
+
+#task-info h2 {
+  align-self: center;
+  font-size: 3em;
+}
+
+// #task-heading {
+//   border-radius: 2em;
+//
+//   background-color: gray;
+//
+// }

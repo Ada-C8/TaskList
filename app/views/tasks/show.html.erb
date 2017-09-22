@@ -1,0 +1,39 @@
+<div id="edit-tasklist">
+<!-- <h1>Task List</h1> -->
+<ul>
+  <li>
+    <%= link_to "Add Task", new_task_path %>
+  </li>
+  <li>
+    <%= link_to "All Tasks", tasks_path %>
+  </li>
+</ul>
+</div>
+
+<div id="task-info">
+<!-- <div id ="task-heading"> -->
+
+
+<h2> <strong><%= @task.name %></strong></h2>
+<!-- </div> -->
+<ul>
+<li>
+  <strong>Task:</strong> <%= @task.name %>
+</li>
+<li>
+  <strong>Description:</strong> <%= @task.description %>
+</li>
+<li>
+  <%# date = Date.new(@task.completion_date)%>
+  <strong>Completion Date:</strong> <%= @task.completion_date.to_date.to_formatted_s(:long_ordinal) %>
+</li>
+<li>
+  <strong>Complete:</strong>
+  <% if @task.complete==false  %>
+  No
+  <% elsif @task.complete==true %>
+  Yes
+  <% end %>
+</li>
+</ul>
+</div>
