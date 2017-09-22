@@ -4,8 +4,14 @@
       Description: <%= @task[:description] %>
     </li>
     <li class="tasks">
-      Complete by: <%= @task[:completion_date] %>
+      Due by: <%= @task[:due_date] %>
     </li>
+
+    <% if @task[:status] == "complete" %>
+      <li class="tasks">
+        Completed On: <%= @task[:completion_date] %>
+      </li>
+    <% end %>
 
     <div class="task-actions">
       <li class="action"><%= link_to "Edit", edit_task_path(@task.id) %></li>

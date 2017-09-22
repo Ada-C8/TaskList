@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.order(:completion_date)
+    @tasks = Task.order(:due_date)
   end
 
   def show
@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], completion_date: params[:task][:completion_date], description: params[:task][:description], status: :incomplete)
+    @task = Task.new(name: params[:task][:name], due_date: params[:task][:due_date], description: params[:task][:description], status: :incomplete, completion_date: nil)
     if @task.save
       redirect_to root_path
     else
@@ -30,7 +30,7 @@ class TasksController < ApplicationController
     # can also use in create or update actions
     # make this into a method?
     # task.update_attributes params.require(:task).permit(:name, :completion_date, :description)
-    # 
+    #
     # private
     #   def task_params
     #     return params.require(:task).permit(:name, :completion_date, :description)
@@ -39,7 +39,7 @@ class TasksController < ApplicationController
     #
 
     @task.name = params[:task][:name]
-    @task.completion_date = params[:task][:completion_date]
+    @task.due_date = params[:task][:due_date]
     @task.description = params[:task][:description]
 
     if @task.save
@@ -62,6 +62,7 @@ class TasksController < ApplicationController
     id = params[:id].to_i
     @task = Task.find(id)
     @task.status = "incomplete"
+    @task.completion_date = Date.today
     @task.save
     redirect_to root_path
   end
