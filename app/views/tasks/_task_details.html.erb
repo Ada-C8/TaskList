@@ -1,18 +1,24 @@
-      <%# check_box_tag 'completed[]', task.complete -%>
+<%# check_box_tag :checked, 1, task.complete, href: complete_task_path(task), method: :put %>
+<p>
+  <% if task.complete != true %>
+  <%= link_to "Mark Complete", complete_task_path(task), method: :put %>
+  <% else%>
+  <%= link_to "Unmark Complete", complete_task_path(task), method: :put %>
+  <% end %>
+</p>
 
-<p class="<%= 'completed_task' if task.complete %>"><strong ><%= link_to "#{task.title}", task_path(task.id) %></strong></p>
+<p class="<%= 'completed_task' if task.complete %>">
+  <strong >
+    <%= link_to "#{task.title}", task_path(task) %>
+  </strong>
+</p>
 
 <p id='description'>
-  <em><%= task.description%></em>
+  <em>
+    <%= task.description%>
+  </em>
 </p>
 
 <p>
-  <%= task.due_date %> | <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
-</p>
-
-<p>
-  <% if task.complete == true %>
-  <%= link_to "Unmark Complete", uncomplete_task_path(task.id), method: :put %>
-  <% else%>
-  <%= link_to "Mark Complete", complete_task_path(task.id), method: :put %> <% end %>
+  <%= task.due_date %> | <%= link_to "Edit", edit_task_path(task) %> | <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
 </p>

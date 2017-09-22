@@ -42,26 +42,13 @@ class TasksController < ApplicationController
 
   def complete
     @task = Task.find(params[:id])
-    @task.complete = true
+    @task.complete = !@task.complete
     @task.save
 
-    redirect_to tasks_path
+    redirect_back(fallback_location: tasks_path)
 
   end
 
-  def uncomplete
-    @task = Task.find(params[:id])
-    @task.complete = false
-    @task.save
-
-
-    redirect_to tasks_path
-  end
-
-  # if task.complete == true 
-  #   link_to "Unmark Complete", uncomplete_task_path(task.id), method: :put
-  # else
-  # link_to "Mark Complete", complete_task_path(task.id), method: :put end
 
   def destroy
     @task = Task.find(params[:id])
