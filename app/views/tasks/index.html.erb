@@ -5,8 +5,10 @@
 <% @tasks.each do |task| %>
   <li>
    <%= link_to(task.name, task_path(task.id)) %>
+   <%= link_to( "Edit Task", edit_task_path(task.id)) %>
  </li>
-   <% end %>
- </section>
+<% end %>
 
-  <%= link_to "Add New Task", new_task_path %>
+</section>
+
+<%= link_to "Add New Task", new_task_path %>

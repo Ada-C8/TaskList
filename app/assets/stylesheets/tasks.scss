@@ -3,9 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
   color: red;
+  font-family: 'Playfair Display', serif;
 }
 
-li {
+#lists li {
+  font-family: 'Playfair Display', serif;
+  list-style: none;
+}
+
+#lists a {
   text-decoration: none;
 }
 
