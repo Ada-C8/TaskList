@@ -24,6 +24,13 @@
   align-content: center;
 }
 
+#robot_container:hover{
+	-webkit-stroke-width: 5.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 1px 0px 20px yellow;
+}
+
 header {
   background-color: white;
   padding-top: 20px;
@@ -147,6 +154,12 @@ body {
   align-content: flex-end;
   align-items: center;
   flex-direction: column;
+}
+
+#show_header {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: yellows;
 }
 
 /*add view styling */
