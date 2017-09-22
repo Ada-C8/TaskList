@@ -43,6 +43,9 @@ class TasksController < ApplicationController
   def complete
     @task = Task.find(params[:id])
     @task.complete = !@task.complete
+    if @task.complete
+      @task.date_complete = DateTime.now
+    end
     @task.save
 
     redirect_back(fallback_location: tasks_path)

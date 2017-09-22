@@ -1,11 +1,4 @@
 <%# check_box_tag :checked, 1, task.complete, href: complete_task_path(task), method: :put %>
-<p>
-  <% if task.complete != true %>
-  <%= link_to "Mark Complete", complete_task_path(task), method: :put %>
-  <% else%>
-  <%= link_to "Unmark Complete", complete_task_path(task), method: :put %>
-  <% end %>
-</p>
 
 <p class="<%= 'completed_task' if task.complete %>">
   <strong >
@@ -13,6 +6,8 @@
   </strong>
 </p>
 
+
+<% if task.complete != true %>
 <p id='description'>
   <em>
     <%= task.description%>
@@ -20,5 +15,34 @@
 </p>
 
 <p>
-  <%= task.due_date %> | <%= link_to "Edit", edit_task_path(task) %> | <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+  Date due: <%= task.due_date %>
 </p>
+
+<ul>
+  <li>
+    <%= link_to "Mark Complete", complete_task_path(task), method: :put %>
+  </li>
+  <li>
+    <%= link_to "Edit", edit_task_path(task) %>
+  </li>
+  <li>
+    <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+  </li>
+</ul>
+
+
+<% else%>
+<p>
+  Time completed: <%= task.date_complete %>
+</p>
+<ul>
+  <li>
+    <%= link_to "Unmark Complete", complete_task_path(task), method: :put %>
+  </li>
+  <li>
+    <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+    <!-- is it worth it to make a new partial for this one line? -->
+  </li>
+</ul>
+
+<% end %>
