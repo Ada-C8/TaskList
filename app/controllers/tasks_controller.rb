@@ -36,13 +36,6 @@ class TasksController < ApplicationController
     @task.due_date = task_updates[:due_date]
     @task.status = task_updates[:status]
     @task.save
-
-    if params[:status]
-      puts hello
-      redirect_to tasks_path
-    else
-      redirect_to task_path(@task)
-    end
   end
 
   def complete

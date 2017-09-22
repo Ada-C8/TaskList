@@ -2,26 +2,7 @@
 
 <h1 class="increase-font">&#10004; EDIT THIS TASK</h1>
 
-<%= form_for @task do |f| %>
-  <div class="input-wrapper">
-    <%= f.label :title, "Name of task:" %>
-    <%= f.text_field :title, class: "input-border" %>
-  </div>
-
-  <div class="input-wrapper">
-    <%= f.label :description, "What do you need to accomplish?" %>
-    <%= f.text_field :description, class: "input-border" %>
-  </div>
-
-  <div class="input-wrapper">
-    <%= f.label :due_date, "Reachable due date?" %>
-    <%= f.date_field :due_date, class: "input-border"%>
-  </div>
-
-  <div class ="submit-wrapper">
-    <%= f.submit "Make Changes!", class: "submit-button" %>
-  </div>
-<% end %>
+<%= render partial: "form", locals: { button_text: "Make the changes!" } %>
 
 </article>
 
