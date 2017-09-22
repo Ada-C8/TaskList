@@ -20,8 +20,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    # @task = Task.find( params[:id].to_i)
-
+    Task.find_by(id: params[:id]).destroy
+    redirect_to root_path
   end
 
   def edit
@@ -42,7 +42,7 @@ class TasksController < ApplicationController
   def update
     task = Task.find_by(id: params[:id].to_i)
     redirect_to tasks_path unless task
-    if task.update_attributes book_params
+    if task.update_attributes task_params
       redirect_to root_path
     else
       render :edit
@@ -51,7 +51,7 @@ class TasksController < ApplicationController
 
   def mark_complete
     @task = Task.find (params[:id].to_i)
-    @task.status ? @task.update(status: false) : @task.update(status: true)
+    @task.status ? @task.update(status: false) : @task.update(status: true, initial_status: true, final_status: true)
 
     redirect_to root_path
   end
@@ -72,7 +72,7 @@ class TasksController < ApplicationController
 
   private
 
-  def book_params
+  def task_params
     return params.require(:task).permit(:name, :description, :completion_date)
   end
 
