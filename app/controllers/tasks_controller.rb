@@ -19,11 +19,13 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find_by(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def edit
-    @task = Task.find_by(params[:id])
+    @task = Task.find(params[:id])
+    # @task = Task.find_by(params[:id]) Why is this not working and giving me task 1?
+    # @task = Task.where(params[:id]).first same here?
   end
 
   def update
