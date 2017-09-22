@@ -26,20 +26,16 @@ class TasksController < ApplicationController
     task_updates = params[:task]
     @task = Task.find(params[:id])
 
-    @task.task = task_updates[:task]
+    @task.title = task_updates[:title]
     @task.description = task_updates[:description]
-    @task.due = task_updates[:due]
+    @task.due_date = task_updates[:due_date]
 
     @task.save
     redirect_to task_path(@task)
   end
 
-  def complete?
-    if @task.status == false
-      return false
-    end
-    @task.save
-    redirect_to '/tasks'
+  def status
+
   end
 
   def destroy

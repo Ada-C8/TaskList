@@ -1,22 +1,21 @@
-<div class="tasks container" id="index">
+<section class=''>
   <h2>Your Tasks</h2>
-  <ol>
-    <% @tasks.each_with_index do |task, i| %>
-    <li class="task button <%= "completed" if task.status == true %>">
-        <p>
-          <strong><%= task.status ? "✓ #{task[:task]}" : (link_to "#{task[:task]}", task) %></strong>
-        </p><br />
-        <nav class="task-options">
-          <ul>
-            <li>
-              <%= link_to "Edit", edit_task_path(task) %> |
-            </li>
-            <li>
-              <%= link_to "Delete", task_path(task), method: :delete %>
-            </li>
-          </ul>
-        </nav>
-    </li>
+    <ol>
+      <% @tasks.each do |task| %>
+        <li>
+          <p>
+            <strong>
+              <%= link_to '#{task[:task]}', task %>
+            </strong>
+          </p>
+          <%= link_to 'Edit', edit_task_path(task) %> |
+          <%= link_to 'Delete', task_path(task), method: :delete %>
+      </li>
     <% end %>
-  </ul>
-</div>
+  </ol>
+</section>
+
+<section class=''>
+  <%= link_to 'Add', new_task_path %> |
+  <%= link_to "List all tasks", tasks_path %>
+</section>
