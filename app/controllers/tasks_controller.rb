@@ -13,7 +13,6 @@ class TasksController < ApplicationController
       @task.due_date = DateTime.now
       @task.save
     end
-
     if @task.due_date < DateTime.now
       @task.status = "Past Due"
     elsif

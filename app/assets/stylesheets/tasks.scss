@@ -21,13 +21,13 @@ H1 , H2, ol li {
 
 H1 {
   background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   font-size: 60px;
-   height: 100%;
-   width: 100%;
-   text-align: center;
-   line-height: 60px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
 }
 
 // flashing text/header
@@ -50,10 +50,14 @@ H1 {
 // @keyframes flash {
 //   from {color: pink;}
 //   to {color: black;}
-  // to {color:green;}
+// to {color:green;}
 // }
 
 // end flashing text
+
+body {
+  width: 100%;
+}
 
 .task_list {
   color:pink;
@@ -72,44 +76,47 @@ footer {
   bottom:0;
   margin-top: -20px;
   height: 20px;
+  right: 5%
 }
 
 
 .task_block {
-  
+
   margin: 0 auto;
-  left:500px;
-  top:150px;
-  display: block;
-  vertical-align: center;
+  display: inline-block;
+  position: absolute;
+  left: 30%;
   border-style: solid;
   border-color: beige;
   border-radius: 15%;
   margin: 4%;
   text-align: center;
   background-color: rgba(250,235,215,.4);
-
 }
 
 
 .edit_pic img {
-    width:100px; /* you can use % */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  width:100px; /* you can use % */
+  // height: auto;
+  // display: block;
+  // margin: 0 auto;
 }
 
 .delete_pic img {
-    width:50px; /* you can use % */
-    display: block;
-    margin: 0 auto;
+  width:50px; /* you can use % */
+  // display: block;
+  // margin: 0 auto;
 }
 
 .all_tasks_pic img {
-    width:60px; /* you can use % */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  width:60px; /* you can use % */
+  // height: auto;
+  // display: block;
+  // margin: 0 auto;
+}
+
+.icons {
+  display: inline-block;
 }
 
 .tasks {
@@ -118,5 +125,26 @@ footer {
   width: 100%;
   text-align: center;
   line-height: 60px;
-   color: green
+  color: green
+}
+
+// .due {
+//   color:red
+// }
+
+.due {
+  display: flex;
+  justify-content: center;
+  animation-name: flash;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes flash {
+  from {color: red;}
+  to {color: black;}
+
 }
