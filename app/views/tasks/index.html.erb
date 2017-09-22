@@ -30,7 +30,7 @@
         <%= link_to "Edit", edit_task_path(task.id), class: "no-underline hover-blue visited-links"%>
       </li>
       <li>
-        <%= link_to "Remove", delete_task_path(task.id), method: :delete, class: "no-underline hover-red visited-links" %>
+        <%= link_to "Remove", task_path(task.id), method: :delete, data: { confirm: "You sure you want to remove?" }, class: "no-underline hover-red visited-links" %>
       </li>
     </ul>
   </nav>

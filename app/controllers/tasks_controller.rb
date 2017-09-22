@@ -13,7 +13,6 @@ class TasksController < ApplicationController
     task = Task.new(title: params[:task][:title], description: params[:task][:description], due_date: params[:task][:due_date])
     task.save
     redirect_to('/tasks')
-
     # This will redirect to the index page because we are telling where the path should go. This should ultimately direc to the show route
   end
 
@@ -38,7 +37,12 @@ class TasksController < ApplicationController
     @task.status = task_updates[:status]
     @task.save
 
-    redirect_to task_path(@task)
+    if params[:status]
+      puts hello
+      redirect_to tasks_path
+    else
+      redirect_to task_path(@task)
+    end
   end
 
   def complete
@@ -54,13 +58,6 @@ class TasksController < ApplicationController
     @task.save
     redirect_to('/tasks')
   end
-  
-  # def remove
-  #   @tasks = Task.where(status: true)
-  #   @tasks.destroy
-  #   @tasks.save
-  #   redirect_to('/tasks')
-  # end
 
   def destroy
     Task.find(params[:id]).destroy
