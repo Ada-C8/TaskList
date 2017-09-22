@@ -6,9 +6,10 @@
     <ol>
       <% @tasks.each do |task| %>
           <li>
-            <%=link_to(task.name, task_show_path(task.id), alt: 'link to task#show')%>
+            <%= link_to(task.name, task_path(task.id), alt: 'link to task#show')%>
             <em><br/>
-              <%=link_to "Mark Complete", task_complete_path(task.id) %> | <%=link_to "Edit", edit_task_path(task.id), alt: 'link to task#edit' %> | <%=link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %>
+              <%= link_to "Edit", edit_task_path(task.id) %>
+              <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %>
             </em></br/>
           </li>
       <% end %>

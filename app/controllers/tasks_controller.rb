@@ -12,7 +12,15 @@ class TasksController < ApplicationController
   # end
 
   def index
-    @tasks = Task.all
+    @tasks = Task.order(:name)
+  end
+
+  def show
+    @task = Task.find(params[:id].to_i)
+  end
+
+  def new
+    @task = Task.new
   end
 
   def create
@@ -24,6 +32,15 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find_by(id: params[:id].to_i)
+
+    unless @task
+      redirect_to root_path
+    end
+
+  end
+
   def destroy
     @task = Task.find(params[:id].to_i).destroy
     if @task.save
@@ -31,20 +48,30 @@ class TasksController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def new
-    @task = Task.new
-  end
-
-  def show
-    @task = Task.find(params[:id].to_i)
-  end
-
   def update
+    task = Task.find_by(id: params[:id].to_i)
+    task.name = params[:task][:name]
+    task.description = params[:task][:description]
+    task.completion_date = params[:task][:completion_date]
+    task.save
+
+    if task.save
+      redirect_to root_path
+    else
+      render :edit
+    end
+
+    # task = Task.find_by(id: params[:id].to_i)
+    # redirect_to tasks_path unless task
+    #
+    # if task.update_attributes name: params[:tasks][:name], description: params[:tasks][:description]
+    #   redirect_to tasks_path
+    # else
+    #   render :edit
+    # end
   end
 
-  # def '#mark_complete'
-  # end
+  def mark_complete
+    
+  end
 end
