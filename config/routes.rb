@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get '/tasks/', to: 'tasks#index', as: 'tasks' #tasks_path
+  root to: 'tasks#index'
+
+  get '/tasks', to: 'tasks#index', as: 'tasks' #tasks_path
 
   get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_task' #edit_book_path
 

@@ -1,14 +1,18 @@
 <h1>Show Tasks</h1>
-<% if @tasks %>
+<%= @task.name %>
+<%= params %>
+<!-- <% if @tasks %> -->
 
-<h1>
-<%= @tasks %>
-<%= link_to "Edit", edit_task_path(@task) %>
-<%= link_to "Delete", delete_task_path(@tasks), method: :delete %>
-</h1>
 
-<% else %>
+
+
+<!-- <%= @task.description %> -->
+<!-- <%= link_to "Edit", edit_task_path(@task) %>
+<%= link_to "Delete", delete_task_path(@tasks), method: :delete %> -->
+
+
+<!-- <% else %>
   <h1>404: Not Found</h1>
-<% end %>
+<% end %> -->
 
-<%= link_to "Home", tasks_path%>
+<!-- <%= link_to "Home", tasks_path%> -->
