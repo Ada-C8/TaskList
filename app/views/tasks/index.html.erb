@@ -9,8 +9,10 @@
     <li>
       <%= link_to(task.name, task_path(task.id)) %>
       <%=button_to "Edit", edit_task_path(task.id), method: :get%>
-      <%= link_to "Delete", delete_task_path(task.id) %>
-      <p> Mark Complete | Delete</p>
+      <%=button_to "Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+
+
+      <p> Mark Complete</p>
       </li>
       <% end %>
     </ol>
