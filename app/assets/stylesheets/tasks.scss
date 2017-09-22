@@ -119,6 +119,8 @@ ul {
   list-style: none;
   text-decoration: none;
   length: 400px;
+  min-width: 275px;
+  overflow: hidden;
   color: #27cdb2;
   font-size: .5em;
   display: inline;

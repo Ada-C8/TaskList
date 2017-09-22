@@ -1,7 +1,7 @@
       <h2 class="task-heading">You Need To...</h2>
       <ul id="task-box">
         <% @tasks.each do |task| %>
-          <% if task.status == "complete" %>
+          <% if task[:status] == "complete" %>
               <li class="complete-task">
                 <%= image_tag 'donut-transparent.png', alt: "A delicious sprinkled donut", class: "donut-image" %><span class="strike"><%= task[:name] %> <span/>
               </li>
@@ -14,7 +14,7 @@
           <% if task[:status] == "incomplete" %>
               <li class="action"><%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %></li>
           <% else %>
-              <li class="action"><%= link_to "Mark Incomplete", mark_complete_path(task.id), method: :patch %></li>
+              <li class="action"><%= link_to "Mark Incomplete", mark_incomplete_path(task.id), method: :patch %></li>
           <% end %>
 
           <li class="action"><%= link_to "Edit", edit_task_path(task.id) %></li>
