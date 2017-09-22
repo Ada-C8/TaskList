@@ -18,15 +18,18 @@
   <input type="submit" value="Press This Button">
 </form> -->
 
-<%= form_tag ('/tasks') do %>
-<%= label_tag "task[title]", "TASK NAME" %>
-<%= text_field_tag "task[title]" %>
 
-<%= label_tag "task[description]", "TASK DESCRIPTION" %>
-<%= text_field_tag "task[description]" %>
 
-<%= label_tag "task[date]", "DATE" %>
-<%= date_field_tag "task[date]" %>
 
-<%= submit_tag "Press This Button" %>
+<%= form_for(@task) do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.label :date %>
+<%= f.date_field :date %>
+
+<%= f.submit "Press This Button" %>
 <% end %>

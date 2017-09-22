@@ -1,1 +1,23 @@
 <h1>This is the edit page</h1>
+
+
+<%= form_for(@task) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_field :date %>
+  </p>
+
+  <p>
+    <%= f.submit "Save Changes"%>
+  </p>
+<% end %>

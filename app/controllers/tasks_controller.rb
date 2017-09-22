@@ -4,6 +4,7 @@ class TasksController < ApplicationController
   end
 
   def new #only cares about showing the form
+    @task = Task.new
   end
 
   def create #hash access to user data, from the form,
@@ -24,14 +25,18 @@ class TasksController < ApplicationController
     # title: params[:book_id]
   end
 
-  def update
-  end
-
-  def edit_task
+  def edit
     @task = Task.find(params[:id])
   end
 
+  def update
+    # @task = Task.find(params[:id])
+    # @task.update(title: params[:title], description: params[:description], date: params[:date])
+    # redirect_to task_path(@task)
+  end
+
   def destroy
+
   end
 
 end
