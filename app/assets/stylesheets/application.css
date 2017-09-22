@@ -55,13 +55,15 @@ p{
   float: right;
   width: 70%;
   margin-top: 110px;
-  /*margin-right: 0px;*/
+  margin-right: 0px;
   border: groove;
   border-radius: 5px;
   padding: 5px;
   vertical-align: top;
+}
 
-
+.choose .unmark{
+  text-decoration: line-through;
 }
 .choose h4{
   display: inline-block;
