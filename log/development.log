@@ -10236,3 +10236,35 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 102ms (Views: 83.4ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 09:32:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 09:33:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 09:33:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 09:33:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
