@@ -1,6 +1,3 @@
-<p>
-  PARTIAL!!
-</p>
 
 <%= form_for @task do |f| %>
 
@@ -8,14 +5,16 @@
   <%= f.text_field :name %>
 
   <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.text_area :description, size: "30x4" %>
 
   <%= f.label :due_date %>
   <%= f.date_field :due_date %>
 
-  <%# how to add class to these? %>
-  <%= f.label :complete, class: "checkbox" %>
-  <%= f.check_box :complete, class: "checkbox" %>
+  <%= f.label :completion_date %>
+  <%= f.date_field :completion_date %>
+
+  <%# f.label :complete, class: "checkbox" %>
+  <%# f.check_box :complete, class: "checkbox" %>
 
   <%= f.submit button_name, class: "button" %>
 <% end %>

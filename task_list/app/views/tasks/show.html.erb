@@ -10,10 +10,11 @@
       <%= @task.description %>
     </p>
     <p class="status">
-      Status: <%= @task.complete ? "Done! Awesome sauce!" : "due #{@task.due_date}" %>
+      Status: <%= @task.completion_date ? "Completed on #{@task.completion_date}! Awesome sauce!" : "due #{@task.due_date}" %>
     </p>
 
     <p>
+      <%= button_to('Task List', root_path, method: :get, class: "button") %>
       <%= button_to('Edit Task', edit_task_path, method: :get, class: "button") %>
     </p>
   </main>

@@ -10,7 +10,8 @@ class TasksController < ApplicationController
   end
 
   def index
-    @tasks = Task.order(:name)
+    # @tasks = Task.order('LOWER(name)')
+    @tasks = Task.order(:due_date)
   end
 
   def edit
@@ -38,27 +39,14 @@ class TasksController < ApplicationController
 
   def destroy
     @task = Task.find_by(id: params[:id].to_i)
+    @task.destroy
 
-    unless @task
-      @task.destroy
-      redirect_to root_path
-    else
-      # flash notice
-      render :index
-    end
+    redirect_to root_path
 
-    #
-    # unless @task
-    #   @task.destroy
-    #   redirect_to root_path
-    # else
-    #   # flash notice
-    #   render :show
-    # end
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], due_date: params[:task][:due_date], complete: false)
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], due_date: params[:task][:due_date], completion_date: params[:task][:completion_date])
 
     if @task.save
       flash[:notice] = "Task added"
@@ -83,7 +71,10 @@ class TasksController < ApplicationController
 
   def mark_complete
     @task = Task.find( params[:id].to_i )
-    @task.complete = @task.complete ? false : true
+    @task.completion_date = @task.completion_date ? nil : Date.today
+
+    # @task.complete = @task.complete ? false : true
+
     @task.save
 
     redirect_to root_path
@@ -92,7 +83,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    return params.require(:task).permit(:name, :description, :due_date, :complete)
+    return params.require(:task).permit(:name, :description, :due_date, :completion_date)
   end
 
 end

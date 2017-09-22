@@ -4,27 +4,43 @@
     <h1>Task List</h1>
   </header>
   <main class="index">
-    <%= image_tag('this_is_fine_dog.png', alt: 'This is Fine cartoon', class: "main-image") %>
+    <div class='main-block'>
+
+      <%= image_tag('this_is_fine_dog.png', alt: 'This is Fine cartoon', class: "main-image") %>
+
+      <ul>
+        <li id='add'>
+          <%# link_to('Add Task', create_task_path, method: :new) %>
+          <%= button_to('Add Task', new_task_path, method: :get) %>
+        </li>
+        <li id='all'>
+          <%# link_to('All Tasks', tasks_path) %>
+          <%= button_to('All Tasks', tasks_path, method: :get) %>
+        </li>
+      </ul>
+    </div>
 
     <div class='list'>
 
       <h2>The Clock is Ticking...</h2>
+
       <ol>
       <% @tasks.each do |task| %>
-        <% @status = task.complete ? 'complete' : 'incomplete' %>
-        <li class= "task <%= @status %>" >
+        <% @status = task.completion_date ? 'complete' : 'incomplete' %>
+        <% @overdue = !task.completion_date && task.due_date < Date.today ? 'overdue' : 'on-time' %>
+        <li class= "task <%= @status %> <%= @overdue %>" >
           <%= link_to(task.name.capitalize, task_path(task.id)) %>
         </li>
         <ul class='options'>
           <li>
-            <% @toggle = task.complete ? 'Unmark Complete' : 'Mark Complete' %>
+            <% @toggle = task.completion_date ? 'Unmark Complete' : 'Mark Complete' %>
             <%= link_to(@toggle, complete_task_path(task.id), method: :patch) %>
           </li>
-          <li>
+          <li id='edit-task'>
             <%= link_to 'Edit', edit_task_path(task.id) %>
           </li>
-          <li>
-            <%= link_to('Delete', delete_task_path(task.id), method: :delete) %>
+          <li id='delete-task'>
+            <%= link_to('Delete', delete_task_path(task.id), method: :delete, data: { confirm: "Delete #{task.name} from task list?" } ) %>
           </li>
         </ul>
         </li>
@@ -33,18 +49,9 @@
       </ol>
     </div>
 
-    <div class='buttons'>
+    <!-- <div class='buttons'> -->
 
-      <ul>
-        <li class='button'>
-          <%# link_to('Add Task', create_task_path, method: :new) %>
-          <%= button_to('Add Task', new_task_path, method: :get) %>
-        </li>
-        <li class='button'>
-          <%# link_to('All Tasks', tasks_path) %>
-          <%= button_to('All Tasks', tasks_path, method: :get) %>
-        </li>
-      </ul>
-    </div>
+
+    <!-- </div> -->
   </main>
 </div>
