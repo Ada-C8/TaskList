@@ -1,2 +1,22 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<div class="tasks container" id="index">
+  <h2>Your Tasks</h2>
+  <ul>
+    <% @tasks.each_with_index do |task, i| %>
+    <li class="task button <%= "completed" if task.status == true %>">
+        <p>
+          <strong><%= task.status ? "✓ #{task[:task]}" : (link_to "#{i + 1}. #{task[:task]}", task) %></strong>
+        </p><br />
+        <nav class="task-options">
+          <ul>
+            <li>
+              <%= link_to "Edit", edit_task_path(task) %> |
+            </li>
+            <li>
+              <%= link_to "Delete", task_path(task), method: :delete %>
+            </li>
+          </ul>
+        </nav>
+    </li>
+    <% end %>
+  </ul>
+</div>
