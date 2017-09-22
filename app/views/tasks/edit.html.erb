@@ -8,6 +8,10 @@
 
   <%= f.label :due_date %>
   <%= f.text_field :due_date %>
-  
+
   <%= f.submit %>
+
+
+      <%= button_to("Back to all tasks", tasks_path(@task)) %>
+
 <% end %>

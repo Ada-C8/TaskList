@@ -7,13 +7,25 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find( params[:id].to_i)
-    if @task.due_date < DateTime.now
-      @task.status = "Past Due"
-    else
-      @task.status = @task.due_date
+
+    @task = Task.find( params[:id].to_i)
+    if @task.due_date == nil
+      @task.due_date = DateTime.now
+      @task.save
     end
 
+    if @task.due_date < DateTime.now
+      @task.status = "Past Due"
+    elsif
+      @task.due_date > DateTime.now
+      @task.status = "Due soon"
+    else
+      @task.status = "Due in a week"
+
+    end
   end
+
+
 
   def edit
     @task = Task.find_by(id: params[:id].to_i)

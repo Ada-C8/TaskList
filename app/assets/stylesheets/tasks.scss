@@ -94,16 +94,21 @@ footer {
 .edit_pic img {
     width:100px; /* you can use % */
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .delete_pic img {
     width:50px; /* you can use % */
-    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .all_tasks_pic img {
     width:60px; /* you can use % */
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .tasks {

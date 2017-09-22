@@ -1,15 +1,16 @@
 <h1>Tasklist</h1>
-<h3>  <%= link_to "Add Task", new_task_path(@task) %>
 
-<%= link_to "All Tasks", tasks_path(@task) %>
-</h3>
 <div class=task_block>
 <h2>
   Your Tasks:
 </h2>
+<p>
+  <%= link_to "Add Task", new_task_path(@task) %>
+</p>
 <ol>
 <% @tasks.each do |task| %>
-  <li>  <strong>
+  <li>
+    <strong>
       <%= link_to(task.name[task.name], task_path(task.id), alt: 'link to', class:"task_list" ) %>
     </strong>
   </li>
