@@ -1,2 +1,22 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1>To Do: <%= @task.name %></h1>
+<ul>
+  <li>
+    <%= @task.description %>
+  </li>
+  <li>
+    Due: <%= @task.due %>
+  </li>
+  <li>
+    Status: <%= @task.status %>
+  </li>
+</ul>
+
+<ul>
+  <li class="button">
+    <%= link_to "Edit", edit_task_path(@task.id) %>
+
+  </li>
+  <li class="button">
+    <%= link_to "List", root_path %>
+  </li>
+</ul>
