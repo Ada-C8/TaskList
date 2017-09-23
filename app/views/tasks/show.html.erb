@@ -1,6 +1,17 @@
 <article class="index">
-  <h2><%= @task.name %></h2>
-  <p> <%= @task.description %></p>
-  <%= render partial: "task_tools", locals: {task: @task}%>
+  <div id="show">
+    <h2><%= @task.name %></h2>
+    <%= render partial: "task_tools", locals: {task: @task}%>
+    <h3>Description</h3>
+    <p><%= @task.description %></p>
+  <% if @task.completion_date == nil %>
 
+  <%= button_to('Mark Complete', mark_task_path(@task.id), method: :patch) %>
+
+  <% else %>
+
+  <%= button_to('Mark Incomplete', mark_task_path(@task.id), method: :patch) %>
+
+  <% end %>
+</div>
 </article>

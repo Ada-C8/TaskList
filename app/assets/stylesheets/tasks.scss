@@ -58,4 +58,28 @@
   width: 2rem;
   height: 2rem;
   padding: 0;
+  border-radius: 50%;
+}
+
+// SHOW STYLING
+#show {
+  position: relative;
+  padding: 10px 5%;
+}
+
+#show nav {
+  text-align: center;
+}
+
+#show .button_to {
+  margin: 1rem auto;
+  padding: .5rem;
+  width: 100%;
+  text-align: center;
+  background-color: Coral;
+}
+
+#show .button_to input {
+  width: auto;
+  border-radius: 0;
 }
