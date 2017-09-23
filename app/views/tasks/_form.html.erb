@@ -4,7 +4,7 @@
   <%= f.label :description %>
   <%= f.text_field :description, required: true %>
   <%= f.label :completion_date %>
-  <%= f.date_field :completion_date, required: true %>
+  <%= f.date_field :completion_date, value: @task.completion_date, required: true %>
 
   <label for="task_done" class="control control-checkbox">
       Done?
