@@ -12,7 +12,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date], complete: params[:task][:complete] = false)
+    task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date], due_date: params[:task][:due_date], complete: params[:task][:complete] = false)
     task.save
     redirect_to tasks_path
   end
@@ -23,7 +23,7 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    task_updates = params.require(:task).permit(:name, :description, :completion_date, :complete)
+    task_updates = params.require(:task).permit(:name, :description, :completion_date, :due_date, :complete)
     @task.update_attributes(task_updates)
     @task.save
 

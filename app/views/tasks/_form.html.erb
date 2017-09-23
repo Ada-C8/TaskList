@@ -21,9 +21,13 @@
     <%= f.text_field :description, class: "form-field", placeholder: hide_placeholder_text ? "" : "Description of Task" %>
   </li>
   <li>
-    <%= f.label :completion_date %>:
-    <%= f.text_field :completion_date, class: "form-field", placeholder: hide_placeholder_text ? "" : "YYYYMMDD" %>
+    <%= f.label :due_date %>:
+    <%= f.text_field :due_date, class: "form-field", placeholder: hide_placeholder_text ? "" : "YYYYMMDD"  %>
   </li>
+  <!-- <li> -->
+    <%# f.label :completion_date %>
+    <%# f.text_field :completion_date, class: "form-field", placeholder: hide_placeholder_text ? "" : "YYYYMMDD" %>
+  <!-- </li> -->
     <%= f.submit button_text, id:"submit-button" %>
   </ul>
   <% end %>

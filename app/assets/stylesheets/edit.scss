@@ -1,3 +1,9 @@
+
+// <%= stylesheet_link_tag "filename" %>
+main {
+  padding: 10% 5%;
+}
+
 #edit-form {
   display: flex;
   flex-direction: column;
@@ -6,10 +12,6 @@
   border: solid;
   border-radius: 2em;
   background-color: #E27D60;
-}
-
-main {
-  padding: 10% 5%;
 }
 
 #edit-form ul {
@@ -30,6 +32,7 @@ main {
 #submit-button {
   width: 20%;
   font-size: 8rem;
+  margin-top: 4%;
   justify-content: center;
   align-self: center;
 }

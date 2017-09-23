@@ -3,11 +3,13 @@
 one:
   name: MyString
   description: MyString
-  completion_date: MyString
+  completion_date: 2017-09-23
   complete: false
+  due_date: 2017-09-23
 
 two:
   name: MyString
   description: MyString
-  completion_date: MyString
+  completion_date: 2017-09-23
   complete: false
+  due_date: 2017-09-23
