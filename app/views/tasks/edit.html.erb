@@ -1,0 +1,10 @@
+<%= form_for @task do |t| %>
+
+<%= t.label "Actividad" %>
+<%= t.text_field :title %>
+<%= t.label "Descripción" %>
+<%= t.text_field :description %>
+<%= t.label "Fecha" %>
+<%= t.date_field :duedate %>
+<%= t.submit "Editar Tarea"%>
+<% end %>
