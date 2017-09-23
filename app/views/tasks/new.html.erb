@@ -1,15 +1,8 @@
-<h1>This is the input page</h1>
+<h2>This is the input page</h2>
 
+<img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Dwight_Schrute.jpg" />
 
+<div>
+<%= render partial: "form", locals: {button_text: "Make a new task"}%>
 
-<%= form_for @task do |t| %>
-  <%= t.label :title %>
-  <%= t.text_field :title %>
-  <%= t.label :description %>
-  <%= t.text_field :description %>
-  <%= t.label :due_date %>
-  <%= t.date_field :due_date %>
-  <%= t.label :complete %>
-  <%= t.text_field :complete %>
-  <%= t.submit %>
-<% end %>
+</div>

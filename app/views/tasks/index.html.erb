@@ -1,36 +1,32 @@
-<body>
-  <h1>Task List</h1>
 
-  <nav>
-    <li>
-      <%= link_to "Add task", new_task_path, class: "link"%>
-    </li>
-    <li>
-      All tasks
-    </li>
-  </ul>
-</nav>
 
-<div>
-<h2>My tasks</h2>
-  <ol>
-    <% @tasks.each do |task|  %>
-    <li>
-      <h3><%=link_to task.title, task_path(task.id)%></h3>
-      Description: <%= task[:description]%>
-      <br>
-      Due Date: <%=task[:due_date]%>
-      <br>
-      Status: <%=
-      if task[:complete]==true
-        "Done!"
-      elsif task[:complete]==false
-      "Incomplete"
-      end
-      %>
-    </li>
-    <%end%>
-  </ol>
+    <nav>
+    </nav>
+    <img src = "https://iworkattheoffice.files.wordpress.com/2008/09/displayimagephp.jpg" />
 
-</div>
-</body>
+
+    <main>
+      <div>
+      <h2>My tasks</h2>
+      <p>
+        <%= link_to "Add task", new_task_path, class: "navigation"%>
+      </p>
+      <ol>
+      <% @tasks.each do |current_task|  %>
+        <li>
+          <h3>
+<%= check_box("tag", tag.id, {checked: current_task.complete}) %>
+        <%=link_to current_task.title, task_path(current_task.id)%>
+          </h3>
+
+          <%= render partial: "task_summary", locals: {current_task: current_task}%>
+
+          <%= render partial: "buttons", locals: {current_task: current_task}%>
+      </li>
+      <%end%>
+    </ol>
+    <p>
+      <%= link_to "Add task", new_task_path, class: "navigation"%>
+    </p>
+  </div>
+</main>

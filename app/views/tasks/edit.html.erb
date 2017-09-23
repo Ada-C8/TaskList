@@ -1,13 +1,10 @@
-<h1> this is the edit page</h1>
+<h2>Edit a task</h2>
 
-<%= form_for @task do |t| %>
-  <%= t.label :title %>
-  <%= t.text_field :title %>
-  <%= t.label :description %>
-  <%= t.text_field :description %>
-  <%= t.label :due_date %>
-  <%= t.date_field :due_date %>
-  <%= t.label :complete %>
-  <%= t.text_field :complete %>
-  <%= t.submit %>
-<% end %>
+
+<img src = "http://previously.tv/m/kotm-dwightjim-full.jpg"  />
+
+<div>
+  <p>
+<%= render partial: "form", locals: {button_text: "Update a task"}%>
+  </p>
+</div>

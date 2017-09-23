@@ -1,25 +1,12 @@
-<h1><%=@task.title %></h1>
+<h2>Closer inspection of task details</h2>
 
-<nav>
-  <ul>
-  <li>
-    <%= link_to "Edit task", edit_task_path, class: "link"%>
-  </li>
-  <li>
-  <%= link_to("delete this task", delete_path, method: :delete, data: {confirm: "are you sure? you can't undo this."})%>
-  </li>
-  <li>
-    <%= link_to "All tasks", tasks_path, class: "link"%>
-  </li>
-</ul>
-</nav>
+<img src="https://www.govloop.com/wp-content/uploads/2015/05/non-defensive-communication.jpeg">
 
-
-
-<ul>
-<li>Description: <%= @task[:description]%></li>
-
-<li>Due Date: <%=@task[:due_date].month%>-<%=@task[:due_date].day%>-<%=@task[:due_date].year%></li>
-
-
-</ul>
+<div>
+  <h3><%=@task.title %></h3>
+  <p>
+    <%current_task = @task %>
+    <%= render partial: "task_summary", locals: {current_task: @task}%>
+    <%= render partial: "buttons", locals: {current_task: current_task}%>
+    </p>
+</div>

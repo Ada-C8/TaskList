@@ -1,0 +1,18 @@
+
+<form>
+<%= form_for @task do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+  <br />
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+  <br />
+  <%= t.label :due_date %>
+  <%= t.date_field :due_date %>
+  <br />
+  <%= t.label :complete %>
+  <%= t.text_field :complete %>
+  <br />
+  <%= t.submit button_text%>
+<% end %>
+</form>

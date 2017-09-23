@@ -14,15 +14,54 @@
  *= require_self
  */
 
+body{
+  background-color: DarkGoldenRod;
+}
+
+div {
+  background-color: LightGrey;
+  display: inline-block;
+  float:right;
+  width: 50%;
+  border-style: solid;
+  border-radius: 20%;
+  padding: 2%;
+  margin: 20px 5% 50px 0;
+}
 
 .margin {
   border: 20px;
 }
 
-h1 {
-  font-size: 2em;
-  padding: 2%;
+header {
+  height: 180px;
+  border-style: solid;
+  text-align: center;
+  background-image: url("http://pixel.nymag.com/imgs/daily/vulture/2012/10/31/31-dwight-schrute.w1200.h630.jpg");
+  background-size: cover;
+  background-position: center;
 }
+
+nav {
+  list-style: none;
+  display: inline-block;
+  float: right;
+  width: 10%;
+}
+
+h1 {
+  font-size: 3em;
+  padding: 10px 0%;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+form{
+  padding: 2% 10%;
+}
+
 
 footer {
   margin: 20px 0 0 0;
