@@ -24,35 +24,25 @@ class TasksController < ApplicationController
     task = Task.find_by(id: params[:id])
     redirect_to root_path unless task
 
-    if task.update_attributes task_params
-      redirect_to root_path # could also be edit_task_path or a way to go back to previous screen
-    else
-      render :edit
-    end
+    task.update_attributes(task_params) ? (redirect_to root_path) : (render :edit)
   end
 
   def mark
     task = Task.find_by(id: params[:id])
 
     if task.completion_date == nil
-      if task.update_attribute :completion_date, Date.today
-        redirect_to root_path # could also be edit_task_path or a way to go back to previous screen
-      end
+      task.update_attribute(:completion_date, Date.today)
+      redirect_back(fallback_location: root_path)
     else
-      if task.update_attribute :completion_date, nil
-        redirect_to root_path # could also be edit_task_path or a way to go back to previous screen
-      end
+      task.update_attribute( :completion_date, nil)
+      redirect_back(fallback_location: root_path)
     end
   end
 
   def create
     @task = Task.new(name:params[:task][:name], description:params[:task][:description])
 
-    if @task.save
-      redirect_to root_path
-    else
-      render :new
-    end
+    @task.save ? (redirect_to root_path) : (render :new)
   end
 
   def destroy
@@ -62,6 +52,6 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    return params.require(:task).permit(:name, :description, :completion_date) #stranger danger! see strong params
+    return params.require(:task).permit(:name, :description, :completion_date) #NOTE to self: stranger danger! see strong params
   end
 end

@@ -1,22 +1,17 @@
 <article class="index">
   <h2>YOUR TASKS</h2>
   <div id="list_view">
-  <ol>
-    <% @tasks.each do |task| %>
-      <li>
-        <% if task.completion_date == nil %>
-
-        <h3><%= button_to('  ', mark_task_path(task.id), method: :patch) %> <%= link_to(task.name, task_path(task.id)) %></h3>
-
-        <% else %>
-
-        <h3><%= button_to(" X ", mark_task_path(task.id), method: :patch) %> <%= link_to(task.name, task_path(task.id), class: "completed") %></h3>
-
-        <% end %>
-
+    <ol>
+      <% @tasks.each do |task| %>
+        <li>
+          <% if task.completion_date == nil %>
+            <h3><%= button_to('  ', mark_task_path(task.id), method: :patch) %> <%= link_to(task.name, task_path(task.id)) %></h3>
+          <% else %>
+            <h3><%= button_to(" X ", mark_task_path(task.id), method: :patch) %> <%= link_to(task.name, task_path(task.id), class: "completed") %></h3>
+          <% end %>
           <%= render partial: "task_tools", locals: {task: task}%>
-      </li>
-    <% end %>
-  </ol>
-</div>
+        </li>
+      <% end %>
+    </ol>
+  </div>
 </article>
