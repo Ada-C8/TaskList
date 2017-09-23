@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.order(:id)
+    @tasks = Task.order(completion_date: :desc).order(id: :desc)
   end
 
   def edit

@@ -14,7 +14,7 @@
   padding: 10px 0;
 }
 
-.form input[type=text] {
+.form input[type=text], input[type=date] {
   width: calc(100% - 10px);
   background-color: white;
   padding: 5px;
@@ -44,14 +44,18 @@
 
 // COMPLETION STYLES
 
-.completed a {
+.completed {
   text-decoration: line-through;
 }
 
-.not_completed{
-
+.button_to {
+  display: inline-block;
+  height: 2rem;
 }
 
-.complete_button{
-
+.button_to input {
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
 }
