@@ -1,0 +1,84 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer');
+
+body {
+  font-family: 'IM Fell Great Primer'
+}
+
+h2 {
+  font-size: 2em;
+}
+
+#task {
+  font-size: 1em;
+}
+
+#show, .form {
+  display: inline-block;
+  width: 60%;
+  margin-left: 10%;
+
+}
+
+// #due_date, #status {
+//   display: inline-block;
+//   width: 25%;
+//   color: purple;
+// }
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+}
+
+h1{
+  display: inline-block;
+  width: 100%;
+  background-color: lightblue;
+}
+nav {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+  margin-left: 2%;
+}
+
+nav a {
+  display:inline-block;
+  width: 100%;
+  background-color: lightblue;
+  text-align: center;
+  margin: 10%;
+}
+
+
+ol {
+  display: inline-block;
+  width: 40vw;
+  background-color: lightblue;
+  margin-left: 20%;
+  // margin-right: 10%;
+}
+
+footer {
+  background-color: lightblue;
+}
+
+
+#complete {
+  text-decoration: line-through;
+}
+
+#not_complete {
+  text-decoration: none;
+}
+
+#edit_link, #delete_link, #mark_completed, #show_link {
+  display: inline-block;
+  width: 22%;
+}

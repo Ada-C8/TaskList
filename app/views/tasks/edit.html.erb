@@ -1,0 +1,10 @@
+<h1>Edit Task</h1>
+
+<nav>
+  <%= link_to "Add Task", new_task_path %>
+  <%= link_to "All Tasks", tasks_path %>
+</nav>
+
+<div class= "form">
+  <%= render partial: "form", locals:  {button_text: "Edit Task!"} %>
+</div>

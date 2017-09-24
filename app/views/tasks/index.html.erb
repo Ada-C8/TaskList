@@ -1,0 +1,66 @@
+<h1>TaskList</h1>
+
+<nav>
+  <%= link_to "Add Task", new_task_path %>
+  <%= link_to "All Tasks", tasks_path %>
+
+</nav>
+<ol>
+  <% @tasks.each do |item| %>
+  <li>
+    <h2>
+    <%if item['status'] == true%>
+      <div id = "complete">
+        <strong>
+          <%= item['task'] %>
+        </strong>
+      </div>
+
+    <%else%>
+      <div id = "not_complete">
+        <strong>
+          <%= item['task'] %>
+        </strong>
+      </div>
+    <%end%>
+  </h2>
+
+    <div id = "description">
+      <%=item['description']%>
+    </div>
+
+    <div id = "due_date">
+      <%=item['due_date']%>
+    </div>
+
+
+    <div id = "show_link">
+      <%= link_to "Show", task_path(item['id'])%>
+    </div>
+
+  <div id = "edit_link">
+    <%= link_to "Edit", edit_task_path(item['id'])%>
+  </div>
+
+  <div id = "delete_link">
+    <%= link_to "Delete",task_path(item['id']), method: :delete, data: {confirm: "Are you sure?"}%>
+  </div>
+
+  <%if item['status'] == false%>
+  <div id = "mark_completed">
+    <%= link_to "Mark", mark_path(item['id']), method: :patch%>
+  </div>
+  <%else%>
+  <div id = "mark_completed">
+    <%= link_to "Unmark", mark_path(item['id']), method: :patch%>
+  </div>
+  <%end%>
+
+
+</li>
+<% end %>
+</ol>
+
+<footer>
+  <p>&copy 2017</p>
+</footer>
