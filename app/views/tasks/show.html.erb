@@ -20,9 +20,8 @@
 < h1>404: Not Found</h1>
 <% end %>
 
-<%= link_to "Home", tasks_path %>
-<%= link_to "Edit", edit_task_path(@task.id) %>
-<%= link_to "Delete", delete_task_path(@task), method: :delete, data: {confirm: "Are you sure?"}%>
+<%= button_to 'Home', tasks_path, method: :get %>
 
+<%= button_to 'Edit', edit_task_path(@task.id), method: :get %>
 
-<!-- <a rel="nofollow" data-method="delete" data-confirm="Are you sure you want to delete?" href="/tasks/<%= @task.id %>">Delet </a> -->
+<%= button_to 'Delete', delete_task_path(@task.id), method: :delete, data: {confirm: "Are you sure?"}%>

@@ -5,7 +5,7 @@ body {
   border-style: solid;
   border-width: 1px;
 
-  width: 600px;
+  width: 700px;
   height: auto;
 }
 
@@ -24,7 +24,7 @@ h3 {
 }
 // -----------------------------------------------
 .right_tasks {
-  width: 50%;
+  width: 60%;
   float: right;
   margin-right: 20px;
   // height: 280px;
@@ -34,7 +34,7 @@ h3 {
 .left_options {
   width: 30%;
   float: left;
-  margin-left: 20px;
+  margin-right: 0;
 }
 
 // -----------------------------------------------
@@ -42,13 +42,13 @@ h3 {
   // border: 1px solid red;
   border-radius: 10px;
   text-align: center;
-  // width: 35%;
 }
 
 .index_nav ul {
   padding-left: 0;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-right: 70%;
+
 }
 
 .index_nav li {
@@ -58,13 +58,15 @@ h3 {
   border-width: 1px;
   border-radius: 10px;
   text-align: center;
-  margin: 10px 0 10px 0;
+  margin: 5px 50px 5px 50px;
   color: black;
 }
 
 .gif {
   height: 150px;
   width: 150px;
+  margin-left: 2%;
+
 }
 
 .index_nav a {
@@ -96,19 +98,24 @@ h3 {
 // -----------------------
 .task_name {
   float: left;
-  width: 50%;
+  width: 40%;
 
 }
 
-.edit_delete {
+.buttons {
   float: right;
-  width: 40%;
+  width: 100%;
+}
+
+.buttons div {
+  // margin: 0 1% 0 1%;
+  float: right;
 }
 
 // ------------------------
 
 footer {
-  margin-top: 80%;
+  margin-top: 50%;
   border-style: solid;
   border-width: 1px;
   text-align: center;

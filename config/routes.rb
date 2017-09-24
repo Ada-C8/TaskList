@@ -13,12 +13,8 @@ Rails.application.routes.draw do
   get '/tasks/:id', to: 'tasks#show', as: 'task' #task_path
 
 
-
-
   # patch 'tasks/completed'
   patch '/tasks/:id/completed', to: 'tasks#completed', as:'completed' #completed_path
-
-
 
 
   # patch 'tasks/update'
