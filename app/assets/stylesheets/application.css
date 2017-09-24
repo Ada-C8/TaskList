@@ -55,6 +55,10 @@ line-height: 12em;
 
 }
 
+.sort {
+  font-size: 0.8em;
+}
+
 .button a:hover {
   text-shadow: yellow 0px 5px 20px;
 }
