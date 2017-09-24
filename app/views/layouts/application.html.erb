@@ -9,6 +9,17 @@
   </head>
 
   <body>
+
+    <h1>Task List</h1>
+
+    <nav>
+
+      <%= link_to "Add Task", add_path %>
+      <%= link_to "All Tasks", tasks_path %>
+      <%= link_to "Google Search", "http://google.com" %>
+
+    </nav>
+
     <%= yield %>
   </body>
 </html>

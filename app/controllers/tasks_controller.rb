@@ -1,40 +1,57 @@
 class TasksController < ApplicationController
 
 
-
-  def new
-    render plain: "added 'new' task"
-  end
-
   def index
-   @tasks = Task.all
+    @tasks = Task.all
     # @tasks = ["complete the death star", "clean the bathroom", "do laundry", "have fun"]
     # render plain: "added 'index' task"
     # render plain: @tasks = ["complete the death star", "clean the bathroom", "do laundry", "have fun"]
 
   end
 
-  def edit
-    render plain: "add 'edit' task"
+  def new
+    @task = Task.new
+  end
+
+  # why do we use a local variable for tasks versus @tasks
+  def create
+    task = Task.new(
+      title: params[:task][:title],
+      description: params[:task][:description],
+      due_date: params[:task][:due_date],
+      completed: params[:task][:completed]
+    )
+    task.save
+
+    redirect_to tasks_path
   end
 
   def show
     render plain: "add 'show' task"
   end
 
+  def edit
+    # why params[:id]
+
+  end
+
   def update
-    render plain: "add 'update' task"
-  end
+    @task = Task.find(params[:id])
 
-  def completed
-    render plain: "add 'completed' task"
-  end
+    # updating attributes
+    @task.title = params[:task][:title]
+    @task.description = params[:task][:description]
+    @task.due_date = params[:task][:due_date]
+    @task.completed = params[:task][:completed]
 
-  def create
-    render plain: "add 'create' task"
+    redirect_to task_path
   end
 
   def destroy
     render plain: "add 'destroy' task"
+  end
+
+  def completed
+    render plain: "add 'completed' task"
   end
 end
