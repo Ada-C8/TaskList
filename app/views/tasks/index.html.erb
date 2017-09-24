@@ -17,22 +17,15 @@
       </div>
       <% counter+=1 %>
 
-      <div class="edit_delete">
-        <div>
-          <%= button_to 'Edit', edit_task_path(task.id), method: :get %>
-          <!-- <%= link_to("Edit", edit_task_path(task[:id])) %> -->
-        </div>
+      <div class="buttons">
+        <%= button_to 'Edit', edit_task_path(task.id), method: :get %>
+        <!-- <%= link_to("Edit", edit_task_path(task[:id])) %> -->
 
-        <div>
-          <%= button_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
-          <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
-        </div>
+        <%= button_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+        <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
 
-        <div>
-          <%= button_to 'Task Complete', completed_path(task.id), method: :patch %>
-          <!-- <%= link_to("Complete", completed_path(task[:id]), method: :patch) %> -->
-        </div>
-
+        <%= button_to 'Task Complete', completed_path(task.id), method: :patch %>
+        <!-- <%= link_to("Complete", completed_path(task[:id]), method: :patch) %> -->
       </div>
     </li>
     <% end %>
