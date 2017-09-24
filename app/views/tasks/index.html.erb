@@ -1,51 +1,9 @@
 
-<% if @priority_zero %>
-<article class="content">
+<% @tasks.each do |priority, array| %>
+
+<article class="content priority<%=priority %>">
+<%= render partial: "priority", locals: { input_priority: priority, tasks: array } %>
 
 
-<%= render partial: "priority", locals: { input_priority: 0 } %>
-
-
-</article>
-<% end %>
-<% if @priority_one %>
-<article class="content priority1">
-<section class ="your_tasks ">
-<ol>
-  <%= render partial: "priority", locals: { input_priority: 1 } %>
-</ol>
-
-</section>
-</article>
-<% end %>
-<% if @priority_two %>
-<article class="content priority2">
-<section class ="your_tasks ">
-<ol>
-  <%= render partial: "priority", locals: { input_priority: 2 } %>
-</ol>
-
-</section>
-</article>
-<% end %>
-
-<% if @priority_three %>
-<article class="content priority3">
-<section class ="your_tasks ">
-<ol>
-  <%= render partial: "priority", locals: { input_priority: 3 } %>
-</ol>
-
-</section>
-</article>
-<% end %>
-<% if @priority_four %>
-<article class="content priority3">
-<section class ="your_tasks ">
-<ol>
-  <%= render partial: "priority", locals: { input_priority: 4 } %>
-</ol>
-
-</section>
 </article>
 <% end %>

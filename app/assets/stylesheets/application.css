@@ -77,9 +77,10 @@ a {
   display: inline-block;
   padding-left: 10px;
   /*max-width: 300px;*/
-  width: 70%;
+  width: 35%;
 
-  min-height: 500px;
+  min-height: 200px;
+  max-height: 300px;
   line-height: 2em;
   background-color: yellow;
   border-bottom-right-radius: 10%;
@@ -87,9 +88,18 @@ a {
   overflow-y: scroll;
 }
 
+.form {
+  width: 70%;
+}
+
 .content li {
   font-size: 2em;
   line-height: 1.25em;
+}
+
+.priority1 {
+  margin-left: 5%;
+  background-color: rgba(255, 0, 177, 0.5);
 }
 
 .completed {
@@ -109,7 +119,7 @@ a {
   text-shadow: blue 5px 5px 30px;
 
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .fixed {
     float: none;
     height: 5em;
@@ -141,6 +151,11 @@ a {
   .content {
     margin-top: 1em;
     width: 95%;
+    clear: both;
+  }
+
+  .priority1 {
+    margin-left: 0em;
   }
 
 }
