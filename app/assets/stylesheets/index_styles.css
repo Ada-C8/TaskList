@@ -96,7 +96,7 @@ a {
  text-decoration: line-through;
 }
 
-.actions span{
+.actions .link {
  margin: 2%;
 }
 

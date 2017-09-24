@@ -72274,3 +72274,36 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 106ms (Views: 102.6ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-24 08:14:13 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 212ms (Views: 201.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/completed_tasks" for 127.0.0.1 at 2017-09-24 08:14:16 -0700
+Processing by TasksController#completed_tasks as HTML
+  Rendering tasks/completed_tasks.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/completed_tasks.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-24 08:14:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-24 08:14:17 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (20.3ms)
+  Rendered tasks/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 69ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
