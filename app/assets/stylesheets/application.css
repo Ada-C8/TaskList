@@ -16,13 +16,3 @@
 
  @import url("index_styles.css");
  @import url("form_styles.css");
-
-/*other html.erb for strike through*/
-
-/*<strong class="<%= task[:status] == "complete" ? "complete" : "" %>">
-  <%= task[:title] %>
-</strong>
-
-(<%= task[:description] %>)
-by <%= task[:due_date] %>,
-status: <%= task[:status] %>*/
