@@ -1,40 +1,10 @@
 class TasksController < ApplicationController
-# TASKS = [
-#   {id: 1,
-#   title:"pay car insurance",
-#   completed: false,
-# },
-# {id: 2,
-# title:"laundry",
-# completed: false},
-# {id: 3,
-# title:"buy groceries",
-# completed: true,
-# description:"spinach, maybe new bread"}
-# ]
-
   def index
-    # @tasks = TASKS
-    @tasks = Task.order(:completed)
-    # @priority_zero = Task.find_by(priority: 0)
-    # @priority_one = Task.find_by(priority: 1)
-    # @priority_two = Task.find_by(priority: 2)
-    # @priority_three = Task.find_by(priority: 3)
-    # @priority_four = Task.find_by(priority: 4)
-
-    @tasks = Task.order(:completed).group_by{|task| task.priority}
-
+    @tasks = Task.order(:completed).group_by{|task| task.category}
   end
 
   def show
     @task = Task.find(params[:id].to_i)
-    # id  params[:id].to_i
-    # @task = nil
-    # TASKS.each do |task|
-    #   if task[:id] == id
-    #     @task = task
-    #   end
-    # end
   end
 
   def edit
@@ -91,7 +61,7 @@ class TasksController < ApplicationController
       completed ? (flash[:notice] = "#{title} was successfully deleted, great job #{owner}!") : (flash[:notice] = "#{title} was successfully deleted, better luck next time #{owner}!")
       redirect_to '/tasks'
     else
-      render :new
+      render :index
     end
   end
 end

@@ -1,8 +1,8 @@
 
-<% @tasks.each do |priority, array| %>
+<% @tasks.each do |category, array| %>
 
-<article class="content priority<%=priority %>">
-<%= render partial: "priority", locals: { input_priority: priority, tasks: array } %>
+<article class="content">
+<%= render partial: "priority", locals: { input_category: category, tasks: array } %>
 
 
 </article>
