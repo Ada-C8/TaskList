@@ -26,14 +26,6 @@ header {
   top: -1em;
 }
 
-/*.nav_box {
-  background-color: #EEE;
-  height: 100%;
-  width: 150px;
-  position: absolute;
-  top: 0px;
-  z-index: -100;
-}*/
 
 .fixed {
   float: left;
@@ -76,9 +68,7 @@ a {
   margin-top: 5em;
   display: inline-block;
   padding-left: 10px;
-  /*max-width: 300px;*/
   width: 35%;
-
   min-height: 200px;
   max-height: 300px;
   line-height: 2em;
@@ -86,6 +76,16 @@ a {
   border-bottom-right-radius: 10%;
   box-shadow: #AAA 0px 15px 20px;
   overflow-y: scroll;
+  vertical-align: top;
+}
+
+.all_tasks {
+  max-height: 700px;
+  width: 70%
+}
+
+.filler {
+  max-height: 700px;
 }
 
 .form {
@@ -97,10 +97,6 @@ a {
   line-height: 1.25em;
 }
 
-.priority1 {
-  margin-left: 5%;
-  background-color: rgba(255, 0, 177, 0.5);
-}
 
 .completed {
   text-decoration: line-through;
@@ -125,7 +121,6 @@ a {
     height: 5em;
     background-color: #EEE;
     max-width: none;
-    /*display: flex;*/
     width: 100%;
     margin-left: 0;
     box-shadow: #AAA 0px 1px 5px;

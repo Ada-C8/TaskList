@@ -20,9 +20,8 @@
     <article class="button">
       <%= link_to "all tasks", tasks_path(params[:sort])%>
     </article>
-    Sort by
 <%= form_tag(tasks_path, method: "get") do %>
-       <% ["owner", "category", "priority", "none" ].each do |i| %>
+       <% ["owner", "category", "priority"].each do |i| %>
         <%= label_tag(:sort, "#{i}") %>
          <%=  radio_button_tag(:sort, i)%>
    <% end %>

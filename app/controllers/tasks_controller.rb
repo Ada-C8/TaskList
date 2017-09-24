@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.order(:completed).group_by {|task| sort_variable(params[:sort], task)}
+      @tasks = Task.order(:completed).group_by {|task| sort_variable(params[:sort], task)}
+      @sorter = params[:sort]
   end
 
   def show
@@ -67,12 +68,21 @@ class TasksController < ApplicationController
 end
 
 private
-  def sort_variable(input_sort, input_task)
-    if input_sort == "owner"
-      input_task.owner
-    elsif input_sort == "priority"
-      input_task.priority
-    else
-      input_task.category
-    end
+# def unsorted(input_sort)
+#   if !(["owner", "priority", "category"].include? input_sort)
+#     return true
+#   else
+#     return false
+#   end
+# end
+
+def sort_variable(input_sort, input_task)
+  if input_sort == "owner"
+    input_task.owner
+  elsif input_sort == "priority"
+    input_task.priority
+  elsif input_sort == "category"
+    input_task.category
+  else
   end
+end

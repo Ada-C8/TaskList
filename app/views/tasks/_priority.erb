@@ -1,7 +1,10 @@
 
+<% if !(input_category) %>
+<h1><%="All Tasks" %></h1>
+<% else %>
 
-<h1><%="category: #{input_category}" %></h1>
-
+<h1><%="#{sorter}: #{input_category}" %></h1>
+<% end %>
 
 
 <section class="your_tasks">
