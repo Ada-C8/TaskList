@@ -1,0 +1,46 @@
+<%= render partial: "tasks_all_add" %>
+
+
+<div id="task-info">
+<h2>
+   <strong>
+     <%= @task.name %>
+   </strong>
+ </h2>
+ <ul>
+   <li>
+     <strong>
+       Task:
+     </strong>
+     <%= @task.name %>
+   </li>
+   <li>
+     <strong>
+       Description:
+     </strong>
+     <%= @task.description %>
+   </li>
+   <strong>
+     Due Date:
+   </strong>
+   <%= @task.due_date.to_date.to_formatted_s(:long_ordinal) %>
+   <% if @task.complete == true && @task.completion_date != nil%>
+    <li>
+      <strong>
+        Completion Date:
+      </strong>
+      <%= @task.completion_date.to_date.to_formatted_s(:long_ordinal) %>
+    </li>
+   <% end %>
+   <li>
+     <strong>
+       Complete:
+     </strong>
+        <% if @task.complete==false  %>
+            No
+        <% elsif @task.complete==true %>
+            Yes
+        <% end %>
+      </li>
+    </ul>
+</div>

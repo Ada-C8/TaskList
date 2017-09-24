@@ -1,0 +1,42 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**************/
+/* ALL TASKS */
+/*************/
+
+#tasks {
+  float: right;
+  width: 50%;
+  margin: 0 10%;
+}
+
+#tasks h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#tasks ol {
+  font-size: 1.3rem;
+  border: solid;
+  border-radius: 3%;
+  background-color: #E27D60;
+}
+
+/*************/
+/* COMPLETE */
+/***********/
+
+#complete-status a, #task-name a {
+text-decoration: none;
+color: rgb(61, 52, 61);
+}
+
+#complete-status a:hover, #task-name a:hover {
+  color: black;
+}
+
+#task-name #task-completed {
+  text-decoration: line-through;
+}

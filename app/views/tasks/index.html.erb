@@ -1,0 +1,14 @@
+<%= render partial: "tasks_all_add" %>
+
+<div id="tasks">
+  <h2> Your Tasks</h2>
+    <ol>
+      <% @tasks.each do |task| %>
+        <li id="task-name">
+          <%= render partial: "task_summary", locals: {task: task} %>
+        </li>
+          <%= render partial: "task_complete_edit_delete", locals: {task: task} %>
+        </li>
+      <% end %>
+    </ol>
+</div>

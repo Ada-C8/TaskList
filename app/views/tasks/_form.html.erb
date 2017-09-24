@@ -1,0 +1,30 @@
+<% button_text ||= "The Button" %>
+<% hide_placeholder_text ||= false %>
+
+<%= render partial: "tasks_all_add" %>
+
+
+<div id="form">
+  <h2>
+    <strong>
+      <%= task_action %>
+    </strong>
+  </h2>
+  <%= form_for @task do |f| %>
+  <ul>
+  <li>
+    <%= f.label :name %>:
+    <%= f.text_field :name, class: "form-field", placeholder: hide_placeholder_text ? "" : "Name of Task" %>
+  </li>
+  <li>
+    <%= f.label :description %>:
+    <%= f.text_field :description, class: "form-field", placeholder: hide_placeholder_text ? "" : "Description of Task" %>
+  </li>
+  <li>
+    <%= f.label :due_date %>:
+    <%= f.text_field :due_date, class: "form-field", placeholder: hide_placeholder_text ? "" : "YYYYMMDD"  %>
+  </li>
+    <%= f.submit button_text, id:"submit-button" %>
+  </ul>
+  <% end %>
+</div>

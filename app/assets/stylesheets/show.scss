@@ -1,0 +1,25 @@
+/******************/
+/* SHOW TASK INFO*/
+/****************/
+
+#task-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  padding: 2%;
+  border: solid;
+  border-radius: 2em;
+  background-color: #E27D60;
+}
+
+#task-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.7rem;
+}
+
+#task-info h2 {
+  align-self: center;
+  font-size: 3em;
+}

@@ -1,0 +1,42 @@
+/***********/
+/* Form */
+/***********/
+
+#form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  border: solid;
+  padding: 2%;
+  border-radius: 2em;
+  background-color: #E27D60;
+}
+
+#form ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 2%;
+  font-size: 1.7rem;
+  margin-top: 0;
+
+}
+
+#form h2 {
+  align-self: center;
+  font-size: 3em;
+}
+
+#submit-button {
+  width: 20%;
+  font-size: 8rem;
+  margin-top: 4%;
+  justify-content: center;
+  align-self: center;
+}
+
+.form-field {
+  width: 60%;
+  height: 20px;
+}
