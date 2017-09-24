@@ -15,19 +15,40 @@
  */
 
  h1 {
-   color: red;
    font-family: 'Playfair Display', serif;
  }
 
- .lists li {
+ .list {
+   float: right;
+   width: 64%;
    font-family: 'Playfair Display', serif;
-   list-style: none;
+   border: solid;
+   border-radius: 20%;
+   padding: 3%;
+   border-color: red;
  }
 
- .lists a {
+ .list div a {
+   display: block;
+   font-weight: bold;
+   margin-bottom: 20px;
    text-decoration: none;
+   color: black;
+   border: solid;
  }
 
- .individual h3 {
-   text-decoration: underline;
+.list div form.button_to {
+  display: inline-block;
+  max-width: 30%;
+  border: solid;
+}
+
+ .list a:hover {
+   color: magenta;
  }
+
+.two_buttons {
+  margin-left: 5%;
+  border: solid;
+  float: left;
+}
