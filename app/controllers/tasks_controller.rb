@@ -31,7 +31,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:description])
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date], completed: false)
 
     if @task.save
       redirect_to root_path
@@ -50,9 +50,10 @@ class TasksController < ApplicationController
 
     if task.completed
       task.update_attribute(:completed, false)
-      task.update_attribute(:completion_date, Date.today)
+      task.update_attribute(:completion_date, "")
     else
       task.update_attribute(:completed, true)
+      task.update_attribute(:completion_date, Date.today)
     end
     redirect_to root_path
   end
