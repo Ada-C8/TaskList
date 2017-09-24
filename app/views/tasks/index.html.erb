@@ -1,16 +1,20 @@
-<h2>To Do List</h2>
-<p>
+<aside>
+  <img src="https://media.giphy.com/media/lddFLE9o2DDGg/giphy.gif" alt= "Rocky running with children">
+  <h4>You've got this!</h4>
+</aside>
+<div id = "task-list">
+  <h2>To Do List</h2>
+
   <ol>
     <% @tasks.order(date: :asc).each do |task| %>
     <li class = "task">
       <% if task.status == true %>
       <strong class = "status_complete">
         <% else %>
-        <strong>
+      <strong>
           <% end %>
-      <%= link_to task.title, task_path(task.id)%> </strong> Due: <%= task[:date] %>
+        <%= link_to task.title, task_path(task.id)%> </strong> Due: <%= task[:date] %>
     </li>
-    <% end %>
-  </ol>
-
-</p>
+        <% end %>
+    </ol>
+</div>

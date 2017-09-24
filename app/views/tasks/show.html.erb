@@ -15,14 +15,15 @@
   </tr>
   <tr>
     <td>Status:</td>
-    <td> <% if @task[:status] == true %> Status: Completed  Date: <%= @task[:completed] %>
+    <td> <% if @task[:status] == true %> Completed  Date: <%= @task[:completed] %>
       <% else %> Incomplete <% end %> </td>
   </tr>
+  </table>
 </div>
 
 
 
-<nav id = "show_nav">
+<nav id = "show">
 
     <% if @task[:status] == false %>
     <li>

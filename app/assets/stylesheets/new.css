@@ -1,0 +1,4 @@
+#new-task{
+  display: flex;
+  flex-direction:  column;
+}
