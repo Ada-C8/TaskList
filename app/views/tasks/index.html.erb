@@ -25,6 +25,7 @@
 
     <% if task.status %>
     <%= link_to "Completed", toggle_complete_path(task.id), method: :patch, class: "button" %>
+
     <% else %>
     <%= link_to "Mark Complete", toggle_complete_path(task.id), method: :patch, class: "button" %>
       <% end %>

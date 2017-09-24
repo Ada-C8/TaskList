@@ -49,8 +49,10 @@ class TasksController < ApplicationController
 
     if task.status
       task.status = false
+      task.completion_date = nil
     elsif
       task.status = true
+      task.completion_date = Date.today
     end
     task.save
     redirect_to root_path
