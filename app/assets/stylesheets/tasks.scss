@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/**************/
+/* ALL TASKS */
+/*************/
+
 #tasks {
   float: right;
   width: 50%;
@@ -19,6 +23,10 @@
   border-radius: 3%;
   background-color: #E27D60;
 }
+
+/*************/
+/* COMPLETE */
+/***********/
 
 #complete-status a, #task-name a {
 text-decoration: none;

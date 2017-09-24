@@ -1,4 +1,8 @@
-#add-form {
+/***********/
+/* Form */
+/***********/
+
+#form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -9,11 +13,7 @@
   background-color: #E27D60;
 }
 
-main {
-  padding: 10% 5%;
-}
-
-#add-form ul {
+#form ul {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -23,7 +23,7 @@ main {
 
 }
 
-#add-form h2 {
+#form h2 {
   align-self: center;
   font-size: 3em;
 }
@@ -34,4 +34,9 @@ main {
   margin-top: 4%;
   justify-content: center;
   align-self: center;
+}
+
+.form-field {
+  width: 60%;
+  height: 20px;
 }

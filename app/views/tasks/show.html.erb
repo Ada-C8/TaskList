@@ -24,13 +24,13 @@
      Due Date:
    </strong>
    <%= @task.due_date.to_date.to_formatted_s(:long_ordinal) %>
-   <li>
-     <% if @task.complete == true && @task.completion_date != nil%>
-     <strong>
-       Completion Date:
-     </strong>
-     <%= @task.completion_date.to_date.to_formatted_s(:long_ordinal) %>
-   </li>
+   <% if @task.complete == true && @task.completion_date != nil%>
+    <li>
+      <strong>
+        Completion Date:
+      </strong>
+      <%= @task.completion_date.to_date.to_formatted_s(:long_ordinal) %>
+    </li>
    <% end %>
    <li>
      <strong>

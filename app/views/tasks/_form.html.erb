@@ -4,7 +4,7 @@
 <%= render partial: "tasks_all_add" %>
 
 
-<div id="add-form">
+<div id="form">
   <h2>
     <strong>
       <%= task_action %>
@@ -24,10 +24,6 @@
     <%= f.label :due_date %>:
     <%= f.text_field :due_date, class: "form-field", placeholder: hide_placeholder_text ? "" : "YYYYMMDD"  %>
   </li>
-  <!-- <li> -->
-    <%# f.label :completion_date %>
-    <%# f.text_field :completion_date, class: "form-field", placeholder: hide_placeholder_text ? "" : "YYYYMMDD" %>
-  <!-- </li> -->
     <%= f.submit button_text, id:"submit-button" %>
   </ul>
   <% end %>
