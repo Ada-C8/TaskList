@@ -7,15 +7,33 @@ body {
   font-family: 'IM Fell Great Primer'
 }
 
-#task {
+h2 {
   font-size: 2em;
 }
 
+#task {
+  font-size: 1em;
+}
 
-#due_date, #status {
+#show, .form {
   display: inline-block;
-  width: 25%;
-  color: yellow;
+  width: 60%;
+  margin-left: 10%;
+
+}
+
+// #due_date, #status {
+//   display: inline-block;
+//   width: 25%;
+//   color: purple;
+// }
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
 }
 
 h1{
@@ -25,16 +43,17 @@ h1{
 }
 nav {
   display: inline-block;
-  width: 15vw;
+  width: 20%;
   vertical-align: top;
-  margin-left: 7%;
+  margin-left: 2%;
 }
 
-nav p {
+nav a {
   display:inline-block;
   width: 100%;
   background-color: lightblue;
   text-align: center;
+  margin: 10%;
 }
 
 
@@ -48,4 +67,18 @@ ol {
 
 footer {
   background-color: lightblue;
+}
+
+
+#complete {
+  text-decoration: line-through;
+}
+
+#not_complete {
+  text-decoration: none;
+}
+
+#edit_link, #delete_link, #mark_completed, #show_link {
+  display: inline-block;
+  width: 22%;
 }

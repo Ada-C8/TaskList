@@ -1,8 +1,24 @@
-<h1>This Task</h1>
-<h2> <%= @task.task %> </h2>
+<h1> <%= @task.task %> </h1>
 
+<main>
 
-<div>
-  <%= @task.description %>
-  <%= @task.due_date %>  
+<nav>
+  <%= link_to "Add Task", new_task_path %>
+  <%= link_to "All Tasks", tasks_path %>
+</nav>
+
+<div id = "show">
+  <p>
+    Details:
+    <%= @task.description %>
+  </p>
+  <p>
+    Due Date:
+    <%= @task.due_date %>
+  </p>
+  <p>Completion Date:
+  <%= @task.completion_date %>
+   </p>
 </div>
+
+</main>
