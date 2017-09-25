@@ -1,0 +1,22 @@
+<section>
+    <% if @task %>
+    <h6>No. <%= @task.id %></h6>
+    <h1>
+      <%= @task.name %>
+    </h1>
+    <h3>
+      <%= @task.description %>
+    </h3>
+    <p>
+      <%= @task.completion_date %>
+    </p>
+    <h6>
+      <%= link_to "Edit", edit_task_path(@task.id) %>
+      | <%= link_to "Delete", delete_task_path(@task.id), method: :delete %>
+    </h6>
+    <% else %>
+    <h1>404: Not found</h1>
+    <% end %>
+
+    <%= link_to "Home", tasks_path, class: "home" %>
+</section>

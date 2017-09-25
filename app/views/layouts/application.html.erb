@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><%= link_to "✓ Tasklist", tasks_path %></h1>
+      </header>
+
+      <main>
+        <aside>
+          <ul>
+            <li>
+              <%= button_to "Add Task", new_task_path, class: "button", :method => "get" %>
+            </li>
+            <li>
+              <%= button_to "All Tasks", root_path, class: "button", :method => "get" %>
+            </li>
+          </ul>
+        </aside>
+
+        <%= yield %>
+      </main>
+    </div>
+
+    <footer>
+      <p>Copyright 2017</p>
+    </footer>
+
+  </body>
+</html>
