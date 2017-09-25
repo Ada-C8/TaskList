@@ -9,12 +9,26 @@
   </head>
 
   <body>
-    <header>
-      <h1>Tasks List</h1>
-    </header>
-    <main>
-      <%= yield %>
-    </main>
+
+      <header>
+        <h1>Tasks List</h1>
+
+        <div class="button-wrapper">
+          <%= button_to "Add Task", {:controller => :tasks,
+          :action => 'new' }, :method => :get %>
+          <%= button_to "All Tasks", {:controller => :tasks,
+          :action => 'index' }, :method => :get %>
+        </div>
+
+      </header>
+
+      <main>
+        <%= yield %>
+      </main>
+
+      <footer>
+        &copy; copywrite 2017
+      </footer>
 
   </body>
 </html>

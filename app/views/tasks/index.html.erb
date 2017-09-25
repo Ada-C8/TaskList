@@ -1,28 +1,30 @@
-<%= button_to "Add Task", {:controller => :tasks,
-:action => 'new' }, :method => :get %>
-<%= button_to "All Tasks", {:controller => :tasks,
-:action => 'index' }, :method => :get %>
-<h2>Your Tasks</h2>
+<div class="list">
+  <h2>Your Tasks</h2>
 
-<ol>
-  <% @tasks.each do |task| %>
-    <li>
-      <strong><%= link_to task[:name], task_path(task.id) %></strong> |
-      description: <em><%= task[:description] %></em>
-      completion_date: <em><%= task[:completion_date] %></em>
-      <ul>
-        <li>Mark Complete</li>
-        <li><%= button_to "edit", {:controller => :tasks,
-      :action => 'edit', :id => task[:id] }, :method => :get %></li>
-        <li><%= button_to "delete", {:controller => :tasks,
-      :action => 'destroy', :id => task[:id] }, :method => :delete, data: { confirm: "Are you sure?" } %></li>
-      </ul>
-    </li>
+  <ol>
+    <% @tasks.each do |task| %>
+      <li>
+        <strong><%= link_to task[:name], task_path(task.id) %></strong> ||
+        description: <em><%= task[:description] %></em> ||
+        completion_date: <em><%= task[:completion_date] %></em>
+        <ul>
+          <li>
+            <% if task.status %>
+              <%= button_to "mark complete", {:controller => :tasks,
+              :action => 'mark_complete', :id => task[:id] }, :method => :patch %>
+            <% else %>
+              <%= button_to "mark uncomplete", {:controller => :tasks,
+              :action => 'mark_complete', :id => task[:id] }, :method => :patch %>
+            <% end %>
+      </li>
+          <li><%= button_to "edit", {:controller => :tasks,
+        :action => 'edit', :id => task[:id] }, :method => :get %></li>
+          <li><%= button_to "delete", {:controller => :tasks,
+        :action => 'destroy', :id => task[:id] }, :method => :delete, data: { confirm: "Are you sure?" } %></li>
+        </ul>
+      </li>
 
 
-  <% end %>
-</ol>
-
-<footer>
-  &copy; 2017
-</footer>
+    <% end %>
+  </ol>
+</div>
