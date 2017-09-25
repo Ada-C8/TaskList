@@ -1,3 +1,33 @@
+<%# use form_for for database interaction eg create, update, and destroy %>
+
+<ul>
+  <%= form_for @task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %><br>
+
+    <%= f.label :due_date %>
+    <%= f.date_field :due_date %><br>
+
+    <%= f.label :completed %>
+    <%= f.check_box :completed %><br>
+
+
+    <%= f.submit %>
+  <% end %>
+</ul>
+
+
+
+
+
+
+
+<% if false %>
+
+<!-- form_tag interprets Ruby code into an HTML tag form -->
 <form action = "/tasks" method = "post" accept-charset="utf-8">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
@@ -25,3 +55,5 @@
 
 
 </form>
+
+<% end %>
