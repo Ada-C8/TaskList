@@ -13,10 +13,15 @@
 *= require_tree .
 *= require_self
 */
+@import url('https://fonts.googleapis.com/css?family=Warnes');
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
-@import url('https://fonts.googleapis.com/css?family=Faster+One');
 html{
-  background-color: yellow;
+    background: gray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lightgray, dimgray); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lightgray, dimgray); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lightgray, dimgray); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lightgray, dimgray); /* Standard syntax */
+
 }
 
 .status_complete{
@@ -83,11 +88,21 @@ nav li {
 }
 
 h1{
-  font-family: 'Faster One', cursive;
+  font-family: 'Warnes', cursive;
   text-align: center;
   font-size: 4em;
   margin: 20px;
-  border-bottom: solid 5px black;
+  background-color: black;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
 }
 
 body{

@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Frijole|Gloria+Hallelujah|Pompiere');
 body ul li{
-font-family: 'Pompiere', cursive;
-margin: 50px;
+  font-family: 'Pompiere', cursive;
+  margin: 50px;
 }
 
 h2{
@@ -15,8 +15,15 @@ h2{
 }
 
 
+#all-tasks li{
+  padding-left: 25px;
+}
 
+#all-tasks li strong a:hover{
+  text-decoration: underline;
 
- p{
+}
+
+p{
   order:2;
 }
