@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html{
+  background-color: LIGHTSTEELBLUE;
+}
+
+ .wrapper{
+   width: 70%;
+   margin: 0 auto;
+   background-color: beige;
+ }
+
+.leftline{
+  float: left;
+  width: 20%;
+  padding: 25px;
+  clear: right;
+
+}
+
+.leftline h3{
+  text-align: center;
+  margin-top: 35px;
+  border: groove;
+  border-radius: 1em;
+  background-color: lightyellow;
+  padding: 25px;
+  font-family: fantasy;
+}
+
+
+.leftline h1{
+  text-align: center;
+  font-family: fantasy;
+}
+
+.box h1{
+  font-weight: bold;
+  text-align: center;
+  font-family: fantasy;
+}
+
+
+.box{
+
+  overflow: scroll;
+  height: 400px;
+  float: right;
+  width: 70%;
+  margin-top: 110px;
+  margin-right: 0px;
+  border: groove;
+  border-radius: 1em;
+  background-color: lightyellow;
+  padding: 5px;
+  vertical-align: top;
+}
+
+.choose .unmark{
+  text-decoration: line-through;
+}
+.choose h4{
+  display: inline-block;
+  width: 30%;
+}
+
+.requested, #addlink, #editlink{
+  float: left;
+  width: 55%;
+  margin-top: 120px;
+  margin-left: 100px;
+  padding: 40px;
+  border: groove;
+  border-radius: 2em;
+  background-color: beige;
+  font-family: fantasy;
+}
