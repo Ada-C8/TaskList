@@ -36,7 +36,7 @@
     </li>
 
     <% else %>
-    <%= link_to "Change Status to Incomplete", status_incomplete_path(@task.id), method: :patch %>
+    <%= link_to "Change Status", status_incomplete_path(@task.id), method: :patch %>
 
    <% end %>
 

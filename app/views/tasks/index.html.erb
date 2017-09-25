@@ -13,7 +13,7 @@
         <% else %>
       <strong>
           <% end %>
-        <%= link_to task.title, task_path(task.id)%> </strong> Due: <%= task[:date] %>
+      <%= link_to task.title, task_path(task.id)%> Due: <%= task[:date]  %> </strong>
     </li>
         <% end %>
     </ol>
