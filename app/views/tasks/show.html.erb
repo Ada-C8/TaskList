@@ -15,9 +15,10 @@
   <strong>
     Completed
   </strong>
-  <!-- <%= check_box("tag", tag.id, {checked: if @task.completed == true }) %> -->
   <%= @task.completed %>
 
   <%= link_to "Edit", edit_path(@task[:id]) %>
 
 </p>
+
+<%# check_box("tag", tag.id, {checked: if @task.completed == true }) %>

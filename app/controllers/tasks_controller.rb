@@ -48,7 +48,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    render plain: "add 'destroy' task"
+    @task = Task.find(params[:id]).destroy
+    redirect_to tasks_path
   end
 
   def completed
