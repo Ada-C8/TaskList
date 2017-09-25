@@ -52,4 +52,12 @@ class TasksController < ApplicationController
 
     redirect_to tasks_path
   end
+
+  def mark_complete
+    @task = Task.find(params[:id])
+    @task.status = !@task.status
+    @task.save
+
+    redirect_to('/tasks')
+  end
 end
