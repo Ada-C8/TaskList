@@ -1,0 +1,16 @@
+<h2><%= "#{@task.title}" %></h2>
+<ul>
+  <li> <strong>Description:</strong> <div class="box"><%= @task.description %></div></li>
+  <li> <strong>Due date:</strong> <%= @task.due_date %></li>
+  <li> <strong>Status:</strong>
+    <% if @task.complete %>
+      <% if @task.date_completed != nil %>
+      <%= "Completed on #{@task.date_completed.strftime('%Y-%m-%d')}" %>
+      <% else %>
+      <%= "Completed" %>
+      <% end %>
+    <% else %>
+    <%= "Uncompleted" %>
+    <% end %>
+  </li>
+</ul>
