@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/tasks/:id', to: 'tasks#show', as: 'task'
   delete '/tasks/:id', to: 'tasks#destroy'
   get 'tasks/:id/edit', to: 'tasks#edit'
+  patch 'tasks/:id/mark_complete', to: 'tasks#mark_complete'
   patch 'tasks/:id', to: 'tasks#update'
+
 end
