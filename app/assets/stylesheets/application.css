@@ -16,11 +16,11 @@
 @import url('https://fonts.googleapis.com/css?family=Warnes');
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 html{
-    background: gray; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(lightgray, dimgray); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(lightgray, dimgray); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(lightgray, dimgray); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(lightgray, dimgray); /* Standard syntax */
+  background: gray; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(lightgray, dimgray); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(lightgray, dimgray); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(lightgray, dimgray); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(lightgray, dimgray); /* Standard syntax */
 
 }
 
@@ -32,11 +32,9 @@ html{
   display: inline-block;
 }
 
-#all-tasks,{
-  display:flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  justify-content: space-between;
+#all-tasks{
+
+  width: 80%;
 }
 body div{
   display:flex;
@@ -68,8 +66,12 @@ body div aside img{
   color: black;
 }
 #task-list h2, #task-list ol li strong a{
-  padding-top: 100px;
+
   color: black;
+}
+
+#task-list h2{
+  padding-top: 100px;
 }
 nav{
   display: flex;
@@ -95,14 +97,14 @@ h1{
   background-color: black;
   color: #fff;
   text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
+  0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 40px #0ff,
+  0 0 80px #0ff,
+  0 0 90px #0ff,
+  0 0 100px #0ff,
+  0 0 150px #0ff;
 }
 
 body{
@@ -132,4 +134,7 @@ footer p{
   background-color: #efefef;
   text-align: center;
   order: 1;
+}
+a:hover{
+  text-decoration: underline;
 }
