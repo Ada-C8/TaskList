@@ -6,7 +6,11 @@
   <ol>
     <% @tasks.each do |task| %>
     <li>
-      <%= link_to task.title, task_path(task.id), class: "link" %>
+    <% if ! task.completion_status %>
+        <%= link_to task.title, task_path(task.id), class: "link" %>
+    <% else %>
+        <%= link_to task.title, task_path(task.id), class: "link", class: "line" %>
+    <% end %>
     </li>
     <ul>
       <li>
