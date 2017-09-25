@@ -32,7 +32,7 @@ class TasksController < ApplicationController
 
   def edit
     # why params[:id]
-
+    @task = Task.find(params[:id])
   end
 
   def update
@@ -44,7 +44,7 @@ class TasksController < ApplicationController
     @task.due_date = params[:task][:due_date]
     @task.completed = params[:task][:completed]
 
-    redirect_to task_path
+    redirect_to tasks_path
   end
 
   def destroy

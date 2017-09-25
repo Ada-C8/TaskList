@@ -7,6 +7,7 @@
   <% @tasks.each do |task|%>
   <li>
     <%= task.title %>
+    <!-- <%= link_to task.title, task_path(task.id) %> -->
     <%= link_to "Edit", edit_path(task[:id]) %> <%# Re <from>: task[:id] worked and task.id and task(id) did not work.%>
     <%= link_to "Show", task_path(task.id) %>
   </li>

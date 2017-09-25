@@ -1,7 +1,13 @@
-<%# render partial: "form", {button_text: "make me a task"} %>
+<%= render partial: "form", locals: {button_text: "Edit My Task"} %>
 
 
-<form action = "/tasks" method = "get" accept-charset="utf-8">
+
+
+
+
+<!-- Regular HTML form, rarely used with rails and it is good to know.  -->
+
+<!-- <form action = "/tasks" method = "get" accept-charset="utf-8">
 
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
@@ -10,9 +16,4 @@
   </label>
   <input type="text" name="title" value="Task.find(params[:id])">
 
-
-
-
-
-
-</form>
+</form> -->

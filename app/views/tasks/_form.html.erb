@@ -1,3 +1,23 @@
 <!-- This is standard Ruby syntax to assign default values  -->
 
-<% button_text ||= "The button" %>
+<!-- <% button_text ||= "The button" %> -->
+
+<div>
+  <%= form_for @task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %><br>
+
+    <%= f.label :due_date %>
+    <%= f.date_field :due_date %><br>
+
+    <%= f.label :completed %>
+    <%= f.check_box :completed %><br>
+
+
+
+    <%= f.submit button_text %>
+  <% end %>
+</div>

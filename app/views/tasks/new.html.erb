@@ -1,6 +1,12 @@
+<%= render partial: "form", locals: { button_text: "Create My Task"} %>
+
+
+
+
+
 <%# use form_for for database interaction eg create, update, and destroy %>
 
-<ul>
+<!-- <ul>
   <%= form_for @task do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %><br>
@@ -15,9 +21,10 @@
     <%= f.check_box :completed %><br>
 
 
+
     <%= f.submit %>
   <% end %>
-</ul>
+</ul> -->
 
 
 
@@ -25,10 +32,10 @@
 
 
 
-<% if false %>
+
 
 <!-- form_tag interprets Ruby code into an HTML tag form -->
-<form action = "/tasks" method = "post" accept-charset="utf-8">
+<!-- <form action = "/tasks" method = "post" accept-charset="utf-8">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
   <label for="title">
@@ -54,6 +61,4 @@
   <input type="submit" value="Submit">
 
 
-</form>
-
-<% end %>
+</form> -->
