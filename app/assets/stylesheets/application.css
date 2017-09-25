@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html {
+  display: block;
+  width: 430px;
+  height: 500px;
+  border: 3px solid #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+body a {
+  text-decoration: none;
+}
+
+header, main {
+  display: inline-block;
+  vertical-align: top;
+}
+
+header li {
+  width: 83px;
+}
+
+li {
+  display: inline-block;
+  margin: 0 0 .5rem 1rem;
+}
+
+li p {
+  display: inline-block;
+}
+
+header {
+  width: 25%;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+main {
+  width: 67%;
+  height: 340px;
+  margin: 4.7rem 0 2rem 0;
+  overflow: scroll;
+}
+
+main, header li {
+  list-style: none;
+  border: 1px solid #000;
+  border-radius: .7rem;
+  padding: .4rem;
+}
+
+header li:last-of-type {
+  margin-top: .5rem;
+}
+
+footer {
+  text-align: center;
+  padding: .5rem;
+  border-top: 3px solid #000;
+}
+main h2 {
+  text-align: center;
+  padding: .5rem;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.uncompleted {
+  text-decoration: none;
+}
+
+div.box {
+  display: inline-block;
+  width: 237px;
+  height: 50px;
+  border: 1px solid #000;
+}
+
+.overdue a{
+  color: red;
+}
+
+.due_today a{
+  color: orange;
+}

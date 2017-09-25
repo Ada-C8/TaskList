@@ -1,0 +1,32 @@
+<h2>My Tasks</h2>
+
+<ol>
+  <% index = 1 %>
+  <% @tasks.each do |task| %>
+  <li>
+    <h3 class="
+    <% if task.complete %>
+    <%= "completed" %>
+    <% else %>
+    <%= "not-completed" %>
+    <% end %>
+    <% if Date.today > task.due_date && task.complete == false %>
+    <%= " overdue" %>
+    <% elsif Date.today == task.due_date && task.complete == false %>
+    <%= " due_today" %>
+    <% end %>
+    ">
+    <%= link_to "#{index}. #{task.title}", task_path(task.id) %></h3>
+    <p>
+     <% if task.complete %>
+     <%= link_to "Unmark Complete", task_path(task.id, :task => {:complete => false, :date_completed => nil }, :refresh => true), method: :patch %>
+     <% else %>
+     <%= link_to "Mark Complete", task_path(task.id, :task => {:complete => true, :date_completed => Date.today }, :refresh => true), method: :patch %>
+     <% end %>
+    </p>
+    <p>| <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: "Really?"} %> </p></li>
+    <% index += 1 %>
+  <% end %>
+
+
+</ol>
