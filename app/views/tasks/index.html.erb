@@ -2,8 +2,20 @@
   <h2>YOUR TASKS</h2>
   <ol>
     <% @tasks.each do |task| %>
+      <!-- <li>
+        <% if task.complete == true %>
+          <strong id="complete"><%=task.title%></strong>
+        <% elsif %>
+        <strong><%=task.title%></strong>
+        <%end%>
+      </li> -->
       <li>
-        <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong><br/>
+        <% if task.complete == true %>
+          <strong id="complete"><%=task.title%></strong>
+        <% elsif %>
+        <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong>
+        <%end%>
+        <br/>
         <%= render partial: "action_bar", locals: { task: task} %>
       </li>
     <% end%>
