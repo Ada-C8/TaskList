@@ -51,7 +51,8 @@ class TaskListController < ApplicationController
   end
 
   def create
-    @task = Task.new(completion_date: params[:task][:completion_date], name: params[:task][:name], action: params[:task][:action],  status: params[:task][:status])
+    @task = Task.new(completion_date: nil, name: params[:task][:name], action: params[:task][:action],  status: params[:task][:status])
+
     if @task.save
       redirect_to root_path #root_path refers to "root to" in the controller
     else
@@ -67,13 +68,13 @@ class TaskListController < ApplicationController
   #create a method to toggle status - use update method
   def mark_complete
     @task = Task.find(params[:id].to_i)
-    @task.status ? @task.update(status: false) : @task.update(status: true)
+    @task.status ? @task.update(status: false, completion_date: nil) : @task.update(status: true, completion_date: Date.today)
     redirect_to root_path
   end
 
-  def create_completion_date
+  def update_completion_date
     @task = Task.find(params[:id].to_i)
-    @task.status ? @task.update(completion_date: Date.now) : @task.update(completion_date: nil)
+    @task.status ? @task.update(completion_date: Date.today) : @task.update(completion_date: nil)
     redirect_to root_path
   end
 

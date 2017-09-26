@@ -1,24 +1,32 @@
 <!-- <h1>TaskList#edit</h1> -->
 
-<div class = "row1">
+<div class = "form-page">
+
+<h2 class= "form-header">edit the task!</h2>
 
 <%= form_for @task do |f| %>
   <div class="name">
-    <%= f.label :name%>
-    <%= f.text_field :name %>
+    <%= f.label :name, "task"%>
+    <%= f.text_field :name, :size => 50 %>
   </div>
 
-  <!-- <%= f.label :completion_date %>
-  <%= f.text_field :completion_date %> -->
-  <!-- <%= f.text_field :completion_date, type:"date", min: "2017-09-22", max: "2018-12-31" %> -->
+  <div class="radio-tag">
+    <%= f.label(:status, "task status:") %>
+    <%= f.radio_button(:status, true) %>
+    <%= f.label(:status, "completed") %>
+    <%= f.radio_button(:status, false) %>
+    <%= f.label(:status, "incomplete") %>
+ </div>
 
-  <%= f.label :status %>
-  <%= f.text_field :status %>
+<div class="details"
+  <%= f.label :action, "task details" %>
+  <%= f.text_area :action, size: "40x1"%>
+</div>
 
-  <%= f.label :action, "Task details" %>
-  <%= f.text_field :action%>
 
   <%= f.submit "save task"%>
+
+
 <% end %>
 
 </div>

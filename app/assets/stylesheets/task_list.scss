@@ -9,6 +9,8 @@
 // font-family: 'Homemade Apple', cursive;
 // font-family: 'Waiting for the Sunrise', cursive;
 
+// APPLICATION.HTML.ERB
+
 html {
   background-image: url(banana-slices.jpg);
   background-repeat: repeat;
@@ -17,9 +19,21 @@ html {
   // padding-right: 15px;
 }
 
+h1 {
+  padding-left: 15px;
+}
+
+.top-menu {
+  list-style: none;
+}
+
+// INDEX.HTML.ERB
+
+.task-completion-date {
+  display: block;
+}
 
 li {
-  list-style: none;
   line-height: 2;
 }
 
@@ -37,7 +51,7 @@ li {
 }
 
 .task-actions {
-
+  font-size: .8em;
 }
 
 .your-tasks {
@@ -62,6 +76,11 @@ li {
 
 .strike-through {
   text-decoration: line-through;
+  display: inline-block;
+}
+
+.completion-date {
+  display: inline-block;
 }
 
 // APPLICATION.HTML
@@ -70,6 +89,17 @@ li {
   display: block;
   background-color: rgba(255,255,255,0.7);
   margin: auto;
+}
+
+// SHOW.HTML.ERB
+
+.show-info {
+  list-style: none;
+}
+
+.show-info li {
+  // padding: 0;
+  // margin: 0;
 }
 
 // NEW.HTML
@@ -81,3 +111,11 @@ li {
 // .row2 {
 //   display: flex;
 // }
+
+.form-page {
+  margin-left: 12px;
+}
+
+.form-header {
+  margin-bottom: 5px;
+}

@@ -6,25 +6,27 @@
   <div class="tasks-container">
 
     <h2 class="your-tasks">Your Tasks:</h2>
-    <ul class="list-container">
+    <ol class="list-container">
       <% @tasks.each do |task| %>
         <li class="each-task">
 
               <%if task.status%>
-                <div class="strike-through">
-                  <%=task.id%>. <%=task.name%>
+                <div class = "task-completion-date">
+                  <div class="strike-through">
+                    <%=task.name%>
+                  </div>
+                  <div class="completion-date"> --> completed on: <%= task.completion_date%></div>
                 </div>
-                <div class="completion-date"> --> completed on: <%= task.completion_date%></div>
 
               <%else%>
                 <div class="no-strike-through">
-                  <%=task.id%>. <%=task.name%> --> not yet complete
+                  <%=task.name%>
                 </div>
               <%end%>
         </li>
-        <li class="task-actions">
-          <%=link_to (task.status ? "unmark complete" : "mark complete"), mark_complete_path(task.id), method: :patch, alt: "mark complete", class: "mark-complete" %> | <%=link_to "details", task_path(task.id)%> | <%=link_to "edit", edit_task_path(task.id)%> |  <%=link_to "delete", destroy_task_path(task.id), method: :delete %>
-        </li>
+      <div class="task-actions">
+        <%=link_to (task.status ? "unmark complete" : "mark complete"), mark_complete_path(task.id), method: :patch, alt: "mark complete", class: "mark-complete" %> | <%=link_to "details", task_path(task.id)%> | <%=link_to "edit", edit_task_path(task.id)%> |  <%=link_to "delete", destroy_task_path(task.id), method: :delete %>
+      </div>
       <%end%>
     </ul>
 

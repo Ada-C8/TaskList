@@ -4,22 +4,26 @@
   Params are: <%= params %>
 </p> -->
 
-<h1>Task #<%= @task[:id]%></h1>
+<!-- <h2>Task #<%= @task[:id]%></h2> -->
+
+<div class="tasks-container">
 
 <% if @task %>
-<%= link_to "Full Task List", tasks_path(@task) %>
-<%= link_to "Edit", edit_task_path(@task.id) %>
-<%= link_to "Delete", destroy_task_path(@task.id), method: :delete %>
-
-  <h2>Task: </h2> <%=@task[:name]%>
-  <h2>Details: </h2><%= @task[:action]%>
-  <h2>Status:<%= @task[:status] ? "Completed" : "Not Yet Completed"%></h3>
-
+<!-- <%= link_to "Full Task List", tasks_path(@task) %> -->
+<%=link_to (@task.status ? "unmark complete" : "mark complete"), mark_complete_path(@task.id), method: :patch, alt: "mark complete", class: "mark-complete" %> | <%=link_to "edit", edit_task_path(@task.id) %> | <%= link_to "delete", destroy_task_path(@task.id), method: :delete %>
+<ul class="show-info">
+  <li class="show-name"><h3>task --  <%=@task[:name]%></h3></li>
+  <li class="show-details"><h3>details -- <%= @task[:action]%></h3></li>
+  <li class="show-status"><h3>status --
+    <%= @task.status ? "completed on #{@task.completion_date}"  : "not yet complete" %></h3></li>
+</ul>
   <%else%>
     <h1>404: Not Found</h1>
 
 <% end %>
 
-<%=link_to "Home", tasks_path %>
+</div>
+
+<!-- <%=link_to "Home", tasks_path %> -->
 
 <!-- <p>Find me in app/views/task_list/show.html.erb</p> -->
