@@ -10,8 +10,10 @@ Rails.application.routes.draw do
 
   get "/tasks/:id", to: "tasks#show", as: "task"
   get "/tasks/:id/edit", to: "tasks#edit", as: "edit"
+  patch "/tasks/:id", to: "tasks#complete?", as: "complete_task"
   patch "/tasks/:id", to: "tasks#update"
   delete "/tasks/:id", to: "tasks#destroy"
+
 
 
 # as: "task" can be used to access patch and delete (by asking for them) and we can apply this in views

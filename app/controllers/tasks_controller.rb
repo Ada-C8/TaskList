@@ -19,7 +19,8 @@ class TasksController < ApplicationController
       title: params[:task][:title],
       description: params[:task][:description],
       due_date: params[:task][:due_date],
-      completed: params[:task][:completed]
+      completed: params[:task][:completed],
+      date_completed: params[:task][:date_completed]
     )
     task.save
 
@@ -43,6 +44,7 @@ class TasksController < ApplicationController
     @task.description = params[:task][:description]
     @task.due_date = params[:task][:due_date]
     @task.completed = params[:task][:completed]
+    @task.save
 
     redirect_to tasks_path
   end
@@ -52,7 +54,16 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-  def completed
-    render plain: "add 'completed' task"
+  def complete?
+    @task = Task.find(params[:id])
+    if @task.completed == false
+      @task.date_completed = Date.today
+      @task.update(completed: true)
+    else
+      @task.update(completed: false)
+    end
+
+    redirect_to tasks_path
+
   end
 end

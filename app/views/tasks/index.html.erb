@@ -7,10 +7,19 @@
   <% @tasks.each do |task|%>
   <li>
     <%= task.title %>
-    <!-- <%= link_to task.title, task_path(task.id) %> -->
+
+
+    <% if task.completed == false %>
+      <%= button_to "Mark Complete", complete_task_path(task), method: :patch %>
+    <% else %>
+
+      <%= button_to "Unmark complete", complete_task_path(task), method: :patch %>
+    <% end %>
+
+
     <%= link_to "Edit", edit_path(task[:id]) %> <%# Re <from>: task[:id] worked and task.id and task(id) did not work.%>
     <%= link_to "Show", task_path(task.id) %>
     <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
-  </li>
+  </li><br>
   <% end %>
 </ol>
