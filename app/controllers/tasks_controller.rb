@@ -57,4 +57,11 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def unmark_complete
+    @task = Task.find(params[:id])
+    @task.complete = false
+    @task.save
+    redirect_to tasks_path
+  end
+
 end
