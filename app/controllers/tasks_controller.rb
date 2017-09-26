@@ -33,20 +33,17 @@ class TasksController < ApplicationController
   def update
     task_updates = params[:task] #gets user input
     @task = Task.find(params[:id]) #find the task object that needs to be updated
-
     @task.title = task_updates[:title]
     @task.description = task_updates[:description]
     @task.due_date = task_updates[:due_date]
     @task.complete = task_updates[:complete]
     @task.save
-
     redirect_to task_path(@task)
   end
 
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-
     redirect_to tasks_path
   end
 
@@ -65,5 +62,4 @@ class TasksController < ApplicationController
     @task.save
     redirect_to tasks_path
   end
-
 end

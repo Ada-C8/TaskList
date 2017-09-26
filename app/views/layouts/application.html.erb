@@ -3,11 +3,9 @@
   <head>
     <title>TaskList</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header class="flex-container">
       <h1>TASKLIST</h1>
@@ -15,11 +13,9 @@
     <main>
       <div class="button">
         <p>
-          <!-- <a href="#">Add Task</a> -->
           <%= link_to "New Task", new_task_path %>
         </p>
         <p>
-          <!-- <a href="#">All Task</a> -->
           <%= link_to "All Tasks", tasks_path %>
         </p>
       </div>

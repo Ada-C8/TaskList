@@ -1,6 +1,5 @@
 <!-- default button text variable -->
 <% button_text ||= "The Button" %>
-
 <%= form_for @task do |f| %>
 <div>
   <%= f.label :title %>
@@ -14,10 +13,5 @@
   <%= f.label :due_date %>
   <%= f.date_field :due_date %>
 </div>
-<!-- Completion status - not needed here -->
-<!-- <div>
-  <%= f.label :complete %>
-  <%= f.text_field :complete %>
-</div> -->
   <%= f.submit button_text%>
 <% end %>
