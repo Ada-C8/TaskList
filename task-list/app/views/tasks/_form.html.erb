@@ -1,0 +1,15 @@
+<p>
+<%= form_for @task,  :html => {:class => 'form'}  do |f| %>
+<% button_text ||= "The button" %>
+  <%= f.label :title %>
+  <%= f.text_field :title, size: "50" %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description, size: "50" %>
+
+  <%= f.label :due_date %>
+  <%= f.datetime_field :due_date %>
+
+  <%= f.submit button_text, :class => 'submit'%>
+<% end %>
+</p>

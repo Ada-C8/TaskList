@@ -1,0 +1,19 @@
+
+<article class="list-of-tasks wrapper">
+  <ol>
+    <li>
+      <%= @task.title %>
+    </li>
+    <ul>
+      <li class="right-border">
+        <%= @task.description %>
+      </li>
+      <li class="right-border">
+        <%= @task.completion_status %>
+      </li>
+      <li>
+        <%= @task.due_date %>
+      </li>
+    </ul>
+  </ol>
+</article>

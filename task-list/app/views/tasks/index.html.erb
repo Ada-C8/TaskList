@@ -1,0 +1,62 @@
+
+
+<article class="list-of-tasks wrapper">
+  <h3>YOUR TASKS</h3>
+
+  <ol>
+    <% @tasks.each do |task| %>
+    <li>
+    <% if ! task.completion_status %>
+        <%= link_to task.title, task_path(task.id), class: "link" %>
+    <% else %>
+        <%= link_to task.title, task_path(task.id), class: "link", class: "line" %>
+    <% end %>
+    </li>
+    <ul>
+      <li>
+       <%= task.description %>
+      </li>
+      <li>
+        Due date: <%= task.due_date %>
+      </li>
+      <li>
+        <%# stated workin on this, so I'll need to make them link_to to call the method. Also will need to remove the above li %>
+        <% if ! task.completion_status %>
+          <%= link_to "Mark Completed", completed_task_path(task), method: :patch, class: "link" %>
+        <% else %>
+          <%= link_to "Mark Uncompleted", uncompleted_task_path(task), method: :patch, class: "link"   %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "Edit", edit_task_path(task.id), class: "link" %>
+      </li>
+      <li>
+        <%= link_to 'Delete', task_path(task.id),
+              data: {:confirm => 'Are you sure?'}, :method => :delete, class: "link" %>
+      </li>
+    </ul>
+      <% end %>
+  </ol>
+</article>
+
+
+
+
+  <!-- <ol>
+    <% @tasks.each do |task| %>
+    <li>
+      <%= task[:title] %>
+    </li>
+    <ul>
+      <li class="right-border">
+        <%= task[:discription] %>
+      </li>
+      <li class="right-border">
+        <%= task[:competion_status] %>
+      </li>
+      <li>
+        <%= task[:due_date] %>
+      </li>
+    </ul>
+      <% end %>
+  </ol> -->
