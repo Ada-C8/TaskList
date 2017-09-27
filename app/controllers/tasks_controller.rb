@@ -42,14 +42,14 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     if params[:status] == "false"
       @task.status = false
+      @task.date_complete = nil
     else
       @task.status = true
+      @task.date_complete = DateTime.now
     end
-    @task.date_complete = DateTime.now
     @task.save
     redirect_to('/tasks')
   end
-
 
   def destroy
     Task.find(params[:id]).destroy
