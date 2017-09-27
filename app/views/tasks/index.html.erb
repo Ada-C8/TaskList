@@ -3,7 +3,8 @@
 
   <%= @tasks.each do |task| %>
       <div class="task">
-        <strong><%= task.title %></strong>
-        <%= task.description %>
+        <strong>
+          <%= link_to task.title, task_path(task.id) %>
+        </strong>
       </div>
   <% end %>
