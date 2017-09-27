@@ -6,4 +6,5 @@
   <p><%= @task.description %></p>
   <!-- <p><%= @task.complete %></p> -->
   <p><%= @task.due_date %></p>
+  <%= link_to "Edit Task", edit_task_path(@task.id) %>
 </div>
