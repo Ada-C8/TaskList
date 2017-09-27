@@ -42,4 +42,14 @@ class TasksController < ApplicationController
         render :edit
       end
   end
+
+  def delete
+    task = Task.find(params[:id])
+
+      if task.destroy
+        redirect_to tasks_path
+      else
+      
+      end
+  end
 end
