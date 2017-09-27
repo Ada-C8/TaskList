@@ -21,10 +21,10 @@
         <ul class="no-bullet">
           <li>
             <% if task.status == false %>
-              <%= link_to "Mark Complete", complete_path(task.id), method: :patch, class: "no-underline hover-green visited-links" %>
+              <%= link_to "Mark Complete", complete_path(task.id, :status => "true"), method: :patch, class: "no-underline hover-green visited-links" %>
             <% else %>
-              <%= link_to "Mark Incomplete", incomplete_path(task.id), method: :patch, class: "no-underline hover-red visited-links" %>
-            <%end %>
+              <%= link_to "Mark Incomplete", complete_path(task.id, :status => "false"), method: :patch, class: "no-underline hover-red visited-links" %>
+            <% end %>
           </li>
           <li>
             <%= link_to "Edit", edit_task_path(task.id), class: "no-underline hover-blue visited-links"%>

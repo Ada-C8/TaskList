@@ -33,26 +33,23 @@ class TasksController < ApplicationController
     @task.title = task_updates[:title]
     @task.description = task_updates[:description]
     @task.due_date = task_updates[:due_date]
-    @task.status = task_updates[:status]
     @task.save
     redirect_to(@task)
   end
 
   def complete
+    # I want to be able to pass in the task id AND pass in the status as false
     @task = Task.find(params[:id])
-    @task.status = true
+    if params[:status] == "false"
+      @task.status = false
+    else
+      @task.status = true
+    end
     @task.date_complete = DateTime.now
     @task.save
     redirect_to('/tasks')
   end
 
-  def incomplete
-    @task = Task.find(params[:id])
-    @task.status = false
-    @task.date_complete = nil
-    @task.save
-    redirect_to('/tasks')
-  end
 
   def destroy
     Task.find(params[:id]).destroy
