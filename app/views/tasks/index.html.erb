@@ -1,2 +1,9 @@
 <h3>Tasks</h3>
-  <p>Tasks coming soon..</p>
+  <!-- <p>Tasks coming soon..</p>  -->
+
+  <%= @task.each do |task| %>
+      <div class="task">
+        <strong><%= task.title %></strong>
+        <%= task.description %>
+      </div>
+  <% end %>
