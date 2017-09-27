@@ -1,9 +1,11 @@
 <main class="index_main">
 
 <!-- <h1 class="index">TASKLIST</h1> -->
-<%= render partial: "nav_buttons" %>
+<aside class = "nav_buttons">
+  <%= render partial: "nav_buttons" %>
+</aside>
 
-<section class="task_list">
+<section class= "main_content">
   <h2>YOUR TASKS</h2>
   <ol>
     <% @tasks.each do |task| %>
@@ -18,9 +20,8 @@
     <% end %>
   </ol>
 </section>
+</main>
+
 <footer>
   <h4>copywrite 2017</h4>
 </footer>
-
-
-</main>

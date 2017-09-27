@@ -1,5 +1,13 @@
-<h1 class = "standard">Edit <%= @task.name%></h1>
+<header class = "boxed">
+  <h1 class = "colors">Edit <%= @task.name%></h1>
+</header>
 
-<%= render partial: "nav_buttons" %>
 
-<%= render partial: "form"%>
+<main>
+  <aside class = "nav_buttons">
+    <%= render partial: "nav_buttons" %>
+  </aside>
+  <section class="main_content">
+    <%= render partial: "form"%>
+  </section>
+</main>

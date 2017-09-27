@@ -1,8 +1,12 @@
-<header class="standard">
-  <h2 class="statement">Congratulations! You've already on the way to completing the task by adding the task to your task list! Just fill in the following detailsan then you deserve a break for completing the task of adding a task to your TaskList!</h2>
+<header class="boxed">
+  <h2 class="colors">Congratulations! You've already on the way to completing the task by adding the task to your task list! Just fill in the following detailsan then you deserve a break for completing the task of adding a task to your TaskList!</h2>
 </header>
 
-
-<%= render partial: "nav_buttons" %>
-
-<%= render partial: "form"%>
+<main>
+  <aside class = "nav_buttons">
+    <%= render partial: "nav_buttons" %>
+  </aside>
+  <section class="main_content">
+    <%= render partial: "form"%>
+  </section>
+</main>

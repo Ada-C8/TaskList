@@ -1,18 +1,21 @@
-<%= render partial: "nav_buttons" %>
-<header class="standard">
-  <h2 class="statement" statement>Your task, should you choose to accept...</h2>
-  <h1 class="statement"><strong><%= @task.name =%></strong></h1>
+
+<header class="boxed">
+  <h2 class="colors" statement>Your task, should you choose to accept...</h2>
+  <h1 class="colors"><strong><%= @task.name =%></strong></h1>
 </header>
 
-<main class="standard">
-  <h3>Description:</h3>
-  <p>
-    <%= @task.description %>
-  </p>
+<main class="borders">
+  <aside class = "nav_buttons">
+    <%= render partial: "nav_buttons" %>
+  </aside>
+  <section class = "main_content">
+    <h3>Description:</h3>
+
+    <p>
+      <%= @task.description %>
+    </p>
+    <h2><%= link_to("Edit", edit_task_path) %></h2>
+    <h2><%= link_to("Delete", delete_task_path, method: :delete, data: {confirm: "Are you sure?"}) %></h2>
+  </section>
+
 </main>
-
-
-<aside class="standard" "float_right">
-  <h2><%= link_to("Edit", edit_task_path) %></h2>
-  <h2><%= link_to("Delete", delete_task_path, method: :delete, data: {confirm: "Are you sure?"}) %></h2>
-</aside>

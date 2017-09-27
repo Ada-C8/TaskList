@@ -2,16 +2,16 @@
   <%= form_for @task do |f| %>
   <div>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "input_text" %>
   </div>
   <div>
     <%= f.label :description %>
   </div>
   <div>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => "input_text" %>
   </div>
-  <div class=.submit_button>
-    <%= f.submit %>
+  <div>
+    <%= f.submit :class => "submit_button" %>
   </div>
 
   <% end %>
