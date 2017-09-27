@@ -8,4 +8,6 @@
   <p><%= @task.due_date %></p>
   <%= link_to "Edit Task", edit_task_path(@task.id) %>
   <%= link_to "Delete Task", delete_task_path(@task.id), method: :delete %>
+
+  <%= link_to "Home", tasks_path %>
 </div>
