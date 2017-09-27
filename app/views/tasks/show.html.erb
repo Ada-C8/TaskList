@@ -1,0 +1,32 @@
+<article>
+
+  <div id="info-wrapper">
+    <header>
+      <h1 class="increase-font"><%= @task.title %></h1>
+
+      <h3 class="zero-margin-bottom">
+        <% if @task.status %>
+          Date completed: <%= @task.date_complete %>
+        <% else %>
+          Due: <%= @task.due_date %>
+        <% end %>
+      </h3>
+
+      <h3 class="zero-margin-bottom">Complete?
+        <% if @task.status %>
+          <span class="green">YOU'RE ONE STEP CLOSER TO BEING HUMAN!</span>
+        <% else %>
+          <span class="red">NO!!!</span>
+        <% end %>
+      </h3>
+    </header>
+
+    <section>
+      <h3 class="zero-margin-bottom">NOTES TO MYSELF:</h3>
+      <p class="left-padding">
+        <%= @task.description %>
+      </p>
+    </section>
+  </div>
+
+</article>

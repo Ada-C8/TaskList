@@ -1,0 +1,37 @@
+
+/******** YIELD TO NEW.HTML.ERB *********/
+
+.input-wrapper, .submit-wrapper {
+  display: block;
+  margin-left: 20px;
+  padding: 10px;
+  max-width: 100%;
+}
+
+.input-border {
+  width: 100%;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 1px dashed #2098D1;
+}
+
+#short-box{
+  width: auto;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+  border-radius: 3em;
+  font-family: 'The Girl Next Door', cursive;
+}
+
+.submit-button:hover {
+  background-color: #008CBA;
+  color: white;
+}

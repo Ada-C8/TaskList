@@ -1,0 +1,22 @@
+<% button_text ||= "" %>
+
+<%= form_for @task do |f| %>
+  <div class="input-wrapper">
+    <%= f.label :title, "Name of task:" %>
+    <%= f.text_field :title, class: "input-border round-border zero-margin" %>
+  </div>
+
+  <div class="input-wrapper">
+    <%= f.label :description, "What do you need to accomplish?" %>
+    <%= f.text_field :description, class: "input-border round-border zero-margin" %>
+  </div>
+
+  <div class="input-wrapper">
+    <%= f.label :due_date, "Reachable due date?" %>
+    <%= f.date_field :due_date, class: "input-border round-border zero-margin", id: "short-box"%>
+  </div>
+
+  <div class ="submit-wrapper">
+    <%= f.submit button_text, class: "submit-button align-center" %>
+  </div>
+<% end %>

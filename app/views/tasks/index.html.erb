@@ -1,0 +1,41 @@
+
+<article>
+
+<h1 class="increase-font">&#10004; TO DO:</h1>
+
+<ul class="no-bullet">
+<% @tasks.each do |task| %>
+  <li>
+    <section id="task-wrapper">
+      <header>
+        <h2>
+          <% if task.status %>
+            <%= link_to task.title, task_path(task.id), class: "no-underline visited-links complete_status" %>
+          <% else %>
+            <%= link_to task.title, task_path(task.id), class: "no-underline visited-links" %>
+          <% end %>
+        </h2>
+      </header>
+
+      <nav id="task-links">
+        <ul class="no-bullet">
+          <li>
+            <% if task.status == false %>
+              <%= link_to "Mark Complete", complete_path(task.id, :status => "true"), method: :patch, class: "no-underline hover-green visited-links" %>
+            <% else %>
+              <%= link_to "Mark Incomplete", complete_path(task.id, :status => "false"), method: :patch, class: "no-underline hover-red visited-links" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "Edit", edit_task_path(task.id), class: "no-underline hover-blue visited-links"%>
+          </li>
+          <li>
+            <%= link_to "Remove", task_path(task.id), method: :delete, data: { confirm: "You sure you want to remove?" }, class: "no-underline hover-red visited-links" %>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </li>
+<% end %>
+
+</article>

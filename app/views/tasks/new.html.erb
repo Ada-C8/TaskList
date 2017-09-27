@@ -1,0 +1,42 @@
+<article>
+
+<h1 class="increase-font">&#10004; ADD A NEW TASK</h1>
+
+<%= render partial: "form", locals: { button_text: "Add to the list!" } %>
+
+</article>
+
+<!-- THIS IS THE ALMOST RAILS-Y WAY -->
+<!-- <%= form_tag "/tasks", method: :post do %>
+
+  <%= label_tag "task[title]", "Book Title" %>
+  <%= text_field_tag "task[title]" %>
+
+  <%= label_tag "task[description]", "Task Description" %>
+  <%= text_field_tag "task[description]" %>
+
+  <%= label_tag "task[due_date]", "Date Due" %>
+  <% text_field_tag "task[due_date]" %>
+
+  <%= submit_tag "ADD TO THE LIST!" %>
+
+<% end %> -->
+
+<!-- THIS IS THE HTML WAY-->
+<!-- <form action="/tasks" method="post" accept-charset="utf-8"> -->
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+  <!-- <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <label for="title">Title</label>
+  <input type="text" name="title" id="title">
+
+  <label for="description">Description</label>
+  <input type="text" name="description" id="description">
+
+  <label for="due_date">Due Date</label>
+  <input type="text" name="due_date" id="due_date">
+
+  <input type="submit" value="Submit">
+</form>
+
+</article> -->
