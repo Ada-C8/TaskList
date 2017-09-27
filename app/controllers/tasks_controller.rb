@@ -6,4 +6,8 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
   end
+
+  def new
+     @task = Task.new #creating a new object; allows  rails to retrieve all the fields in that model
+  end
 end
