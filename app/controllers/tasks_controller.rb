@@ -44,6 +44,7 @@ class TasksController < ApplicationController
     @task.description = params[:task][:description]
     @task.due_date = params[:task][:due_date]
     @task.completed = params[:task][:completed]
+    @task.date_completed = params[:task][:date_completed]
     @task.save
 
     redirect_to tasks_path
