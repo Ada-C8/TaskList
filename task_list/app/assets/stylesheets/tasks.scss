@@ -4,7 +4,6 @@
 $side-margin: 5%;
 $top-margin: 2rem;
 $footer_size: 3rem;
-$img-width: 52%;
 $btn-height: 3.5rem;
 
 * {
@@ -59,15 +58,8 @@ ol > li {
 }
 
 /* LAYOUT */
-// html, body, .container {
-//   height: 100%;
-// }
-
 .main-block {
   display: inline-block;
-  // width: $img-width;
-  // border: 1px black solid;
-  // height: 2rem;
 }
 
 #add, #all {
@@ -142,8 +134,6 @@ a {
   text-decoration: none;
 }
 
-
-
 .options li {
   display: inline-block;
   width: 18%;
@@ -167,44 +157,36 @@ a {
   padding-left: .5rem;
 }
 
-// @media all and(min-width: 900px) {
-  .main-image {
-    // padding-right: 5rem;
-    // max-width: 50%;
-    // width: 100%;
-    min-width: 35rem;
-  }
+.main-image {
+  min-width: 35rem;
+}
 
-  .list {
-    display: inline-block;
-    border: 2px black solid;
-    border-radius: 2rem;
-    margin: 0;
+.list {
+  display: inline-block;
+  border: 2px black solid;
+  border-radius: 2rem;
+  margin: 0;
 
-    min-width: 20rem;
-    max-width: 37%;
-    vertical-align: top;
-    position: relative;
-    left: 10%;
+  min-width: 20rem;
+  max-width: 37%;
+  vertical-align: top;
+  position: relative;
+  left: 10%;
+  margin-bottom: 4rem;
+}
 
-    // height: 20rem;
-  }
+.list ol {
+  padding: 1rem 2rem 2rem 4rem;
+}
 
-  .list ol {
-    padding: 1rem 2rem 2rem 4rem;
-  }
+.task {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
 
-  .task {
-    margin-top: 1rem;
-    margin-bottom: .5rem;
-  }
-
-  .list h2 {
-    padding: 2rem 1.25rem 0 2rem;
-  }
-
-// }
-
+.list h2 {
+  padding: 2rem 1.25rem 0 2rem;
+}
 
 .show h1 {
   font-size: 2rem;
@@ -234,13 +216,10 @@ label {
   -webkit-appearance: none;
   border: 1px black solid;
   display: inline-block;
-  // width: $img-width / 2;
-  // margin: 0 3rem;
   font-size: 1.25rem;
   margin-top: 3rem;
   width: 16.25rem;
-  // margin: 1rem 0 2rem 0;
-  // border: 1px black solid;
+
 }
 
 // .checkbox {
