@@ -13,9 +13,9 @@
 <!-- <%= link_to "Full Task List", tasks_path(@task) %> -->
 <%=link_to (@task.status ? "unmark complete" : "mark complete"), mark_complete_path(@task.id), method: :patch, alt: "mark complete", class: "mark-complete" %> | <%=link_to "edit", edit_task_path(@task.id) %> | <%= link_to "delete", destroy_task_path(@task.id), method: :delete %>
 <ul class="show-info">
-  <li class="show-name"><h3>task --  <%=@task[:name]%></h3></li>
-  <li class="show-details"><h3>details -- <%= @task[:action]%></h3></li>
-  <li class="show-status"><h3>status --
+  <li class="show-name"><h4>task:  <%=@task[:name]%></h3></li>
+  <li class="show-details"><h4>details:   <%= @task[:action]%></h3></li>
+  <li class="show-status"><h4>status:
     <%= @task.status ? "completed on #{@task.completion_date}"  : "not yet complete" %></h3></li>
 </ul>
   <%else%>
