@@ -1,46 +1,11 @@
 <!-- <h1>TaskList#new</h1> -->
 <div class = "form-page">
 
+<%= render partial: "main-page-menu" %>
+
 <h2 class= "form-header">add a task!</h2>
 
-<nav class="menu-container">
-  <ul class="top-menu">
-    <li>
-      <%=link_to "view full list", tasks_path%>
-    </li>
-  </ul>
-</nav>
-<div class="content">
-
-<%= form_for @task do |f| %>
-<div class="name">
-  <%= f.label :name, "task:"%>
-  <%= f.text_field :name, :size => 52 %>
-</div>
-  <!-- <%= f.label :name%>
-  <%= f.text_field :name %> -->
-
-
-  <div class="radio-tag">
-    <%= f.label(:status, "task status:") %>
-    <%= f.radio_button(:status, true) %>
-    <%= f.label(:status, "completed") %>
-    <%= f.radio_button(:status, false) %>
-    <%= f.label(:status, "incomplete") %>
- </div>
-  <!-- <%= f.label :status %>
-  <%= f.text_field :status %> -->
-
-  <div class="details"
-    <%= f.label :action, "task details:" %>
-    <%= f.text_area :action, size: "43x1"%>
-  </div>
-
-  <!-- <%= f.label :action %>
-  <%= f.text_field :action%> -->
-
-  <%= f.submit "save task"%>
-<% end %>
+<%= render partial: "form" %>
 
 </div>
 

@@ -1,0 +1,24 @@
+<%= form_for @task do |f| %>
+  <div class="name">
+    <%= f.label :name, "task:"%>
+    <%= f.text_field :name, :size => 50 %>
+  </div>
+
+  <div class="radio-tag">
+    <%= f.label(:status, "task status:") %>
+    <%= f.radio_button(:status, true) %>
+    <%= f.label(:status, "completed") %>
+    <%= f.radio_button(:status, false) %>
+    <%= f.label(:status, "incomplete") %>
+ </div>
+
+<div class="details"
+  <%= f.label :action, "task details:" %>
+  <%= f.text_area :action, size: "41x1"%>
+</div>
+
+
+  <%= f.submit "save task"%>
+
+
+<% end %>
