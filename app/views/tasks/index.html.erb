@@ -3,20 +3,31 @@
     <h2>To Do:</h2>
     <ol>
       <% @tasks.each do |task| %>
-      <li>
-        <%= link_to(task.name, task_path(task.id)) %>
-        <p class="task_links">
-          <%= link_to("Edit", edit_task_path(task.id.to_i)) %>
-          <%= link_to("Delete", remove_task_path(task.id.to_i)) %>
-          <%= link_to("Mark Complete", mark_complete_path(task.id), method: :patch) %>
-        </p>
-      </li>
-      <%end%>
-    </ol>
-  </div>
-</body>
-<footer>
-  <p>
-    Gale Did Dis 2017
-  </p>
-</footer>
+      <% if task.completion_date != nil %>
+      <li class="marked">
+        <% else %>
+        <li>
+          <% end %>
+          <div>
+          <%= link_to(task.name, task_path(task.id)) %>
+          </div>
+          
+          <p class="task_links">
+            <%= link_to("Edit", edit_task_path(task.id.to_i)) %>
+            <%= link_to("Delete", remove_task_path(task.id.to_i)) %>
+            <% if task.completion_date == nil %>
+            <%= link_to("Mark Complete", mark_complete_path(task.id), method: :patch) %>
+            <% else %>
+            <%= link_to("Unmark Complete", mark_complete_path(task.id), method: :patch) %>
+            <% end %>
+          </p>
+        </li>
+        <%end%>
+      </ol>
+    </div>
+  </body>
+  <footer>
+    <p>
+      Gale Did Dis 2017
+    </p>
+  </footer>

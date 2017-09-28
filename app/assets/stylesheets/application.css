@@ -1,18 +1,18 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
 body {
   background-image: url("https://visitkohrong.com/wp-content/uploads/2016/03/Royal-Sands-Hotel-on-Koh-Rong-Island-in-Cambodia-Chill-Bar-and-Grill-Cocktials-2-768x432.jpg");
@@ -21,42 +21,50 @@ body {
   margin: 0;
 }
 
- #Tasklist {
-   position: relative;
-   width: 100%;
-   background-color: #ed104b;
-   left: 0;
-   top: 0;
-   margin: 0;
-   padding: 2vw;
-   padding-left: 5vw;
-   font-family: 'Shrikhand', cursive;
-   color: white;
-   font-size: 3em;
- }
+#Tasklist {
+  position: relative;
+  width: 100%;
+  background-color: #ed104b;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 2vw;
+  padding-left: 5vw;
+  font-family: 'Shrikhand', cursive;
+  color: white;
+  font-size: 3em;
+}
 
- #add_button, #all_button {
-    border: solid;
-    background-color: white;
-    border-radius: 2vw;
-    padding: 2vw;
-    margin: 5vw;
-    margin-right: 3vw;
-  }
+#add_button, #all_button {
+  border: solid;
+  background-color: white;
+  border-radius: 2vw;
+  padding: 2vw;
+  margin: 5vw;
+  margin-right: 3vw;
+}
 
 aside {
   display: inline-block;
 }
 
-  footer p {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    margin: 0;
-    padding-top: 1vw;
-    padding-left: 5vw;
-    background-color: purple;
-    color: white;
-    z-index: -1;
-  }
+footer p {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  margin: 0;
+  padding-top: 1vw;
+  padding-left: 5vw;
+  background-color: purple;
+  color: white;
+  z-index: -1;
+}
+
+.marked > div {
+  text-decoration: line-through;
+}
+
+/*p.task_links {
+  text-decoration: none;
+}*/
