@@ -6,27 +6,20 @@
   <head>
     <title>TaskList</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Indie+Flower|Permanent+Marker|Sedgwick+Ave|Waiting+for+the+Sunrise|Walter+Turncoat" rel="stylesheet">
   </head>
-  <header>
-    <h1>Task List</h1>
+  <header class="header">
+    <h1 class="task-list-header">Task List</h1>
+    <h4 class="dont-go-bananas">Don't Go Bananas - Make a List!</h4>
   </header>
   <body>
-    <nav class="menu-container">
-      <ul class="top-menu">
-        <li>
-          <%=link_to "view full list", tasks_path%>
-        </li>
-        <li>
-          <%=link_to "add an item", new_task_path%>
-        </li>
-      </ul>
-    </nav>
-    <div class="content">
+
       <%= yield %>
     </div>
+    <footer class="art-credit">
+      <a class="credit" href='http://www.freepik.com/free-vector/vector-illustration-of-a-set-of-banana-slices_1216000.htm'>Background art designed by Freepik</a>
+    </footer>
   </body>
 </html>

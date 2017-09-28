@@ -3,9 +3,18 @@
 
 <h2 class= "form-header">add a task!</h2>
 
+<nav class="menu-container">
+  <ul class="top-menu">
+    <li>
+      <%=link_to "view full list", tasks_path%>
+    </li>
+  </ul>
+</nav>
+<div class="content">
+
 <%= form_for @task do |f| %>
 <div class="name">
-  <%= f.label :name, "task"%>
+  <%= f.label :name, "task:"%>
   <%= f.text_field :name, :size => 52 %>
 </div>
   <!-- <%= f.label :name%>
@@ -23,8 +32,8 @@
   <%= f.text_field :status %> -->
 
   <div class="details"
-    <%= f.label :action, "task details" %>
-    <%= f.text_area :action, size: "40x1"%>
+    <%= f.label :action, "task details:" %>
+    <%= f.text_area :action, size: "43x1"%>
   </div>
 
   <!-- <%= f.label :action %>

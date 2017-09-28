@@ -2,25 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// font-family: 'Indie Flower', cursive;
-// font-family: 'Permanent Marker', cursive;
 // font-family: 'Sedgwick Ave', cursive;
 // font-family: 'Walter Turncoat', cursive;
 // font-family: 'Homemade Apple', cursive;
-// font-family: 'Waiting for the Sunrise', cursive;
+
+//STYLING USED THROUGHOUT
+
+a:hover {
+  color: blue;
+}
 
 // APPLICATION.HTML.ERB
 
 html {
   background-image: url(banana-slices.jpg);
   background-repeat: repeat;
-  font-family: 'Homemade Apple', cursive;
-  // padding-left: 15px;
-  // padding-right: 15px;
+  font-family: 'Sedgwick Ave', cursive;
 }
 
-h1 {
+footer.art-credit {
+  display: flex;
+  justify-content: center;
+}
+
+.credit {
+  padding: 50px;
+}
+
+.header {
   padding-left: 15px;
+}
+
+.task-list-header {
+  margin: 0;
+  padding-bottom: 0;
+}
+.dont-go-bananas {
+  margin: 0;
 }
 
 .top-menu {
@@ -28,6 +46,15 @@ h1 {
 }
 
 // INDEX.HTML.ERB
+
+.all-content-container {
+  display: flex;
+}
+
+.inline-menu-container {
+  margin: 0;
+  padding: 0;
+}
 
 .task-completion-date {
   display: block;
@@ -37,13 +64,18 @@ li {
   line-height: 2;
 }
 
-// .all-content-container {
-//   width = 100%;
-// }
+h2.your-tasks {
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.list-container {
+  margin-top: 8px;
+}
 
 .tasks-container {
   display: block;
-  // border: 5px dotted purple;
   background-color: rgba(255,255,255,0.7);
   width: 600px;
   margin: auto;
@@ -52,18 +84,6 @@ li {
 
 .task-actions {
   font-size: .8em;
-}
-
-.your-tasks {
-
-}
-
-.list-container {
-
-}
-
-.each-task {
-
 }
 
 .task-actions {
@@ -89,6 +109,7 @@ li {
   display: block;
   background-color: rgba(255,255,255,0.7);
   margin: auto;
+  margin-left: 12px;
 }
 
 // SHOW.HTML.ERB
@@ -97,23 +118,11 @@ li {
   list-style: none;
 }
 
-.show-info li {
-  // padding: 0;
-  // margin: 0;
-}
-
 // NEW.HTML
-
-.row1 {
-  // display: flex;
-}
-
-// .row2 {
-//   display: flex;
-// }
 
 .form-page {
   margin-left: 12px;
+  line-height: 1.8em;
 }
 
 .form-header {

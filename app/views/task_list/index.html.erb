@@ -1,6 +1,18 @@
 <!-- TaskList#index -->
 
 <!-- <h1 class="index-heading">Task List</h1> -->
+<nav class="menu-container">
+  <ul class="top-menu">
+    <li>
+      <%=link_to "view full list", tasks_path%>
+    </li>
+    <li>
+      <%=link_to "+ add an item", new_task_path%>
+    </li>
+  </ul>
+</nav>
+<div class="content">
+
 <div class="all-content-container">
 
   <div class="tasks-container">
@@ -15,7 +27,7 @@
                   <div class="strike-through">
                     <%=task.name%>
                   </div>
-                  <div class="completion-date"> --> completed on: <%= task.completion_date%></div>
+                  <div class="completion-date"> completed on: <%= task.completion_date%></div>
                 </div>
 
               <%else%>
