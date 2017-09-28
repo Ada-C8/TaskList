@@ -1,6 +1,8 @@
-<h1>Are you sure you want to remove <%= @task.name %>? </h1>
-<%= link_to("No! Keep Task", tasks_path) %>
-<%= link_to("Yes! Remove Task", confirm_remove_path(@task.id), method: :delete) %>
+<section class="remove_task">
+  <h1>Are you sure you want to remove "<%= @task.name %>?" </h1>
+  <%= link_to("No! Keep Task", tasks_path) %>
+  <%= link_to("Yes! Remove Task", confirm_remove_path(@task.id), method: :delete) %>
+</section>
 <footer>
   <p>
     Gale Did Dis 2017

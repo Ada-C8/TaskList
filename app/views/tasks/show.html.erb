@@ -1,32 +1,26 @@
-<h1>Tasks#show</h1>
- <p>
-   Params are <%= params %>
- </p>
-
- <p>
-   Task is <%= @task %>
- </p>
-
- <% if @task %>
+<section class="show_task">
+  <% if @task %>
   <h1>
     Task: <%= @task.name %>
   </h1>
   <h2>
     Description: <%= @task.description %>
   </h2>
+  <% if @task.completion_date == nil %>
   <h2>
-    Oh look, there is also a date for reasons!
-    It is <%=@task.date%>
+    Due date: <%=@task.date%>
   </h2>
-  <h2>Task ID number: <%= @task.id %> </h2>
-  <h2>Completed: <%=@task.completion_date %></h2>
-
+  <% end %>
+  <% if @task.completion_date != nil %>
+  <h2>Congrats! You completed this task on <%=@task.completion_date %>!</h2>
+  <% end %>
   <%= link_to("Edit", edit_task_path(@task.id.to_i)) %>
   <%= link_to("Delete", remove_task_path(@task.id.to_i)) %>
   <%= link_to("Mark Complete", mark_complete_path(@task.id), method: :patch) %>
   <%end%>
-  <footer>
-    <p>
-      Gale Did Dis 2017
-    </p>
-  </footer>
+</section>
+<footer>
+  <p>
+    Gale Did Dis 2017
+  </p>
+</footer>
