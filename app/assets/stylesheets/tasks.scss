@@ -12,20 +12,20 @@
   height: 500px;
 }
 
+
+a {
+  text-decoration: none;
+}
+
 h2 {
   background: navy;
   border-radius: 2em;
-  width: 100%;
   text-align: center;
   color: skyblue;
   font-size: 2em;
   box-shadow: 6px 10px 9px #888899;
   padding: 5%;
-}
-
-ol {
-  // padding: ;
-  // margin: ;
+  margin: 12%;
 }
 
 li {
@@ -34,6 +34,7 @@ li {
   padding: 2%;
 }
 
-ol p {
-  // display: inline-block;
-}
+
+.complete {
+    text-decoration: line-through;
+  }

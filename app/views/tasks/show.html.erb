@@ -1,23 +1,34 @@
 <div class="show">
   <h2>
-  <%= "#{@task.name}" %>
+    <%= "#{@task.name}" %>
   </h2>
 
-<ul>
-  <li>
-    <%= "#{@task.description}" %>
-  </li>
-  <li>
-    <% if @task.due_date == nil %>
+  <ul>
+    <li>
+      <%= "#{@task.description}" %>
+    </li>
+    <li>
+      <% if @task.complete == true %>
+        <p>Complete: Yes</p>
+      <% else %>
+        <p>Complete: Not yet</p>
+      <% end %>
+
+    </li>
+    <li>
+      <% if @task.due_date == nil %>
       <p> No due date <p>
-    <% else %>
-      <p> Due: <%= @task.due_date.strftime("%A, %B %d, %Y") %> </p>
-    <% end %>
-  </li>
-  <li>
-    <%= link_to "Edit", edit_task_path %>
-  </li>
-</ul>
+        <% else %>
+        <p> Due: <%= @task.due_date.strftime("%A, %B %d, %Y") %> </p>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "Edit", edit_task_path %>
+      </li>
+      <li>
+        <%= link_to "Return to All Tasks", tasks_path %>
+      </li>
+    </ul>
 
 
-</div>
+  </div>

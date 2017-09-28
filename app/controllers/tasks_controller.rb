@@ -29,17 +29,18 @@ class TasksController < ApplicationController
   end
 
   def update
-    task_updates = params[:task]
 
-    # task_updates = name: params[:task][:name], description: params[:task][:description], due_date: params[:task][:due_date])
     @task = Task.find (params[:id])
-    # @task.update_attributes(task_updates) #don't know how to use this right now
-    @task.name = task_updates[:name]
-    @task.description = task_updates[:description]
-    @task.due_date = task_updates[:due_date]
+    task_updates = params.require(:task).permit(:name, :description, :due_date, :complete)
+    @task.update_attributes(task_updates) #don't know how to use this right now
     @task.save
-    # redirect_to('/tasks')
-    redirect_to task_path(@task)
+
+    if params[:refresh]
+      redirect_to tasks_path
+    else
+      redirect_to task_path(@task)
+    end
+
   end
 
   def destroy
@@ -47,6 +48,5 @@ class TasksController < ApplicationController
     task.destroy
     redirect_to tasks_path
   end
-
 
 end
