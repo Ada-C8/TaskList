@@ -8,9 +8,11 @@
   top: 6vw;
   border: solid;
   border-radius: 2vw;
-  padding: 2vw;
-  min-width: 20vw;
+  padding: 1.5em;
+  min-width: 20em;
   display: inline-block;
+  max-height: 20em;
+  overflow: scroll;
 }
 
 .to_do_list h2, h1.view_title {
@@ -23,27 +25,34 @@
   padding-bottom: 2vw;
 }
 
+
 .form p {
-  font-size: 1.5em;
+  font-size: 1.25em;
   width: 100%;
 }
 
 input {
   text-align: center;
-  width: 85%;
-  padding: 2vw;
-  margin-left: 2vw;
+  width: 90%;
+  padding: 1em;
+  margin: .5em;
   border-width: .5vw;
   border-color: #ed104b;
 }
 
 .submit_container {
-  width: 100%;
+  width: 95%;
 }
 
 .submit{
   width: 100%;
   padding: 1vw;
+  margin-top:  0;
   font-size: 1.5em;
   font-family: 'Shrikhand', cursive;
+}
+
+.remove_task a, .show_task a {
+  font-size: 1.25em;
+  margin-left: 1.5em;
 }

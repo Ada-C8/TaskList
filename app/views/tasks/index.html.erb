@@ -11,7 +11,7 @@
           <div>
           <%= link_to(task.name, task_path(task.id)) %>
           </div>
-          
+
           <p class="task_links">
             <%= link_to("Edit", edit_task_path(task.id.to_i)) %>
             <%= link_to("Delete", remove_task_path(task.id.to_i)) %>
@@ -26,8 +26,3 @@
       </ol>
     </div>
   </body>
-  <footer>
-    <p>
-      Gale Did Dis 2017
-    </p>
-  </footer>

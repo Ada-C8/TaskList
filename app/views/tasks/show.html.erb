@@ -1,8 +1,8 @@
 <section class="show_task">
   <% if @task %>
-  <h1>
+  <h2>
     Task: <%= @task.name %>
-  </h1>
+  </h2>
   <h2>
     Description: <%= @task.description %>
   </h2>
@@ -19,8 +19,3 @@
   <%= link_to("Mark Complete", mark_complete_path(@task.id), method: :patch) %>
   <%end%>
 </section>
-<footer>
-  <p>
-    Gale Did Dis 2017
-  </p>
-</footer>
