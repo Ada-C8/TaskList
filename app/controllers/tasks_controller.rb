@@ -49,7 +49,7 @@ class TasksController < ApplicationController
       if task.destroy
         redirect_to tasks_path
       else
-      
+
       end
   end
 end

@@ -1,7 +1,7 @@
 <h3>Tasks</h3>
   <!-- <p>Tasks coming soon..</p>  -->
 
-  <%= @tasks.each do |task| %>
+  <% @tasks.each do |task| %>
       <div class="task">
         <strong>
           <%= link_to task.title, task_path(task.id) %>

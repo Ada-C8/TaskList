@@ -2200,3 +2200,260 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-27 01:36:57 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nkiruonwuneme/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nkiruonwuneme/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (13.2ms)
+Completed 200 OK in 36ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 15:51:59 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 262ms (Views: 241.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-28 15:54:26 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 76ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 15:56:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 15:57:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 15:57:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 15:58:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 52ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 15:58:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nkiruonwuneme/Documents/ada/projects/week_8/TaskList/app/views/tasks/index.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+tput_buffer.append=( if true );@output_buffer.safe_append='
+                              ^
+/Users/nkiruonwuneme/Documents/ada/projects/week_8/TaskList/app/views/tasks/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/nkiruonwuneme/Documents/ada/projects/week_8/TaskList/app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/nkiruonwuneme/Documents/ada/projects/week_8/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/index.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/tasks/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 15:59:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 15:59:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 90], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 90], ["LIMIT", 1]]
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-28 16:11:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/90" for 127.0.0.1 at 2017-09-28 16:11:53 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"90"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 90], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=90):
+  
+app/controllers/tasks_controller.rb:7:in `show'
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2017-09-28 16:14:19 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2017-09-28 16:14:54 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h3>Edit Task</h3>
+    2: <% @task = nil %>
+    3: <%= form_for @task do |f| %>
+    4:   <%= f.label :title %>
+    5:   <%= f.text_field :title %>
+    6: 
+  
+app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb___4151546883229235369_70118062335300'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 16:16:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-28 16:16:04 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 16:16:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 42ms (Views: 32.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-28 16:16:53 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2017-09-28 16:16:55 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = ? LIMIT ?[0m  [["title", "CS_Fun"], ["LIMIT", 1]]
+Started GET "/tasks/6" for 127.0.0.1 at 2017-09-28 16:21:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 19.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-28 16:26:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/5" for 127.0.0.1 at 2017-09-28 16:41:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/5/edit" for 127.0.0.1 at 2017-09-28 16:41:29 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/5" for 127.0.0.1 at 2017-09-28 16:41:44 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kNdSHmMUb0v6GTqphQg1egVHU/7+B9+tSYdwnPAtDL327WhoI40Jvpv1oE1KujrfurlfV0ddYGB3VjGYdzlOww==", "task"=>{"title"=>"Volunteering", "description"=>"Prep meals for women's shelter", "due_date"=>"2017-09-25"}, "commit"=>"Update Task", "id"=>"5"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/5
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/5" for 127.0.0.1 at 2017-09-28 16:41:44 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCompletedDateToTasks (20170929090755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "tasks" ADD "completed_date" datetime[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170929090755"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
