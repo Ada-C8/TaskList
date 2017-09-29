@@ -1,26 +1,23 @@
 
-<h1> <%= @task.title %> </h1>
-<h1> <%= @task.description %> </h1>
-<h1> <%= @task.due_date %> </h1>
-<h1> <%= @task.complete %> </h1>
-<h1> <%= @task.completed_date %></h1>
-
-
-
-<!-- <h2> <%= @task.title%> </h2>
- <p><%= @task.description%> </p>
- <ul>
-   <li> Due Date: <%= @task.due_date%> </li>
-   <li> Completed: <%= @task.complete%> </li>
- </ul> -->
+<h2>Title: <%= @task.title %> </h2>
+<h3>Description: <%= @task.description %> </h3>
+<h3>Due Date:  <%= @task.due_date %> </h3>
+<h3>Status: <%= @task.complete %> </h3>
+<h3>Completed Date: <%= @task.completed_date %></h3>
 
  <%=button_to "Edit", edit_task_path(@task.id), method: :get%>
-
  <%=button_to "Delete", delete_task_path(@task.id), method: :delete%>
 
 
 
 
+
+ <!-- <h2> <%= @task.title%> </h2>
+  <p><%= @task.description%> </p>
+  <ul>
+    <li> Due Date: <%= @task.due_date%> </li>
+    <li> Completed: <%= @task.complete%> </li>
+  </ul> -->
 
 
 
