@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navigation">
+    <%= link_to "Donut Forget!", tasks_path %>
+  </header>
+
+  <section class="task-body">
+
+    <div class="all-task-actions">
+      <ul>
+        <li><%= link_to "Add Task", new_task_path %></li>
+        <li><%= link_to "All Tasks", tasks_path %></li>
+      </ul>
+    </div>
+
+    <div class="information-box">
+      <%= yield %>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy;Kimberley Mackenzie 2017
+  </footer>
+</body>
+
+</html>

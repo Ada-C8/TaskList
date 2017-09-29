@@ -1,0 +1,32 @@
+<h2 class="task-heading">You Need To...</h2>
+
+<ul id="task-box">
+  <% @tasks.each do |task| %>
+    <% if task[:status] == "complete" %>
+      <li class="complete-task">
+      <%= image_tag 'donut-transparent.png', alt: "A delicious sprinkled donut", class: "donut-image" %><span class="strike"><%= task[:name] %> <span/>
+      </li>
+    <% elsif task[:status] == "incomplete" && (task[:due_date] < Date.today) %>
+      <li class="tasks overdue">
+      <%= image_tag 'donut-transparent.png', alt: "A delicious sprinkled donut", class: "donut-image" %><p><%= task[:name] %></p>
+      </li>
+    <% else %>
+      <li class="tasks">
+      <%= image_tag 'donut-transparent.png', alt: "A delicious sprinkled donut", class: "donut-image" %><p><%= task[:name] %></p>
+      </li>
+    <% end %>
+
+    <div class="task-actions">
+      <% if task[:status] == "incomplete" %>
+        <li class="action"><%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %></li>
+      <% else %>
+        <li class="action"><%= link_to "Mark Incomplete", mark_incomplete_path(task.id), method: :patch %></li>
+      <% end %>
+
+      <li class="action"><%= link_to "Edit", edit_task_path(task.id) %></li>
+      <li class="action"><%= link_to "Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+      </li>
+      <li class="action"><%= link_to "Show", task_path(task.id) %></li>
+    </div>
+  <% end %>
+</ul>
