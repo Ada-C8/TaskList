@@ -1,13 +1,41 @@
-<h2>Task Details</h2>
+
+<h1> <%= @task.title %> </h1>
+<h1> <%= @task.description %> </h1>
+<h1> <%= @task.due_date %> </h1>
+<h1> <%= @task.complete %> </h1>
+<h1> <%= @task.completed_date %></h1>
+
+
+
+<!-- <h2> <%= @task.title%> </h2>
+ <p><%= @task.description%> </p>
+ <ul>
+   <li> Due Date: <%= @task.due_date%> </li>
+   <li> Completed: <%= @task.complete%> </li>
+ </ul> -->
+
+ <%=button_to "Edit", edit_task_path(@task.id), method: :get%>
+
+ <%=button_to "Delete", delete_task_path(@task.id), method: :delete%>
+
+
+
+
+
+
+
+
+
+<!-- <h2>Task Details</h2> -->
 <!-- <p>TODO:  Add a Task</p> -->
 
-<div>
+<!-- <div>
   <strong><%= @task.title %></strong>
-  <p><%= @task.description %></p>
+  <p><%= @task.description %></p> -->
   <!-- <p><%= @task.complete %></p> -->
-  <p><%= @task.due_date %></p>
+  <!-- <p><%= @task.due_date %></p>
   <%= link_to "Edit Task", edit_task_path(@task.id) %>
   <%= link_to "Delete Task", delete_task_path(@task.id), method: :delete %>
 
   <%= link_to "Home", tasks_path %>
-</div>
+</div> -->

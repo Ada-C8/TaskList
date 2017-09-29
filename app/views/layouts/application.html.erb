@@ -9,6 +9,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+    <h1 class="title">TASKLIST</h1>
+      <ul>
+        <li class="task" ><%= link_to "Add Task", new_task_path %></li>
+        <li class="task" ><%= link_to "All Tasks", tasks_index_path %></li>
+      </ul>
+    </header>
+
+    <main>
+        <%= yield %>
+    </main>
+
+    <div id="footer">
+      <footer>copyright 2017</footer>
+    </div>
+
   </body>
+
+
+
 </html>
