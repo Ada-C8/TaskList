@@ -43,5 +43,4 @@ class TasksController < ApplicationController
 
     redirect_to home_url
   end
-
 end
