@@ -6,11 +6,17 @@
     <ol>
       <% @tasks.each do |task| %>
           <li>
-            <%= link_to(task.name, task_path(task.id), alt: 'link to task#show')%>
-            <em><br/>
+            <%if task.completion_date == nil%>
+              <%= link_to(task.name, task_path(task.id), alt: 'link to task#show')%>
               <%= link_to "Edit", edit_task_path(task.id) %>
               <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %>
-            </em></br/>
+              <%= button_to "Mark Complete", task_complete_path(task.id), method: :patch %>
+            <% else %>
+              <%= link_to(task.name, task_path(task.id), alt: 'link to task#show', class: 'striked')%>
+              <%= link_to "Edit", edit_task_path(task.id) %>
+              <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %>
+              <%= button_to "Completed #{task.completion_date}", task_complete_path(task.id), method: :patch %>
+            <%end %>
           </li>
       <% end %>
     </ol>
