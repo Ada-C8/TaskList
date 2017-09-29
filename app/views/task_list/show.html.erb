@@ -1,0 +1,30 @@
+<!-- TaskList#show -->
+
+<!-- <p>
+  Params are: <%= params %>
+</p> -->
+
+<!-- <h2>Task #<%= @task[:id]%></h2> -->
+<%= render partial: "main-page-menu" %>
+
+<div class="tasks-container">
+
+<% if @task %>
+<!-- <%= link_to "Full Task List", tasks_path(@task) %> -->
+<%=link_to (@task.status ? "unmark complete" : "mark complete"), mark_complete_path(@task.id), method: :patch, alt: "mark complete", class: "mark-complete" %> | <%=link_to "edit", edit_task_path(@task.id) %> | <%= link_to "delete", destroy_task_path(@task.id), method: :delete %>
+<ul class="show-info">
+  <li class="show-name"><h4>task:  <%=@task[:name]%></h3></li>
+  <li class="show-details"><h4>details:   <%= @task[:action]%></h3></li>
+  <li class="show-status"><h4>status:
+    <%= @task.status ? "completed on #{@task.completion_date}"  : "not yet complete" %></h3></li>
+</ul>
+  <%else%>
+    <h1>404: Not Found</h1>
+
+<% end %>
+
+</div>
+
+<!-- <%=link_to "Home", tasks_path %> -->
+
+<!-- <p>Find me in app/views/task_list/show.html.erb</p> -->

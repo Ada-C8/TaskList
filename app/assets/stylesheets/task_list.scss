@@ -1,0 +1,130 @@
+// Place all the styles related to the TaskList controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// font-family: 'Sedgwick Ave', cursive;
+// font-family: 'Walter Turncoat', cursive;
+// font-family: 'Homemade Apple', cursive;
+
+//STYLING USED THROUGHOUT
+
+a:hover {
+  color: blue;
+}
+
+// APPLICATION.HTML.ERB
+
+html {
+  background-image: url(banana-slices.jpg);
+  background-repeat: repeat;
+  font-family: 'Sedgwick Ave', cursive;
+}
+
+footer.art-credit {
+  display: flex;
+  justify-content: center;
+}
+
+.credit {
+  padding: 50px;
+}
+
+.header {
+  padding-left: 15px;
+}
+
+.task-list-header {
+  margin: 0;
+  padding-bottom: 0;
+}
+.dont-go-bananas {
+  margin: 0;
+}
+
+.top-menu {
+  list-style: none;
+}
+
+// INDEX.HTML.ERB
+
+.all-content-container {
+  display: flex;
+}
+
+.inline-menu-container {
+  margin: 0;
+  padding: 0;
+}
+
+.task-completion-date {
+  display: block;
+}
+
+li {
+  line-height: 2;
+}
+
+h2.your-tasks {
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.list-container {
+  margin-top: 8px;
+}
+
+.tasks-container {
+  display: block;
+  background-color: rgba(255,255,255,0.7);
+  width: 600px;
+  margin: auto;
+  border: 10px solid rgba(255,255,255,0.7);
+}
+
+.task-actions {
+  font-size: .8em;
+}
+
+.task-actions {
+  padding-bottom: 10px;
+}
+
+.counter {
+  display: none;
+}
+
+.strike-through {
+  text-decoration: line-through;
+  display: inline-block;
+}
+
+.completion-date {
+  display: inline-block;
+}
+
+// APPLICATION.HTML
+
+.menu-container {
+  display: block;
+  background-color: rgba(255,255,255,0.7);
+  margin: auto;
+  margin-left: 12px;
+}
+
+// SHOW.HTML.ERB
+
+.show-info {
+  list-style: none;
+}
+
+// NEW.HTML
+
+.form-page {
+  margin-left: 12px;
+  line-height: 1.8em;
+}
+
+.form-header {
+  margin-bottom: 5px;
+}

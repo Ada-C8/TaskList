@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <!-- <a href='http://www.freepik.com/free-vector/banana-pattern-vector_733641.htm'>Designed by Freepik</a>
+  <img class='bananas' src="ada/Rails/TaskList/imgs/banana-slices.jpg" />
+  <img src= "http://fillmurray.com/200/300" /> -->
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Indie+Flower|Permanent+Marker|Sedgwick+Ave|Waiting+for+the+Sunrise|Walter+Turncoat" rel="stylesheet">
+  </head>
+  <header class="header">
+    <h1 class="task-list-header">Task List</h1>
+    <h4 class="dont-go-bananas">Don't Go Bananas - Make a List!</h4>
+  </header>
+  <body>
+
+      <%= yield %>
+    </div>
+    <footer class="art-credit">
+      <a class="credit" href='http://www.freepik.com/free-vector/vector-illustration-of-a-set-of-banana-slices_1216000.htm'>Background art designed by Freepik</a>
+    </footer>
+  </body>
+</html>
