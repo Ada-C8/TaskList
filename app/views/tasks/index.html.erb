@@ -1,6 +1,13 @@
 <!-- <h1>Tasks#index</h1>
 <p>Find me in app/views/tasks/index.html.erb</p> -->
 
+<nav class="tasklist-options">
+  <ul>
+    <li><%= link_to("Add Task", new_task_path, alt: 'new_task form') %></li>
+    <li><%= link_to("All Tasks", root_path, alt: 'homepage')%></li>
+  </ul>
+</nav>
+
   <div class="your-tasks-container">
     <h2>YOUR TASKS</h2>
     <ol>
