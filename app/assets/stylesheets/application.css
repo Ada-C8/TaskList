@@ -13,11 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+ /* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+ */
+
+ html {
+     height: 100%;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     background: #70bg32;
+     background-repeat:no-repeat;
+     background: -webkit-linear-gradient( to left top, blue, red);
+     background: -moz-linear-gradient( to left top, blue, red);
+     background: -ms-linear-gradient( to left top, blue, red);
+     background: -o-linear-gradient( to left top, blue, red);
+     background: linear-gradient( to left top, blue, red);
+ }
+
+ html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+ @media (max-width: 770px){
+   footer{
+     position: relative;
+   }
+ }
+header h1 {
+  font-family: 'Righteous', cursive;
+}
+
+.tasklist-nav, .your-tasks-container, .form, h1, footer {
+  font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
+}
+
 header a {
   text-decoration: none;
 }
 
-.tasklist-options li {
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 4px;
+  background-color: #efefef;
+  text-align: center;
+}
+
+.your-tasks-container h1 {
+  margin-top: 1px;
+}
+
+.tasklist-nav li {
   list-style: none;
   width: 85px;
   border-radius: 10px;
@@ -27,15 +80,15 @@ header a {
   margin-bottom: 10px;
 }
 
-/*.tasklist-options, .your-tasks-container {
-  display: inline-block;
-}*/
-
-.tasklist-options {
+.tasklist-nav {
   float: left;
 }
 
-.task-options-row {
+.tasklist-nav a {
+  text-decoration: none;
+}
+
+.task-options-button {
   display: inline-block;
 }
 
@@ -43,20 +96,14 @@ header a {
   float: left;
   border-radius: 10px;
   border: 1px solid black;
-  padding: 20px;
-  margin-left: 30px;
+  padding-left: 5px;
+  margin-left: 5%;
   margin-bottom: 10px;
   width: 50%;
 }
 
-footer {
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  vertical-align: middle;
-  clear: both;
+.no-underline {
+  text-decoration: none;
 }
 
 .striked {

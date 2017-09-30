@@ -1,7 +1,7 @@
 <!-- <h1>Tasks#index</h1>
 <p>Find me in app/views/tasks/index.html.erb</p> -->
 
-<nav class="tasklist-options">
+<nav class="tasklist-nav">
   <ul>
     <li><%= link_to("Add Task", new_task_path, alt: 'new_task form') %></li>
     <li><%= link_to("All Tasks", root_path, alt: 'homepage')%></li>
@@ -14,22 +14,32 @@
       <% @tasks.each do |task| %>
           <li>
             <%if task.completion_date == nil%>
-              <strong><%= link_to(task.name, task_path(task.id), alt: 'link to task#show')%></strong>
+              <strong>
+                <%= link_to(task.name, task_path(task.id), alt: 'link to task#show', class: 'no-underline')%>
+              </strong>
               <br/>
-              <div class="task-options-row">
-                <%= link_to "Mark Complete", task_complete_path(task.id), method: :patch %>
-                <%= link_to "Edit", edit_task_path(task.id) %> |
-                <!-- <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %> -->
-                <%= link_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure you would like to delete this task?"} %>
+              <div class="task-options-button">
+                <%= link_to("Mark Complete", task_complete_path(task.id), method: :patch, class: 'no-underline') %> |
+              </div>
+              <div class="task-options-button">
+                <%= link_to("Edit", edit_task_path(task.id), class: 'no-underline') %> |
+              </div>
+              <div class="task-options-button">
+                <%= link_to('Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure you would like to delete this task?"}, class: 'no-underline') %>
               </div>
             <% else %>
-              <strong><%= link_to(task.name, task_path(task.id), alt: 'link to task#show', class: 'striked')%></strong>
+              <strong>
+                <%= link_to(task.name, task_path(task.id), alt: 'link to task#show', class: 'striked')%>
+              </strong>
               <br/>
-              <div class="task-options-row">
-                <%= link_to "Completed #{task.completion_date}", task_complete_path(task.id), method: :patch %>
-                <%= link_to "Edit", edit_task_path(task.id) %> |
-                <!-- <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %> -->
-                <%= link_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure you would like to delete this task?"} %>
+              <div class="task-options-button">
+                <%= link_to("Completed #{task.completion_date}", task_complete_path(task.id), method: :patch, class: 'no-underline') %> |
+              </div>
+              <div class="task-options-button">
+                <%= link_to("Edit", edit_task_path(task.id), class: 'no-underline') %> |
+              </div>
+              <div class="task-options-button">
+                <%= link_to('Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure you would like to delete this task?"}, class: 'no-underline') %>
               </div>
             <%end %>
           </li>

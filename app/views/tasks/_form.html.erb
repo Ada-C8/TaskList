@@ -1,15 +1,17 @@
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br/>
-  <br/>
-  <%= f.label :description %>
-  <%= f.text_area(:description, size: '50x1') %>
-  <br/>
-  <br/>
-  <%= f.label :completion_date %>
-  <%= f.text_field :completion_date %>
-  <br/>
-  <br/>
-  <%= f.submit button%>
-<% end %>
+<div class="form">
+  <%= form_for @task do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br/>
+    <br/>
+    <%= f.label :description %>
+    <%= f.text_area(:description, size: '50x1') %>
+    <br/>
+    <br/>
+    <%= f.label :completion_date %>
+    <%= f.text_field :completion_date %>
+    <br/>
+    <br/>
+    <%= f.submit button%>
+  <% end %>
+</div>
