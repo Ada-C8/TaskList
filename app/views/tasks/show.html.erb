@@ -28,11 +28,10 @@
     <%= @task.duedate %>
   </li>
 
+<%= link_to( "Modificar", edit_task_path(@task.id)) %>
 
 </ul>
-<div>
-    <%= link_to( "Modificar", edit_task_path(@task.id)) %>
-</div>
+
 </section>
 
 
