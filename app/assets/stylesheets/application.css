@@ -27,12 +27,16 @@ header a {
   margin-bottom: 10px;
 }
 
-.tasklist-options, .your-tasks-container {
+/*.tasklist-options, .your-tasks-container {
   display: inline-block;
-}
+}*/
 
 .tasklist-options {
   float: left;
+}
+
+.task-options-row {
+  display: inline-block;
 }
 
 .your-tasks-container {
@@ -46,7 +50,6 @@ header a {
 }
 
 footer {
-  background: gray;
   width: 100%;
   left: 0;
   bottom: 0;

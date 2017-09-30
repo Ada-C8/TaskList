@@ -12,7 +12,7 @@ class TasksController < ApplicationController
   # end
 
   def index
-    @tasks = Task.order(:name)
+    @tasks = Task.order(:created_at)
   end
 
   def show
@@ -78,7 +78,7 @@ class TasksController < ApplicationController
     else
       task.completion_date = nil
     end
-    
+
     if task.save
       redirect_to root_path
     end

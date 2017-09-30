@@ -3,10 +3,6 @@
   <%= f.text_field :name %>
 
   <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.label :completion_date %>
-  <%= f.text_field :completion_date%>
-
+  <%= f.text_area(:description, size: '50x5') %>
   <%= f.submit button%>
 <% end %>

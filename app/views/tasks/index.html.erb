@@ -7,17 +7,23 @@
       <% @tasks.each do |task| %>
           <li>
             <%if task.completion_date == nil%>
-              <%= link_to(task.name, task_path(task.id), alt: 'link to task#show')%>
-              <%= button_to "Mark Complete", task_complete_path(task.id), method: :patch %>
-              <%= link_to "Edit", edit_task_path(task.id) %> |
-              <!-- <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %> -->
-              <%= link_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+              <strong><%= link_to(task.name, task_path(task.id), alt: 'link to task#show')%></strong>
+              <br/>
+              <div class="task-options-row">
+                <%= link_to "Mark Complete", task_complete_path(task.id), method: :patch %>
+                <%= link_to "Edit", edit_task_path(task.id) %> |
+                <!-- <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %> -->
+                <%= link_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure you would like to delete this task?"} %>
+              </div>
             <% else %>
-              <%= link_to(task.name, task_path(task.id), alt: 'link to task#show', class: 'striked')%>
-              <%= button_to "Completed #{task.completion_date}", task_complete_path(task.id), method: :patch %>
-              <%= link_to "Edit", edit_task_path(task.id) %> |
-              <!-- <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %> -->
-              <%= link_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+              <strong><%= link_to(task.name, task_path(task.id), alt: 'link to task#show', class: 'striked')%></strong>
+              <br/>
+              <div class="task-options-row">
+                <%= link_to "Completed #{task.completion_date}", task_complete_path(task.id), method: :patch %>
+                <%= link_to "Edit", edit_task_path(task.id) %> |
+                <!-- <%= link_to "Delete", delete_task_path(task.id), method: :delete, alt: 'link to task#destroy' %> -->
+                <%= link_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure you would like to delete this task?"} %>
+              </div>
             <%end %>
           </li>
       <% end %>
