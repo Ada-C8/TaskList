@@ -1,12 +1,18 @@
+<!-- "Home Page" -->
+
 <h1>All the Tasks!</h1>
-<ul>
+
+<div class="tasks_right">
+<ul class="tasks">
   <% @tasks.each do |task| %>
   <li>Task:
     <strong><%= link_to(task.name, task_path(task.id)) %></strong>
   </li>
-  <li>Description:
+  <div class="description">
+    <li>Description:
     <strong><%= task.description %></strong>
   </li>
+</div>
   <li>
     <% if task.completed %>
     <%= button_to("Incomplete Task", complete_task_path(task.id), method: "patch") %>
@@ -17,3 +23,13 @@
   </li>
   <% end %>
 </ul>
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer">
+    <p id="copyright">
+      &copy; 2017 - Stefanie Gunderson, keeping it simple.
+    </p>
+  </div>

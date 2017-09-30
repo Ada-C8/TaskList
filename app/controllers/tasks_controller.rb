@@ -38,13 +38,7 @@ class TasksController < ApplicationController
 
   def complete
     @task = Task.find(params[:id])
-    if @task.completed
-      @task.update_attribute(:completed, false)
-
-    else
-      @task.completion_date = Time.current
-      @task.update_attribute(:completed, true)
-    end
+    @task.toggle_complete!
     redirect_to tasks_path
   end
 
