@@ -27,9 +27,15 @@ h3 {
 }
 
 .task-data {
+  list-style: none;
+  text-decoration: none;
   border: 1px solid blue;
 }
 
-li {
+.task-items:link {
+  text-decoration: none;
+}
 
+li {
+  text-decoration: none;
 }
