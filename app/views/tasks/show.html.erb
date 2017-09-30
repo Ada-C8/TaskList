@@ -1,0 +1,19 @@
+<h1>Task List</h1>
+
+<section class="individual">
+
+  <h3>
+    To do: <%= @task.name %>
+  </h3>
+
+  <h3>
+    Description: <%= @task.description %>
+  </h3>
+
+  <h3>
+    Completed: <%= @task.completion_date %>
+  </h3>
+
+</section>
+
+<%= link_to "Home", tasks_path %>

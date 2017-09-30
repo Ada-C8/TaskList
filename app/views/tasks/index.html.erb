@@ -1,0 +1,29 @@
+<main>
+
+<h1>Maria's Task List</h1>
+
+<!-- <div class="lists"> -->
+<article class="list">
+  <h2>Your Tasks</h2>
+  <ol>
+<% @tasks.each do |task| %>
+  <div>
+    <li><%= link_to(task.name, task_path(task.id)) %></li>
+
+     <%= button_to task.completed ? "Unmark completed" : "Mark completed", mark_complete_path(task.id), method: :patch %>
+     <%= button_to "Edit Task", edit_task_path(task.id), method: :get  %>
+     <%= button_to "Delete", delete_task_path(task.id),  method: :delete, data: { confirm: "Are you sure you want to delete #{task.name}?" } %>
+
+  </div>
+<% end %>
+</ol>
+  </article>
+
+<!-- </div> -->
+
+<article class="two_buttons">
+<%= button_to "All Tasks", tasks_path, method: :get %>
+<%= button_to "Add New Task", new_task_path, method: :get %>
+</article>
+
+</main>
