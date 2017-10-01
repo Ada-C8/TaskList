@@ -17185,3 +17185,31 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-10-01 15:58:43 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (6.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 464ms (Views: 423.1ms | ActiveRecord: 21.5ms)
+
+
+Started DELETE "/tasks/21/destroy" for 127.0.0.1 at 2017-10-01 15:58:58 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mv1+UojKDm/zQrdDvHnjxT5zwRfik9dl5/pCLhR5va9euq5/LThuUdtoIUsAah+A8jCv4ofshK75YjR3shawlQ==", "id"=>"21"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 21]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-01 15:58:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.5ms)
+
+
