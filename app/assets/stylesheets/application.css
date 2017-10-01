@@ -1,0 +1,187 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+body {
+  position: relative;
+  font-family: Indie Flower;
+  background-color: #A2A79E;
+  color: white;
+  box-sizing: content-box;
+}
+
+body :nth-child(n) {
+  overflow: hidden;
+}
+
+#work {
+  width: 40%;
+  height: 50%;
+  padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+  }
+
+header {
+  position: fixed;
+  height: 6vw;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #A27E8E;
+  background: #607fb2;
+  z-index: 1;
+}
+
+.header {
+  color: white;
+  position: fixed;
+  top: 0;
+  font-size: 3vw;
+  z-index: 2;
+}
+
+main {
+  position: relative;
+  margin: 10vw;
+}
+
+/*navigation section*/
+#navigate {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  padding: 2vw;
+  margin: 1.5vw;
+  position: relative;
+  min-width: 250px;
+}
+
+.image {
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+ #nonspecific_links ul{
+   list-style: none;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+
+  }
+
+  #nonspecific_links li{
+    display: inline;
+   }
+
+
+
+/*list section*/
+
+.list h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+ .list {
+   display: inline-block;
+   width: 40%;
+   border-radius: 10px;
+   background: #A77464;
+   min-width: 250px;
+   padding: 2vw;
+   margin: 1.5vw;
+   background: #9b5415;
+   opacity: .85;
+   border: solid black 2px;
+ }
+
+ .list .incomplete {
+   text-transform: uppercase;
+ }
+
+ .list .complete {
+   text-decoration: line-through;
+ }
+
+
+ .list ul {
+   list-style: none;
+   padding: 1vw;
+ }
+
+ .item {
+   border-top: black solid 1px;
+   padding: 1vw;
+   padding-top: 0vw;
+ }
+
+ .list .button {
+     font-size: .6em;
+
+ }
+
+ .task_name {
+  font-size: 1.3em;
+
+ }
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5vw;
+  text-align: center;
+  color: white;
+  background: #A27E8E;
+  background: #607fb2;
+}
+
+.green {
+  color: green;
+  background: #d6e4f9;
+}
+
+.orange {
+  color: orange;
+
+  background: #d6e4f9;
+}
+
+ol {
+  list-style: none;
+}
+
+
+.button {
+  border: 1px white solid;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 1vw;
+}
+
+.button:hover{
+  text-transform: uppercase;
+}

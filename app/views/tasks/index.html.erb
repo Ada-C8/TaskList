@@ -1,0 +1,68 @@
+<%# In this space, I am going to write code that will generate HTML. The point of this is to write ruby code that will show up on the web page%>
+
+<h1 class="header">Performance Anxiety</h1>
+
+<section id="navigate">
+  <%= image_tag "http://salvadordaliprints.org/Salvador%20Dali%20Melting%20Clocks.jpg", alt:"why", class:"image" %>
+  <article id="nonspecific_links">
+  <ul>
+    <li>
+      <%=link_to "New Task", new_task_path, class:"button" %>
+    </li>
+    <li>
+      <%=link_to "Show All", tasks_path, class:"button" %>
+    </li>
+  </ul>
+  </article>
+</section>
+
+
+<section class="list">
+  <h2> TO DO </h2>
+  <ol>
+    <% i = 1;%>
+    <% @tasks.each do |task| %>
+    <% task.status == "complete" ? @status = "complete" : @status = "incomplete" %>
+    <li class=item>
+      <ul>
+        <li class="<%= @status %>" >
+          <%= i %>.  <%= link_to(task.name, task_path(task.id), alt: 'link to', class:"task_name") %>
+        </li>
+        <li>
+          Due: <%= link_to task.due,  class:"button" %>
+        </li>
+        <li class="details">
+          <%= link_to task.status, mark_unmark_status_path(task.id), method: :patch, class:"button"%>
+
+          <%=link_to("Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to delete this?"}, class:"button") %>
+
+          <%=link_to "Edit", edit_task_path(task.id), class:"button" %>
+
+          <% if task.completion_date? %>
+          <% @on_time = "green" if task.completion_date <= task.due%>
+          <% @on_time = "orange" if task.completion_date > task.due%>
+
+          <li class="<%= @on_time %>">
+            Completed on: <%= task.completion_date%>
+          </li>
+          <%end%>
+        </li>
+
+      </ul>
+    </li>
+    <% i += 1 %>
+    <%end %>
+  </ol>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- <% %>
+<% %>
+<% %> -->
