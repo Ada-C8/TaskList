@@ -11,7 +11,14 @@
       <%= f.text_field :description %>
     </section>
 
-    <%= f.submit action_name if action_name == "New"%>
+    <% if action_name == "Edit" %>
+      <section class = "input">
+        <%= f.label "Completed?" %>:
+        <%= f.select(:status, [true, false]) %>
+      </section>
+    <% end %>
+
+    <%= f.submit action_name %>
   <% end %>
 
 </section>

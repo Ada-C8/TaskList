@@ -1,14 +1,6 @@
 <section class= "notebook">
   <h1>Edit Task</h1>
   <%= render partial: "form", locals: { action_name: "Edit" } %>
-  <%= form_for @task do |f| %>
-    <section class = "input">
-      <%= f.label "Completed?" %>:
-      <%= f.select(:status, [true, false]) %>
-    </section>
-
-    <%= f.submit %>
-  <% end %>
   <!-- <section>
     <%= form_for @task do |f| %>
 
