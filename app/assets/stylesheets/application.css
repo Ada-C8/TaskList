@@ -55,21 +55,3 @@ footer {
   color: white;
   position: absolute;
 }
-
-
-/*@media (min-width: 530px) {
-  footer {
-  position: absolute;
-}
-  .left {
-    float: left;
-    width: 30%;
-    max-width: 12rem;
-  }
-
-  .right {
-    float: left;
-    width: 65%;
-    max-width: 40rem;
-  }
-}*/

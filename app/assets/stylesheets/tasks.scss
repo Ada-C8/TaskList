@@ -78,7 +78,7 @@
   box-shadow: 0 3px #95a5a6;
 }
 
-.add-task {
+.add-task, .edit-task {
   margin-left: 3%;
   margin-right: 3%;
   border-radius: 10px;
@@ -93,5 +93,5 @@
 }
 
 .striked {
-  text-decoration: line-through ;
+  text-decoration: line-through;
 }
