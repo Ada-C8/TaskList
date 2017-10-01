@@ -1,5 +1,5 @@
-
-<section class = "all-tasks">
+<!--TODO: put complete tasks on the bottom  -->
+<section class = "all-tasks notebook">
   <!-- ordered list style -->
   <h2><strong>All Tasks</strong></h2>
   <ol>
@@ -11,12 +11,12 @@
           </p>
         </strong>
         <section class = "actions">
-          <%= link_to( (task.status ? "Unmark Complete": "Mark Complete"), mark_completion_task_path(task.id), method: :patch,  alt: 'link_to')%>
-          <%= link_to "Show", task_path(task.id)%>
-          <%= link_to("Edit", edit_task_path(task.id), alt: 'link_to')%>
+          <%= link_to( (task.status ? "Unmark Complete": "Mark Complete"), mark_completion_task_path(task.id), method: :patch,  alt: 'link_to', class: "link")%>
+          <%= link_to "Show", task_path(task.id), class: "link" %>
+          <%= link_to("Edit", edit_task_path(task.id), alt: 'link_to', class: "link")%>
           <!-- <%= link_to "Delete", confirm_delete_path(task.id)%> -->
 
-          <%= link_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+          <%= link_to 'Delete', delete_task_path(task.id), method: :delete, class: "link", data: {confirm: "Are you sure?"} %>
         </section>
       </li>
     <%end%>

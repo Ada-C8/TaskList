@@ -27,9 +27,10 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find_by(id: params[:id].to_i)
-  redirect_to tasks_path unless task
+    redirect_to tasks_path unless task
 
     if task.update_attributes task_params
+      task.status ? task.update(completion_date: Date.today.to_s) : task.update(completion_date: " ")
       redirect_to task_path(task.id)
     else
       render :edit

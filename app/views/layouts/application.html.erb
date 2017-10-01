@@ -7,24 +7,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Alfa+Slab+One|Rufina|Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Alfa+Slab+One|Rufina|Shrikhand|Open+Sans|Droid+Sans+Mono" rel="stylesheet">
   </head>
 
   <body>
     <header>
       <h1>Task List</h1>
+      <section = class= "action-buttons">
+        <%= button_to("All Tasks", tasks_path, method: :get,  alt: 'button_to', class: "button")%>
+        <%= button_to("Add Task", new_task_path, method: :get,  alt: 'button_to', class: "button")%>
+      </section>
     </header>
 
-    <section = class= "action-buttons">
-      <%= button_to("All Tasks", tasks_path, method: :get,  alt: 'button_to', class: "button")%>
-      <%= button_to("Add Task", new_task_path, method: :get,  alt: 'button_to', class: "button")%>
-    </section>
 
     <main>
       <%= yield %>
     </main>
     <footer>
-      2017
+      &copy; 2017
     </footer>
   </body>
 </html>
