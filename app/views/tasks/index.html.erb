@@ -1,6 +1,5 @@
 <!--TODO: put complete tasks on the bottom  -->
 <section class = "all-tasks notebook">
-  <!-- ordered list style -->
   <h2><strong>All Tasks</strong></h2>
   <ol>
     <% @tasks.each do |task| %>
@@ -23,28 +22,3 @@
   </ol>
 
 </section>
-<!-- unordered list style, creating lists based on task ids instead -->
-
-<!-- <% @tasks.each do |task| %>
-  <ul>
-    <li>
-      <strong><%=task[:id]%>. <%=task[:name]%> </strong>
-      <section>
-        <%= link_to("Mark Complete", update_task_path(task[:id]), method: :patch,  alt: 'link_to')%>
-        <%= link_to("Edit", edit_task_path(task[:id]), alt: 'link_to')%>
-        <%= link_to "Delete", delete_task_path(task[:id]), method: :delete%>
-      </section>
-    </li>
-  </ul>
-
-<%end%> -->
-
-<!-- <p>Find me in app/views/tasks/index.html.erb</p> -->
-
-<!-- <header>
-  <h1>Task List</h1>
-  <section = "action-buttons">
-    <span>Add Task</span>
-    <span>All Tasks</span>
-  </section>
-</header> -->

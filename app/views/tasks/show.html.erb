@@ -3,24 +3,25 @@
     <h1>
       Task: <%= @task.name %>
     </h1>
+    <section class = "container">
+      <section class= "task_description">
+        <p>
+          Date Created: <%=@task.created_at%>
+        </p>
+        <p>
+          Status: <%= @task.status ? "Complete" : "Incomplete"%>
+        </p>
+        <p>
+          Description: <%=@task.description%>
+        </p>
+        <p>
+          Completion Date: <%= @task.completion_date %>
+        </p>
+      </section>
 
-    <section class= "task_description">
-      <p>
-        Date Created: <%=@task.created_at%>
-      </p>
-      <p>
-        Status: <%= @task.status ? "Complete" : "Incomplete"%>
-      </p>
-      <p>
-        Description: <%=@task.description%>
-      </p>
-      <p>
-        Completion Date: <%= @task.completion_date %>
-      </p>
-    </section>
-
-    <section class = "task_id_picture", <%= "id = complete-stamp" if @task.status %>>
-      #<%=@task.id%>
+      <section class = "task_id_picture" <%="id = complete-stamp" if @task.status %>>
+        #<%=@task.id%>
+      </section>
     </section>
 
   <%else%>
