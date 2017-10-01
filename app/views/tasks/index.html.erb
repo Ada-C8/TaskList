@@ -1,0 +1,23 @@
+<section class = "all-tasks notebook">
+  <h2><strong>All Tasks</strong></h2>
+  <ol>
+    <% @tasks.each do |task| %>
+      <li>
+        <strong>
+          <p <%= task.status ? "class = complete": "class = incomplete"%>>
+            <%=task.name%>
+          </p>
+        </strong>
+        <section class = "actions">
+          <%= link_to( (task.status ? "Unmark Complete": "Mark Complete"), mark_completion_task_path(task.id), method: :patch,  alt: 'link_to', class: "link")%>
+          <%= link_to "Show", task_path(task.id), class: "link" %>
+          <%= link_to("Edit", edit_task_path(task.id), alt: 'link_to', class: "link")%>
+          <!-- <%= link_to "Delete", confirm_delete_path(task.id)%> -->
+
+          <%= link_to 'Delete', delete_task_path(task.id), method: :delete, class: "link", data: {confirm: "Are you sure?"} %>
+        </section>
+      </li>
+    <%end%>
+  </ol>
+
+</section>

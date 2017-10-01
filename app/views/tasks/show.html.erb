@@ -1,0 +1,37 @@
+<section class = "notebook">
+  <% if @task %>
+    <h1>
+      Task: <%= @task.name %>
+    </h1>
+    <section class = "container">
+      <section class= "task_description">
+        <p>
+          Date Created: <%=@task.created_at%>
+        </p>
+        <p>
+          Status: <%= @task.status ? "Complete" : "Incomplete"%>
+        </p>
+        <p>
+          Description: <%=@task.description%>
+        </p>
+        <p>
+          Completion Date: <%= @task.completion_date %>
+        </p>
+      </section>
+
+      <section class = "task_id_picture" <%="id = complete-stamp" if @task.status %>>
+        #<%=@task.id%>
+      </section>
+    </section>
+
+  <%else%>
+    <h1> 404: Not Found</h1>
+  <% end %>
+
+  <section class = "links">
+    <%= link_to "Home", tasks_path %>
+    <%= link_to("Edit", edit_task_path(@task.id), alt: 'link_to')%>
+    <%= link_to 'Delete', delete_task_path(@task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+  </section>
+
+</section>
