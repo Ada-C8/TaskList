@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+body {
+   font-family: 'Droid Sans Mono', monospace;
+ }
 
 header {
   width: 30%;
@@ -33,13 +36,22 @@ h1 {
   font-size: 2em;
 }
 
- main {
+main {
    width: 60%;
    margin: auto;
    display: inline-block;
    padding: 45px 10px 10px 20px;
  }
 
+li {
+   margin-bottom: 20px;
+ }
+
+footer {
+   background-color: lightgray;
+   text-align: center;
+   width: 100%;
+ }
 
  .action-buttons {
    box-sizing: border-box;
@@ -49,24 +61,13 @@ h1 {
    margin: auto;
  }
 
-
- li {
-   margin-bottom: 20px;
- }
-
- .actions {
+.actions {
    margin-top: 5px;
  }
 
- .actions a {
+.actions a {
    padding-right: 5px;
  }
-
-footer {
-  background-color: lightgray;
-  text-align: center;
-  width: 100%;
-}
 
 .button {
   background-color: snow;
@@ -102,17 +103,13 @@ footer {
   overflow: scroll;
 }
 
-.notebook, .container {
-  position: relative;
-}
-
-body {
-  font-family: 'Droid Sans Mono', monospace;
-}
-
 ol strong p {
   font-size: 1.3em;
   margin: 0px;
+}
+
+.notebook, .container {
+  position: relative;
 }
 
 input[type=text], textarea {
@@ -131,6 +128,10 @@ input[type=text], textarea {
   color: #007291;
 }
 
+.links {
+  display: block;
+}
+
 .task_description {
   display: inline-block;
   max-width: 60%;
@@ -144,10 +145,6 @@ input[type=text], textarea {
   vertical-align: top;
   margin: 20px;
   background-color: lightgray;
-}
-
-.links {
-  display: block;
 }
 
 #complete-stamp:after {
@@ -168,21 +165,3 @@ input[type=text], textarea {
     text-shadow: 0 0 2px #c00;
     box-shadow: 0 0 2px #c00;
 }
-
-
-/*fonts*/
-/*font-family: 'Abril Fatface', cursive;
-font-family: 'Alfa Slab One', cursive;
-font-family: 'Rufina', serif;*/
-
-/*colors*/
-/*yellow*/
-/*#f5c600	(245,198,0)*/
-/*dark orange*/
-/*#d8460b	(216,70,11)*/
-/*red*/
-/*#c21703	(194,23,3)*/
-/*brown*/
-/*#9b4923	(155,73,35)*/
-/*blue*/
-/*#007291	(0,114,145)*/
