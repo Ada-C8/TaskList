@@ -7,7 +7,7 @@
 
     <main>
       <div>
-      <h2>My tasks</h2>
+      <h2>Dwight's ambitious list of activities</h2>
       <p>
         <%= link_to "Add task", new_task_path, class: "navigation"%>
       </p>
@@ -15,7 +15,7 @@
       <% @tasks.each do |current_task|  %>
         <li>
           <h3>
-<%= check_box("tag", tag.id, {checked: current_task.complete}) %>
+
         <%=link_to current_task.title, task_path(current_task.id)%>
           </h3>
 

@@ -16,7 +16,7 @@ class TasksController < ApplicationController
   def create
      task = Task.new(title: params[:task][:title], description: params[:task][:description], due_date: params[:task][:due_date], complete: params[:task][:complete])
      task.save
-     redirect_to('/tasks')
+     redirect_to tasks_path
   end
 
   def edit
@@ -35,22 +35,22 @@ class TasksController < ApplicationController
       @task.date_completed = nil
     end
     @task.save
-    redirect_to('/tasks')
-  end
-
-
-  def destroy
-    @task = Task.find(params[:id])
-    @task.destroy
     redirect_to tasks_path
   end
 
 
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+      redirect_to tasks_path
+  end
+
+
   def complete
-    @task = Task.find(params[:id])
-    @task.complete = true
-    @task.date_completed = DateTime.now
-    @task.save
+    task = Task.find(params[:id])
+    task.complete = true
+    task.date_completed = DateTime.now
+    task.save
     redirect_to('/tasks')
   end
 

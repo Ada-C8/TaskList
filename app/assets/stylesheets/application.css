@@ -29,17 +29,27 @@ div {
   margin: 20px 5% 50px 0;
 }
 
-.margin {
-  border: 20px;
+a {
+  color: DarkOliveGreen;
+}
+
+a:visited {
+  color: Maroon;
 }
 
 header {
   height: 180px;
   border-style: solid;
   text-align: center;
-  background-image: url("http://pixel.nymag.com/imgs/daily/vulture/2012/10/31/31-dwight-schrute.w1200.h630.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: DarkOliveGreen;
+  clear:both;
+}
+footer {
+  height: 50px;
+  padding: 1%;
+  border-style: solid;
+  background-color: DarkOliveGreen;
+  clear:both;
 }
 
 nav {
@@ -54,6 +64,11 @@ h1 {
   padding: 10px 0%;
 }
 
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
 h3 {
   font-size: 1.5em;
 }
@@ -62,9 +77,45 @@ form{
   padding: 2% 10%;
 }
 
+img {
+  display: inline-block;
+  float:left;
+  width: 30%;
+  margin: 20px 0;
+  padding: 20px 1% 100px 5%;
+}
 
-footer {
-  margin: 20px 0 0 0;
-  padding: 5%;
-  border-style: solid;
+.navigation {
+  color: blue;
+  display: inline-block;
+  float: right;
+  padding: 5px 10%;
+}
+
+
+
+#copyright {
+  display: inline-block;
+  float: right;
+  color: Maroon;
+}
+
+ol {
+display: inline-block;
+width: 100%
+}
+
+ol li {
+  padding: 20px 20px
+}
+
+
+ul {
+  list-style: none;
+  width: 100%;
+}
+
+ul li {
+  display: inline-block;
+  width: 15%
 }
