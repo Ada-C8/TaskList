@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<header>
+  <h1>Dwight's List of Action Items</h1>
+  <nav>
+    <%= link_to "All tasks", tasks_path, class: "link"%>
+  </nav>
+</header>
+
+
+  <body>
+    <%= yield %>
+  </body>
+
+
+<footer>
+  <p id="copyright">
+    © 2017
+  </p>
+</footer>
+
+</html>

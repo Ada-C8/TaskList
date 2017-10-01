@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body{
+  background-color: DarkGoldenRod;
+}
+
+div {
+  background-color: LightGrey;
+  display: inline-block;
+  float:right;
+  width: 50%;
+  border-style: solid;
+  border-radius: 20%;
+  padding: 2%;
+  margin: 20px 5% 50px 0;
+}
+
+a {
+  color: DarkOliveGreen;
+}
+
+a:visited {
+  color: Maroon;
+}
+
+header {
+  height: 180px;
+  border-style: solid;
+  text-align: center;
+  background-color: DarkOliveGreen;
+  clear:both;
+}
+footer {
+  height: 50px;
+  padding: 1%;
+  border-style: solid;
+  background-color: DarkOliveGreen;
+  clear:both;
+}
+
+nav {
+  list-style: none;
+  display: inline-block;
+  float: right;
+  width: 10%;
+}
+
+h1 {
+  font-size: 3em;
+  padding: 10px 0%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+form{
+  padding: 2% 10%;
+}
+
+img {
+  display: inline-block;
+  float:left;
+  width: 30%;
+  margin: 20px 0;
+  padding: 20px 1% 100px 5%;
+}
+
+.navigation {
+  color: blue;
+  display: inline-block;
+  float: right;
+  padding: 5px 10%;
+}
+
+
+
+#copyright {
+  display: inline-block;
+  float: right;
+  color: Maroon;
+}
+
+ol {
+display: inline-block;
+width: 100%
+}
+
+ol li {
+  padding: 20px 20px
+}
+
+
+ul {
+  list-style: none;
+  width: 100%;
+}
+
+ul li {
+  display: inline-block;
+  width: 15%
+}

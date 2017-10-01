@@ -1,0 +1,26 @@
+<h2>Input new tasks there</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Dwight_Schrute.jpg" />
+
+<div>
+  <p>
+    <%= form_for @task do |form| %>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+      <br />
+      <%= form.label :description %>
+      <%= form.text_field :description %>
+      <br />
+      <%= form.label :due_date %>
+      <%= form.date_field :due_date %>
+      <br />
+      <%= form.label :complete %>
+      <%= form.check_box :complete %>
+      <br />
+      <%= form.submit "Make a new task"%>
+    <% end %>
+
+    <!--  When I tried to use the render partial, submitting the update would no longer update the DB and the user was no longer redirected to the index, so I just stayed with the longer way that worked.
+<%= render partial: "form", locals: {button_text: "Make a new task"}%> -->
+
+</div>

@@ -1,0 +1,14 @@
+<p>
+  Description: <%= current_task[:description]%>
+  <br/>
+  Due Date: <%=current_task[:due_date].month%>-<%=current_task[:due_date].day%>-<%=current_task[:due_date].year%>
+  <br/>
+  Complete: <%= current_task[:complete]%>
+  <br/>
+  Date Completed:
+  <%if current_task[:date_completed]%>
+  <%=current_task[:date_completed].month%>-<%=current_task[:date_completed].day%>-<%=current_task[:date_completed].year%>
+  <%else%>
+  Not yet complete
+  <%end%>
+</p>
