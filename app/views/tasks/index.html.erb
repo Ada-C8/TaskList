@@ -1,5 +1,4 @@
 
-
 <div class=task_block>
   <h2>
     Your Tasks:
@@ -7,14 +6,32 @@
   <p>
     <%= link_to "Add Task", new_task_path(@task) %>
   </p>
+
+  <!-- trial -->
   <ol>
     <% @tasks.each do |task| %>
     <li>
-      <strong>
-        <%= link_to(task.name[task.name], task_path(task.id), alt: 'link to', class:"task_list" ) %>
+      <span <%= task.status ? "class=normal"  : "class=strikethrough" %>>
+        <strong>
+          <%= link_to(task.name[task.name], task_path(task.id), alt: 'link to', class:"task_list" ) %>
+        </span>
+
+
+        <%= link_to(task.status ? "Uncross" : "Mark Complete", mark_complete_task_path(task.id), {method: :patch, alt: "link to mark complete", data: { confirm: "Are you sure?" } }) %>
+
+          <%= link_to(task.status ? "Mark Complete" : "Uncross", mark_incomplete_task_path(task.id), {method: :patch, alt: "link to mark complete",  data: { confirm: "Are you sure?" } }) %>
+
+        <!-- end trial -->
+        <!-- new trial -->
+
+          <!-- <%= link_to("Mark Complete", mark_complete_task_path(task.id), {method: :patch, alt: "link to mark complete",  data: { confirm: "Are you sure?" } }) %> -->
+
+          
+
+          <!-- /new trial -->
         <%= link_to("Edit", edit_task_path(task.id)) %>
         <%= link_to("Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} ) %>
-        <!-- default method for delete is get, so need method delete -->
+        <!-- default method for delete is get, so need method delete  -->
       </strong>
     </li>
     <% end %>

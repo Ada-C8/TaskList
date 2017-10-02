@@ -5,7 +5,6 @@
 
 <h1>Task: <%=@task.name %>
 </h1>
-<div class=task_block>
   <div class="icons">
 <div class="edit_pic">
 <%= link_to image_tag("http://www.clker.com/cliparts/B/l/1/P/z/N/edit-icon-hi.png", alt: "Image goes to edit task page") , edit_task_path(@task.id) %>
@@ -19,6 +18,7 @@
 <%= link_to  image_tag("http://www.jeansforgenesday.org/static/images/up/checklist-large-2015.gif", alt: "Image goes to all tasks page"), tasks_path(@task) %>
 </div>
   </div>
+  
 <div class = tasks>
 <h2>
   <p>

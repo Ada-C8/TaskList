@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   get '/tasks/:id', to: 'tasks#show', as: 'task' #task_path
 
+  patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'mark_complete_task' #mark_complete_task_path
+
+  patch '/tasks/:id/mark_incomplete', to: 'tasks#mark_incomplete', as: 'mark_incomplete_task'
+
   patch '/tasks/:id', to: 'tasks#update', as: 'update_task' #update_task_path
 
   patch '/tasks/:id/mark_complete', to: 'tasks#mark_complete'
