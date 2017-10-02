@@ -7,7 +7,14 @@
 <h1>
 <%= link_to(task.name, task_path(task.id), alt: "link to task.name") %>
 <%= link_to "Edit", edit_task_path(task) %>
-<%= link_to "Delete", delete_task_path(task), method: :delete %>
+<%= link_to "Delete", delete_task_path(task), method: :delete, data: {confirm: "Delete this FOREVER?" } %>
+
+<% if task.status %>
+<%= link_to "Complete", mark_complete_path(task.id), method: :patch %>
+
+<% else %>
+<%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %>
+<% end %>
 </h1>
 <% end %>
 
@@ -16,3 +23,4 @@
 <% end %> -->
 
 <%= link_to "Home", tasks_path%>
+<%= link_to "Add Task", new_task_path %>

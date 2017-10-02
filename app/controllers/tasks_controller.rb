@@ -26,6 +26,14 @@ class TasksController < ApplicationController
 
 
   def update
+     task = Task.find_by(id: params[:id])
+     redirect_to root_path unless task
+
+     if task.update_attributes task_params
+       redirect_to root_path
+     else
+       render :edit
+     end
   end
 
   def new
@@ -33,14 +41,31 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion: params[:task][:completion])
-    if @task.save
-      redirect_to root_path
-    else
-      render :new
-    end
+     @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion: params[:task][:completion])
+     if @task.save
+       redirect_to root_path
+     else
+       render :new
+     end
   end
 
   def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to('/tasks')
+  end
+
+  def mark_complete
+    @task = Task.find_by(id: params[:id])
+
+    if @task.status == true
+      @task.completion = nil
+      @task.status = false
+    else
+      @task.status = true
+      @task.completion = Date.today
+    end
+    @task.save
+    redirect_to root_path
   end
 end
