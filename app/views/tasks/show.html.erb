@@ -1,18 +1,18 @@
 <!-- Individual Task Page -->
-<h1>One Task at a Time!</h1>
+<h2>One Task at a Time!</h2>
 
-<h2>
+<h3>
   <%= @task.name %>
   <%= link_to "Edit", edit_task_path(@task.id) %>
   <%= link_to "Delete", delete_task_path(@task), method: :delete, data: { confirm: 'Are you sure you want to delete this task?' }  %>
-</h2>
+</h3>
 
 <p>
   Description: <%= @task.description %>
 </p>
 
 
-<!-- Home Button -->
+<!-- Home Link -->
 <%= link_to "Home", tasks_path %>
 
 <!-- Footer -->

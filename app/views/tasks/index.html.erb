@@ -1,30 +1,27 @@
 <!-- "Home Page" -->
 
 <h1>All the Tasks!</h1>
+<% @tasks.each do |task| %>
+<li>Task:
+  <strong><%= link_to(task.name, task_path(task.id)) %></strong>
+</li>
+<li>Description:
+  <strong><%= task.description %></strong>
+</li>
 
-<div class="tasks_right">
-<ul class="tasks">
-  <% @tasks.each do |task| %>
-  <li>Task:
-    <strong><%= link_to(task.name, task_path(task.id)) %></strong>
-  </li>
-  <div class="description">
-    <li>Description:
-    <strong><%= task.description %></strong>
-  </li>
-</div>
-  <li>
-    <% if task.completed %>
-    <%= button_to("Incomplete Task", complete_task_path(task.id), method: "patch") %>
-      <strong>Completed on <%= task.completion_date %></strong>
-    <% else %>
-      <%= button_to("Complete Task", complete_task_path(task.id), method: "patch") %>
-    <% end %>
-  </li>
+<li>
+  <% if task.completed %>
+  <%= button_to("Incomplete Task", complete_task_path(task.id), method: "patch") %>
+  <strong>Completed on <%= task.completion_date %></strong>
+  <% else %>
+  <%= button_to("Complete Task", complete_task_path(task.id), method: "patch") %>
   <% end %>
-</ul>
+</li>
+<% end %>
 
 
+<!-- Home Link -->
+<%= link_to "Home", tasks_path %>
 
 <!-- Footer -->
 <footer>
