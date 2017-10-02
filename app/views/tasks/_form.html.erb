@@ -1,0 +1,14 @@
+<%= form_for @task do |f| %>
+<p><%= f.label :name, :class => "label" %></p>
+<p><%= f.text_field :name, :class => "field" %></p>
+
+<p><%= f.label :description, :class => "label" %></p>
+<p><%= f.text_area :description, :class => "field" %></p>
+
+<p><%= f.label :due_date %></p>
+<p><%= f.date_select :due_date %></p>
+<br>
+<%= f.submit "Save" %>
+<% end %>
+
+<%= button_to "Cancel", tasks_path, method: :get %>

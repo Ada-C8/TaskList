@@ -1,0 +1,118 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+a, h1, p, ul, section, li, form > label {
+  font-family: 'Muli', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+p, li {
+  padding: 3px;
+  margin: 1px auto;
+}
+
+li {
+  font-size: 18px;
+}
+
+section.container, div#form  {
+  background-color: #F9F9F9;
+  min-width: 60%;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+section.title {
+  padding: 1em;
+}
+
+h1#list_name {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 2em;
+}
+
+section.title > form.button_to {
+  display: inline-block;
+  width: 4em;
+}
+
+ul#index_list {
+  margin: 2px auto;
+  padding: 4px;
+  width: 90%;
+}
+
+section.task {
+  border-bottom: #001a6a solid 2px;
+}
+
+section.task_details {
+  display: inline-block;
+  position: relative;
+  left: 3em;
+  bottom: 2em;
+  width: 90%;
+  padding: 3px;
+  margin: 1px 2px;
+}
+
+li.complete {
+  display: inline-block;
+  width: 50%;
+}
+
+p.complete {
+  display: inline-block;
+  font-size: 12px;
+  width: 40%;
+}
+
+p.task_details {
+  font-size: 14px;
+}
+
+.task img {
+  height: 20px;
+  width: 20px;
+  padding: 1px;
+  border: solid darkgrey 1px;
+  border-radius: 4px;
+}
+
+form.button_to input, form.new_task input, form.edit_task input, div#form > form.button_to input {
+  border: darkgrey solid 1px;
+  border-radius: 3px;
+  background-color: white;
+  width: auto;
+  padding: 4px;
+}
+
+form.button_to input {
+  width: 2em;
+  margin: 2px;
+  padding: 2px;
+}
+
+div#form {
+  padding: 1em;
+}
+
+div#form h1 {
+  margin-top: 0;
+}
+
+div#form > form.button_to input {
+  margin-left: 0;
+  margin-top: 4px;
+}

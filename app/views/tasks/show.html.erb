@@ -1,0 +1,7 @@
+<h1><%= @task.name %></h1>
+<p><%= @task.description %></p>
+<p><%= @task.due_date %></p>
+<% if @task.complete? %>
+  <p>Done!</p>
+  <p>Completed: <%= @task.completion_date.to_string %></p>
+<% end %>

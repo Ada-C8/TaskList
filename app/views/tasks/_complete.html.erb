@@ -1,0 +1,9 @@
+<section class="task_details">
+  <p class="button done"><%= button_to "\u{2714}", complete_task_path(@task.id), method: :patch %></p>
+  <li class="task title"><strike><%= @task.name %></strike></li>
+  <p>Completed on: <%= @task.completion_date %></p>
+  <p class="task description">Description: <%= @task.description %></p>
+  <p>Due Date: <%= @task.due_date %></p>
+  <p class="button edit"><%= link_to "Edit", edit_task_path(@task.id), method: :get %></p>
+  <p class="button delete"><%= button_to "\u{2DF}", delete_task_path(@task.id), method: :delete, data: { confirm: "Delete task?" } %></p>
+</section class="task_details"
