@@ -21,21 +21,13 @@ h3 {
   text-align: center;
 }
 
-.task-links {
-  // list-style: none;
-  border: 1px solid red;
-}
-
-.task-data {
-  list-style: none;
-  text-decoration: none;
-  border: 1px solid blue;
-}
-
-.task-items:link {
+a:link {
+  color: red;
   text-decoration: none;
 }
+
 
 li {
+  list-style: none;
   text-decoration: none;
 }
