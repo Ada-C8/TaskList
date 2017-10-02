@@ -43,13 +43,13 @@ class TasksController < ApplicationController
     redirect_to("/tasks")
   end
 
-  def completed
-    @task = Task.find(params[:id])
-    @task.status = true
-
-    @task.date_completed = Date.today
-    @task.save
-
-    redirect_to("/tasks")
-  end
+  # def mark_completed
+  #   @task = Task.find(params[:id])
+  #   @task.status = true
+  #
+  #   @task.date_completed = Date.today
+  #   @task.save
+  #
+  #   redirect_to("/tasks")
+  # end
 end
