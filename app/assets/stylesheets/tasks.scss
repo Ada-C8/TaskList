@@ -1,0 +1,33 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+header {
+  font-family: cursive;
+}
+
+input {
+  font-family: helvetica;
+  font-size: 24px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  border: 1px solid green;
+  text-align: center;
+}
+
+a:link {
+  color: red;
+  text-decoration: none;
+}
+
+
+li {
+  list-style: none;
+  text-decoration: none;
+}

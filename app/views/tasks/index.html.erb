@@ -1,0 +1,21 @@
+<h1>Tasks I Probably Won't Do</h1>
+
+
+<!-- <a href="/tasks" class="link">Custom anchor tag</a> -->
+<%= link_to "List all Tasks", tasks_path %>
+
+<%= link_to "New Task", new_task_path %>
+
+<h3>Uppercase Tasks are Complete</h3>
+
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <strong><%= link_to task.title, task_path(task.id) %></strong>
+        <%= link_to 'mark_complete', complete_task_path(task.id) %>
+        <%= link_to 'edit', edit_task_path(task.id) %>
+        <%= link_to 'delete', task_path(task.id), method: :delete, data: { confirm: "Are You Sure?" } %>
+    </li>
+  <% end %>
+</ul>
