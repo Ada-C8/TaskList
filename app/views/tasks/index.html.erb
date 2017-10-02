@@ -1,0 +1,37 @@
+
+
+  <h1>TaskList</h1>
+
+<!-- <% if @tasks %> -->
+
+<section>
+  <div id="add">
+    <%= link_to "Add Task", new_task_path %>
+  </div>
+<div id="home">
+  <%= link_to "Home", tasks_path%>
+</div>
+</section>
+
+<div id="list">
+<h2> Your Tasks</h2>
+<%@tasks.each do |task| %>
+
+<h3>
+<%= link_to(task.name, task_path(task.id), alt: "link to task.name") %>
+</h3>
+<%= link_to "Edit", edit_task_path(task) %>
+<%= link_to "Delete", delete_task_path(task), method: :delete, data: {confirm: "Delete this FOREVER?" } %>
+
+<% if task.status %>
+<%= link_to "Complete", mark_complete_path(task.id), method: :patch %>
+
+<% else %>
+<%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch %>
+<% end %>
+
+<% end %>
+</div>
+<!-- <% else %>
+  <h1>404: Not Found</h1>
+<% end %> -->
