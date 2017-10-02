@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <h1>Much Tasks, Many Lists</h1>
+  </header>
+
+  <section class="fixed"><nav>
+
+    <article class="button">
+      <%= link_to "new task", new_task_path %>
+    </article>
+    <article class="button">
+      <%= link_to "all tasks", tasks_path(params[:sort])%>
+    </article>
+    <article class ="sort">
+      <%= form_tag(tasks_path, method: "get") do %>
+      <% ["owner", "category", "priority"].each do |i| %>
+        <%= label_tag(:sort, "#{i}") %>
+        <%=  radio_button_tag(:sort, i)%>
+      <% end %>
+      <p>
+        <%= submit_tag "sort tasks" %>
+      </p>
+    </article>
+    <%end %>
+
+
+  </section>
+</nav>
+<section class="fluid">
+  <% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  <%= yield %>
+</section>
+</body>
+<section class="params">
+<%=params%>
+</section>
+</html>

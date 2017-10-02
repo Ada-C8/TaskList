@@ -1,0 +1,12 @@
+
+
+
+<% @tasks.each do |category, array| %>
+
+
+<article class="content <%= "all_tasks" if !(category)%> <%= "filler" if @tasks.count < 3 %>">
+<%= render partial: "priority", locals: { input_category: category, tasks: array, sorter: @sorter} %>
+
+
+</article>
+<% end %>

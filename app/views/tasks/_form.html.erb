@@ -1,0 +1,24 @@
+
+<%= form_for @task do |f| %>
+<%= f.label :owner %>
+<%= f.text_field :owner %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+<hr />
+<article class="description">
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+</article>
+<hr />
+
+<%= select_date Date.today, prefix: :start_date %>
+<hr />
+<%= f.label :priority %>
+<%= f.text_field :priority %>
+<hr />
+<%= f.label :category %>
+<%= f.text_field :category %>
+
+<%= f.submit action_name %>
+<% end %>
