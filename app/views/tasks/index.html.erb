@@ -1,22 +1,18 @@
 <section>
   <h2>Tasks</h2>
-    <ol>
-      <% @tasks.each do |task| %>
-        <li>
-          <p>
-            <strong>
-              <%= link_to task.task, task_path(task.id) %>
-            </strong>
-          </p>
-          <%= link_to 'Edit', edit_task_path(task) %> |
-          <%= link_to 'Delete', task_path(task), method: :delete %>
+  <ol>
+    <% @tasks.each do |task| %>
+      <li>
+        <p>
+          <strong>
+            <%= link_to task.task, task_path(task.id) %>
+          </strong>
+        </p>
+        <%= link_to 'Edit', edit_task_path(task) %> |
+        <%= link_to 'Delete', task_path(task), method: :delete %>
       </li>
     <% end %>
   </ol>
 </section>
 
-<nav>
-  <%= link_to 'Home', tasks_path %> |
-  <%= link_to 'Add', new_task_path %> |
-  <%= link_to 'All tasks', all_tasks_path %>
-</nav>
+<%= render partial: 'nav' %>

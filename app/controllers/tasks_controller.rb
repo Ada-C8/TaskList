@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   def update
     task = Task.find(params[:id])
     task.update(task: params[:task][:task], description: params[:task][:description], due: params[:task][:due])
-    
+
     redirect_to('/tasks')
   end
 
@@ -40,6 +40,25 @@ class TasksController < ApplicationController
   def destroy
     task = Task.find(params[:id])
     task.destroy
+    redirect_to("/tasks")
+  end
+
+  def mark_as_complete
+    @task = Task.find(params[:id])
+    @task.status = true
+
+    @task.date_completed = Date.today
+    @task.save
+
+    redirect_to("/tasks")
+  end
+
+  def mark_as_incomplete
+    @task = Task.find(params[:id])
+    @task.status = false
+    @task.date_completed = ""
+    @task.save
+
     redirect_to("/tasks")
   end
 end

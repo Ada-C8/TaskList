@@ -1,0 +1,24 @@
+<section>
+  <h2>Completed Tasks</h2>
+    <ol>
+      <% @tasks.each do |task| %>
+        <li>
+          <% if task.status == true %>
+            <p>
+              <strong>
+                <%= link_to task.task, task_path(task.id) %>
+              </strong>
+            </p>
+          <% end %>
+        </li>
+      <p>
+        Details: <%= task.description %>
+      </p>
+      <p>
+        <%= task.due %>
+      </p>
+    <% end %>
+  </ol>
+</section>
+
+<%= render partial: 'nav' %>
