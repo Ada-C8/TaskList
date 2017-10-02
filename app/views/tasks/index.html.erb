@@ -8,8 +8,9 @@
             <%= link_to task.task, task_path(task.id) %>
           </strong>
         </p>
+        <%= link_to "Mark Completed", completed_path(task.id), method: :patch %> |
         <%= link_to 'Edit', edit_task_path(task) %> |
-        <%= link_to 'Delete', task_path(task), method: :delete %>
+        <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "This cannot be reversed. Are you sure you want to delete?" } %>
       </li>
     <% end %>
   </ol>

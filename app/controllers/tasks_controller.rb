@@ -43,7 +43,7 @@ class TasksController < ApplicationController
     redirect_to("/tasks")
   end
 
-  def mark_as_complete
+  def complete
     @task = Task.find(params[:id])
     @task.status = true
 
@@ -53,7 +53,7 @@ class TasksController < ApplicationController
     redirect_to("/tasks")
   end
 
-  def mark_as_incomplete
+  def incomplete
     @task = Task.find(params[:id])
     @task.status = false
     @task.date_completed = ""
