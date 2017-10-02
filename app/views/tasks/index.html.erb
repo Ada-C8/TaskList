@@ -1,0 +1,22 @@
+<section class="homepage">
+  <ul class="inline">
+    <% num = 1 %>
+
+    <% @tasks.each do |task| %>
+    <% class_name = task.completion_date == nil ? '' : 'complete' %>
+    <% button_val = task.completion_date == nil ? 'Mark Complete' : 'Unmark Complete' %>
+
+    <h3><%= num %>. <%= link_to(task.name, task_path(task.id), alt: 'link to', class: class_name) %></h3>
+    <li>
+      <%= button_to button_val, mark_complete_task_path(task.id), method: :patch %>
+    </li> |
+    <li>
+      <%= link_to "Edit", edit_task_path(task.id) %>
+    </li> |
+    <li>
+      <%= link_to "Delete", delete_task_path(task.id), method: :delete %>
+    </li>
+    <% num += 1 %>
+    <% end %>
+  </ul>
+</section>

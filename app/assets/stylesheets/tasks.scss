@@ -1,0 +1,141 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// General Styling
+// Not great uses of SCSS, I just wanted to teach myself
+$background-color: #F9C5A7;
+$container-color: white;
+$background-gif: "source.gif";
+$font-color: #344B91;
+
+@mixin container($radius, $color) {
+  border-radius: $radius;
+  background-color: $color;
+}
+
+body {
+  background: $background-color;
+  color: $font-color;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.wrapper {
+  background: image-url($background-gif);
+  min-height: 100vh;
+}
+
+a, .button {
+  color: $font-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: fade-out($font-color, 0.3);
+}
+
+h1, h2 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header h1 {
+  margin:0;
+  padding-top: 30px;
+}
+
+.taskform label, footer, .home {
+  @extend h1;
+  font-size: 0.6em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inline li {
+  font-size: 0.8em;
+  display: inline-block;
+}
+
+// Main layout
+
+main {
+  margin: 70px auto;
+  max-width: 650px;
+}
+
+aside, section {
+  display: inline-block;
+  vertical-align: top;
+}
+
+section {
+  width: 65%;
+  margin-left: 10px;
+  padding: 20px 20px 40px;
+}
+
+section, .button {
+  @include container(12px, $container-color);
+}
+
+.homepage {
+  text-align: left;
+}
+
+.homepage ul {
+  padding-left: 30px;
+}
+
+// Button class
+
+.button {
+  width: 120px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-style: italic;
+  border-width: 0;
+  box-shadow: 2px 2px 10px rgba(52, 75, 145, 0.4);
+}
+
+.button:hover {
+  background: fade-out($container-color, 0.3);
+}
+
+.button:focus {
+  outline:0;
+}
+
+// Footer
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// Single Task page
+
+.home {
+  border-bottom: 2px solid $font-color;
+}
+
+// Add Task form
+
+.taskform input{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+// Mark complete
+
+.complete {
+  text-decoration: line-through;
+}
