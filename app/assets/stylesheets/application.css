@@ -63,6 +63,10 @@ line-height: 12em;
   text-shadow: yellow 0px 5px 20px;
 }
 
+.button a:focus {
+  text-shadow: yellow 0px 5px 20px;
+}
+
 a {
   color: blue;
   font-weight: bolder;
@@ -86,6 +90,28 @@ a {
 .all_tasks {
   max-height: 700px;
   width: 70%
+}
+
+.description input {
+  width: 80%;
+  height: 150px;
+  /*padding: 12px 20px;*/
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.new {
+  max-height: 700px;
+  width: 70%;
+
+}
+
+.edit {
+  max-height: 700px;
+  width: 70%;
 }
 
 .filler {
@@ -116,6 +142,11 @@ a {
 }
 
 .task_edits a:hover {
+  text-shadow: blue 5px 5px 30px;
+
+}
+
+.task_edits a:focus {
   text-shadow: blue 5px 5px 30px;
 
 }
