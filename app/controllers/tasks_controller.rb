@@ -30,6 +30,14 @@ class TasksController < ApplicationController
     redirect_to task_path(@task)
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    @task.date = Date.today
+    @task.title = @task.title.upcase!
+    @task.save
+    redirect_to('/tasks')
+  end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
