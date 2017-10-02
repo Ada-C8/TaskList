@@ -1,6 +1,8 @@
+require 'date'
+
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.order(:due_date, :completion_date)
   end
 
   def show
@@ -20,6 +22,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     if @task.save
+      flash[:notice] = "Task saved"
       redirect_to root_path
     else
       render :new
@@ -52,12 +55,12 @@ class TasksController < ApplicationController
     else
       task.update_attribute(:completion_date, Date.current)
     end
-    
+
     redirect_to root_path
   end
 
   private
     def task_params
-      return params.require(:task).permit(:name, :description, :due_date, :completion_date, :completed)
+      return params.require(:task).permit(:name, :description, :due_date, :completion_date)
     end
 end

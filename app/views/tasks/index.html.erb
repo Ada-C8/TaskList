@@ -1,19 +1,29 @@
-<h1 id="app_name">Gitturdun</h1>
-<ul id="index_list">
-  <% @tasks.each do |task| %>
-    <% if task.completion_date %>
-      <p><%= link_to "Mark Incomplete", complete_task_path(task.id), method: :patch %></p>
-      <li><strike><%= task.name %></strike></li>
-    <% else %>
-      <p><%= link_to "Mark Complete", complete_task_path(task.id), method: :patch %></p>
-      <li class="task"><%= link_to task.name, task_path(task.id) %></li>
-    <% end %>
-    <p><%= task.due_date %></p>
-    <section class="task_buttons">
-      <p class="edit"><%= button_to "Edit", edit_task_path(task.id), method: :get %></p>
-      <p class="delete"><%= button_to "Delete", delete_task_path(task.id), method: :delete, data: { confirm: "Delete task?" } %></p>
-    </section<
-  <% end %>
-<ul>
-<p class="add"><%= button_to "+", new_task_path, method: :get %></p>
-<p class="all"><%= button_to "All", tasks_path, method: :get %></p>
+<section class="container">
+  <section class="title">
+    <h1 id="list_name">Task List</h1>
+    <%= button_to "+", new_task_path, method: :get %>
+  </section>
+  <ul id="index_list">
+    <% @tasks.each do |task| %>
+    <section class="task">
+      <br>
+      <% if task.complete? %>
+      <%= button_to "\u{2714}", complete_task_path(task.id), method: :patch %>
+      <section class="task_details">
+        <li class="complete"><strike><%= task.name %></strike></li>
+        <p class="complete">Completed on: <%= task.completion_date.strftime("%d.%m.%y") %></p>
+        <% else %>
+        <%= button_to " ", complete_task_path(task.id), method: :patch %>
+        <section class="task_details">
+          <li class="task"><%= link_to task.name, task_path(task.id) %></li>
+          <% end %>
+          <p class="task_details">Due Date: <%= task.due_date %></p>
+          <p class="task_details">Description: <%= task.description %></p>
+          <br>
+          <%= link_to image_tag("edit_pencil.png", alt: "edit button"), edit_task_path(task.id), method: :get %>
+          <%= link_to image_tag("delete.png", alt: "delete button"), delete_task_path(task.id), method: :delete, data: { confirm: "Delete task?" } %>
+        </section>
+      </section>
+      <% end %>
+    </ul>
+  </section>
