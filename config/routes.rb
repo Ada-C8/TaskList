@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   patch '/tasks/:id', to: 'tasks#update'
   delete '/tasks/:id', to: 'tasks#destroy'
 
-  get '/tasks/completed', to: 'tasks#completed', as: 'all_completed'
+  get '/tasks/completed_tasks', to: 'tasks#completed_tasks', as: 'completed_tasks'
   patch '/tasks/:id/completed', to: 'tasks#completed', as: 'completed'
-  patch '/tasks/:id/incompleted', to: 'tasks#incompleted'
+  # patch '/tasks/:id/incompleted', to: 'tasks#incompleted'
 end
