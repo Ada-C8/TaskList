@@ -1,0 +1,54 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Font */
+*{
+  @import url('https://fonts.googleapis.com/css?family=Pacifico');
+font-family: 'Pacifico', cursive;
+}
+
+/* Body */
+body {
+  border-style: solid;
+  border-width: 2px;
+  width: 600px;
+  height: auto;
+}
+
+/* Header */
+h1 {
+  font-size: 35px;
+  text-align: center;
+}
+
+h2 {
+font-size: 25px;
+}
+
+h3 {
+font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+}
+
+li {
+  list-style-type: none;
+}
+/* Buttons */
+
+
+/* Footer */
+.footer #copyright {
+  position: bottom;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .10rem;
+  text-align: center;
+  font-size: 12px;
+  border-style: solid;
+  border-width: 1px;
+}

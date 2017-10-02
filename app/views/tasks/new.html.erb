@@ -1,0 +1,16 @@
+<!-- Add a tasky task task page -->
+
+<h2>You don't have enough to do, so make something new!</h2>
+
+<%= render partial: "form", locals: {the_task: @task} %>
+
+<!-- Home Link -->
+<%= link_to "Home", tasks_path %>
+
+<!-- Footer -->
+<footer>
+  <div class="footer">
+    <p id="copyright">
+      &copy; 2017 - Stefanie Gunderson, keeping it simple.
+    </p>
+  </div>
