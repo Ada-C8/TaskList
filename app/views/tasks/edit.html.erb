@@ -13,4 +13,8 @@
   <%= f.submit 'Save' %>
 <% end %>
 
-<%= link_to 'Home', tasks_path %>
+<nav>
+  <%= link_to 'Home', tasks_path %> |
+  <%= link_to 'Add', new_task_path %> |
+  <%= link_to 'All tasks', all_tasks_path %>
+</nav>
