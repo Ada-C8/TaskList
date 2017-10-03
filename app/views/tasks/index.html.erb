@@ -51,7 +51,7 @@
       <p>
         <%= link_to(task.status ? "Unmark Complete" : "Mark Complete", mark_complete_task_path(task.id), {method: :patch, alt: "link to mark complete", class: "task_link" }) %>
         <%= link_to("Edit", edit_task_path(task.id), {alt: "link to edit", class: "task_link", id: "edit_link"}) %>
-        <%= link_to("Delete", delete_task_path(task.id), {method: :delete, alt: "link to delete", class: "task_link", data: {confirm: "Are you sure you want to delete this task?"} }) %>
+        <%= link_to("Delete", task_path(task.id), {method: :delete, alt: "link to delete", class: "task_link", data: {confirm: "Are you sure you want to delete this task?"} }) %>
         <% end %>
       </p>
     </ul>
