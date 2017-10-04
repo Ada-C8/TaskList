@@ -1,0 +1,53 @@
+<h2>Editing  Task</h2>
+
+<%= render partial: "task_summary", locals: { submit_text: "Edit"}%>
+
+
+
+<!-- <h2>Editing Task</h2>
+
+<% form_for @task do |f| %>
+  <%= f.label :title %>
+  <% f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :due_date %>
+  <%= f.text_field :due_date %>
+
+  <%= f.submit "Add a task!" %>
+
+<% end %> -->
+
+
+<!-- <form action="/tasks" method="POST" accept-charset="utf-8"> -->
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+<!--
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <label for="title">Title</label>
+  <input type="text" name="title" value="" id="title">
+
+  <label for="description">Description</label>
+  <input type="text" name="description" value="" id="description">
+
+  <label for="due_date">Due Date</label>
+  <input type="date" name="due_date" value="" id="due_date">
+
+  <input type="submit" value="Add Task">
+</form> -->
+
+<!-- <%= form_for @task do |f| %>
+  <%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.label :due_date %>
+<%= f.text_field :due_date %>
+
+<%= f.submit %>
+
+<% end %> -->

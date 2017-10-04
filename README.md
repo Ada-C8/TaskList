@@ -30,7 +30,6 @@ This wave is where we introduce ActiveRecord to create a model. We use the model
     - you may need to update the view as well to use the model fields rather than the hard-coded data
 
 
-
 ## Wave 2
 In this wave, we will expand the actions we support and introduce forms for user interactivity and persistence.
 
