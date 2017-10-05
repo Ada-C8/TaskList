@@ -1,0 +1,43 @@
+<h1>Tasks#show</h1>
+<p>Find me in app/views/tasks/show.html.erb</p>
+<p>
+params are : <%= params %>
+</p>
+
+<%if @task %>
+<h2>
+  <%= @task.name%>
+  <%=link_to "Edit", edit_task_path(@task.id) %>
+  <%=link_to "Add Task", new_task_path %>
+  <!-- <%= link_to 'Delete', confirm_task_path(@task.id)%> -->
+  <%= link_to 'Delete',
+             delete_task_path(@task.id),
+                         method: :delete,
+                         data: { confirm: 'Are you sure?' } %>
+  <!-- <%=link_to "Delete", delete_task_path(@task.id), method: :delete %> -->
+  <% if @task.completed %>
+      <%=link_to "Mark Incomplete", update_task_path(@task.id, :task => { :completed => false }), method: :patch %>
+  <% else %>
+      <%=link_to "Mark Complete", update_task_path(@task.id, :task => { :completed => true }), method: :patch %>
+  <% end %>
+  </h2>
+  <h3>
+    <%= @task.description %>
+  </h3>
+  <h3>
+    <%= @task[:due] %>
+  </h3>
+  <h3>
+    <%= @task[:priority] %>
+  </h3>
+  <h3>
+    <%= @task[:completed] %>
+  </h3>
+  <%else%>
+  <h1> 404 : Not Found !</h1>
+  <%end%>
+</p>
+
+<h2>
+  <%=link_to "Home", tasks_path %>
+</h2>

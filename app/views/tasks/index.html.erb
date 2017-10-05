@@ -1,0 +1,23 @@
+
+<nav class="nav wrapper">
+  <h2> Task List </h2>
+    <%=link_to "Add Task", new_task_path %>
+    <%=link_to "All Tasks", tasks_path %>
+  <!-- </section> -->
+</nav>
+
+<article class="list-of-tasks wrapper">
+  <h3>TO DO :</h3>
+
+  <ol>
+    <% @tasks.each do |task| %>
+    <li>
+      <%=link_to(task.name, task_path(task.id), { :class => (task.completed)? "complete" : "" })%>
+    </li>
+    <ul>
+      <li class="right-border">
+        <%= task.description %>
+      </li>
+    </ul>
+      <% end %>
+  </ol>
