@@ -1,0 +1,21 @@
+<div class="container">
+
+  <header>
+    <h1><%= @task.name.capitalize %></h1>
+  </header>
+  <main class="show">
+
+    <!-- <p>Find me in app/views/tasks/show.html.erb</p> -->
+    <p>
+      <%= @task.description %>
+    </p>
+    <p class="status">
+      Status: <%= @task.completion_date ? "Completed on #{@task.completion_date}! Awesome sauce!" : "due #{@task.due_date}" %>
+    </p>
+
+    <p>
+      <%= button_to('Task List', root_path, method: :get, class: "button") %>
+      <%= button_to('Edit Task', edit_task_path, method: :get, class: "button") %>
+    </p>
+  </main>
+</div>
