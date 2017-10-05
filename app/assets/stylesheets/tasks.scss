@@ -1,0 +1,105 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// * {
+//   border: 1px black solid;
+// }
+
+body {
+  background-image: url(colors.JPG);
+  background-size: cover;
+}
+
+.boxed {
+  background-color: rgba(255,255,255,0.7);
+  border: 1px solid purple;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+.colors {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.main_content {
+  width: 60%;
+  max-width: 600px;
+  max-height: 580px;
+  overflow: scroll;
+}
+
+.nav_buttons, .main_content {
+  float: left;
+  margin: 2%;
+}
+
+.nav_buttons article {
+  margin-bottom: 25px;
+  text-align: center;
+  width: 150px;
+}
+
+.nav_buttons article, .main_content{
+  border: 1px orange solid;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 2em;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.main_content h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.main_content li {
+  margin: 25px 0;
+}
+
+.form div {
+  margin: 20px auto;
+}
+
+.input_text {
+  font-size: 0.6em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  border: 1px solid yellow;
+  text-align: center;
+  margin-top: 50px;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+a, li, h2{
+  text-decoration: none;
+  color:#313131;
+  color: #fff;
+    -webkit-animation: random 5s infinite;
+    animation: random 5s infinite;
+}
+
+.submit_button {
+  font-size: 2em;
+}
+
+@keyframes random {
+  15% { color: red; }
+  30% { color: purple; }
+  45% { color: green; }
+  60% { color: blue; }
+  75% { color: orange; }
+}

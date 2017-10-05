@@ -1,0 +1,18 @@
+<section class="form">
+  <%= form_for @task do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => "input_text" %>
+  </div>
+  <div>
+    <%= f.label :description %>
+  </div>
+  <div>
+    <%= f.text_area :description, :class => "input_text" %>
+  </div>
+  <div>
+    <%= f.submit :class => "submit_button" %>
+  </div>
+
+  <% end %>
+</section>
