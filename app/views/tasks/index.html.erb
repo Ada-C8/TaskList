@@ -1,0 +1,39 @@
+<body>
+<header>
+  <a href="">[ Homepage ]</a>
+</header>
+
+<main>
+    <section class="tasklist">
+      <h1>Task List</h1>
+    </section>
+
+    <section class="yourtasks">
+      <h2> Your Tasks </h2>
+        <ol>
+          <%@tasks.each do |task|%>
+            <li>
+              <h3><%=link_to task.title, task_path(task.id)%></h3>
+              <p>
+              Completed On: <%= task.completion_date %>
+              </p>
+              <p>
+              <%=button_to "Mark Complete", complete_task_path(task.id), method: :patch%>
+              <%=button_to "Edit", edit_task_path(task.id), method: :get%>
+              <%=button_to "Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+              </p>
+            </li>
+          <%end%>
+        </ol>
+    </section>
+
+    <section class="side_buttons">
+      <%=button_to "Add New", new_task_path, method: :get%>
+
+    </section>
+</main>
+</body>
+
+<footer>
+
+</footer>

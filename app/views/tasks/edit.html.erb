@@ -1,0 +1,22 @@
+<!-- <h1>Edit Task</h1> -->
+<!--
+<%= render 'form' %> -->
+
+<%= link_to 'Back', tasks_path %>
+
+
+<h1> Edit Task </h1>
+
+<%= render partial: "form", locals: { button_text: "Confirm Edits" }%>
+
+<!-- <section>
+  <%=form_for @task do |f|%>
+    <%=f.label :title%>
+    <%=f.text_field :title%>
+    <%=f.label :description%>
+    <%=f.text_field :description%>
+    <%=f.label :due_date%>
+    <%=f.text_field :due_date%>
+    <%=f.submit "Submit Edits"%>
+  <%end%>
+</section> -->

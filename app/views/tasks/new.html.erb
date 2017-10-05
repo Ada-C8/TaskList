@@ -1,0 +1,20 @@
+<%= link_to 'Back', tasks_path %>
+
+<h1> New Task </h1>
+
+<%= render partial: "form", locals: { button_text: "Submit" }%>
+
+
+
+
+<!-- <section>
+  <%=form_for @task do |f|%>
+    <%=f.label :title%>
+    <%=f.text_field :title%>
+    <%=f.label :description%>
+    <%=f.text_field :description%>
+    <%=f.label :due_date%>
+    <%=f.text_field :due_date%>
+    <%=f.submit "Add Task"%>
+  <%end%>
+</section> -->
