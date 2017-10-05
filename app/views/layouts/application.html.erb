@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- <em><p>Params are: <%= params %></p></em> -->
+    <header>
+      <h1><%= link_to("TASKLIST", root_path, alt: 'homepage')%></h1>
+    </header>
+
+    <%= yield %>
+    <footer>
+      <h3>&copy; 2017</h3>
+    </footer>
+  </body>
+</html>

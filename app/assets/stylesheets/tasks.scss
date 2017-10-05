@@ -1,0 +1,97 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tasklist-nav, .your-tasks-container, .form, h1, h2, ol, li, p, footer {
+  font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
+  color: #7f8c8d;
+}
+
+.tasklist-nav ul {
+  padding-top: 0;
+  padding-left: 10px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
+.tasklist-nav li {
+  list-style: none;
+  width: 85px;
+  text-align: center;
+  padding: 6px;
+  margin-bottom: 10px;
+  background-color: #f39c12;
+  border-radius: 3px;
+  box-shadow: 0 3px #e67e22;
+}
+
+.tasklist-nav li:hover,
+.tasklist-nav li.press li.hover {
+  background-color: #1abc9c;
+}
+
+.tasklist-nav {
+  float: left;
+}
+
+.tasklist-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.your-tasks-container {
+  float: left;
+  border-radius: 10px;
+  border: 1.5px solid #95a5a6;
+  padding-left: 5px;
+  margin-left: 2%;
+  margin-bottom: 10px;
+  width: 80%;
+  background: #FFEEC7;
+  box-shadow: 0 3px #95a5a6;
+}
+
+.your-tasks-container h2 {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.your-tasks-container a {
+  color: #7f8c8d;
+}
+
+.your-tasks-container a:hover {
+  color: #1abc9c;
+}
+
+.task-options-button {
+  display: inline-block;
+}
+
+.show-task {
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 10px;
+  border: 1.5px solid #95a5a6;
+  background: #FFF2D5;
+  padding: 1px 10px;
+  box-shadow: 0 3px #95a5a6;
+}
+
+.add-task, .edit-task {
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 10px;
+  border: 1.5px solid #95a5a6;
+  background: #FFF2D5;
+  padding: 1px 10px;
+  box-shadow: 0 3px #95a5a6;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.striked {
+  text-decoration: line-through;
+}
