@@ -7082,3 +7082,111 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:17:22 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_nav_buttons.html.erb (0.6ms)
+  [1m[36mTask Load (2.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (105.2ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `mark_complete_path' for #<#<Class:0x007fb0860baac0>:0x007fb086118508>):
+    13:       <p class="<%= completed_status_class(task) %>">
+    14:         <%= link_to(task.name, task_path(task.id)) %>
+    15:       </p>
+    16:       <%= link_to(task.completed ? "Unmark Complete" : "Mark Complete", mark_complete_path(task.id), method: :patch) %>  |
+    17:       <%= link_to("Edit", edit_task_path(task.id)) %>  |  <%= link_to("Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Do you REALLY want to delete me?!"}) %>
+    18:       </p>
+    19:     </li>
+  
+app/views/tasks/index.html.erb:16:in `block in _app_views_tasks_index_html_erb___2859161964081051820_70198070125480'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___2859161964081051820_70198070125480'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:18:27 -0700
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:18:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_nav_buttons.html.erb (0.4ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 277ms (Views: 273.7ms | ActiveRecord: 0.2ms)
+
+
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_nav_buttons.html.erb (0.3ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-10-03 10:18:47 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_nav_buttons.html.erb (0.4ms)
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 17.6ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/tasks/2/mark_complete" for 127.0.0.1 at 2017-10-03 10:18:59 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"hnt0mVEzwrmF89Qmzmzd83ejJXiSECco/ij2G8z56p3+IA4ZrBs1mm3wOmpie4t8Hkt1N+3gZ7644m5qjsnWpQ==", "id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completed", "t"], ["updated_at", "2017-10-03 17:18:59.413858"], ["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:18:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_nav_buttons.html.erb (0.4ms)
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/2/mark_complete" for 127.0.0.1 at 2017-10-03 10:19:00 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"Nx7Oa4pIntori2eGxqxl1+kBhWeYyc63w7yYGWIiQFNPRbTrd2Bp+cOIicpquzNYgOnVKOc5jiGFdgBoIBJ8aw==", "id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completed", "f"], ["updated_at", "2017-10-03 17:19:00.131147"], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:19:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_nav_buttons.html.erb (0.4ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-10-03 10:19:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_nav_buttons.html.erb (0.5ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-10-03 10:19:02 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_nav_buttons.html.erb (0.3ms)
+  Rendered tasks/_form.html.erb (21.6ms)
+  Rendered tasks/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
