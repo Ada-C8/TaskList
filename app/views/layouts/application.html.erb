@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <h1> <%= link_to('TASKLIST', root_path, alt: 'link to TASKLIST') %> </h1>
+  </header>
+
+  <main class="group">
+    <div class="left">
+      <section class="button">
+        <h4><%= link_to('Add Task', new_task_path, alt: 'link to create new task') %></h4>
+      </section>
+      <section class="button">
+        <h4><%= link_to('All Tasks', root_path, alt: 'link to all tasks') %></h4>
+      </section>
+    </div>
+
+    <div class="right" id="yield">
+      <%= yield %>
+    </div>
+
+  </main>
+
+  <footer>
+    <h6> Copyright © 2017</h6>
+  </body>
+  </html>

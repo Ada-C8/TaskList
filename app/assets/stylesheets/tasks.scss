@@ -1,0 +1,85 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// FORM STYLING
+.form {
+  position: relative;
+  padding: 10px 5%;
+}
+
+.form label {
+  display: block;
+  padding: 10px 0;
+}
+
+.form input[type=text], input[type=date] {
+  width: calc(100% - 10px);
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #555;
+}
+
+.form textarea {
+  width: calc(100% - 10px);
+  min-height: 10rem;
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #555;
+}
+
+.form input[type=text]:focus, .form textarea:focus {
+  background-color: Azure;
+}
+
+.form input[type=button], input[type=submit], input[type=reset] {
+  margin: 1rem auto;
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+  color: white;
+  background-color: Coral;
+}
+
+// COMPLETION STYLES
+
+.completed {
+  text-decoration: line-through;
+}
+
+.button_to {
+  display: inline-block;
+  height: 2rem;
+}
+
+.button_to input {
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+// SHOW STYLING
+#show {
+  position: relative;
+  padding: 10px 5%;
+}
+
+#show nav {
+  text-align: center;
+}
+
+#show .button_to {
+  margin: 1rem auto;
+  padding: .5rem;
+  width: 100%;
+  text-align: center;
+  background-color: Coral;
+}
+
+#show .button_to input {
+  width: auto;
+  border-radius: 0;
+}

@@ -1,0 +1,252 @@
+/* line 7, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form {
+  position: relative;
+  padding: 10px 5%;
+}
+
+/* line 12, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form label {
+  display: block;
+  padding: 10px 0;
+}
+
+/* line 17, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form input[type=text], input[type=date] {
+  width: calc(100% - 10px);
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #555;
+}
+
+/* line 24, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form textarea {
+  width: calc(100% - 10px);
+  min-height: 10rem;
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #555;
+}
+
+/* line 32, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form input[type=text]:focus, .form textarea:focus {
+  background-color: Azure;
+}
+
+/* line 36, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form input[type=button], input[type=submit], input[type=reset] {
+  margin: 1rem auto;
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+  color: white;
+  background-color: Coral;
+}
+
+/* line 47, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.completed {
+  text-decoration: line-through;
+}
+
+/* line 51, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.button_to {
+  display: inline-block;
+  height: 2rem;
+}
+
+/* line 56, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.button_to input {
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* line 65, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+#show {
+  position: relative;
+  padding: 10px 5%;
+}
+
+/* line 70, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+#show nav {
+  text-align: center;
+}
+
+/* line 74, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+#show .button_to {
+  margin: 1rem auto;
+  padding: .5rem;
+  width: 100%;
+  text-align: center;
+  background-color: Coral;
+}
+
+/* line 82, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+#show .button_to input {
+  width: auto;
+  border-radius: 0;
+}
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+
+
+*/
+
+/*=========================*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, input, textarea, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: sans-serif;
+  text-decoration: none;
+  background-color: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1.4;
+}
+ol, ul, li {
+  margin: 0 1rem;
+  padding: .5rem 0 0 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: sans-serif;
+}
+ul {
+  list-style: none;
+  }*/
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /*==========================*/
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    font-size: .8rem;
+  }
+
+  /*HEADER*/
+  header h1 {
+    padding: 2rem 5%;
+  }
+
+  /*MAIN*/
+  main {
+    margin: 0 10%;
+    max-width: 100rem;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .button {
+    margin: 1rem auto;
+    max-width: 8rem;
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .group::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  /*YIELD*/
+  #yield {
+    padding: 2rem .5rem;
+    border: 1px solid black;
+    border-radius: 5rem;
+  }
+
+  #yield h2 {
+    text-align: center;
+  }
+
+  /*FOOTER*/
+  footer h6{
+    margin-top: 2rem;
+    padding: 1rem 5%;
+    border-top: 1px solid black;
+  }
+
+  /*MAIN (Larger than Mobile)*/
+  @media (min-width: 700px) {
+    .left {
+      float: left;
+      width: 30%;
+      max-width: 12rem;
+    }
+
+    .right {
+      float: left;
+      width: 65%;
+      max-width: 40rem;
+    }

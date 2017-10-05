@@ -1,0 +1,5 @@
+<nav>
+  <%= task.completion_date == nil ? 'Incomplete' : "Completed #{task.completion_date.to_s}" %> |
+  <%= link_to('Edit', edit_task_path(task.id)) %> |
+  <%= link_to('Delete', delete_task_path(task.id), method: :delete, data: {confirm: 'Ultra sure? No take backs...'}) %>
+</nav>
