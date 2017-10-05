@@ -1,3 +1,92 @@
+/* line 7, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form {
+  position: relative;
+  padding: 10px 5%;
+}
+
+/* line 12, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form label {
+  display: block;
+  padding: 10px 0;
+}
+
+/* line 17, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form input[type=text], input[type=date] {
+  width: calc(100% - 10px);
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #555;
+}
+
+/* line 24, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form textarea {
+  width: calc(100% - 10px);
+  min-height: 10rem;
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #555;
+}
+
+/* line 32, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form input[type=text]:focus, .form textarea:focus {
+  background-color: Azure;
+}
+
+/* line 36, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.form input[type=button], input[type=submit], input[type=reset] {
+  margin: 1rem auto;
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+  color: white;
+  background-color: Coral;
+}
+
+/* line 47, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.completed {
+  text-decoration: line-through;
+}
+
+/* line 51, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.button_to {
+  display: inline-block;
+  height: 2rem;
+}
+
+/* line 56, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+.button_to input {
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* line 65, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+#show {
+  position: relative;
+  padding: 10px 5%;
+}
+
+/* line 70, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+#show nav {
+  text-align: center;
+}
+
+/* line 74, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+#show .button_to {
+  margin: 1rem auto;
+  padding: .5rem;
+  width: 100%;
+  text-align: center;
+  background-color: Coral;
+}
+
+/* line 82, /Users/jessicaowens/Dropbox/ada/coursework/07week/TaskList/app/assets/stylesheets/tasks.scss */
+#show .button_to input {
+  width: auto;
+  border-radius: 0;
+}
 /*
 * This is a manifest file that'll be compiled into application.css, which will include all the files
 * listed below.
@@ -10,8 +99,8 @@
 * files in this directory. Styles in this file should be added after the last require_* statement.
 * It is generally better to create a new file per style scope.
 *
-*= require_tree .
-*= require_self
+
+
 */
 
 /*=========================*/
@@ -20,6 +109,7 @@
 v2.0 | 20110126
 License: none (public domain)
 */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -63,7 +153,7 @@ ol, ul, li {
 }
 ul {
   list-style: none;
-  }
+  }*/
   blockquote, q {
     quotes: none;
   }
