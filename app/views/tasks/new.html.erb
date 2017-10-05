@@ -1,0 +1,32 @@
+<h1>Time to add a Task? </h1>
+
+<form action="/tasks" method="post" accept-charset="utf-8">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+<%= form_for @task do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.label :due_date %>
+<%= f.date_field :due_date %>
+
+
+<%= f.submit "Add that task!"%>
+<% end %>
+
+</form>
+
+
+<!-- <label for="task">Task</label>
+<input type="text" name="task[name]" value="" placeholder="Grocery shopping" id="task">
+
+<label for="description">Description</label>
+<input type="text" name="task[description]" value="" placeholder="" id="description">
+
+<label for="due_date">Due date</label>
+<input type="text" name="due_date" value="" placeholder="" id="due_date">
+
+<input type="submit" value="Add Task"> -->

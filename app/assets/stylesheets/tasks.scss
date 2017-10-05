@@ -1,0 +1,40 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tasklist {
+  background-color: skyblue;
+  padding-right: 70px;
+  margin-right: 70px;
+  border-radius: 1em;
+  overflow: scroll;
+  width: 70%;
+  height: 500px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  background: navy;
+  border-radius: 2em;
+  text-align: center;
+  color: skyblue;
+  font-size: 2em;
+  box-shadow: 6px 10px 9px #888899;
+  padding: 5%;
+  margin: 12%;
+}
+
+li {
+  font-family: serif;
+  margin: 5%;
+  padding: 2%;
+}
+
+
+.complete {
+    text-decoration: line-through;
+  }

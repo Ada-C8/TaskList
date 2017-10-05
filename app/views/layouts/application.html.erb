@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BusyBee</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+  <body>
+    <header>
+      <h1>The Busy Bee </h1>
+      <p>
+        Let's get Busy!
+      </p>
+
+      <nav>
+        <ul>
+          <li>
+            <%= link_to "Add Task", new_task_path %>
+          </li>
+          <li>
+            <%= link_to "All Tasks", tasks_path %>
+            <!-- not that you can also do '"/tasks"' but note that if we change what that link is, we need to change it here
+          whereas if we use the prefix then we don't run the same risk of having a broken link  -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      &copy; 2017 bb inc.
+    </footer>
+  </body>
+</html>
