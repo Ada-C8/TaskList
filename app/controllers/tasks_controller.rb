@@ -35,10 +35,7 @@ class TasksController < ApplicationController
     if params[:task][:done].to_i == 1
       done_boolean = true
     end
-    @task = Task.new(name: params[:task][:name],
-                     description: params[:task][:description],
-                     completion_date: params[:task][:completion_date],
-                     done: done_boolean)
+    @task = Task.new(task_parameters)
     if @task.save
       redirect_to @task
     else
