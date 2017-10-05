@@ -1,0 +1,52 @@
+<div>
+<section >
+  <h1>
+    ¿Qué tengo que hacer?
+  </h1>
+  <ul>
+    <il>
+      <%= link_to "Añadir Tarea", new_task_path %>
+    </il>
+    <il>
+      <%= link_to "Todas las tareas", tasks_path %>
+    </il>
+  </ul>
+</section>
+
+<section id="list">
+<h2>Añaniendo Tarea</h2>
+<ul>
+<%= form_for @task do |t| %>
+
+<li>
+  <%= t.label "Actividad" %>
+  <%= t.text_field :title %>
+</li>
+<li>
+  <%= t.label "Descripción" %>
+  <%= t.text_field :description %>
+</li>
+<li>
+  <%= t.label "Fecha" %>
+  <%= t.date_field :duedate %>
+</li>
+
+
+  <%= t.submit "Crear Tarea"%>
+
+</ul>
+
+
+
+<% end %>
+
+</section>
+
+</div>
+
+
+<footer>
+  <p>
+  &copy 2017
+</p>
+</footer>

@@ -1,0 +1,51 @@
+<div>
+<section >
+  <h1>
+    ¿Qué tengo que hacer?
+  </h1>
+  <ul>
+    <il>
+      <%= link_to "Añadir Tarea", new_task_path %>
+    </il>
+    <il>
+      <%= link_to "Todas las tareas", tasks_path %>
+    </il>
+  </ul>
+</section>
+
+<section id="list">
+<h2>
+  <%= @task.title %>
+</h2>
+
+
+
+<ul>
+  <li>
+    <%= @task.description %>
+  </li>
+  <li>
+    <%= @task.duedate %>
+  </li>
+
+<%= link_to( "Modificar", edit_task_path(@task.id)) %>
+
+</ul>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+  <p>
+  &copy 2017
+</p>
+</footer>

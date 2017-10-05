@@ -1,0 +1,54 @@
+
+
+
+  <h1>
+    ¿Qué tengo que hacer?
+  </h1>
+
+
+
+<div>
+<section >
+
+  <ul>
+    <il>
+      <%= link_to "Añadir Tarea", new_task_path %>
+    </il>
+    <il>
+      <%= link_to "Todas las tareas", tasks_path %>
+    </il>
+  </ul>
+</section>
+
+<section id="list">
+<h2>Lista de Tareas</h2>
+<ul>
+  <% @tasks.each do |task|  %>
+    <li>
+      <h3>
+        <% if task.complete %>
+          <%= link_to( task.title, task_path(task.id), id: "Complete") %>
+        <% else %>
+          <%= link_to( task.title, task_path(task.id), id: "NoComplete") %>
+        <% end  %>
+      </h3>
+        <%= link_to( "Modificar", edit_task_path(task.id)) %>
+        <%= link_to( "Borrar", task_path(task.id), method: :delete, data: { :confirm => "¿Segura que quieres eliminar esta tarea?" } ) %>
+
+        <%if task.complete %>
+          <%= link_to "No he terminado", mark_task_path(task.id, {:task => {:complete => false}}), method: :patch  %>
+        <% else %>
+          <%= link_to "Finalizar Tarea", mark_task_path(task.id, {:task => {:complete => true}}), method: :patch %>
+        <% end %>
+      </li>
+<% end %>
+</ul>
+</section>
+</div>
+
+
+<footer>
+  <p>
+  &copy 2017
+</p>
+</footer>
