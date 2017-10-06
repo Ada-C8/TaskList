@@ -9,7 +9,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], status: params[:task][:status])
+    @task = Task.new(task_params)
     if @task.save
       redirect_to root_path
     else
@@ -72,7 +72,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    return params.require(:task).permit(:name, :description, :completion_date)
+    return params.require(:task).permit(:name, :description, :completion_date, :status)
   end
 
 end
