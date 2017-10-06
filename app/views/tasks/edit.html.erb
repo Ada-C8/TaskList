@@ -1,0 +1,11 @@
+<h1>Edit Task</h1>
+<!-- <%= form_for @task do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.label :due_date %>
+  <%= f.date_field :completion_date, min: Date.today, required: true %>
+  <%= f.submit "Edit task", method: :patch %>
+<% end %> -->
+<%= render partial: 'form', locals: {action: "Edit"} %>

@@ -1,0 +1,9 @@
+<h1><%= @task.name %></h1>
+<ul>
+  <li>
+    <span><strong>Description: </strong><%= @task.description %></span>
+    <br /><span><strong>Due Date: </strong><%= @task.completion_date %></span>
+    <br /><%= link_to "Edit", edit_task_path(@task.id), method: :get %>
+    | <%= link_to "Delete", delete_task_path(@task.id), method: :delete, data: {:confirm=>'Are you sure?'} %>
+  </li>
+</ul>
