@@ -62,8 +62,10 @@ body div aside img{
   align-content: center;
 }
 #task-list{
-  background-image: url('https://cdn.pixabay.com/photo/2017/03/02/15/56/vector-notepad-2111645_1280.png');
+  background-image: url('vector-notepad-2111645_1280.png');
   color: black;
+  width: 80%;
+  align-content: center;
 }
 #task-list h2, #task-list ol li strong a{
 
