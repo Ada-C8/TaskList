@@ -1,0 +1,81 @@
+<% button_text ||= "Button" %>
+<% modifiable ||= "true" %>
+
+<%= form_for @task, html: {id: "task-form"} do |t| %>
+
+  <%= content_tag :div, class: 'name-wrapper' do %>
+    <%= t.label :name, 'Task Name' %>
+    <% if modifiable == true %>
+      <%= t.text_field :name, placeholder: 'Example: Buy cookies' %>
+    <% else %>
+      <%= t.text_field :name, disabled: true %>
+    <% end %>
+  <% end -%>
+
+  <%= content_tag :div, class: "desc-wrapper" do %>
+    <%= t.label :description, "Description" %>
+    <% if modifiable == true %>
+      <%= t.text_area :description, html: { rows: 6, cols: 50 } %>
+    <% else %>
+      <%= t.text_area :description, disabled: true %>
+    <% end %>
+  <% end -%>
+
+  <%= content_tag :div, class: "date-wrapper" do %>
+    <%= content_tag :div, class: "created-wrap" do %>
+      <%= t.label :created, "Created" %>
+      <% if modifiable == true %>
+        <%= t.date_field :created %>
+      <% else %>
+        <%= t.date_field :created, disabled: true %>
+      <% end %>
+    <% end -%>
+    <%= content_tag :div, class: "due-wrap" do %>
+      <%= t.label :due, "Due" %>
+      <% if modifiable == true %>
+        <%= t.date_field :due %>
+      <% else %>
+        <%= t.date_field :due, disabled: true %>
+      <% end %>
+    <% end -%>
+  <% end -%>
+
+  <%= content_tag :div, class: "status-wrapper" do %>
+    <%= t.label :status, "Status", class: 'status-title' %>
+    <% if @task.status == "Complete" %>
+      <% if modifiable == true %>
+        <%= t.radio_button :status, "Incomplete"%>
+        <%= t.label :status, 'Incomplete' %>
+        <%= t.radio_button :status, "Complete", checked: true %>
+        <%= t.label :status, 'Complete' %>
+      <% else %>
+        <%= t.radio_button :status, "Incomplete", disabled: true %>
+        <%= t.label :status, 'Incomplete' %>
+        <%= t.radio_button :status, "Complete", checked: true %>
+        <%= t.label :status, 'Complete' %>
+      <% end %>
+    <% else %>
+      <% if modifiable == true %>
+        <%= t.radio_button :status, "Incomplete", checked: true %>
+        <%= t.label :status, 'Incomplete' %>
+        <%= t.radio_button :status, "Complete" %>
+        <%= t.label :status, 'Complete' %>
+      <% else %>
+        <%= t.radio_button :status, "Incomplete", checked: true %>
+        <%= t.label :status, 'Incomplete' %>
+        <%= t.radio_button :status, "Complete", disabled: true %>
+        <%= t.label :status, 'Complete' %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <% if modifiable == true %>
+    <%= content_tag :div, class: "submit-wrapper" do %>
+      <%= t.submit button_text %>
+    <% end -%>
+  <% else %>
+    <%= content_tag :div, class: "link-wrapper" do  %>
+      <%= link_to 'Edit Task', edit_task_path, class: 'button' %>
+    <% end -%>
+  <% end %>
+<% end %>

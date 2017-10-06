@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task List</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <h1>Task List</h1>
+    </header>
+    <main>
+      <aside class="task-options">
+        <%= link_to tasks_path, :class => 'button' do %>
+          <i class="fa fa-list"></i>
+          View All Tasks
+        <% end %>
+        <%= link_to new_task_path, :class => 'button' do %>
+          <i class="fa fa-plus"></i>
+          Add New Task
+        <% end %>
+        <figure>
+          <img src="http://www.placecage.com/c/270/320" alt="Motivating crazy Nicholas Cage image">
+        </figure>
+      </aside>
+
+      <section class="main-list">
+        <%= yield %>
+      </section>
+
+    </main>
+    <footer>
+      <p>Copyright &copy; 2017</p>
+    </footer>
+  </body>
+</html>
