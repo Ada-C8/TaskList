@@ -16,11 +16,11 @@
           </span>
           |
           <span>
-            <%= link_to "edit", edit_task_path(task.id), class: "link" %>
+            <%= render partial: "edit_links", locals: {task: task} %>
           </span>
           |
           <span>
-            <%= link_to "delete", tasks_path(task.id), class: "link" %>
+            <%= render partial: "delete_links", locals: {task: task} %>
           </span>
         </div>
         <% else %>
@@ -36,11 +36,11 @@
         </span>
         |
         <span>
-          <%= link_to "edit", edit_task_path(task.id), class: "link" %>
+          <%= render partial: "edit_links", locals: {task: task} %>
         </span>
         |
         <span>
-          <%= link_to "delete", task_path(task.id), method: :delete, data: { confirm: "You sure?" }, class: "link" %>
+          <%= render partial: "delete_links", locals: {task: task} %>
         </span>
       </div>
       <% end %>
