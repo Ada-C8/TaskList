@@ -1,0 +1,11 @@
+<h2><%= @task.title %></h2>
+<p>
+  Details: <%= @task.description %>
+</p>
+<p>
+  <% if @task.status == true %>
+  Date completed: <%= @task.date_completed%>
+  <% else %>
+  Try to do by: <%= @task.due_date %>
+  <% end %>
+</p>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>task manager</h1>
+      </header>
+      <nav>
+        <ul>
+          <li class="button">
+            <%= link_to "add task", new_task_path %>
+          </li>
+          <li class="button">
+            <%= link_to "all tasks", tasks_path %>
+          </li>
+          <li class="button">
+            <%= link_to "feel good", completed_tasks_path %>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <%= yield %>
+      </main>
+
+      <footer>
+        <h6> &copy;2017 </h6>
+      </footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<section class="task-list">
+<h3 class="tasks-completed">completed tasks (yay)</h3>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.status == true %>
+        <strong>
+          <%= link_to task.title, task_path(task.id), class: "link"%>
+        </strong>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  </section>

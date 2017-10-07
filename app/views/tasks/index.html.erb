@@ -1,0 +1,63 @@
+
+<section class="task-list">
+  <h3>your tasks</h3>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.status == true %>
+        <p>
+          <strong class="complete">
+          <%= task.title %>
+          </strong>
+        </p>
+        <div class="actions">
+          <span>
+            <%= link_to "mark incomplete", mark_as_incomplete_path(task.id), method: :patch, data: { confirm: "You sure you're not done this?" }, class: "link" %>
+          </span>
+          |
+          <span>
+            <%= render partial: "edit_links", locals: {task: task} %>
+          </span>
+          |
+          <span>
+            <%= render partial: "delete_links", locals: {task: task} %>
+          </span>
+        </div>
+        <% else %>
+        <strong>
+          <p>
+            <%= link_to task.title, task_path(task.id), class: "link" %>
+          </p>
+        </strong>
+      </li>
+      <div class="actions">
+        <span>
+          <%= link_to "mark complete", mark_as_complete_path(task.id), method: :patch, data: { confirm: "You sure you're done this?" }, class: "link" %>
+        </span>
+        |
+        <span>
+          <%= render partial: "edit_links", locals: {task: task} %>
+        </span>
+        |
+        <span>
+          <%= render partial: "delete_links", locals: {task: task} %>
+        </span>
+      </div>
+      <% end %>
+    <% end %>
+  </ul>
+
+</section>
+
+
+
+
+<%# other html.erb code for strike through%>
+
+<%# <strong class="<%= task[:status] == "complete" ? "complete" : "" %><%# ">
+ <%# <%= task[:title] %>
+<%# </strong>
+
+<%# <%= task[:description] %>
+<%# by <%= task[:due_date] %>
+<%# status: <%= task[:status] %>
