@@ -1,0 +1,41 @@
+<!-- ALTERNATIVE FORM OPTIONS -->
+<!-- <form action="/tasks" method="post" accept-charset="utf-8">
+  SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+
+  <label for="title">Title</label>
+  <input type="text" name="title" value="" id="title">
+
+  <label for="description">Description</label>
+  <input type="text" name="description" value="" id="description">
+
+  <label for="due_date">Due Date</label>
+  <input type="text" name="due_date" value="" id="due_date">
+
+  <label for="status">Task Status</label>
+  <input type="text" name="status" value="" id="status">
+
+  <input type="submit" value="Submit">
+</form> -->
+
+<!-- <%= form_tag tasks_path, method: :post do %>
+
+  <%= label_tag "task[title]", "Title" %>
+  <%= text_field_tag "task[title]" %>
+
+  <%= label_tag "task[description]", "Description" %>
+  <%= text_field_tag "task[description]" %>
+
+  <%= label_tag "task[due_date]", "Due Date" %>
+  <%= text_field_tag "task[due_date]" %>
+
+  <%= label_tag "task[status]", "Status" %>
+  <%= text_field_tag "task[status]" %>
+
+  <%= submit_tag "Add Task" %>
+<% end %> -->
+<div class="your-tasks">
+  <h2>Add a new task</h2>
+  <%= render partial: "form", locals: {button_text: "Add Task"} %>
+</div>

@@ -1,0 +1,17 @@
+<!-- <h1>show erb</h1> -->
+
+<div class="show-task">
+  <h2>Task #<%= @task.id %></h2>
+  <ul>
+    <li>
+      <strong>Title:</strong> <%= @task.title %>
+    </li>
+    <li>
+      <strong>Description:</strong> <%= @task.description %>
+    </li>
+    <li>
+      <strong>Due Date:</strong> <%= @task.due_date %>
+    </li>
+    <%= render partial: "action_bar", locals: { task: @task } %>
+  </ul>
+</div>
