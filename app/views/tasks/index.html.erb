@@ -3,8 +3,8 @@
   <ol>
     <% @tasks.each do |task| %>
       <li>
-        <% if task.complete == true %>
-          <strong id="complete"><%=task.title%></strong>
+        <% if task.complete %>
+          <strong class="complete"><%=task.title%></strong>
         <% elsif %>
         <strong><%= link_to "#{task[:title]}", task_path(task[:id]) %></strong>
         <%end%>

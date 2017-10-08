@@ -1,5 +1,5 @@
-<% if task.complete == true %>
-  <%= link_to "Unmark Complete", unmark_complete_path(task[:id]), method: :patch %> 
+<% if task.complete %>
+  <%= link_to "Unmark Complete", unmark_complete_path(task[:id]), method: :patch %>
 <% elsif %>
   <%= link_to "Mark Complete", mark_complete_path(task[:id]), method: :patch %>
 <% end %>
