@@ -1,0 +1,7 @@
+#new-task{
+  display: flex;
+  flex-direction:  column;
+  align-items: center;
+  justify-content: center;
+  font-family: helvetica, serif;
+}

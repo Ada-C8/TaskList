@@ -1,0 +1,142 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+@import url('https://fonts.googleapis.com/css?family=Warnes');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+html{
+  background: gray; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(lightgray, dimgray); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(lightgray, dimgray); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(lightgray, dimgray); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(lightgray, dimgray); /* Standard syntax */
+
+}
+
+.status_complete{
+  text-decoration: line-through;
+}
+
+#task-list,  #all-tasks div{
+  display: inline-block;
+}
+
+#all-tasks{
+
+  width: 80%;
+}
+body div{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+h4 {
+  text-align: center;
+  font-family: helvetica, serif;
+  font-size: 18px;
+}
+body div aside, #all-tasks, #task-list ol{
+  margin: 20px;
+}
+
+aside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body div aside img{
+  width: 120%;
+  -webkit-clip-path: ellipse(30% 43% at 50% 50%);
+  clip-path: ellipse(30% 43% at 50% 50%);
+  align-content: center;
+}
+#task-list{
+  background-image: url('vector-notepad-2111645_1280.png');
+  color: black;
+  width: 80%;
+  align-content: center;
+}
+#task-list h2, #task-list ol li strong a{
+
+  color: black;
+}
+
+#task-list h2{
+  padding-top: 100px;
+}
+nav{
+  display: flex;
+  flex-direction:  row;
+  justify-content: space-between;
+}
+a{
+  text-decoration: none;
+}
+nav li {
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: space-around;
+  font-family: helvetica, serif;
+  margin: 20px;
+}
+
+h1{
+  font-family: 'Warnes', cursive;
+  text-align: center;
+  font-size: 4em;
+  margin: 20px;
+  background-color: black;
+  color: #fff;
+  text-shadow:
+  0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 40px #0ff,
+  0 0 80px #0ff,
+  0 0 90px #0ff,
+  0 0 100px #0ff,
+  0 0 150px #0ff;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+footer, nav{
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #efefef;
+}
+div ol li{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2em;
+}
+footer p{
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  width:100%;
+  background-color: #efefef;
+  text-align: center;
+  order: 1;
+}
+a:hover{
+  text-decoration: underline;
+}

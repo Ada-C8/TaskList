@@ -1,0 +1,52 @@
+
+
+  <h2><strong> <%=  @task[:title] %> </strong></h2>
+
+<div id="table">
+  <table>
+  <tr>
+    <td>Description:</td>
+    <td><%= @task[:description] %></td>
+  </tr>
+
+  <tr>
+    <td>Due Date:</td>
+    <td><%= @task[:date] %></td>
+  </tr>
+  <tr>
+    <td>Status:</td>
+    <td> <% if @task[:status] == true %> Completed  Date: <%= @task[:completed] %>
+      <% else %> Incomplete <% end %> </td>
+  </tr>
+  </table>
+</div>
+
+
+
+<nav id = "show">
+
+    <% if @task[:status] == false %>
+    <li>
+   <%= form_for @task, url: update_status_path(@task.id) do |f| %>
+
+        <%=  f.label "Date of Comlpletion" %>
+        <%= f.date_field :completed %>
+        <%= f.submit "Mark Task Completed" %>
+      <% end %>
+    </li>
+
+    <% else %>
+    <%= link_to "Change Status", status_incomplete_path(@task.id), method: :patch %>
+
+   <% end %>
+
+
+   <li>
+  <%= link_to "Edit", edit_task_path(@task.id) %>
+  </li>
+
+  <li>
+    <%= link_to "Delete", delete_task_path(@task.id), method: :delete, data: { confirm: "Are you sure you want to delete this task?" } %>
+  </li>
+
+</nav>

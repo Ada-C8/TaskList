@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <header>
+    <h1>Your Personalized Agenda</h1>
+  </header>
+
+
+  <nav>
+  <li>
+      <%= link_to "List All Tasks", tasks_path%>
+  </li>
+  <li>
+    <%= link_to "New Task", new_task_path %>
+  </li>
+  <li>
+    <%= link_to "Remove All Completed Tasks",  delete_completed_path, method: :delete, data: { confirm: "Are you sure you want to delete these tasks?" }  %>
+  </li>
+  </nav>
+
+  <body>
+
+    <div>
+
+      <div id = "all-tasks">
+        <%= yield %>
+      </div>
+
+    </div>
+
+    <section>
+    </section>
+  </body>
+
+  <footer>
+    <p>
+  &copy 2017
+    </p>
+  </footer>
+</html>

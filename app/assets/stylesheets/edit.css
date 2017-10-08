@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+#all-tasks nav:first-child{
+  font-family: helvetica, serif;
+}
+
+#table{
+  font-family:'Shadows Into Light', cursive;
+  font-size: 2em;
+  text-align: -webkit-center;
+}
+
+#table td{
+  margin: 20px;
+padding: 20px;
+}
