@@ -1,10 +1,10 @@
 <main>
       <div>
-      <h2>Dwight's ambitious list of activities</h2>
+      <h2>List of activities</h2>
       <p>
         <%= link_to "Add task", new_task_path, class: "navigation"%>
       </p>
-      <ol>
+      <ul>
       <% @tasks.each do |current_task|  %>
         <li>
           <h3>
@@ -12,14 +12,10 @@
         <%=link_to current_task.title, task_path(current_task.id)%>
           </h3>
 
-          <%= render partial: "task_summary", locals: {current_task: current_task}%>
-
-          <%= render partial: "buttons", locals: {current_task: current_task}%>
       </li>
       <%end%>
-    </ol>
-    <p>
-      <%= link_to "Add task", new_task_path, class: "navigation"%>
-    </p>
+    </ul>
+
+
   </div>
 </main>
