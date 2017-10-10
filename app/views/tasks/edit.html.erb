@@ -1,10 +1,6 @@
 <h2>Edit a task</h2>
 
 
-<img src = "http://previously.tv/m/kotm-dwightjim-full.jpg"  />
-
-
-
 <div>
   <p>
     <%= form_for @task do |form| %>
@@ -24,9 +20,4 @@
     <% end %>
   </p>
 
-
-  <!-- When I tried to use the render partial, submitting the update would no longer update the DB and the user was no longer redirected to the index, so I just stayed with the longer way that worked.
-   <p>
-<%= render partial: "form", locals: {button_text: "Update a task"}%>
-  </p> -->
 </div>

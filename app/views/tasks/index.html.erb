@@ -5,14 +5,18 @@
         <%= link_to "Add task", new_task_path, class: "navigation"%>
       </p>
       <ul>
-      <% @tasks.each do |current_task|  %>
+      <% @tasks.each do |task|  %>
+        <h2>
+            <%=link_to task.title, task_path(task.id)%>
+        </h2>
         <li>
-          <h3>
+          <%=link_to "Delete " + task.title, task_path(task.id), method: :delete,
+          data: {confirm: 'Are you sure?'} %>
+        </li>
 
-        <%=link_to current_task.title, task_path(current_task.id)%>
-          </h3>
-
-      </li>
+        <li>
+          <%=link_to "Complete " + task.title, task_complete_path(task.id), method: :patch%>
+        </li>
       <%end%>
     </ul>
 

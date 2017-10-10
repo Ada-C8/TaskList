@@ -1,7 +1,7 @@
 <h2>Closer inspection of task details</h2>
 
 <p>
-  <%= link_to "Home", tasks_path, class: "navigation"%>
+  <%= link_to "Home", tasks_path %>
 </p>
 
 <div>
@@ -17,4 +17,10 @@
   <p>
     Complete? <%= @task.complete %>
   </p>
+
+  <p>
+    <%= link_to "Edit Task", edit_task_path%>
+  </p>
+
+
 </div>
