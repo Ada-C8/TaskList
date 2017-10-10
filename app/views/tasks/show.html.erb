@@ -1,0 +1,12 @@
+<h2>Closer inspection of task details</h2>
+
+<img src="https://www.govloop.com/wp-content/uploads/2015/05/non-defensive-communication.jpeg">
+
+<div>
+  <h3><%=@task.title %></h3>
+  <p>
+    <%current_task = @task %>
+    <%= render partial: "task_summary", locals: {current_task: @task}%>
+    <%= render partial: "buttons", locals: {current_task: current_task}%>
+    </p>
+</div>
