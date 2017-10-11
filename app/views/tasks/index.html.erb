@@ -26,13 +26,13 @@
         </div>
 
         <div>
-        <%= button_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
-        <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+        <%= button_to 'Delete', task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+        <!-- <%# link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
         </div>
 
         <div>
-        <%= button_to 'Task Complete', completed_path(task.id), method: :patch %>
-        <!-- <%= link_to("Complete", completed_path(task[:id]), method: :patch) %> -->
+        <%= button_to 'Task Complete', task_completed_path(task.id), method: :patch %>
+        <!-- <%# link_to("Complete", completed_path(task[:id]), method: :patch) %> -->
         </div>
 
       </div>

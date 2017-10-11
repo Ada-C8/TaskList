@@ -14987,3 +14987,652 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-02 21:58:39 -0700
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.1ms)
+Completed 200 OK in 21ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-10-02 21:58:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-10-02 21:58:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (4.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (177.1ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 15.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fbea3467378>:0x007fbea3464ba0>
+Did you mean?  edit_task_path):
+    26:         </div>
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb__1177082238124864264_70228386537740'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb__1177082238124864264_70228386537740'
+Started GET "/tasks" for 127.0.0.1 at 2017-10-02 21:59:10 -0700
+Processing by TasksController#index as HTML
+Started GET "/" for 127.0.0.1 at 2017-10-02 21:59:20 -0700
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 272ms (Views: 260.0ms | ActiveRecord: 4.7ms)
+
+
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 43ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-10-02 21:59:24 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 60ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-10-02 21:59:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 66ms (Views: 61.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/71" for 127.0.0.1 at 2017-10-02 21:59:31 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 89ms (Views: 79.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2017-10-03 10:13:10 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:13:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (7.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 271ms (Views: 246.4ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:13:32 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:13:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (142.7ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fde5ab07aa8>:0x007fde5ab05e88>
+Did you mean?  edit_task_path):
+    26:         </div>
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb___3106617473884860002_70296510009300'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3106617473884860002_70296510009300'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:21:16 -0700
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:21:25 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-10-03 10:21:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (160.0ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 10.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fcf86090a80>:0x007fcf87969bd8>
+Did you mean?  edit_task_path):
+    26:         </div>
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264641849740'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264641849740'
+Started GET "/tasks" for 127.0.0.1 at 2017-10-03 10:22:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (123.4ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task' for #<#<Class:0x007fcf86090a80>:0x007fcf890bcb50>
+Did you mean?  DelegateClass):
+    26:         </div>
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', delete_task(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264667105940'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264667105940'
+Started GET "/tasks" for 127.0.0.1 at 2017-10-03 10:22:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (124.7ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for #<#<Class:0x007fcf86090a80>:0x007fcf85043060>):
+    26:         </div>
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', delete(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264633302320'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264633302320'
+Started GET "/tasks" for 127.0.0.1 at 2017-10-03 10:25:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (120.0ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fcf86090a80>:0x007fcf84eb9c80>
+Did you mean?  edit_task_path):
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+    33:         <div>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264632496940'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264632496940'
+Started GET "/tasks" for 127.0.0.1 at 2017-10-03 10:25:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (117.0ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fcf86090a80>:0x007fcf842a4378>
+Did you mean?  edit_task_path):
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', tasks_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+    33:         <div>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264630862400'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264630862400'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:25:44 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:25:50 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Marisa/.rvm/gems/ruby-2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:25:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (140.8ms)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fcf87d559e0>:0x007fcf84783768>
+Did you mean?  edit_task_path):
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', tasks_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+    33:         <div>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264656933360'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264656933360'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:26:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (121.4ms)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fcf87d559e0>:0x007fcf878014d0>
+Did you mean?  edit_task_path):
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+    33:         <div>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264654140120'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264654140120'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:26:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (119.3ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `task_delete' for #<#<Class:0x007fcf87d559e0>:0x007fcf891105c0>
+Did you mean?  task_completed_url):
+    26:         </div>
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', task_delete(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264667277260'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264667277260'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:28:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (123.7ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fcf87d559e0>:0x007fcf87acb508>
+Did you mean?  edit_task_path):
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+    33:         <div>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264655613620'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264655613620'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:29:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (116.4ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fcf87d559e0>:0x007fcf87e4bbb0>
+Did you mean?  edit_task_path):
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', tasks_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+    33:         <div>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___3965104346103269905_70264667652840'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___3965104346103269905_70264667652840'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:29:41 -0700
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (130.1ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fe496b6f440>:0x007fe494ea93d8>
+Did you mean?  edit_task_path):
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', tasks_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+    33:         <div>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___537619556200415338_70309863818660'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___537619556200415338_70309863818660'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:30:07 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (126.3ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fe496b6f440>:0x007fe494a25848>
+Did you mean?  edit_task_path):
+    27: 
+    28:         <div>
+    29:         <%= button_to 'Delete', tasks_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    30:         <!-- <%= link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+    31:         </div>
+    32: 
+    33:         <div>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___537619556200415338_70309855749540'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___537619556200415338_70309855749540'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:30:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (124.6ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `completed_path' for #<#<Class:0x007fe496b6f440>:0x007fe494dd1258>
+Did you mean?  compute_asset_path):
+    31:         </div>
+    32: 
+    33:         <div>
+    34:         <%= button_to 'Task Complete', completed_path(task.id), method: :patch %>
+    35:         <!-- <%= link_to("Complete", completed_path(task[:id]), method: :patch) %> -->
+    36:         </div>
+    37: 
+  
+app/views/tasks/index.html.erb:34:in `block in _app_views_tasks_index_html_erb___537619556200415338_70309863395000'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb___537619556200415338_70309863395000'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:33:17 -0700
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (131.8ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `completed_path' for #<#<Class:0x007fb574e502a0>:0x007fb577694608>
+Did you mean?  compute_asset_path):
+    32: 
+    33:         <div>
+    34:         <%= button_to 'Task Complete', task_completed_path(task.id), method: :patch %>
+    35:         <!-- <% link_to("Complete", completed_path(task[:id]), method: :patch) %> -->
+    36:         </div>
+    37: 
+    38:       </div>
+  
+app/views/tasks/index.html.erb:35:in `block in _app_views_tasks_index_html_erb__3768648684267007552_70208663488580'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb__3768648684267007552_70208663488580'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:33:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (153.6ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 6.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `completed_path' for #<#<Class:0x007fb574e502a0>:0x007fb574addc58>
+Did you mean?  compute_asset_path):
+    31:         </div>
+    32: 
+    33:         <div>
+    34:         <%= button_to 'Task Complete', completed_path(task.id), method: :patch %>
+    35:         <!-- <% link_to("Complete", completed_path(task[:id]), method: :patch) %> -->
+    36:         </div>
+    37: 
+  
+app/views/tasks/index.html.erb:34:in `block in _app_views_tasks_index_html_erb__3768648684267007552_70208661682840'
+app/views/tasks/index.html.erb:11:in `_app_views_tasks_index_html_erb__3768648684267007552_70208661682840'
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:36:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 225ms (Views: 221.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/tasks/64" for 127.0.0.1 at 2017-10-03 10:36:58 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ovVudAo8NuidjCYA/64Ci263Y5Iw8UFgHJgDOBdTTCr7mSSB7rzErWLXkuMwanBHe9G9jMVJc8y0/88TrUW0gw==", "id"=>"64"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.9ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 64]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 21.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:36:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/65" for 127.0.0.1 at 2017-10-03 10:38:34 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (143.2ms)
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete_task_path' for #<#<Class:0x007fb57970bd00>:0x007fb57970a0e0>
+Did you mean?  edit_task_path):
+    24: 
+    25: <%= button_to 'Edit', edit_task_path(@task.id), method: :get %>
+    26: 
+    27: <%= button_to 'Delete', delete_task_path(@task.id), method: :delete, data: {confirm: "Are you sure?"}%>
+  
+app/views/tasks/show.html.erb:27:in `_app_views_tasks_show_html_erb___3711639350911008766_70208662323040'
+Started GET "/tasks/65" for 127.0.0.1 at 2017-10-03 10:38:56 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 21:42:04 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (23.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 370ms (Views: 304.6ms | ActiveRecord: 47.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 22:09:51 -0700
+  [1m[35m (12.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (23.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 321ms (Views: 258.7ms | ActiveRecord: 31.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 22:17:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (116.2ms)
+Completed 200 OK in 203ms (Views: 150.8ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-05 12:37:45 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (6.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 286ms (Views: 246.9ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2017-10-10 20:55:58 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-10 20:56:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (7.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 315ms (Views: 285.2ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-10-10 20:56:06 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 72ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
