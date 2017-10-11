@@ -1,0 +1,61 @@
+<!-- <h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p> -->
+
+<h1>Task List</h1>
+
+<div class="right_tasks">
+  <ul class="tasks">
+    <h4 class="task_header">Your Tasks</h4>
+
+    <% counter = 1 %>
+    <% @tasks.each do |task| %>
+    <li>
+      <!-- <%= task.name %> -->
+
+      <div class="task_name">
+        <%= "#{counter}. " %> <%=link_to(task.name, task_path(task.id)) %>
+      </div>
+      <% counter+=1 %>
+
+      <div class="buttons">
+
+
+        <div>
+        <%= button_to 'Edit', edit_task_path(task.id), method: :get %>
+        <!-- <%= link_to("Edit", edit_task_path(task[:id])) %> -->
+        </div>
+
+        <div>
+        <%= button_to 'Delete', task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
+        <!-- <%# link_to("Delete", delete_task_path(task[:id]), method: :delete, data: {confirm: "Are you sure?"}) %> -->
+        </div>
+
+        <div>
+        <%= button_to 'Task Complete', task_completed_path(task.id), method: :patch %>
+        <!-- <%# link_to("Complete", completed_path(task[:id]), method: :patch) %> -->
+        </div>
+
+      </div>
+    </li>
+    <% end %>
+
+  </ul>
+</div>
+
+<div class="'left_options'">
+
+  <div>
+    <nav class="index_nav">
+      <ul>
+        <li><%= link_to "Add Task", new_task_path %></li>
+
+        <li><%= link_to "All Tasks", tasks_path %></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div>
+    <img class="gif" src="https://media.giphy.com/media/YLHwkqayc1j7a/200.gif" alt="jafar gif">
+  </div>
+
+</div>
