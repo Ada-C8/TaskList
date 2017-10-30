@@ -14,6 +14,8 @@
  *= require_self
  */
 
+
+
 /* GENERAL STYLING */
 header {
   padding-bottom: 20px;
@@ -194,7 +196,7 @@ textarea {
 }
 .base {
   position: absolute;
-  margin 0 auto;
+  margin: 0 auto;
   left: 0;
   bottom: -90px;
   width: 95px;

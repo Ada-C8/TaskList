@@ -29,7 +29,7 @@ class TasksController < ApplicationController
 
   def create
 
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], deadline: params[:task][:deadline])
+    @task = Task.new(task_params)
     # @task.task_status = false
     @task.completion_date = nil
      #instantiate a new task
