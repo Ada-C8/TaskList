@@ -1,0 +1,15 @@
+
+<div class="task-list">
+  <h2>New task</h2>
+  <%= render partial: "./entries/form", locals: { action_name: "New" } %>
+  <!-- <%= form_for @task do |f| %>
+    <%= f.label "task:" %>
+    <%= f.text_field :name %>
+    <%= f.label "description:" %>
+    <%= f.text_area :description %>
+    <%= f.label "deadline:" %>
+    <%= f.date_field :deadline %>
+    <%= f.submit "add task"%>
+  <% end %> -->
+
+</div>
